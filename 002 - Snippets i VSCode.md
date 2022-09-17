@@ -2,6 +2,10 @@
 
 ##### (inbyggd funktion som infogar kod för funktioner, if-else och mycket annat)
 
+(btw kan man köra snippets enkelt om man lägger till 
+"editor.suggest.snippetsPreventQuickSuggestions": true,
+i settings.json)
+
 1. Kör ctrl+k ctrl+s för att öppna Keyboard Shortcuts, sök efter snippet och se hotkey för kommandet editor.action.showSnippets (jag glömde bort vad det var default)
 2. I en .js-fil tryck på hotkeyn, du får en lista där du kan välja (och söka) efter en viss snippet
 3. Sök efter t.ex function genom att skriva fu, tryck enter och du får följande 
