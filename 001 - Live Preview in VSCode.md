@@ -1,4 +1,5 @@
 # Live Preview i VSCode
+## 
 
 ##### (skapar en lokal webbserver för att visa HTML+CSS+JS i en embedded browser i VSCode istället för att ha en annan browser öppen)
 
