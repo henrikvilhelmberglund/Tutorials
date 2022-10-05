@@ -1,23 +1,21 @@
-# Snippets i VSCode
+# Snippets in VSCode
 
-##### (inbyggd funktion som infogar kod för funktioner, if-else och mycket annat)
+##### (feature for quickly adding code for functions, if-else statements and much more)
 
-(btw kan man köra snippets enkelt om man lägger till 
-"editor.suggest.snippetsPreventQuickSuggestions": true,
-i settings.json)
-
-1. Kör ctrl+k ctrl+s för att öppna Keyboard Shortcuts, sök efter snippet och se hotkey för kommandet editor.action.showSnippets (jag glömde bort vad det var default)
-2. I en .js-fil tryck på hotkeyn, du får en lista där du kan välja (och söka) efter en viss snippet
-3. Sök efter t.ex function genom att skriva fu, tryck enter och du får följande 
+1. In settings search for Snippet Suggestions and switch "inline" to "top"
+2. In a .js file write for example fun and intellisense should show function, press enter and code for creating a function will be inserted
+3. Like this:
 ```js
 function name(params) {
   
 }
 ```
-4. "name" markeras och du kan börja skriva för att skriva över namnet med det du vill
-5. Om du trycker på tab hoppar cursorn till "params" där du kan skriva över parameters också
-6. Om du trycker på tab igen hoppar cursorn till nästa rad där du kan skriva själva funktionen
-7. Innan du hoppar till {} kan du också trycka shift-tab för att hoppa tillbaka men när du har kommit till {} hoppar du ut ur snippeten så du får autocomplete igen
+4. The function name is selected and you can type to replace the text with your desired function name
+5. If you press tab the cursor jumps to params where you can write parameter names
+6. If you press tab again the cursor jumps to the next row where you can write the code itself
+7. You can also use shift tab to jump backwards
 8. Success!
 
-Mer info https://code.visualstudio.com/docs/editor/userdefinedsnippets
+More info https://code.visualstudio.com/docs/editor/userdefinedsnippets
+
+### My personal JS snippets can be found here: https://github.com/henrikvilhelmberglund/JS-snippets/blob/main/javascript.json
