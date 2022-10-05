@@ -7,13 +7,13 @@
 ![example](https://github.com/henrikvilhelmberglund/Tutorials/blob/main/004_example.png?raw=true)
 
 ### Viewing
-0a. If you don't already have Live Server, in extensions in the left side panel search for Live Server and install it.
-0b. If you don't have Edge (Dev version), go to https://www.microsoftedgeinsider.com/en-us/download to download it .
-1. In extensions in the left side panel search for Edge Devtools and install it.
-2. Now we need a launch.json for the project, click the Microsoft Edge Tools icon in the left side panel and in your code folder (workspace) click Generate launch.json.
-3. Some entries will be added to the launch.json file but we need one more for starting Edge Devtools without debugging.
-4. Open Run and Debug in the left side panel and click the Open launch.json icon.
-5. In there paste the following at the top inside of configurations.
+0. If you don't already have Live Server, in extensions in the left side panel search for Live Server and install it.
+1. If you don't have Edge (Dev version), go to https://www.microsoftedgeinsider.com/en-us/download to download it .
+2. In extensions in the left side panel search for Edge Devtools and install it.
+3. Now we need a launch.json for the project, click the Microsoft Edge Tools icon in the left side panel and in your code folder (workspace) click Generate launch.json.
+4. Some entries will be added to the launch.json file but we need one more for starting Edge Devtools without debugging.
+5. Open Run and Debug in the left side panel and click the Open launch.json icon.
+6. In there paste the following at the top inside of configurations.
 ```
 {
         "name": "Open App (Headless)",
@@ -23,11 +23,11 @@
         "webRoot": "${workspaceFolder}"
       },
 ```
-6. This command will launch the Edge Devtools as an embedded browser along with developer tools but without debugging functionality. This is useful for just viewing your web project as you're building it.
-7. Go to Keyboard Shortcuts and a shortcut key for Debug: Start Debugging and make sure Open App (Headless) is selected in the dropdown. This isn't really headless anymore by the way so you can change the name if you want to.
-8. To make the Live Server experience even better when using Edge Devtools, go to Settings and search for auto save, change Auto Save to afterDelay and the Auto Save Delay to 400ms.
-9. Next search for live server delay and change Live Server Wait to 410ms. By doing this your unsaved files will auto save after 400ms after changes are made and Live Server will automatically reload the page after 410ms. This means you can see your changes as you are coding.
-10. Success! (for viewing, just press the shortcut key)
+7. This command will launch the Edge Devtools as an embedded browser along with developer tools but without debugging functionality. This is useful for just viewing your web project as you're building it.
+8. Go to Keyboard Shortcuts and a shortcut key for Debug: Start Debugging and make sure Open App (Headless) is selected in the dropdown. This isn't really headless anymore by the way so you can change the name if you want to.
+9. To make the Live Server experience even better when using Edge Devtools, go to Settings and search for auto save, change Auto Save to afterDelay and the Auto Save Delay to 400ms.
+10. Next search for live server delay and change Live Server Wait to 410ms. By doing this your unsaved files will auto save after 400ms after changes are made and Live Server will automatically reload the page after 410ms. This means you can see your changes as you are coding.
+11. Success! (for viewing, just press the shortcut key)
 
 ### Debugging
 0. Start with Viewing if you didn't do it yet to set up the basics.
