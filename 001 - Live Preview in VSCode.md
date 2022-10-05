@@ -1,12 +1,12 @@
-# Live Preview i VSCode
-## 
+# Live Preview in VSCode
+## (Warning: Tutorial 004 has a better workflow!)
 
-##### (skapar en lokal webbserver för att visa HTML+CSS+JS i en embedded browser i VSCode istället för att ha en annan browser öppen)
+##### (creates a local web server for showing HTML+CSS+JS in an embedded browser in VSCode instead of opening a separate browser window)
 
-1. I VSCode, hitta Extensions till vänster bland ikonerna och sök efter Live Preview
-2. Klicka på Live Preview och sedan Install
-3. Skapa en ny fil och spara den som .html
-4. Copy pastea följande och spara
+1. In VSCode, find Extensions in the left panel and search for Live Preview
+2. Click Live Preview and Install
+3. Create a new file and save it as .html
+4. Copy paste the following and save
 ```html
 <html>
     <head>
@@ -14,10 +14,10 @@
     </head>
     <body>
         <h1>H1!</h1>
-        <p>Hej, det här är en paragraf.</p>
+        <p>Hi, this is a paragraph.</p>
     </body>
 </html>
 ```
-5. Uppe till höger bredvid Playknappen tryck på Show Preview
-6. En embedded browser öppnas till höger där sidan visas (förhoppningsvis)
-7. Success! (btw, sidan uppdateras i realtid)
+5. With the .html file active, in the top right click Show Preview
+6. An embedded browser is opened where the project HTML+CSS+JS is displayed
+7. Success! (the page updates in realtime)
