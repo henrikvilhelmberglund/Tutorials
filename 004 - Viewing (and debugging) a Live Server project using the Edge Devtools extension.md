@@ -4,6 +4,8 @@
 
 ## Purpose: to view (or debug) a Live Server project in an embedded Edge browser in VSCode itself with console, elements and so on also visible
 
+![example](https://github.com/henrikvilhelmberglund/Tutorials/blob/main/004_example.png?raw=true)
+
 ### Viewing
 0a. If you don't already have Live Server, in extensions in the left side panel search for Live Server and install it.
 0b. If you don't have Edge (Dev version), go to https://www.microsoftedgeinsider.com/en-us/download to download it .
