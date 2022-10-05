@@ -1,0 +1,27 @@
+# Code Runner in VSCode
+
+##### (for running JavaScript code only projects in the VSCode console)
+
+1. Download NodeJS https://nodejs.org/en/
+2. In VSCode, find Extensions in the left side panel and search for Code Runner
+3. Click Code Runner and Install
+4. Create a new .js file and copy paste `console.log("Success!");`
+5. Press Ctrl+Alt+n to run the code and show the output in the bottom panel Output tab
+6. **Success!** (hopefully)
+
+Tip 1: You can change the shortcut key in Ctrl+k Ctrl+s (search for Run Code)
+
+Tip 2: In case you have a web project using document and so on but still would like to run the code using Node you can wrap the code in an if statement:
+
+```js
+//from https://flaviocopes.com/error-document-not-defined/
+if (typeof window !== 'undefined') {
+  //here `window` is available, so `window.document` (or simply `document`) is available too
+
+  function editParagraphs() {
+    let paragraph = document.querySelector("p");
+    paragraph.innerText = "ändrad paragraphtext";
+  }
+  editParagraphs();
+}
+```
