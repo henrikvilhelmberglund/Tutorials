@@ -1,10 +1,11 @@
-# Snippet med multi-command i VSCode
+# Multi command snippets in VSCode
 
-##### En key för att lägga till console.log(); med eller utan något markerat genom flera kommandon och en snippet med hjälp av extensionen multi-command
+#### (Note: I'm not using this for console logging right now but still useful as an example)
+##### One key for adding a console.log(); for the line contents with the help of the extension multi-command
 
-1. I extensions till vänster sök efter multi-command och installera
-2. öppna Command Palette (View - Command Palette... ) och sök efter Settings, öppna Open Settings (JSON) (inte default!)
-3. Lägg till följande längst ned (lägg till komma om det inte finns)
+1. In extensions in the left side panel search for multi-command and install it
+2. In the Command Palette (View - Command Palette... ) search for settings, select Open Settings (JSON) (not default!) and press enter
+3. Add the following to the bottom (add a comma as well)
 ```"multiCommand.commands": [
         {
             "command": "multiCommand.createConsoleLog",
@@ -14,7 +15,7 @@
                 {   
                     "command": "editor.action.insertSnippet",
                     "args": {
-                        "snippet": "console.log(${TM_SELECTED_TEXT}$1);"
+                        "snippet": "console.log(${TM_SELECTED_TEXT}$0);"
                     }
                 },
                 "leaveSnippet"
@@ -23,14 +24,13 @@
         }        
       ],
 ```
-Detta kommand kör fyra kommandon:
- 1. cursorHome (som att trycka på Home för att hoppa längst till vänster)
- 2. cursorEndSelect (som att trycka shift+End för att markera allt till höger på raden)
- 3. editor.action.insertSnippet med argumentet "console.log(${TM_SELECTED_TEXT}$1);" för att lägga till en console.log med den markerade texten (om den finns) och sätta cursor  location till $1 som är innanför ()
- 4. leaveSnippet för att "hoppa ut" ur snippeten så man får tillbaka autocomplete igen (vanligtvis stängs det av i snippets så man inte autocompletar allt möjligt av misstag när man tabbar mellan alla fält)
-
-4. öppna Command Palette (View - Command Palette... ) och sök efter Keyboard, öppna Open Keyboard Shortcuts (JSON) (inte default!)
-5. Lägg till följande längst ned (lägg till komma om det inte finns)
+This multi command runs four commands:
+ 1. cursorHome (like pressing Home to jump to the start of the row)
+ 2. cursorEndSelect (like pressing shift+End for selecting everything to the right on the row)
+ 3. editor.action.insertSnippet with the argument "console.log(${TM_SELECTED_TEXT}$0);" for adding a console.log with the contents of the row and setting the cursor location to $0 which is inside the ()
+ 4. leaveSnippet for leaving the snippet to get back the intellisense suggestions. Usually these are disabled in snippets for not autocompleting by accident when using tab to jump between the parameters. Also in this case leaveSnippet isn't really necessary because we're using $0 and not $1 but this could be useful in other cases.
+ 5. In the Command Palette (View - Command Palette... ) search for keyboard, then Open Keyboard Shortcuts (JSON) (not default!) and press enter
+ 6. Add the following to the bottom and a comma
 ```
 {
         "key": "ctrl+l",
@@ -38,10 +38,10 @@ Detta kommand kör fyra kommandon:
         "when": "editorLangId == javascript && editorTextFocus",
     },
 ```
-6. ändra "key": om det behövs (tror att ctrl+l är något annat default) alternativt öppna Edit - Preferences - Keyboard Shortcuts, sök efter ctrl+l och ta bort den funktionen som fanns där innan
-7. I en .js-fil tryck på ctrl+l (eller din key) för att lägga till en console.log(); där du direkt kan skriva in vad du vill logga
-Du kan också köra den på en rad där kod redan finns för att lägga in koden i en console.log();
-8. Success!
+ 7. Change "key": if necessary by opening Edit - Preferences - Keyboard Shortcuts, search for ctrl+l and remove the conflicting key, or just pick another key
+ 8. In a .js-file press ctrl+l (or whichever key you chose) to add a console.log();
+ You can also just run it on a row to wrap everything on that row in a console.log();
+ 9. Success!
 
-Tips: man kan också lägga till nya multicommands, lägg till kommandnamnet och alla commands i settings.json och "key",  "command och "when" i keybindings.json
-Mer info om snippets https://code.visualstudio.com/docs/editor/userdefinedsnippets
+Tip:  you can add more multicommands, just add the command name and the commands you would like to use in your settings.json file, also "key",  "command" and "when" in keybindings.json
+More info on snippets https://code.visualstudio.com/docs/editor/userdefinedsnippets
