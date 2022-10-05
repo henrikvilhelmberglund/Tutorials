@@ -37,4 +37,5 @@
 For more information on debugging itself see https://code.visualstudio.com/docs/editor/debugging
 4. When you are done debugging click the red button and Edge Devtools will close. This is the janky part.
 5. To get back Edge Devtools for viewing the project without debugging press your shortcut key for Debug: Start Debugging.
-6. Success!
+6. To add a shortcut key for debugging in Keyboard Shortcuts add a key for Microsoft Edge Tools: Launch project.
+7. Success!
