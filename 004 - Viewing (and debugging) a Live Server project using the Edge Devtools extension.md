@@ -35,7 +35,21 @@
 2. Click the Microsoft Edge Tools icon in the left side panel and then Launch Project. If it says Launch Instance you may need to open your project as a folder. 
 3. This should start debugging for your project (you can see a small bar with different buttons).
 For more information on debugging itself see https://code.visualstudio.com/docs/editor/debugging
-4. When you are done debugging click the red button and Edge Devtools will close. This is the janky part.
-5. To get back Edge Devtools for viewing the project without debugging press your shortcut key for Debug: Start Debugging.
-6. To add a shortcut key for debugging in Keyboard Shortcuts add a key for Microsoft Edge Tools: Launch project.
-7. Success!
+4. To open the console at the bottom of the DevTools window (if it's not there), press escape.
+5. When you are done debugging click the red button and Edge Devtools will close. This is the janky part.
+6. To get back Edge Devtools for viewing the project without debugging press your shortcut key for Debug: Start Debugging.
+7. To add a shortcut key for debugging in Keyboard Shortcuts add a key for Microsoft Edge Tools: Launch project.
+8. Success!
+
+
+### Logpoints
+
+- When debugging is active you can add logpoints by right clicking left of the line numbers to the left and clicking Add Logpoint. 
+
+- It is important to note that these will need to be on a line below the variable definition if you want to log its value (or you will just get back undefined). 
+
+- To get the value of a variable or any expression just surround it with curly braces, so if we had a variable myVariable it would be {myVariable}.
+
+- One of the powerful features of logpoints is that it doesn't trigger a file save so you can keep your website state (without it refreshing your Live Server page) but it is still possible to add and edit all the logpoints. 
+
+- So, instead of throwing console.log() everywhere and adding/changing our inputs in the site every time we want to see something in the console we can just have debugging running, add a logpoint anywhere in our code or even change our existing logpoints to log what we want without disrupting website/app state for easier debugging. Try it out! 
