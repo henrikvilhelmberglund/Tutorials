@@ -1,5 +1,6 @@
 <script>
   import Markdown from "/src/lib/markdown.md";
+  import Post from "/src/lib/Post.svelte";
   export let data;
 </script>
 
@@ -13,9 +14,7 @@
 <ul>
   {#each data.myMenu as post}
     <li>
-      <a href="/blog/{post.link}">
-        {post.title}
-      </a>
+      <svelte:component this={post.newbody} />
     </li>
   {/each}
 </ul>
