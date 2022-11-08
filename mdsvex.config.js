@@ -1,5 +1,5 @@
 import { defineMDSveXConfig as defineConfig } from "mdsvex";
-import examples from 'mdsvexamples'
+import examples from 'mdsvexamples';
 
 const config = defineConfig({
   extensions: [".svelte.md", ".md", ".svx"],
@@ -7,8 +7,14 @@ const config = defineConfig({
   smartypants: {
     dashes: "oldschool",
   },
+  remarkPlugins: [
+    examples,
+    {
+      defaults: {
+        Wrapper: "/src/lib/Example.svelte"
+      }
+    }],
 
-  remarkPlugins: [examples],
   rehypePlugins: [],
 });
 
