@@ -1,77 +1,138 @@
 {
   "node_modules/@sveltejs/kit/src/runtime/client/start.js": {
-    "file": "_app/immutable/start-71fbe3bc.js",
+    "file": "_app/immutable/start-494a3456.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/client/start.js",
     "isEntry": true,
     "imports": [
-      "_index-f27b776d.js",
-      "_singletons-29edeb4d.js"
+      "_index-032954cb.js",
+      "_singletons-12f1369f.js",
+      "_preload-helper-b21cceae.js",
+      "_paths-6cd3a76e.js"
     ],
     "dynamicImports": [
       ".svelte-kit/generated/nodes/0.js",
       ".svelte-kit/generated/nodes/1.js",
-      ".svelte-kit/generated/nodes/2.js"
+      ".svelte-kit/generated/nodes/2.js",
+      ".svelte-kit/generated/nodes/3.js"
     ]
   },
-  "node_modules/@sveltejs/kit/src/runtime/components/layout.svelte": {
-    "file": "_app/immutable/components/layout.svelte-25c3178e.js",
-    "src": "node_modules/@sveltejs/kit/src/runtime/components/layout.svelte",
+  "src/routes/+layout.svelte": {
+    "file": "_app/immutable/components/pages/_layout.svelte-d925f601.js",
+    "src": "src/routes/+layout.svelte",
     "isEntry": true,
     "imports": [
-      "_index-f27b776d.js"
+      "_index-032954cb.js",
+      "_paths-6cd3a76e.js"
     ]
   },
   "node_modules/@sveltejs/kit/src/runtime/components/error.svelte": {
-    "file": "_app/immutable/components/error.svelte-917dc890.js",
+    "file": "_app/immutable/components/error.svelte-24c4d113.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/components/error.svelte",
     "isEntry": true,
     "imports": [
-      "_index-f27b776d.js",
-      "_singletons-29edeb4d.js"
+      "_index-032954cb.js",
+      "_singletons-12f1369f.js"
     ]
   },
   "src/routes/+page.svelte": {
-    "file": "_app/immutable/components/pages/_page.svelte-4127bbb5.js",
+    "file": "_app/immutable/components/pages/_page.svelte-caf12b9c.js",
     "src": "src/routes/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index-f27b776d.js"
-    ],
-    "css": [
-      "_app/immutable/assets/_page-de7becd2.css"
+      "_index-032954cb.js",
+      "_Example-7010d6de.js"
+    ]
+  },
+  "src/routes/[slug]/+page.svelte": {
+    "file": "_app/immutable/components/pages/_slug_/_page.svelte-99cc372c.js",
+    "src": "src/routes/[slug]/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-032954cb.js"
     ]
   },
   "src/routes/+layout.js": {
-    "file": "_app/immutable/modules/pages/_layout.js-7b9cbfbc.js",
+    "file": "_app/immutable/modules/pages/_layout.js-38fe8489.js",
     "src": "src/routes/+layout.js",
     "isEntry": true,
     "imports": [
-      "__layout-8d2a742b.js"
+      "_preload-helper-b21cceae.js",
+      "__layout-9edfa5c9.js"
     ]
   },
-  "_singletons-29edeb4d.js": {
-    "file": "_app/immutable/chunks/singletons-29edeb4d.js",
+  "src/routes/[slug]/+page.js": {
+    "file": "_app/immutable/modules/pages/_slug_/_page.js-2f8f139c.js",
+    "src": "src/routes/[slug]/+page.js",
+    "isEntry": true,
     "imports": [
-      "_index-f27b776d.js"
+      "_preload-helper-b21cceae.js",
+      "__page-d0bc370b.js"
     ]
   },
-  "_index-f27b776d.js": {
-    "file": "_app/immutable/chunks/index-f27b776d.js"
+  "_singletons-12f1369f.js": {
+    "file": "_app/immutable/chunks/singletons-12f1369f.js",
+    "imports": [
+      "_index-032954cb.js",
+      "_paths-6cd3a76e.js"
+    ]
   },
-  "__layout-8d2a742b.js": {
-    "file": "_app/immutable/chunks/_layout-8d2a742b.js"
+  "_paths-6cd3a76e.js": {
+    "file": "_app/immutable/chunks/paths-6cd3a76e.js"
+  },
+  "_index-032954cb.js": {
+    "file": "_app/immutable/chunks/index-032954cb.js"
+  },
+  "_preload-helper-b21cceae.js": {
+    "file": "_app/immutable/chunks/preload-helper-b21cceae.js"
+  },
+  "__layout-9edfa5c9.js": {
+    "file": "_app/immutable/chunks/_layout-9edfa5c9.js",
+    "imports": [
+      "_preload-helper-b21cceae.js"
+    ],
+    "dynamicImports": [
+      "src/lib/md/000 - Code Runner in VSCode.md",
+      "src/lib/md/001 - Live Preview in VSCode.md",
+      "src/lib/md/002 - Snippets in VSCode.md",
+      "src/lib/md/003 - Multi command snippets in VSCode.md",
+      "src/lib/md/004 - Viewing (and debugging) a Live Server project using the Edge Devtools extension.md",
+      "src/lib/md/Learning Svelte and SvelteKit week 1.md"
+    ]
+  },
+  "_Example-7010d6de.js": {
+    "file": "_app/immutable/chunks/Example-7010d6de.js",
+    "imports": [
+      "_index-032954cb.js"
+    ],
+    "css": [
+      "_app/immutable/assets/Example-de7becd2.css"
+    ]
+  },
+  "__page-d0bc370b.js": {
+    "file": "_app/immutable/chunks/_page-d0bc370b.js",
+    "imports": [
+      "_preload-helper-b21cceae.js"
+    ],
+    "dynamicImports": [
+      "src/lib/md/000 - Code Runner in VSCode.md",
+      "src/lib/md/001 - Live Preview in VSCode.md",
+      "src/lib/md/002 - Snippets in VSCode.md",
+      "src/lib/md/003 - Multi command snippets in VSCode.md",
+      "src/lib/md/004 - Viewing (and debugging) a Live Server project using the Edge Devtools extension.md",
+      "src/lib/md/Learning Svelte and SvelteKit week 1.md"
+    ]
   },
   ".svelte-kit/generated/nodes/0.js": {
-    "file": "_app/immutable/chunks/0-ac4c8836.js",
+    "file": "_app/immutable/chunks/0-8b83d180.js",
     "src": ".svelte-kit/generated/nodes/0.js",
     "isDynamicEntry": true,
     "imports": [
-      "__layout-8d2a742b.js",
-      "node_modules/@sveltejs/kit/src/runtime/components/layout.svelte"
+      "__layout-9edfa5c9.js",
+      "src/routes/+layout.svelte"
     ]
   },
   ".svelte-kit/generated/nodes/1.js": {
-    "file": "_app/immutable/chunks/1-d12a6caf.js",
+    "file": "_app/immutable/chunks/1-54a7dd79.js",
     "src": ".svelte-kit/generated/nodes/1.js",
     "isDynamicEntry": true,
     "imports": [
@@ -79,15 +140,73 @@
     ]
   },
   ".svelte-kit/generated/nodes/2.js": {
-    "file": "_app/immutable/chunks/2-3756b172.js",
+    "file": "_app/immutable/chunks/2-974a2996.js",
     "src": ".svelte-kit/generated/nodes/2.js",
     "isDynamicEntry": true,
     "imports": [
       "src/routes/+page.svelte"
     ]
   },
-  "src/routes/+page.css": {
-    "file": "_app/immutable/assets/_page-de7becd2.css",
-    "src": "src/routes/+page.css"
+  ".svelte-kit/generated/nodes/3.js": {
+    "file": "_app/immutable/chunks/3-1dd35373.js",
+    "src": ".svelte-kit/generated/nodes/3.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "__page-d0bc370b.js",
+      "src/routes/[slug]/+page.svelte"
+    ]
+  },
+  "src/lib/md/000 - Code Runner in VSCode.md": {
+    "file": "_app/immutable/chunks/000 - Code Runner in VSCode-2bc4a1f1.js",
+    "src": "src/lib/md/000 - Code Runner in VSCode.md",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-032954cb.js"
+    ]
+  },
+  "src/lib/md/001 - Live Preview in VSCode.md": {
+    "file": "_app/immutable/chunks/001 - Live Preview in VSCode-68003475.js",
+    "src": "src/lib/md/001 - Live Preview in VSCode.md",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-032954cb.js"
+    ]
+  },
+  "src/lib/md/002 - Snippets in VSCode.md": {
+    "file": "_app/immutable/chunks/002 - Snippets in VSCode-62b50f4f.js",
+    "src": "src/lib/md/002 - Snippets in VSCode.md",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-032954cb.js"
+    ]
+  },
+  "src/lib/md/003 - Multi command snippets in VSCode.md": {
+    "file": "_app/immutable/chunks/003 - Multi command snippets in VSCode-4c05376f.js",
+    "src": "src/lib/md/003 - Multi command snippets in VSCode.md",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-032954cb.js"
+    ]
+  },
+  "src/lib/md/004 - Viewing (and debugging) a Live Server project using the Edge Devtools extension.md": {
+    "file": "_app/immutable/chunks/004 - Viewing (and debugging) a Live Server project using the Edge Devtools extension-9e06764b.js",
+    "src": "src/lib/md/004 - Viewing (and debugging) a Live Server project using the Edge Devtools extension.md",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-032954cb.js"
+    ]
+  },
+  "src/lib/md/Learning Svelte and SvelteKit week 1.md": {
+    "file": "_app/immutable/chunks/Learning Svelte and SvelteKit week 1-537a4c5e.js",
+    "src": "src/lib/md/Learning Svelte and SvelteKit week 1.md",
+    "isDynamicEntry": true,
+    "imports": [
+      "_index-032954cb.js",
+      "_Example-7010d6de.js"
+    ]
+  },
+  "Example.css": {
+    "file": "_app/immutable/assets/Example-de7becd2.css",
+    "src": "Example.css"
   }
 }

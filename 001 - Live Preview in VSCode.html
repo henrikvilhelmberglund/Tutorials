@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="./favicon.png" />
+  <link rel="stylesheet" href="prism-vsc-dark-plus.css">
+  <meta name="viewport" content="width=device-width" />
+  <meta http-equiv="content-security-policy" content="">
+		<link href="./_app/immutable/assets/Example-de7becd2.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/start-494a3456.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index-032954cb.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons-12f1369f.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/paths-6cd3a76e.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/preload-helper-b21cceae.js">
+		<link rel="modulepreload" href="./_app/immutable/components/pages/_layout.svelte-d925f601.js">
+		<link rel="modulepreload" href="./_app/immutable/modules/pages/_layout.js-38fe8489.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/_layout-9edfa5c9.js">
+		<link rel="modulepreload" href="./_app/immutable/components/pages/_slug_/_page.svelte-99cc372c.js">
+		<link rel="modulepreload" href="./_app/immutable/modules/pages/_slug_/_page.js-2f8f139c.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/_page-d0bc370b.js">
+</head>
+
+<body>
+  <div>
+
+
+<nav><ul><li><a href="/000 - Code Runner in VSCode">000 - Code Runner in VSCode</a>
+        </li><li><a href="/001 - Live Preview in VSCode">001 - Live Preview in VSCode</a>
+        </li><li><a href="/002 - Snippets in VSCode">002 - Snippets in VSCode</a>
+        </li><li><a href="/003 - Multi command snippets in VSCode">003 - Multi command snippets in VSCode</a>
+        </li><li><a href="/004 - Viewing (and debugging) a Live Server project using the Edge Devtools extension">004 - Viewing (and debugging) a Live Server project using the Edge Devtools extension</a>
+        </li><li><a href="/Learning Svelte and SvelteKit week 1">Learning Svelte and SvelteKit week 1</a>
+        </li></ul></nav>
+
+
+
+
+<h1>Live Preview in VSCode</h1>
+<h2>(Warning: Tutorial 004 has a better workflow!)</h2>
+<h5>(creates a local web server for showing HTML+CSS+JS in an embedded browser in VSCode instead of opening a separate browser window)</h5>
+<ol><li>In VSCode, find Extensions in the left panel and search for Live Preview</li>
+<li>Click Live Preview and Install</li>
+<li>Create a new file and save it as .html</li>
+<li>Copy paste the following and save</li></ol>
+<pre class="language-html"><!-- HTML_TAG_START --><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>It works!<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span>H1!<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>Hi, this is a paragraph.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code><!-- HTML_TAG_END --></pre>
+<ol start="5"><li>With the .html file active, in the top right click Show Preview</li>
+<li>An embedded browser is opened where the project HTML+CSS+JS is displayed</li>
+<li>Success! (the page updates in realtime)</li></ol>
+
+
+		<script type="module" data-sveltekit-hydrate="1oj4qeh">
+			import { start } from "./_app/immutable/start-494a3456.js";
+
+			start({
+				env: {},
+				hydrate: {
+					status: 200,
+					error: null,
+					node_ids: [0, 3],
+					params: {slug:"001 - Live Preview in VSCode"},
+					route: {"id":"/[slug]"},
+					data: [null,null],
+					form: null
+				},
+				paths: {"base":"","assets":""},
+				target: document.querySelector('[data-sveltekit-hydrate="1oj4qeh"]').parentNode,
+				trailing_slash: "never"
+			});
+		</script>
+	</div>
+</body>
+
+</html>

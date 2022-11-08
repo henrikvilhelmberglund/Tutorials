@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="./favicon.png" />
+  <link rel="stylesheet" href="prism-vsc-dark-plus.css">
+  <meta name="viewport" content="width=device-width" />
+  <meta http-equiv="content-security-policy" content="">
+		<link href="./_app/immutable/assets/Example-de7becd2.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/start-494a3456.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index-032954cb.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons-12f1369f.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/paths-6cd3a76e.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/preload-helper-b21cceae.js">
+		<link rel="modulepreload" href="./_app/immutable/components/pages/_layout.svelte-d925f601.js">
+		<link rel="modulepreload" href="./_app/immutable/modules/pages/_layout.js-38fe8489.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/_layout-9edfa5c9.js">
+		<link rel="modulepreload" href="./_app/immutable/components/pages/_slug_/_page.svelte-99cc372c.js">
+		<link rel="modulepreload" href="./_app/immutable/modules/pages/_slug_/_page.js-2f8f139c.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/_page-d0bc370b.js">
+</head>
+
+<body>
+  <div>
+
+
+<nav><ul><li><a href="/000 - Code Runner in VSCode">000 - Code Runner in VSCode</a>
+        </li><li><a href="/001 - Live Preview in VSCode">001 - Live Preview in VSCode</a>
+        </li><li><a href="/002 - Snippets in VSCode">002 - Snippets in VSCode</a>
+        </li><li><a href="/003 - Multi command snippets in VSCode">003 - Multi command snippets in VSCode</a>
+        </li><li><a href="/004 - Viewing (and debugging) a Live Server project using the Edge Devtools extension">004 - Viewing (and debugging) a Live Server project using the Edge Devtools extension</a>
+        </li><li><a href="/Learning Svelte and SvelteKit week 1">Learning Svelte and SvelteKit week 1</a>
+        </li></ul></nav>
+
+
+
+
+<h1>Multi command snippets in VSCode</h1>
+<h4>(Note: I’m not using this for console logging right now but still useful as an example)</h4>
+<h5>One key for adding a console.log(); for the line contents with the help of the extension multi-command</h5>
+<ol><li>In extensions in the left side panel search for multi-command and install it</li>
+<li>In the Command Palette (View - Command Palette… ) search for settings, select Open Settings (JSON) (not default!) and press enter</li>
+<li>Add the following to the bottom (add a comma as well)</li></ol>
+<pre class="language-json"><!-- HTML_TAG_START --><code class="language-json"><span class="token property">"multiCommand.commands"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">&#123;</span>
+            <span class="token property">"command"</span><span class="token operator">:</span> <span class="token string">"multiCommand.createConsoleLog"</span><span class="token punctuation">,</span>
+            <span class="token property">"sequence"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+                <span class="token string">"cursorHome"</span><span class="token punctuation">,</span>
+                <span class="token string">"cursorEndSelect"</span><span class="token punctuation">,</span>
+                <span class="token punctuation">&#123;</span>   
+                    <span class="token property">"command"</span><span class="token operator">:</span> <span class="token string">"editor.action.insertSnippet"</span><span class="token punctuation">,</span>
+                    <span class="token property">"args"</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
+                        <span class="token comment">// "snippet": "console.log($&#123;TM_SELECTED_TEXT&#125;$0);"</span>
+                    <span class="token punctuation">&#125;</span>
+                <span class="token punctuation">&#125;</span><span class="token punctuation">,</span>
+                <span class="token string">"leaveSnippet"</span>
+
+            <span class="token punctuation">]</span>
+        <span class="token punctuation">&#125;</span>        
+      <span class="token punctuation">]</span><span class="token punctuation">,</span></code><!-- HTML_TAG_END --></pre>
+<p>This multi command runs four commands:</p>
+<ol><li>cursorHome (like pressing Home to jump to the start of the row)</li>
+<li>cursorEndSelect (like pressing shift+End for selecting everything to the right on the row)</li>
+<li>leaveSnippet for leaving the snippet to get back the intellisense suggestions. Usually these are disabled in snippets for not autocompleting by accident when using tab to jump between the parameters. Also in this case leaveSnippet isn’t really necessary because we’re using $0 and not $1 but this could be useful in other cases.</li>
+<li>In the Command Palette (View - Command Palette… ) search for keyboard, then Open Keyboard Shortcuts (JSON) (not default!) and press enter</li>
+<li>Add the following to the bottom and a comma</li></ol>
+<pre class="language-json"><!-- HTML_TAG_START --><code class="language-json"><span class="token punctuation">&#123;</span>
+        <span class="token property">"key"</span><span class="token operator">:</span> <span class="token string">"ctrl+l"</span><span class="token punctuation">,</span>
+        <span class="token property">"command"</span><span class="token operator">:</span> <span class="token string">"multiCommand.createConsoleLog"</span><span class="token punctuation">,</span>
+        <span class="token property">"when"</span><span class="token operator">:</span> <span class="token string">"editorLangId == javascript &amp;&amp; editorTextFocus"</span><span class="token punctuation">,</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">,</span></code><!-- HTML_TAG_END --></pre>
+<ol start="7"><li>Change “key”: if necessary by opening Edit - Preferences - Keyboard Shortcuts, search for ctrl+l and remove the conflicting key, or just pick another key</li>
+<li>In a .js-file press ctrl+l (or whichever key you chose) to add a console.log();
+You can also just run it on a row to wrap everything on that row in a console.log();</li>
+<li>Success!</li></ol>
+<p>Tip:  you can add more multicommands, just add the command name and the commands you would like to use in your settings.json file, also “key”,  “command” and “when” in keybindings.json
+More info on snippets <a href="https://code.visualstudio.com/docs/editor/userdefinedsnippets" rel="nofollow">https://code.visualstudio.com/docs/editor/userdefinedsnippets</a></p>
+
+
+		<script type="module" data-sveltekit-hydrate="1h38fcv">
+			import { start } from "./_app/immutable/start-494a3456.js";
+
+			start({
+				env: {},
+				hydrate: {
+					status: 200,
+					error: null,
+					node_ids: [0, 3],
+					params: {slug:"003 - Multi command snippets in VSCode"},
+					route: {"id":"/[slug]"},
+					data: [null,null],
+					form: null
+				},
+				paths: {"base":"","assets":""},
+				target: document.querySelector('[data-sveltekit-hydrate="1h38fcv"]').parentNode,
+				trailing_slash: "never"
+			});
+		</script>
+	</div>
+</body>
+
+</html>

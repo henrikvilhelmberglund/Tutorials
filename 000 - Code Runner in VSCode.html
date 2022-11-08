@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="./favicon.png" />
+  <link rel="stylesheet" href="prism-vsc-dark-plus.css">
+  <meta name="viewport" content="width=device-width" />
+  <meta http-equiv="content-security-policy" content="">
+		<link href="./_app/immutable/assets/Example-de7becd2.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/start-494a3456.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index-032954cb.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons-12f1369f.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/paths-6cd3a76e.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/preload-helper-b21cceae.js">
+		<link rel="modulepreload" href="./_app/immutable/components/pages/_layout.svelte-d925f601.js">
+		<link rel="modulepreload" href="./_app/immutable/modules/pages/_layout.js-38fe8489.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/_layout-9edfa5c9.js">
+		<link rel="modulepreload" href="./_app/immutable/components/pages/_slug_/_page.svelte-99cc372c.js">
+		<link rel="modulepreload" href="./_app/immutable/modules/pages/_slug_/_page.js-2f8f139c.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/_page-d0bc370b.js">
+</head>
+
+<body>
+  <div>
+
+
+<nav><ul><li><a href="/000 - Code Runner in VSCode">000 - Code Runner in VSCode</a>
+        </li><li><a href="/001 - Live Preview in VSCode">001 - Live Preview in VSCode</a>
+        </li><li><a href="/002 - Snippets in VSCode">002 - Snippets in VSCode</a>
+        </li><li><a href="/003 - Multi command snippets in VSCode">003 - Multi command snippets in VSCode</a>
+        </li><li><a href="/004 - Viewing (and debugging) a Live Server project using the Edge Devtools extension">004 - Viewing (and debugging) a Live Server project using the Edge Devtools extension</a>
+        </li><li><a href="/Learning Svelte and SvelteKit week 1">Learning Svelte and SvelteKit week 1</a>
+        </li></ul></nav>
+
+
+
+
+<h1>Code Runner in VSCode</h1>
+<h5>(for running JavaScript code only projects in the VSCode console)</h5>
+<ol><li>Download NodeJS <a href="https://nodejs.org/en/" rel="nofollow">https://nodejs.org/en/</a></li>
+<li>In VSCode, find Extensions in the left side panel and search for Code Runner</li>
+<li>Click Code Runner and Install</li>
+<li>Create a new .js file and copy paste <code>console.log(&quot;Success!&quot;);</code></li>
+<li>Press Ctrl+Alt+n to run the code and show the output in the bottom panel Output tab</li>
+<li><strong>Success!</strong> (hopefully)</li></ol>
+<p>Tip 1: You can change the shortcut key in Ctrl+k Ctrl+s (search for Run Code)</p>
+<p>Tip 2: In case you have a web project using document and so on but still would like to run the code using Node you can wrap the code in an if statement:</p>
+<pre class="language-js"><!-- HTML_TAG_START --><code class="language-js"><span class="token comment">//from https://flaviocopes.com/error-document-not-defined/</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> window <span class="token operator">!==</span> <span class="token string">'undefined'</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token comment">//here &#96;window&#96; is available, so &#96;window.document&#96; (or simply &#96;document&#96;) is available too</span>
+
+  <span class="token keyword">function</span> <span class="token function">editParagraphs</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">let</span> paragraph <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"p"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    paragraph<span class="token punctuation">.</span>innerText <span class="token operator">=</span> <span class="token string">"ändrad paragraphtext"</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+  <span class="token function">editParagraphs</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
+
+
+		<script type="module" data-sveltekit-hydrate="kvdom">
+			import { start } from "./_app/immutable/start-494a3456.js";
+
+			start({
+				env: {},
+				hydrate: {
+					status: 200,
+					error: null,
+					node_ids: [0, 3],
+					params: {slug:"000 - Code Runner in VSCode"},
+					route: {"id":"/[slug]"},
+					data: [null,null],
+					form: null
+				},
+				paths: {"base":"","assets":""},
+				target: document.querySelector('[data-sveltekit-hydrate="kvdom"]').parentNode,
+				trailing_slash: "never"
+			});
+		</script>
+	</div>
+</body>
+
+</html>
