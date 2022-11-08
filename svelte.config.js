@@ -18,11 +18,11 @@ const config = {
       precompress: false,
       strict: true,
     }),
+    paths: {
+      base: dev ? "" : "/Tutorials",
+    },
   },
 
-  paths: {
-    base: dev ? "" : "/Tutorials",
-  },
 
   preprocess: [mdsvex(mdsvexConfig)],
 };
