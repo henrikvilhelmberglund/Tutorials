@@ -45,7 +45,9 @@ The script tag is just vanilla JS with some added Svelte magic which replaces va
 
 This is easier to show with an example. 
 
-```js
+
+```svelte example
+
 <script>
 	let count = 0;
 	let doubled = count * 2;
@@ -59,6 +61,7 @@ This is easier to show with an example.
 	Clicked {count} {count === 1 ? 'time' : 'times'}
 </button>
 <p>{count} doubled is {doubled}</p>
+
 ```
 
 Here we have a script where you click a button and the amount of times you clicked it is displayed.
@@ -75,7 +78,37 @@ with
 
 `$:` means that whenever any variables to the right of the = change we rerun this statement.
 
-By default assignments in general in the top script block are reactive so `let count = 0;` will just work if we increment it in a function later, but for variables that depend on other variables we can use `$:`.
+By default assignments in general in the top script block are reactive so 
+
+`let count = 0;`
+
+ will just work if we increment it in a function later, but for variables that depend on other variables we can use 
+ 
+ `$:`
+ 
+ .
+
+ Let's try the previous example again.
+
+ ```svelte example
+
+<script>
+	let count = 0;
+	$: doubled = count * 2;
+
+	function handleClick() {
+		count += 1;
+	}
+</script>
+
+<button on:click={handleClick}>
+	Clicked {count} {count === 1 ? 'time' : 'times'}
+</button>
+<p>{count} doubled is {doubled}</p>
+
+```
+
+It works! (maybe)
 
 **However** using array methods will not update the variable because there's no assignment, so instead of 
 
@@ -98,7 +131,7 @@ instead.
 
 ### Markup
 
-In the markup block (between the script and style tags) we can have our HTML. If we want to reference a variable from the script block we can enclose it in curly brackets {count}. In fact we can have any JS we want inside of curly brackets which is useful.
+In the markup block (between the script and style tags) we can have our HTML. If we want to reference a variable from the script block we can enclose it in curly brackets count. In fact we can have any JS we want inside of curly brackets which is useful.
 
 We also have some other fancy things like:
 
