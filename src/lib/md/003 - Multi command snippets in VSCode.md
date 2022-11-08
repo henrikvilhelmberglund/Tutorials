@@ -6,7 +6,8 @@
 1. In extensions in the left side panel search for multi-command and install it
 2. In the Command Palette (View - Command Palette... ) search for settings, select Open Settings (JSON) (not default!) and press enter
 3. Add the following to the bottom (add a comma as well)
-```"multiCommand.commands": [
+```json
+"multiCommand.commands": [
         {
             "command": "multiCommand.createConsoleLog",
             "sequence": [
@@ -15,7 +16,7 @@
                 {   
                     "command": "editor.action.insertSnippet",
                     "args": {
-                        "snippet": "console.log(${TM_SELECTED_TEXT}$0);"
+                        // "snippet": "console.log(${TM_SELECTED_TEXT}$0);"
                     }
                 },
                 "leaveSnippet"
@@ -27,11 +28,12 @@
 This multi command runs four commands:
  1. cursorHome (like pressing Home to jump to the start of the row)
  2. cursorEndSelect (like pressing shift+End for selecting everything to the right on the row)
- 3. editor.action.insertSnippet with the argument "console.log(${TM_SELECTED_TEXT}$0);" for adding a console.log with the contents of the row and setting the cursor location to $0 which is inside the ()
+ <!-- 3. editor.action.insertSnippet with the argument "console.log(${TM_SELECTED_TEXT}$0);" for adding a console.log with the contents of the row and setting the cursor location to $0 which is inside the () -->
  4. leaveSnippet for leaving the snippet to get back the intellisense suggestions. Usually these are disabled in snippets for not autocompleting by accident when using tab to jump between the parameters. Also in this case leaveSnippet isn't really necessary because we're using $0 and not $1 but this could be useful in other cases.
  5. In the Command Palette (View - Command Palette... ) search for keyboard, then Open Keyboard Shortcuts (JSON) (not default!) and press enter
  6. Add the following to the bottom and a comma
-```
+
+```json
 {
         "key": "ctrl+l",
         "command": "multiCommand.createConsoleLog",
