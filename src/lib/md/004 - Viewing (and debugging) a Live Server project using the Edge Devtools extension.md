@@ -4,7 +4,7 @@
 
 ## Purpose: to view (or debug) a Live Server project in an embedded Edge browser in VSCode itself with console, elements and so on also visible
 
-![example](004_example.png?raw=true)
+
 
 ### Viewing
 0. If you don't already have Live Server, in extensions in the left side panel search for Live Server and install it.
@@ -48,7 +48,7 @@ For more information on debugging itself see https://code.visualstudio.com/docs/
 
 - It is important to note that these will need to be on a line below the variable definition if you want to log its value (or you will just get back undefined). 
 
-- To get the value of a variable or any expression just surround it with curly braces, so if we had a variable myVariable it would be {myVariable}.
+- To get the value of a variable or any expression just surround it with curly braces, so if we had a variable myVariable it would be myVariable inside curly braces.
 
 - One of the powerful features of logpoints is that it doesn't trigger a file save so you can keep your website state (without it refreshing your Live Server page) but it is still possible to add and edit all the logpoints. 
 
