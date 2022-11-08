@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+### [0.0.3](https://github.com/henrikvilhelmberglund/Tutorials/compare/v0.0.2...v0.0.3) (2022-11-08)
+
+
+### Features
+
+* :sparkles: add +layout.svelte which will save all .mds in certain folders in an array ([801ae60](https://github.com/henrikvilhelmberglund/Tutorials/commit/801ae60fd16ce5dcf834a1b79729acc916c11976))
+* :sparkles: add load function in +layout.js and remove it from +layout.svelte ([7eecafa](https://github.com/henrikvilhelmberglund/Tutorials/commit/7eecafaf3e0d116a8b5ae64cb6fc3f06f296d2e1))
+* :sparkles: add slug dynamic route that tries to import the post (should probably move into sub folder later) ([c7443ea](https://github.com/henrikvilhelmberglund/Tutorials/commit/c7443eaf74d1e6fb156dc52fdac8a2228232394a))
+* :sparkles: add Svelte components from the dynamic import array ([4e21dc8](https://github.com/henrikvilhelmberglund/Tutorials/commit/4e21dc8e004a7e4c39b08a3de036dfa0e7d213e4))
+* :sparkles: add top level await import that adds the content of all .md files into the main page ([0e767d3](https://github.com/henrikvilhelmberglund/Tutorials/commit/0e767d3bf5eba7e8120dc22276143e306d26567f))
+* :sparkles: add ugly nav bar at the top ([5ebcf5a](https://github.com/henrikvilhelmberglund/Tutorials/commit/5ebcf5a8ef6de491e3bb3bf63aab54c496b358c2))
+* :sparkles: add unused (for now) Post component ([c10f000](https://github.com/henrikvilhelmberglund/Tutorials/commit/c10f0007cfd746f7b201fc43da770bf1f29e1268))
+* :sparkles: use the data in +page.svelte (links will not work yet) ([2bf9971](https://github.com/henrikvilhelmberglund/Tutorials/commit/2bf997181eaca66bea5e87c0157bb388cedffba3))
+
+
+### Bug Fixes
+
+* :bug: comment out lines in 003 that caused problems (will try to add them back later) ([7cfaccc](https://github.com/henrikvilhelmberglund/Tutorials/commit/7cfaccc1c56ba75ef888a11708c8e23a7fb650d3))
+* :bug: fix base path (was outside of kit) ([1f51d20](https://github.com/henrikvilhelmberglund/Tutorials/commit/1f51d20a9f17f985aea48860051190293c3b3b67))
+* :bug: fix prism CSS link to use %sveltekit.assets% so it builds correctly ([3ad0bae](https://github.com/henrikvilhelmberglund/Tutorials/commit/3ad0bae288ad7da817baf28121077bd6c6b674f5))
+* :bug: move the .md to be in the same folder for ease, also... ([552becc](https://github.com/henrikvilhelmberglund/Tutorials/commit/552becce52c70436ba64745b403ae26878eb2b3d))
+* :fire: remove file (missed stage) ([b347b4e](https://github.com/henrikvilhelmberglund/Tutorials/commit/b347b4e8c3ddd4585f2c2bfee13719570763d168))
+* :fire: remove image that causes problems with dynamic import (try to add back later) ([c4cd330](https://github.com/henrikvilhelmberglund/Tutorials/commit/c4cd330d119267736554552192d90e649c1a4f95))
+
 ### 0.0.2 (2022-11-08)
 
 
