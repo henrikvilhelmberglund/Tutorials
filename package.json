@@ -8,13 +8,15 @@
     "preview": "vite preview",
     "check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch",
-    "release": "commit-and-tag-version"
+    "release": "commit-and-tag-version",
+    "deploy": "npx gh-pages -d build --dotfiles"
   },
   "devDependencies": {
     "@sveltejs/adapter-auto": "next",
     "@sveltejs/adapter-static": "^1.0.0-next.48",
     "@sveltejs/kit": "next",
     "commit-and-tag-version": "^10.1.0",
+    "gh-pages": "^4.0.0",
     "mdsvex": "^0.10.6",
     "svelte": "^3.44.0",
     "svelte-check": "^2.7.1",
