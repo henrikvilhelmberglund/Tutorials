@@ -1,5 +1,5 @@
 <script>
-  import Markdown from "../lib/markdown.md";
+  import Markdown from "./markdown.md";
 </script>
 
 <h1>Welcome to SvelteKit</h1>
