@@ -1,5 +1,5 @@
 <script>
-  
+  import Button from "./Button.svelte"
 </script>
 
 # hello 
@@ -16,23 +16,25 @@
 
 - hello too
 
-```svelte example"
-
+```svelte example
 <script>
-	let count = 0;
+  let count = 0;
 
-	function handleClick() {
-		count += 1;
-	}
+  function handleClick() {
+    count += 1;
+  }
 </script>
 
 <button on:click={handleClick}>
-	Clicked {count} {count === 1 ? 'time' : 'times'}
+  Clicked {count}
+  {count === 1 ? "time" : "times"}
 </button>
+
+<style>
+</style>
 
 
 ```
-<!-- <Button/> -->
 
 <style>
 </style>
