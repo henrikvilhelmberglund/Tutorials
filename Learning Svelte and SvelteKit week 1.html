@@ -8,17 +8,17 @@
   <meta name="viewport" content="width=device-width" />
   <meta http-equiv="content-security-policy" content="">
 		<link href="./_app/immutable/assets/Example-de7becd2.css" rel="stylesheet">
-		<link rel="modulepreload" href="./_app/immutable/start-494a3456.js">
+		<link rel="modulepreload" href="./_app/immutable/start-26dffa49.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/index-032954cb.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/singletons-12f1369f.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons-d860aada.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/paths-6cd3a76e.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/preload-helper-b21cceae.js">
 		<link rel="modulepreload" href="./_app/immutable/components/pages/_layout.svelte-d925f601.js">
-		<link rel="modulepreload" href="./_app/immutable/modules/pages/_layout.js-38fe8489.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/_layout-9edfa5c9.js">
+		<link rel="modulepreload" href="./_app/immutable/modules/pages/_layout.js-a34bdc6b.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/_layout-afc66445.js">
 		<link rel="modulepreload" href="./_app/immutable/components/pages/_slug_/_page.svelte-99cc372c.js">
-		<link rel="modulepreload" href="./_app/immutable/modules/pages/_slug_/_page.js-2f8f139c.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/_page-d0bc370b.js">
+		<link rel="modulepreload" href="./_app/immutable/modules/pages/_slug_/_page.js-674ce421.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/_page-0be9dc3a.js">
 </head>
 
 <body>
@@ -87,9 +87,28 @@
 <p><code>$: doubled = count * 2;</code></p>
 <p><code>$:</code> means that whenever any variables to the right of the = change we rerun this statement.</p>
 <p>By default assignments in general in the top script block are reactive so </p>
+<p><code>let count = 0;</code></p>
 <p>will just work if we increment it in a function later, but for variables that depend on other variables we can use </p>
 <p><code>$:</code></p>
 <p>.</p>
+<p>Let’s try the previous example again.</p>
+<div><div class="root svelte-6kazdp"><div class="container svelte-6kazdp"><div class="example-wrapper svelte-6kazdp"><div class="example svelte-6kazdp"><button>Clicked 0 times</button>
+<p>0 doubled is 0</p></div></div>
+		<pre class="language-svelte svelte-6kazdp"><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+	<span class="token keyword">let</span> count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+	<span class="token literal-property property">$</span><span class="token operator">:</span> doubled <span class="token operator">=</span> count <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">;</span>
+
+	<span class="token keyword">function</span> <span class="token function">handleClick</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		count <span class="token operator">+=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name"><span class="token namespace">on:</span>click=</span><span class="token language-javascript"><span class="token punctuation">{</span>handleClick<span class="token punctuation">}</span></span><span class="token punctuation">></span></span>
+	Clicked <span class="token language-javascript"><span class="token punctuation">{</span>count<span class="token punctuation">}</span></span> <span class="token language-javascript"><span class="token punctuation">{</span>count <span class="token operator">===</span> <span class="token number">1</span> <span class="token operator">?</span> <span class="token string">'time'</span> <span class="token operator">:</span> <span class="token string">'times'</span><span class="token punctuation">}</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span><span class="token language-javascript"><span class="token punctuation">{</span>count<span class="token punctuation">}</span></span> doubled is <span class="token language-javascript"><span class="token punctuation">{</span>doubled<span class="token punctuation">}</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span><!-- HTML_TAG_END --></pre></div>
+</div></div>
+<p>It works! (maybe)</p>
 <p><strong>However</strong> using array methods will not update the variable because there’s no assignment, so instead of </p>
 <pre class="language-js"><!-- HTML_TAG_START --><code class="language-js"><span class="token keyword">function</span> <span class="token function">addNumber</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
   numbers<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>numbers<span class="token punctuation">.</span>length <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -194,8 +213,8 @@ I found that here:</p>
 <p>Thanks for reading!</p>
 
 
-		<script type="module" data-sveltekit-hydrate="10lnkhb">
-			import { start } from "./_app/immutable/start-494a3456.js";
+		<script type="module" data-sveltekit-hydrate="17vkeh2">
+			import { start } from "./_app/immutable/start-26dffa49.js";
 
 			start({
 				env: {},
@@ -209,7 +228,7 @@ I found that here:</p>
 					form: null
 				},
 				paths: {"base":"","assets":""},
-				target: document.querySelector('[data-sveltekit-hydrate="10lnkhb"]').parentNode,
+				target: document.querySelector('[data-sveltekit-hydrate="17vkeh2"]').parentNode,
 				trailing_slash: "never"
 			});
 		</script>
