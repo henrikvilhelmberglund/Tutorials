@@ -26,3 +26,5 @@ import Th from "./components/Th.svelte";
 export { Th };
 import Td from "./components/Td.svelte";
 export { Td };
+import Strong from "./components/Strong.svelte";
+export { Strong };

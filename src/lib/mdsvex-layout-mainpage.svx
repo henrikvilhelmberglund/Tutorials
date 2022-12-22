@@ -15,6 +15,7 @@
     Table,
     Th,
     Td,
+    Strong,
   } from "$lib/components.js";
 
   export {
@@ -32,6 +33,7 @@
     Table as table,
     Th as th,
     Td as td,
+    Strong as strong,
   };
 </script>
 

@@ -23,6 +23,7 @@ layout: mainpage
     Table,
     Th,
     Td,
+    Strong,
   } from "$lib/components.js";
 </script>
 
