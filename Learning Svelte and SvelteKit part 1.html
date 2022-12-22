@@ -7,21 +7,21 @@
   <link rel="stylesheet" href="/Tutorials/prism-vsc-dark-plus.css">
   <meta name="viewport" content="width=device-width" />
   <meta http-equiv="content-security-policy" content="">
-		<link href="/Tutorials/_app/immutable/assets/_layout-4ec3e60b.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/_layout-6f20c0c6.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/Blockquote-4571d5f1.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/Learning Svelte and SvelteKit part 1-de7becd2.css" rel="stylesheet">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/start-ba6fa9f3.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/start-f475ef7b.js">
 		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/index-fc701e62.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/singletons-61092d1d.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/singletons-58ec0ac1.js">
 		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/paths-6cd3a76e.js">
 		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/preload-helper-b21cceae.js">
 		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/_layout.svelte-de671001.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/modules/pages/_layout.js-0b461af3.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/modules/pages/_layout.js-c256ce39.js">
 		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/dynamic-import-helper-f6190917.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/_layout-bc4ca5cb.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/_layout-e4b803e0.js">
 		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/_slug_/_page.svelte-7b90a23f.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/modules/pages/_slug_/_page.js-66234f1e.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/_page-971b4f6a.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/modules/pages/_slug_/_page.js-e35a0fb3.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/_page-c1440d32.js">
 </head>
 
 <body>
@@ -118,7 +118,7 @@
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span><span class="token language-javascript"><span class="token punctuation">{</span>count<span class="token punctuation">}</span></span> doubled is <span class="token language-javascript"><span class="token punctuation">{</span>doubled<span class="token punctuation">}</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span><!-- HTML_TAG_END --></pre></div>
 </div></div>
 <p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">It works! (maybe)</p>
-<p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4"><strong>However</strong> using array methods will not update the variable because there’s no assignment, so instead of </p>
+<p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4"><strong class="text-pink-500 font-extrabold">However</strong> using array methods will not update the variable because there’s no assignment, so instead of </p>
 <pre class="language-js"><!-- HTML_TAG_START --><code class="language-js"><span class="token keyword">function</span> <span class="token function">addNumber</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
   numbers<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>numbers<span class="token punctuation">.</span>length <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   numbers <span class="token operator">=</span> numbers<span class="token punctuation">;</span>
@@ -172,14 +172,14 @@
 <h2 class="text-4xl font-medium font-sans text-pink-500 mt-8">What is SvelteKit?</h2>
 <p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">That’s a good question and probably one that I can’t answer too well, I just knows that it’s a framework you use in Svelte if you want a website with multiple pages.</p>
 <h3 class="">Routing</h3>
-<p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">You have a \src\routes\ folder which contains <strong>routes</strong> which I guess is a fancy word for pages. For each route you need a file <strong>+page.svelte</strong> which will basically turn into the index.html file. The + sign before page.svelte signifies that it’s a route that SvelteKit will magically make work somehow.</p>
+<p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">You have a \src\routes\ folder which contains <strong class="text-pink-500 font-extrabold">routes</strong> which I guess is a fancy word for pages. For each route you need a file <strong class="text-pink-500 font-extrabold">+page.svelte</strong> which will basically turn into the index.html file. The + sign before page.svelte signifies that it’s a route that SvelteKit will magically make work somehow.</p>
 <p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">so \src\routes\+page.svelte will be your</p>
 <p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">yoursite.com</p>
 <p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">index.html page and if you add a folder \src\routes\about\ with another +page.svelte file </p>
 <p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">yoursite.com/about</p>
 <p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">will use the \src\routes\about\+page.svelte file.</p>
-<p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">So <strong>folders</strong> determine the routing which seemed pretty easy to understand for me.</p>
-<p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">You can also have a file called <strong>+layout.svelte</strong> which can be used for for example navigation. If you have a <strong>+layout.svelte</strong> file in \src\routes\ it will show in all child routes automatically so you don’t need to add your navigation to each <strong>+page.svelte</strong> file. </p>
+<p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">So <strong class="text-pink-500 font-extrabold">folders</strong> determine the routing which seemed pretty easy to understand for me.</p>
+<p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">You can also have a file called <strong class="text-pink-500 font-extrabold">+layout.svelte</strong> which can be used for for example navigation. If you have a <strong class="text-pink-500 font-extrabold">+layout.svelte</strong> file in \src\routes\ it will show in all child routes automatically so you don’t need to add your navigation to each <strong class="text-pink-500 font-extrabold">+page.svelte</strong> file. </p>
 <p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">Very handy!</p>
 <p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">You can also have random other files without the + sign which won’t affect the routing, for example your Svelte components or stores.js or whatever.</p>
 <h3 class="">Pitfalls (here is the tutorial part)</h3>
@@ -222,8 +222,8 @@ I found that here:</p>
 <p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">Thanks for reading!</p></section></article>
 
 
-		<script type="module" data-sveltekit-hydrate="1lemdp6">
-			import { start } from "/Tutorials/_app/immutable/start-ba6fa9f3.js";
+		<script type="module" data-sveltekit-hydrate="13cf3bw">
+			import { start } from "/Tutorials/_app/immutable/start-f475ef7b.js";
 
 			start({
 				env: {},
@@ -237,7 +237,7 @@ I found that here:</p>
 					form: null
 				},
 				paths: {"base":"/Tutorials","assets":"/Tutorials"},
-				target: document.querySelector('[data-sveltekit-hydrate="1lemdp6"]').parentNode,
+				target: document.querySelector('[data-sveltekit-hydrate="13cf3bw"]').parentNode,
 				trailing_slash: "never"
 			});
 		</script>

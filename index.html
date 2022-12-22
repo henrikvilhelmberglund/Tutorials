@@ -7,18 +7,18 @@
   <link rel="stylesheet" href="/Tutorials/prism-vsc-dark-plus.css">
   <meta name="viewport" content="width=device-width" />
   <meta http-equiv="content-security-policy" content="">
-		<link href="/Tutorials/_app/immutable/assets/_layout-4ec3e60b.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/_layout-6f20c0c6.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/Blockquote-4571d5f1.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/Learning Svelte and SvelteKit part 1-de7becd2.css" rel="stylesheet">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/start-ba6fa9f3.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/start-f475ef7b.js">
 		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/index-fc701e62.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/singletons-61092d1d.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/singletons-58ec0ac1.js">
 		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/paths-6cd3a76e.js">
 		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/preload-helper-b21cceae.js">
 		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/_layout.svelte-de671001.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/modules/pages/_layout.js-0b461af3.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/modules/pages/_layout.js-c256ce39.js">
 		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/dynamic-import-helper-f6190917.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/_layout-bc4ca5cb.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/_layout-e4b803e0.js">
 		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/_page.svx-c535541b.js">
 </head>
 
@@ -47,7 +47,7 @@
 <li class="text-1xl font-medium font-sans text-pink-600 list-disc list-inside">Click Code Runner and Install</li>
 <li class="text-1xl font-medium font-sans text-pink-600 list-disc list-inside">Create a new .js file and copy paste <code>console.log(&quot;Success!&quot;);</code></li>
 <li class="text-1xl font-medium font-sans text-pink-600 list-disc list-inside">Press Ctrl+Alt+n to run the code and show the output in the bottom panel Output tab</li>
-<li class="text-1xl font-medium font-sans text-pink-600 list-disc list-inside"><strong>Success!</strong> (hopefully)</li></ol>
+<li class="text-1xl font-medium font-sans text-pink-600 list-disc list-inside"><strong class="text-pink-500 font-extrabold">Success!</strong> (hopefully)</li></ol>
 <p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">Tip 1: You can change the shortcut key in Ctrl+k Ctrl+s (search for Run Code)</p>
 <p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">Tip 2: In case you have a web project using document and so on but still would like to run the code using Node you can wrap the code in an if statement:</p>
 <pre class="language-js"><!-- HTML_TAG_START --><code class="language-js"><span class="token comment">//from https://flaviocopes.com/error-document-not-defined/</span>
@@ -195,18 +195,20 @@ For more information on debugging itself see <a class="text-1xl font-medium font
     <div class="flex justify-center items-center gap-1"><p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">Posted on 2022-12-22 by</p>
       <a class="text-1xl font-medium font-sans text-pink-600 underline" href="http://github.com/henrikvilhelmberglund/">henrikvilhelmberglund</a></div></section>
   <section class="bg-slate-100 rounded-xl flex flex-col justify-center items-center w-5/6 p-4 [&>*]:p-2"><h1 class="text-6xl font-medium font-sans text-pink-600">Command Center in VSCode</h1>
-<p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">Command Center is a feature in VSCode that turns the top text bar into a clickable bar with the following features:</p>
+<p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">Command Center is a feature in VSCode that turns the top text bar into a <strong class="text-pink-500 font-extrabold">clickable bar</strong> with some cool features.</p>
+<p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">To enable it go to <strong class="text-pink-500 font-extrabold">Settings</strong> - search for <strong class="text-pink-500 font-extrabold">Command Center</strong> and tick the checkbox. After that you get a bar at the top with the name of your project that you can click to use the features.</p>
+<p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">My recommendation is to also add a shortcut key for <strong class="text-pink-500 font-extrabold">Launch Command Center</strong></p>
 <h2 class="text-4xl font-medium font-sans text-pink-500 mt-8">Search</h2>
-<p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">Type something in the field and you’ll get files from your workspace as search results. I use this a lot when using SvelteKit, just search for + and you’ll get all the <code>+page.svelte</code> routes (after excluding .js and so on in settings). Very handy when you have lots of files!</p>
+<p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4"><strong class="text-pink-500 font-extrabold">Type something in the field</strong> and you’ll get files from your workspace as search results. I use this a lot when using SvelteKit, just search for + and you’ll get <strong class="text-pink-500 font-extrabold">all the +page.svelte routes</strong> (after excluding .js and so on in settings). Very handy when you have lots of files!</p>
 <h2 class="text-4xl font-medium font-sans text-pink-500 mt-8">Go to symbol in editor</h2>
-<p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">By typing <code>@</code> you can get a list of all of the symbols (functions, variables, properties and so on) in your file. Very useful if you want to find a certain CSS class for example. </p>
+<p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">By typing <strong class="text-pink-500 font-extrabold">@</strong> you can get a list of all of the symbols (<strong class="text-pink-500 font-extrabold">functions, variables, properties</strong> and so on) in your file. Very useful if you want to find a <strong class="text-pink-500 font-extrabold">certain CSS class</strong> for example. </p>
 <p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">…actually, if it’s a CSS class just get the <a class="text-1xl font-medium font-sans text-pink-600 underline" href="https://marketplace.visualstudio.com/items?itemName=pucelle.vscode-css-navigation">CSS Navigation extension</a> instead and peek the definition. (protip)</p>
-<p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">If you want to sort the symbols by type just type <code>@:</code></p>
+<p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">If you want to <strong class="text-pink-500 font-extrabold">sort the symbols by type</strong> just type <strong class="text-pink-500 font-extrabold">@:</strong></p>
 <h2 class="text-4xl font-medium font-sans text-pink-500 mt-8">Tasks</h2>
 <blockquote class="svelte-18vnj9c"><p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">…what’s a task? </p>
 </blockquote>
-<p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">Tasks are… tasks. For example the scripts in your package.json. If you don’t use something like npm tasks are probably not that useful.</p>
-<p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">By typing <code>task (task name here)</code> you can run these from the Command Center. Here’s a spicy example of a custom (overwritten) task:</p>
+<p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">Tasks are… tasks. For example the scripts in your package.json. If you don’t use something like <strong class="text-pink-500 font-extrabold">npm</strong> tasks are probably not that useful.</p>
+<p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">By typing <strong class="text-pink-500 font-extrabold">task (task name here)</strong> you can run these from the Command Center. Here’s a spicy example of a custom (overwritten) task:</p>
 <pre class="language-json"><!-- HTML_TAG_START --><code class="language-json">  <span class="token comment">//tasks.json</span>
 <span class="token punctuation">&#123;</span>
   <span class="token property">"version"</span><span class="token operator">:</span> <span class="token string">"2.0.0"</span><span class="token punctuation">,</span>
@@ -223,11 +225,11 @@ For more information on debugging itself see <a class="text-1xl font-medium font
     <span class="token punctuation">&#125;</span>
   <span class="token punctuation">]</span>
 <span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
-<p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">This is the “dev” task I made to find out what tasks actually do. I got the base config file tasks.json by executing the command Configure Task and choosing <code>npm:dev</code>. I renamed it to just <code>dev</code> because that way I know it’s my custom task. I also added </p>
+<p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">This is the “dev” task I made to find out what tasks actually do. I got the base config file tasks.json by executing the command <strong class="text-pink-500 font-extrabold">Configure Task and choosing npm:dev</strong>. I renamed it to just <strong class="text-pink-500 font-extrabold">dev</strong> because that way I know it’s my custom task. I also added </p>
 <pre class="language-json"><!-- HTML_TAG_START --><code class="language-json"><span class="token property">"presentation"</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
         <span class="token property">"reveal"</span><span class="token operator">:</span> <span class="token string">"never"</span>
       <span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
-<p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">to make it launch silently. So instead of</p>
+<p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">to make it <strong class="text-pink-500 font-extrabold">launch silently</strong>. So instead of</p>
 <ul class="bg-black bg-slate-300 rounded-xl self-start ml-8"><li class="text-1xl font-medium font-sans text-pink-600 list-disc list-inside">Open the terminal</li>
 <li class="text-1xl font-medium font-sans text-pink-600 list-disc list-inside">run <code>npm run dev</code></li>
 <li class="text-1xl font-medium font-sans text-pink-600 list-disc list-inside">close the terminal</li></ul>
@@ -246,7 +248,7 @@ For more information on debugging itself see <a class="text-1xl font-medium font
 <li class="text-1xl font-medium font-sans text-pink-600 list-disc list-inside">?debug to start debugging</li>
 <li class="text-1xl font-medium font-sans text-pink-600 list-disc list-inside">?edt to view a list of all open files</li></ul>
 <p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">And probably more. But honestly the top 2 alone make it good enough.</p>
-<p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">Don’t forget to set a shortcut key (or just click the top) and enjoy the Command Center!</p></section></article><div class="p-12 bg-red-900 [&>*]:p-4"><p class="text-red-300 text-6xl">Warning!</p>
+<p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">Don’t forget to <strong class="text-pink-500 font-extrabold">set a shortcut key</strong> (or just click the top) and <strong class="text-pink-500 font-extrabold">enjoy the Command Center</strong>!</p></section></article><div class="p-12 bg-red-900 [&>*]:p-4"><p class="text-red-300 text-6xl">Warning!</p>
   <p class="text-red-100 text-3xl">under construction :)</p></div>
 <article class="flex flex-col justify-center items-center m-12"><section class="from-slate-300 bg-gradient-to-b to-slate-100 rounded-xl p-4 m-4"><div class="flex flex-col justify-center items-center"><h2 class="text-4xl font-medium font-sans text-pink-500 mt-8">Code Runner in VSCode</h2></div>
     <div class="flex justify-center items-center gap-1"><p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">Posted on 2022-10-05 by</p>
@@ -324,7 +326,7 @@ For more information on debugging itself see <a class="text-1xl font-medium font
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span><span class="token language-javascript"><span class="token punctuation">{</span>count<span class="token punctuation">}</span></span> doubled is <span class="token language-javascript"><span class="token punctuation">{</span>doubled<span class="token punctuation">}</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span><!-- HTML_TAG_END --></pre></div>
 </div></div>
 <p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">It works! (maybe)</p>
-<p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4"><strong>However</strong> using array methods will not update the variable because there’s no assignment, so instead of </p>
+<p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4"><strong class="text-pink-500 font-extrabold">However</strong> using array methods will not update the variable because there’s no assignment, so instead of </p>
 <pre class="language-js"><!-- HTML_TAG_START --><code class="language-js"><span class="token keyword">function</span> <span class="token function">addNumber</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
   numbers<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>numbers<span class="token punctuation">.</span>length <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   numbers <span class="token operator">=</span> numbers<span class="token punctuation">;</span>
@@ -378,14 +380,14 @@ For more information on debugging itself see <a class="text-1xl font-medium font
 <h2 class="text-4xl font-medium font-sans text-pink-500 mt-8">What is SvelteKit?</h2>
 <p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">That’s a good question and probably one that I can’t answer too well, I just knows that it’s a framework you use in Svelte if you want a website with multiple pages.</p>
 <h3 class="">Routing</h3>
-<p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">You have a \src\routes\ folder which contains <strong>routes</strong> which I guess is a fancy word for pages. For each route you need a file <strong>+page.svelte</strong> which will basically turn into the index.html file. The + sign before page.svelte signifies that it’s a route that SvelteKit will magically make work somehow.</p>
+<p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">You have a \src\routes\ folder which contains <strong class="text-pink-500 font-extrabold">routes</strong> which I guess is a fancy word for pages. For each route you need a file <strong class="text-pink-500 font-extrabold">+page.svelte</strong> which will basically turn into the index.html file. The + sign before page.svelte signifies that it’s a route that SvelteKit will magically make work somehow.</p>
 <p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">so \src\routes\+page.svelte will be your</p>
 <p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">yoursite.com</p>
 <p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">index.html page and if you add a folder \src\routes\about\ with another +page.svelte file </p>
 <p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">yoursite.com/about</p>
 <p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">will use the \src\routes\about\+page.svelte file.</p>
-<p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">So <strong>folders</strong> determine the routing which seemed pretty easy to understand for me.</p>
-<p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">You can also have a file called <strong>+layout.svelte</strong> which can be used for for example navigation. If you have a <strong>+layout.svelte</strong> file in \src\routes\ it will show in all child routes automatically so you don’t need to add your navigation to each <strong>+page.svelte</strong> file. </p>
+<p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">So <strong class="text-pink-500 font-extrabold">folders</strong> determine the routing which seemed pretty easy to understand for me.</p>
+<p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">You can also have a file called <strong class="text-pink-500 font-extrabold">+layout.svelte</strong> which can be used for for example navigation. If you have a <strong class="text-pink-500 font-extrabold">+layout.svelte</strong> file in \src\routes\ it will show in all child routes automatically so you don’t need to add your navigation to each <strong class="text-pink-500 font-extrabold">+page.svelte</strong> file. </p>
 <p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">Very handy!</p>
 <p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">You can also have random other files without the + sign which won’t affect the routing, for example your Svelte components or stores.js or whatever.</p>
 <h3 class="">Pitfalls (here is the tutorial part)</h3>
@@ -428,8 +430,8 @@ I found that here:</p>
 <p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">Thanks for reading!</p></section></article>
 
 
-		<script type="module" data-sveltekit-hydrate="1ybu61j">
-			import { start } from "/Tutorials/_app/immutable/start-ba6fa9f3.js";
+		<script type="module" data-sveltekit-hydrate="7pncz5">
+			import { start } from "/Tutorials/_app/immutable/start-f475ef7b.js";
 
 			start({
 				env: {},
@@ -443,7 +445,7 @@ I found that here:</p>
 					form: null
 				},
 				paths: {"base":"/Tutorials","assets":"/Tutorials"},
-				target: document.querySelector('[data-sveltekit-hydrate="1ybu61j"]').parentNode,
+				target: document.querySelector('[data-sveltekit-hydrate="7pncz5"]').parentNode,
 				trailing_slash: "never"
 			});
 		</script>

@@ -1,11 +1,11 @@
 {
   "node_modules/@sveltejs/kit/src/runtime/client/start.js": {
-    "file": "_app/immutable/start-ba6fa9f3.js",
+    "file": "_app/immutable/start-f475ef7b.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/client/start.js",
     "isEntry": true,
     "imports": [
       "_index-fc701e62.js",
-      "_singletons-61092d1d.js",
+      "_singletons-58ec0ac1.js",
       "_preload-helper-b21cceae.js",
       "_paths-6cd3a76e.js"
     ],
@@ -25,16 +25,16 @@
       "_paths-6cd3a76e.js"
     ],
     "css": [
-      "_app/immutable/assets/_layout-4ec3e60b.css"
+      "_app/immutable/assets/_layout-6f20c0c6.css"
     ]
   },
   "node_modules/@sveltejs/kit/src/runtime/components/error.svelte": {
-    "file": "_app/immutable/components/error.svelte-0760c493.js",
+    "file": "_app/immutable/components/error.svelte-d33078ad.js",
     "src": "node_modules/@sveltejs/kit/src/runtime/components/error.svelte",
     "isEntry": true,
     "imports": [
       "_index-fc701e62.js",
-      "_singletons-61092d1d.js"
+      "_singletons-58ec0ac1.js"
     ]
   },
   "src/routes/+page.svx": {
@@ -57,27 +57,27 @@
     ]
   },
   "src/routes/+layout.js": {
-    "file": "_app/immutable/modules/pages/_layout.js-0b461af3.js",
+    "file": "_app/immutable/modules/pages/_layout.js-c256ce39.js",
     "src": "src/routes/+layout.js",
     "isEntry": true,
     "imports": [
       "_preload-helper-b21cceae.js",
       "_dynamic-import-helper-f6190917.js",
-      "__layout-bc4ca5cb.js"
+      "__layout-e4b803e0.js"
     ]
   },
   "src/routes/[slug]/+page.js": {
-    "file": "_app/immutable/modules/pages/_slug_/_page.js-66234f1e.js",
+    "file": "_app/immutable/modules/pages/_slug_/_page.js-e35a0fb3.js",
     "src": "src/routes/[slug]/+page.js",
     "isEntry": true,
     "imports": [
       "_preload-helper-b21cceae.js",
       "_dynamic-import-helper-f6190917.js",
-      "__page-971b4f6a.js"
+      "__page-c1440d32.js"
     ]
   },
-  "_singletons-61092d1d.js": {
-    "file": "_app/immutable/chunks/singletons-61092d1d.js",
+  "_singletons-58ec0ac1.js": {
+    "file": "_app/immutable/chunks/singletons-58ec0ac1.js",
     "imports": [
       "_index-fc701e62.js",
       "_paths-6cd3a76e.js"
@@ -92,8 +92,8 @@
   "_preload-helper-b21cceae.js": {
     "file": "_app/immutable/chunks/preload-helper-b21cceae.js"
   },
-  "__layout-bc4ca5cb.js": {
-    "file": "_app/immutable/chunks/_layout-bc4ca5cb.js",
+  "__layout-e4b803e0.js": {
+    "file": "_app/immutable/chunks/_layout-e4b803e0.js",
     "imports": [
       "_preload-helper-b21cceae.js",
       "_dynamic-import-helper-f6190917.js"
@@ -111,8 +111,8 @@
   "_dynamic-import-helper-f6190917.js": {
     "file": "_app/immutable/chunks/dynamic-import-helper-f6190917.js"
   },
-  "__page-971b4f6a.js": {
-    "file": "_app/immutable/chunks/_page-971b4f6a.js",
+  "__page-c1440d32.js": {
+    "file": "_app/immutable/chunks/_page-c1440d32.js",
     "imports": [
       "_preload-helper-b21cceae.js",
       "_dynamic-import-helper-f6190917.js"
@@ -128,16 +128,16 @@
     ]
   },
   ".svelte-kit/generated/nodes/0.js": {
-    "file": "_app/immutable/chunks/0-dcb53760.js",
+    "file": "_app/immutable/chunks/0-0cab5986.js",
     "src": ".svelte-kit/generated/nodes/0.js",
     "isDynamicEntry": true,
     "imports": [
-      "__layout-bc4ca5cb.js",
+      "__layout-e4b803e0.js",
       "src/routes/+layout.svelte"
     ]
   },
   ".svelte-kit/generated/nodes/1.js": {
-    "file": "_app/immutable/chunks/1-7849092f.js",
+    "file": "_app/immutable/chunks/1-8edd9877.js",
     "src": ".svelte-kit/generated/nodes/1.js",
     "isDynamicEntry": true,
     "imports": [
@@ -153,22 +153,23 @@
     ]
   },
   ".svelte-kit/generated/nodes/3.js": {
-    "file": "_app/immutable/chunks/3-8b362fa6.js",
+    "file": "_app/immutable/chunks/3-1348d728.js",
     "src": ".svelte-kit/generated/nodes/3.js",
     "isDynamicEntry": true,
     "imports": [
-      "__page-971b4f6a.js",
+      "__page-c1440d32.js",
       "src/routes/[slug]/+page.svelte"
     ]
   },
   "src/lib/md/000 - Code Runner in VSCode.svx": {
-    "file": "_app/immutable/chunks/000 - Code Runner in VSCode-4196d43f.js",
+    "file": "_app/immutable/chunks/000 - Code Runner in VSCode-300191ae.js",
     "src": "src/lib/md/000 - Code Runner in VSCode.svx",
     "isDynamicEntry": true,
     "imports": [
       "_index-fc701e62.js",
       "_mdsvex-layout-notes-bdb6c861.js",
-      "_H5-f683e6e8.js"
+      "_H5-f683e6e8.js",
+      "_Strong-fa97584c.js"
     ]
   },
   "_mdsvex-layout-notes-bdb6c861.js": {
@@ -182,6 +183,12 @@
   },
   "_H5-f683e6e8.js": {
     "file": "_app/immutable/chunks/H5-f683e6e8.js",
+    "imports": [
+      "_index-fc701e62.js"
+    ]
+  },
+  "_Strong-fa97584c.js": {
+    "file": "_app/immutable/chunks/Strong-fa97584c.js",
     "imports": [
       "_index-fc701e62.js"
     ]
@@ -249,34 +256,36 @@
     ]
   },
   "src/lib/md/005 - Command Center in VSCode.svx": {
-    "file": "_app/immutable/chunks/005 - Command Center in VSCode-197cc3f7.js",
+    "file": "_app/immutable/chunks/005 - Command Center in VSCode-b1cdbb66.js",
     "src": "src/lib/md/005 - Command Center in VSCode.svx",
     "isDynamicEntry": true,
     "imports": [
       "_index-fc701e62.js",
       "_mdsvex-layout-notes-bdb6c861.js",
-      "_Ul-2b27a338.js"
+      "_Ul-2b27a338.js",
+      "_Strong-fa97584c.js"
     ],
     "css": [
       "_app/immutable/assets/Blockquote-4571d5f1.css"
     ]
   },
   "src/lib/md/Learning Svelte and SvelteKit part 1.svx": {
-    "file": "_app/immutable/chunks/Learning Svelte and SvelteKit part 1-7c1f6409.js",
+    "file": "_app/immutable/chunks/Learning Svelte and SvelteKit part 1-67055ea4.js",
     "src": "src/lib/md/Learning Svelte and SvelteKit part 1.svx",
     "isDynamicEntry": true,
     "imports": [
       "_index-fc701e62.js",
       "_mdsvex-layout-notes-bdb6c861.js",
       "_H3-68fd3b6f.js",
-      "_Ul-2b27a338.js"
+      "_Ul-2b27a338.js",
+      "_Strong-fa97584c.js"
     ],
     "css": [
       "_app/immutable/assets/Learning Svelte and SvelteKit part 1-de7becd2.css"
     ]
   },
   "src/routes/+layout.css": {
-    "file": "_app/immutable/assets/_layout-4ec3e60b.css",
+    "file": "_app/immutable/assets/_layout-6f20c0c6.css",
     "src": "src/routes/+layout.css"
   },
   "Blockquote.css": {

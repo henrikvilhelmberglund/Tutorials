@@ -7,21 +7,21 @@
   <link rel="stylesheet" href="/Tutorials/prism-vsc-dark-plus.css">
   <meta name="viewport" content="width=device-width" />
   <meta http-equiv="content-security-policy" content="">
-		<link href="/Tutorials/_app/immutable/assets/_layout-4ec3e60b.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/_layout-6f20c0c6.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/Blockquote-4571d5f1.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/Learning Svelte and SvelteKit part 1-de7becd2.css" rel="stylesheet">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/start-ba6fa9f3.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/start-f475ef7b.js">
 		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/index-fc701e62.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/singletons-61092d1d.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/singletons-58ec0ac1.js">
 		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/paths-6cd3a76e.js">
 		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/preload-helper-b21cceae.js">
 		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/_layout.svelte-de671001.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/modules/pages/_layout.js-0b461af3.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/modules/pages/_layout.js-c256ce39.js">
 		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/dynamic-import-helper-f6190917.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/_layout-bc4ca5cb.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/_layout-e4b803e0.js">
 		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/_slug_/_page.svelte-7b90a23f.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/modules/pages/_slug_/_page.js-66234f1e.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/_page-971b4f6a.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/modules/pages/_slug_/_page.js-e35a0fb3.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/_page-c1440d32.js">
 </head>
 
 <body>
@@ -46,18 +46,20 @@
     <div class="flex justify-center items-center gap-1"><p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">Posted on 2022-12-22 by</p>
       <a class="text-1xl font-medium font-sans text-pink-600 underline" href="http://github.com/henrikvilhelmberglund/">henrikvilhelmberglund</a></div></section>
   <section class="bg-slate-100 rounded-xl flex flex-col justify-center items-center w-5/6 p-4 [&>*]:p-2"><h1 class="text-6xl font-medium font-sans text-pink-600">Command Center in VSCode</h1>
-<p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">Command Center is a feature in VSCode that turns the top text bar into a clickable bar with the following features:</p>
+<p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">Command Center is a feature in VSCode that turns the top text bar into a <strong class="text-pink-500 font-extrabold">clickable bar</strong> with some cool features.</p>
+<p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">To enable it go to <strong class="text-pink-500 font-extrabold">Settings</strong> - search for <strong class="text-pink-500 font-extrabold">Command Center</strong> and tick the checkbox. After that you get a bar at the top with the name of your project that you can click to use the features.</p>
+<p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">My recommendation is to also add a shortcut key for <strong class="text-pink-500 font-extrabold">Launch Command Center</strong></p>
 <h2 class="text-4xl font-medium font-sans text-pink-500 mt-8">Search</h2>
-<p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">Type something in the field and you’ll get files from your workspace as search results. I use this a lot when using SvelteKit, just search for + and you’ll get all the <code>+page.svelte</code> routes (after excluding .js and so on in settings). Very handy when you have lots of files!</p>
+<p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4"><strong class="text-pink-500 font-extrabold">Type something in the field</strong> and you’ll get files from your workspace as search results. I use this a lot when using SvelteKit, just search for + and you’ll get <strong class="text-pink-500 font-extrabold">all the +page.svelte routes</strong> (after excluding .js and so on in settings). Very handy when you have lots of files!</p>
 <h2 class="text-4xl font-medium font-sans text-pink-500 mt-8">Go to symbol in editor</h2>
-<p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">By typing <code>@</code> you can get a list of all of the symbols (functions, variables, properties and so on) in your file. Very useful if you want to find a certain CSS class for example. </p>
+<p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">By typing <strong class="text-pink-500 font-extrabold">@</strong> you can get a list of all of the symbols (<strong class="text-pink-500 font-extrabold">functions, variables, properties</strong> and so on) in your file. Very useful if you want to find a <strong class="text-pink-500 font-extrabold">certain CSS class</strong> for example. </p>
 <p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">…actually, if it’s a CSS class just get the <a class="text-1xl font-medium font-sans text-pink-600 underline" href="https://marketplace.visualstudio.com/items?itemName=pucelle.vscode-css-navigation">CSS Navigation extension</a> instead and peek the definition. (protip)</p>
-<p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">If you want to sort the symbols by type just type <code>@:</code></p>
+<p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">If you want to <strong class="text-pink-500 font-extrabold">sort the symbols by type</strong> just type <strong class="text-pink-500 font-extrabold">@:</strong></p>
 <h2 class="text-4xl font-medium font-sans text-pink-500 mt-8">Tasks</h2>
 <blockquote class="svelte-18vnj9c"><p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">…what’s a task? </p>
 </blockquote>
-<p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">Tasks are… tasks. For example the scripts in your package.json. If you don’t use something like npm tasks are probably not that useful.</p>
-<p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">By typing <code>task (task name here)</code> you can run these from the Command Center. Here’s a spicy example of a custom (overwritten) task:</p>
+<p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">Tasks are… tasks. For example the scripts in your package.json. If you don’t use something like <strong class="text-pink-500 font-extrabold">npm</strong> tasks are probably not that useful.</p>
+<p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">By typing <strong class="text-pink-500 font-extrabold">task (task name here)</strong> you can run these from the Command Center. Here’s a spicy example of a custom (overwritten) task:</p>
 <pre class="language-json"><!-- HTML_TAG_START --><code class="language-json">  <span class="token comment">//tasks.json</span>
 <span class="token punctuation">&#123;</span>
   <span class="token property">"version"</span><span class="token operator">:</span> <span class="token string">"2.0.0"</span><span class="token punctuation">,</span>
@@ -74,11 +76,11 @@
     <span class="token punctuation">&#125;</span>
   <span class="token punctuation">]</span>
 <span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
-<p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">This is the “dev” task I made to find out what tasks actually do. I got the base config file tasks.json by executing the command Configure Task and choosing <code>npm:dev</code>. I renamed it to just <code>dev</code> because that way I know it’s my custom task. I also added </p>
+<p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">This is the “dev” task I made to find out what tasks actually do. I got the base config file tasks.json by executing the command <strong class="text-pink-500 font-extrabold">Configure Task and choosing npm:dev</strong>. I renamed it to just <strong class="text-pink-500 font-extrabold">dev</strong> because that way I know it’s my custom task. I also added </p>
 <pre class="language-json"><!-- HTML_TAG_START --><code class="language-json"><span class="token property">"presentation"</span><span class="token operator">:</span> <span class="token punctuation">&#123;</span>
         <span class="token property">"reveal"</span><span class="token operator">:</span> <span class="token string">"never"</span>
       <span class="token punctuation">&#125;</span></code><!-- HTML_TAG_END --></pre>
-<p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">to make it launch silently. So instead of</p>
+<p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">to make it <strong class="text-pink-500 font-extrabold">launch silently</strong>. So instead of</p>
 <ul class="bg-black bg-slate-300 rounded-xl self-start ml-8"><li class="text-1xl font-medium font-sans text-pink-600 list-disc list-inside">Open the terminal</li>
 <li class="text-1xl font-medium font-sans text-pink-600 list-disc list-inside">run <code>npm run dev</code></li>
 <li class="text-1xl font-medium font-sans text-pink-600 list-disc list-inside">close the terminal</li></ul>
@@ -97,11 +99,11 @@
 <li class="text-1xl font-medium font-sans text-pink-600 list-disc list-inside">?debug to start debugging</li>
 <li class="text-1xl font-medium font-sans text-pink-600 list-disc list-inside">?edt to view a list of all open files</li></ul>
 <p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">And probably more. But honestly the top 2 alone make it good enough.</p>
-<p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">Don’t forget to set a shortcut key (or just click the top) and enjoy the Command Center!</p></section></article>
+<p class="text-1xl font-medium font-sans text-blue-600 self-start pl-4">Don’t forget to <strong class="text-pink-500 font-extrabold">set a shortcut key</strong> (or just click the top) and <strong class="text-pink-500 font-extrabold">enjoy the Command Center</strong>!</p></section></article>
 
 
-		<script type="module" data-sveltekit-hydrate="gsqz11">
-			import { start } from "/Tutorials/_app/immutable/start-ba6fa9f3.js";
+		<script type="module" data-sveltekit-hydrate="irg67n">
+			import { start } from "/Tutorials/_app/immutable/start-f475ef7b.js";
 
 			start({
 				env: {},
@@ -115,7 +117,7 @@
 					form: null
 				},
 				paths: {"base":"/Tutorials","assets":"/Tutorials"},
-				target: document.querySelector('[data-sveltekit-hydrate="gsqz11"]').parentNode,
+				target: document.querySelector('[data-sveltekit-hydrate="irg67n"]').parentNode,
 				trailing_slash: "never"
 			});
 		</script>
