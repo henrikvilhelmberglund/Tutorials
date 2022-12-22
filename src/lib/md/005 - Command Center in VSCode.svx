@@ -1,0 +1,85 @@
+---
+title: Command Center in VSCode
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2022-12-22
+layout: notes
+---
+# Command Center in VSCode
+
+Command Center is a feature in VSCode that turns the top text bar into a clickable bar with the following features:
+
+## Search
+
+Type something in the field and you'll get files from your workspace as search results. I use this a lot when using SvelteKit, just search for + and you'll get all the `+page.svelte` routes (after excluding .js and so on in settings). Very handy when you have lots of files!
+
+## Go to symbol in editor
+
+By typing `@` you can get a list of all of the symbols (functions, variables, properties and so on) in your file. Very useful if you want to find a certain CSS class for example. 
+
+...actually, if it's a CSS class just get the [CSS Navigation extension](https://marketplace.visualstudio.com/items?itemName=pucelle.vscode-css-navigation) instead and peek the definition. (protip)
+
+If you want to sort the symbols by type just type `@:`
+
+## Tasks
+> ...what's a task? 
+
+Tasks are... tasks. For example the scripts in your package.json. If you don't use something like npm tasks are probably not that useful.
+
+By typing `task (task name here)` you can run these from the Command Center. Here's a spicy example of a custom (overwritten) task:
+
+```json
+  //tasks.json
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "npm",
+      "script": "dev",
+      "problemMatcher": [],
+      "label": "dev",
+      "detail": "vite dev",
+      "presentation": {
+        "reveal": "never"
+      }
+    }
+  ]
+}
+```
+
+This is the "dev" task I made to find out what tasks actually do. I got the base config file tasks.json by executing the command Configure Task and choosing `npm:dev`. I renamed it to just `dev` because that way I know it's my custom task. I also added 
+```json
+"presentation": {
+        "reveal": "never"
+      }
+```
+
+to make it launch silently. So instead of
+- Open the terminal
+- run `npm run dev`
+- close the terminal
+
+I can do this:
+
+- Click the Command Center at the top of the screen
+- Click tasks
+- Click dev
+
+Easy peasy! Or, the keyboard version:
+
+- Press your shortcut for Launch Command Center (you need to add this in keyboard shortcuts)
+- Type `task dev` and press enter
+😁
+
+## Other stuff
+
+There are a few other things you can do:
+
+- : to go to a certain line
+- `>` to open the command palette
+- ?debug to start debugging
+- ?edt to view a list of all open files
+
+And probably more. But honestly the top 2 alone make it good enough.
+
+Don't forget to set a shortcut key (or just click the top) and enjoy the Command Center!
