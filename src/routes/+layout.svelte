@@ -1,12 +1,13 @@
 <script>
+  import "../app.postcss";
   export let data;
   import { base } from "$app/paths";
 </script>
 
 <nav>
-  {#if data.myMenu}
+  {#if data.myPages}
     <ul>
-      {#each data.myMenu as link}
+      {#each data.myPages as link}
         <li>
           <a href="{base}/{link.title}">{link.title}</a>
         </li>
@@ -18,4 +19,7 @@
 <slot />
 
 <style>
+  :global(body) {
+    @apply bg-slate-300;
+  }
 </style>

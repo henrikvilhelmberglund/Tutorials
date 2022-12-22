@@ -1,0 +1,35 @@
+---
+layout: mainpage
+---
+
+<script>
+  // import Notes from "./Notes.svx";
+  let list = [1, 2, 3, 4, 5];
+  export let data;
+  let items = [];
+
+  import {
+    H1,
+    H2,
+    H3,
+    H4,
+    H5,
+    H6,
+    Blockquote,
+    Li,
+    Ul,
+    P,
+    A,
+    Table,
+    Th,
+    Td,
+  } from "$lib/components.js";
+</script>
+
+{#each data.myPages as item}
+<svelte:component this={item.newbody}></svelte:component>
+{/each}
+
+<style>
+
+</style>

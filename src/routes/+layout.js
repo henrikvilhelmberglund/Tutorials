@@ -1,25 +1,27 @@
-export const prerender = true;
+// export const modules = import.meta.glob("./*.svx");
 
-const modules = import.meta.glob([
-  "/src/lib/md/**.md",
-  "/src/lib/md/learning-Svelte-and-SvelteKit/**.md",
-]);
-let myMenu = [];
+const modules = import.meta.glob(["$lib/md/*.svx", "!$lib/md/_*.svx"]);
+let myPages = [];
 for (let path in modules) {
-  let fixedPath = path.replace(".md", "");
-  const post = await import(`../lib/md/${fixedPath.substring(fixedPath.lastIndexOf("/") + 1)}.md`);
+  // console.log(path);
+  let fixedPath = path.replace(".svx", "");
+  const post = await import(
+    `$lib/md/${fixedPath.substring(fixedPath.lastIndexOf("/") + 1)}.svx`
+  );
   // let fixedPath = path;
-  myMenu.push({
+  myPages.push({
     title: fixedPath.substring(fixedPath.lastIndexOf("/") + 1),
     link: fixedPath,
     original: path,
-    newbody: post.default
+    newbody: post.default,
   });
 }
-console.log(myMenu);
 
-export async function load() {
+export async function load({ params }) {
   return {
-    myMenu
+    myPages,
+    titles: modules,
+    title: "Tutorials",
+    // meta: post.metadata
   };
 }
