@@ -7,26 +7,30 @@ layout: notes
 ---
 # Command Center in VSCode
 
-Command Center is a feature in VSCode that turns the top text bar into a clickable bar with the following features:
+Command Center is a feature in VSCode that turns the top text bar into a **clickable bar** with some cool features.
+
+To enable it go to **Settings** - search for **Command Center** and tick the checkbox. After that you get a bar at the top with the name of your project that you can click to use the features.
+
+My recommendation is to also add a shortcut key for **Launch Command Center**
 
 ## Search
 
-Type something in the field and you'll get files from your workspace as search results. I use this a lot when using SvelteKit, just search for + and you'll get all the `+page.svelte` routes (after excluding .js and so on in settings). Very handy when you have lots of files!
+**Type something in the field** and you'll get files from your workspace as search results. I use this a lot when using SvelteKit, just search for + and you'll get **all the +page.svelte routes** (after excluding .js and so on in settings). Very handy when you have lots of files!
 
 ## Go to symbol in editor
 
-By typing `@` you can get a list of all of the symbols (functions, variables, properties and so on) in your file. Very useful if you want to find a certain CSS class for example. 
+By typing **@** you can get a list of all of the symbols (**functions, variables, properties** and so on) in your file. Very useful if you want to find a **certain CSS class** for example. 
 
 ...actually, if it's a CSS class just get the [CSS Navigation extension](https://marketplace.visualstudio.com/items?itemName=pucelle.vscode-css-navigation) instead and peek the definition. (protip)
 
-If you want to sort the symbols by type just type `@:`
+If you want to **sort the symbols by type** just type **@:**
 
 ## Tasks
 > ...what's a task? 
 
-Tasks are... tasks. For example the scripts in your package.json. If you don't use something like npm tasks are probably not that useful.
+Tasks are... tasks. For example the scripts in your package.json. If you don't use something like **npm** tasks are probably not that useful.
 
-By typing `task (task name here)` you can run these from the Command Center. Here's a spicy example of a custom (overwritten) task:
+By typing **task (task name here)** you can run these from the Command Center. Here's a spicy example of a custom (overwritten) task:
 
 ```json
   //tasks.json
@@ -47,14 +51,14 @@ By typing `task (task name here)` you can run these from the Command Center. Her
 }
 ```
 
-This is the "dev" task I made to find out what tasks actually do. I got the base config file tasks.json by executing the command Configure Task and choosing `npm:dev`. I renamed it to just `dev` because that way I know it's my custom task. I also added 
+This is the "dev" task I made to find out what tasks actually do. I got the base config file tasks.json by executing the command **Configure Task and choosing npm:dev**. I renamed it to just **dev** because that way I know it's my custom task. I also added 
 ```json
 "presentation": {
         "reveal": "never"
       }
 ```
 
-to make it launch silently. So instead of
+to make it **launch silently**. So instead of
 - Open the terminal
 - run `npm run dev`
 - close the terminal
@@ -82,4 +86,4 @@ There are a few other things you can do:
 
 And probably more. But honestly the top 2 alone make it good enough.
 
-Don't forget to set a shortcut key (or just click the top) and enjoy the Command Center!
+Don't forget to **set a shortcut key** (or just click the top) and **enjoy the Command Center**!
