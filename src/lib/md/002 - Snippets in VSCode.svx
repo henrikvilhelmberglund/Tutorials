@@ -1,3 +1,10 @@
+---
+title: Snippets in VSCode
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2022-10-05
+layout: notes
+---
 # Snippets in VSCode
 
 ##### (feature for quickly adding code for functions, if-else statements and much more)

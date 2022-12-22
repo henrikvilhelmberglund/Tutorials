@@ -1,3 +1,10 @@
+---
+title: Code Runner in VSCode
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2022-10-05
+layout: notes
+---
 # Code Runner in VSCode
 
 ##### (for running JavaScript code only projects in the VSCode console)

@@ -1,3 +1,10 @@
+---
+title: Live Preview in VSCode
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2022-10-05
+layout: notes
+---
 # Live Preview in VSCode
 ## (Warning: Tutorial 004 has a better workflow!)
 

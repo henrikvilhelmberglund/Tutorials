@@ -1,3 +1,10 @@
+---
+title: Multi command snippets in VSCode
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2022-10-05
+layout: notes
+---
 # Multi command snippets in VSCode
 
 #### (Note: I'm not using this for console logging right now but still useful as an example)

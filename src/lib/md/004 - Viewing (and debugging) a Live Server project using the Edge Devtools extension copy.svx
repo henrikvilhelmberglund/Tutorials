@@ -1,3 +1,10 @@
+---
+title: Viewing (and debugging) a Live Server project using the Edge Devtools extension
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2022-10-05
+layout: notes
+---
 # Viewing (and debugging) a Live Server project using the Edge Devtools extension
 
 #### (Note: Slightly janky)
