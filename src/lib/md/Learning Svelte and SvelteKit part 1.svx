@@ -1,6 +1,13 @@
-# Learning Svelte and SvelteKit - week 1
+---
+title: Code Runner in VSCode
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2022-10-05
+layout: notes
+---
+# Learning Svelte and SvelteKit - part 1
 
-This will be a weekly (if I can remember) mini blog thingy where I describe how my Svelte and Sveltekit learning is going.
+This will be a mini blog thingy where I describe how my Svelte and Sveltekit learning is going.
 
 ## Why learn Svelte?
 
