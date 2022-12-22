@@ -1,4 +1,5 @@
 // export const modules = import.meta.glob("./*.svx");
+export const prerender = true;
 
 const modules = import.meta.glob(["$lib/md/*.svx", "!$lib/md/_*.svx"]);
 let myPages = [];
