@@ -1,3 +1,9 @@
-<ul class="bg-slate-300 rounded-xl self-start ml-8">
+<ul class="bg-slate-300 rounded-2xl self-start ml-6 shadow-xl">
   <slot />
+</ul>
+
+<ul>
+  <li>line</li>
+  <li>anotherline</li>
+  <li>morelines</li>
 </ul>
