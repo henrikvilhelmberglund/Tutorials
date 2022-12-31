@@ -1,4 +1,3 @@
-export let data;
 export async function load({ params }) {
   const post = await import(`../../lib/md/${params.slug}.svx`);
   // console.log(post.default);
