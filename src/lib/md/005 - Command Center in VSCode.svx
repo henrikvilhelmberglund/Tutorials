@@ -5,6 +5,41 @@ authorlink: github.com/henrikvilhelmberglund/
 date: 2022-12-22
 layout: notes
 ---
+
+<script>
+
+  import H1 from "$lib/components/H1.svelte";
+  export { H1 };
+  import H2 from "$lib/components/H2.svelte";
+  export { H2 };
+  import H3 from "$lib/components/H3.svelte";
+  export { H3 };
+  import H4 from "$lib/components/H4.svelte";
+  export { H4 };
+  import H5 from "$lib/components/H5.svelte";
+  export { H5 };
+  import H6 from "$lib/components/H6.svelte";
+  export { H6 };
+  import Blockquote from "$lib/components/Blockquote.svelte";
+  export { Blockquote };
+  import Li from "$lib/components/Li.svelte";
+  export { Li };
+  import Ul from "$lib/components/Ul.svelte";
+  export { Ul };
+  import P from "$lib/components/P.svelte";
+  export { P };
+  import A from "$lib/components/A.svelte";
+  export { A };
+  import Table from "$lib/components/Table.svelte";
+  export { Table };
+  import Th from "$lib/components/Th.svelte";
+  export { Th };
+  import Td from "$lib/components/Td.svelte";
+  export { Td };
+  import Strong from "$lib/components/Strong.svelte";
+  export { Strong };
+</script>
+
 # Command Center in VSCode
 
 Command Center is a feature in VSCode that turns the top text bar into a **clickable bar** with some cool features.
@@ -63,7 +98,10 @@ to make it **launch silently**. So instead of
 - run `npm run dev`
 - close the terminal
 
-I can do this:
+<P _class="text-red-700">I can do this: </P>
+
+<!-- <div class="i-logos-svelte-icon text-6xl" /> -->
+
 
 - Click the Command Center at the top of the screen
 - Click tasks
