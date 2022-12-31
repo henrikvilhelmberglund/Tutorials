@@ -38,10 +38,11 @@
 </script>
 
 <script>
-  export let title;
-  export let author;
-  export let authorlink;
-  export let date;
+  export let title = "Untitled";
+  export let author = "Unknown author";
+  export let authorlink = "Unknown author link";
+  export let date = "Unknown date";
+  export let layout = "unknown layout";
 </script>
 <div class="p-12 bg-red-900 [&>*]:p-4">
   <p class="text-red-300 text-6xl">Warning!</p>
