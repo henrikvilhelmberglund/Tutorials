@@ -1,5 +1,4 @@
 <script>
-  import "../app.postcss";
   export let data;
   import { base } from "$app/paths";
 </script>
