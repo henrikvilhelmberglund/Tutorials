@@ -20,7 +20,6 @@ const config = defineConfig({
         Wrapper: "/src/lib/Example.svelte",
       },
     },
-    remarkattr,
   ],
 
   rehypePlugins: [],
