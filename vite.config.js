@@ -1,6 +1,6 @@
 import { sveltekit } from "@sveltejs/kit/vite";
 import examples from "mdsvexamples/vite";
-import UnoCSS from "@unocss/vite";
+import UnoCSS from "unocss/vite";
 import presetIcons from "@unocss/preset-icons";
 import presetUno from "@unocss/preset-uno";
 
