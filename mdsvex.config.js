@@ -1,6 +1,5 @@
 import { defineMDSveXConfig as defineConfig } from "mdsvex";
 import examples from "mdsvexamples";
-import remarkattr from "remark-attr";
 
 const config = defineConfig({
   extensions: [".svelte.md", ".md", ".svx"],
