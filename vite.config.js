@@ -9,6 +9,7 @@ const config = {
   plugins: [
     UnoCSS({
       mode: "svelte-scoped",
+      include: [/\.svelte$/, /\.svelte\.md$/, /\.svx$/],
       presets: [
         presetUno(),
         presetIcons({
