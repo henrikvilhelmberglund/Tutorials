@@ -42,7 +42,7 @@
   export let author = "Unknown author";
   export let authorlink = "Unknown author link";
   export let date = "Unknown date";
-  export let layout = "unknown layout";
+  export const layout = "unknown layout";
 </script>
 <div class="p-12 bg-red-900 [&>*]:p-4">
   <p class="text-red-300 text-6xl">Warning!</p>
