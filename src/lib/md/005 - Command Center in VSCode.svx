@@ -98,7 +98,9 @@ to make it **launch silently**. So instead of
 - run `npm run dev`
 - close the terminal
 
-<P _class="text-red-700">I can do this: </P>
+<svelte:component this={P} _class="text-red-700">
+I can do this: 
+</svelte:component>
 
 <!-- <div class="i-logos-svelte-icon text-6xl" /> -->
 
