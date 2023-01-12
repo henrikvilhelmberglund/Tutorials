@@ -23,6 +23,13 @@ const config = {
       base: dev ? "" : "/Tutorials",
     },
   },
+  vitePlugin: {
+    experimental: {
+      inspector: {
+        holdMode: true,
+      },
+    },
+  },
 
   preprocess: [mdsvex(mdsvexConfig), preprocess()],
 };
