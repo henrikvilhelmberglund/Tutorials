@@ -2,15 +2,22 @@
 	export let data;
 </script>
 
+<nav>
+	<a class="m-4 rounded-lg bg-green-300  p-4 text-black no-underline" href="/"> Home </a>
+	<a class="rounded-lg bg-green-300 p-4 text-black no-underline" href="/svelte-course">
+		Svelte Course
+	</a>
+</nav>
+
 <div class="w-full bg-red-900 [&>*]:p-2">
-	<p class="text-red-300 text-6xl">Warning!</p>
-	<p class="text-red-100 text-3xl">under construction :)</p>
+	<p class="text-6xl text-red-300">Warning!</p>
+	<p class="text-3xl text-red-100">under construction :)</p>
 </div>
 
 <slot />
 
 <style uno:preflights uno:safelist global>
-  :global(body) {
+	:global(body) {
 		@apply m-0 bg-slate-300;
 	}
 </style>

@@ -1,3 +1,3 @@
-<strong class="text-pink-500 font-extrabold">
-  <slot></slot>
+<strong class="font-extrabold text-pink-500">
+	<slot />
 </strong>

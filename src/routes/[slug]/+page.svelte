@@ -1,6 +1,6 @@
 <script>
-  export let data;
-  //const { title, date, thumbnail } = data.meta;
+	export let data;
+	//const { title, date, thumbnail } = data.meta;
 </script>
 
 <!-- 

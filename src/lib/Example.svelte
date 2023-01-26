@@ -9,12 +9,12 @@
 <div class="root">
 	<div class="container">
 		<div
-			class="example-wrapper p-4 border-solid border-2 border-b-0 rounded-b-0 border-orange-500 rounded-lg">
+			class="example-wrapper rounded-b-0 rounded-lg border-2 border-b-0 border-solid border-orange-500 p-4">
 			<div class="example">
 				<slot name="example" />
 			</div>
 		</div>
-		<pre class="language-svelte rounded-lg border-t-0 rounded-t-0"><slot name="code" /></pre>
+		<pre class="language-svelte rounded-t-0 rounded-lg border-t-0"><slot name="code" /></pre>
 	</div>
 </div>
 

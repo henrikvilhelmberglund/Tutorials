@@ -1,3 +1,3 @@
-<h1 class="text-6xl font-medium font-sans text-pink-600">
-  <slot />
+<h1 class="font-sans text-6xl font-medium text-pink-600">
+	<slot />
 </h1>

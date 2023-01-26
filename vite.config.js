@@ -6,26 +6,26 @@ import presetUno from "@unocss/preset-uno";
 
 /** @type {import('vite').UserConfig} */
 const config = {
-  plugins: [
-    UnoCSS({
-      mode: "svelte-scoped",
-      presets: [
-        presetUno(),
-        presetIcons({
-          prefix: "i-",
-          extraProperties: {
-            display: "inline-block",
-            "vertical-align": "middle",
-          },
-        }),
-      ],
-    }),
-    sveltekit(),
-    examples,
-  ],
-  build: {
-    target: "esnext",
-  },
+	plugins: [
+		UnoCSS({
+			mode: "svelte-scoped",
+			presets: [
+				presetUno(),
+				presetIcons({
+					prefix: "i-",
+					extraProperties: {
+						display: "inline-block",
+						"vertical-align": "middle"
+					}
+				})
+			]
+		}),
+		sveltekit(),
+		examples
+	],
+	build: {
+		target: "esnext"
+	}
 };
 
 export default config;

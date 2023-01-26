@@ -1,3 +1,3 @@
-<li class="text-1xl font-medium font-sans text-pink-600 list-disc list-inside">
-  <slot />
+<li class="text-1xl list-inside list-disc font-sans font-medium text-pink-600">
+	<slot />
 </li>
