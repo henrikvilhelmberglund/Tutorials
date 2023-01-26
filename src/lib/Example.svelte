@@ -1,24 +1,25 @@
 <script>
-  export let src = undefined;
-  export let meta = undefined;
+	export let src = undefined;
+	export let meta = undefined;
 
-  // suppress vite-plugin-svelte warning about unused props
-  $: src, meta;
+	// suppress vite-plugin-svelte warning about unused props
+	$: src, meta;
 </script>
 
 <div class="root">
-  <div class="container">
-    <div class="example-wrapper">
-      <div class="example">
-        <slot name="example" />
-      </div>
-    </div>
-    <pre class="language-svelte"><slot name="code" /></pre>
-  </div>
+	<div class="container">
+		<div
+			class="example-wrapper p-4 border-solid border-2 border-b-0 rounded-b-0 border-orange-500 rounded-lg">
+			<div class="example">
+				<slot name="example" />
+			</div>
+		</div>
+		<pre class="language-svelte rounded-lg border-t-0 rounded-t-0"><slot name="code" /></pre>
+	</div>
 </div>
 
 <style>
-  .root {
+	/* .root {
     margin: 0.5rem 0;
   }
 
@@ -48,9 +49,9 @@
     align-items: center;
     padding: 0.75rem 0;
     min-height: 3rem;
-  }
+  } */
 
-  pre {
-    margin: 0;
-  }
+	pre {
+		margin: 0;
+	}
 </style>
