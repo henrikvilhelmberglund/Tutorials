@@ -1,13 +1,12 @@
 ---
-title: Writing Your First Svelte Component
+title: Writing your first Svelte component
 author: henrikvilhelmberglund
 authorlink: github.com/henrikvilhelmberglund/
 date: 2022-11-27
 layout: notes
 ---
 <script>
-</script>
-
+  </script>
 
 There is a [REPL](https://svelte.dev/repl/hello-world?version=3.53.1) at the site where you can write code and run it in the browser.
 
