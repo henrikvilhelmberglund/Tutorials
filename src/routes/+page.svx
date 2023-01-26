@@ -2,10 +2,13 @@
 layout: mainpage
 ---
 
+
 <script>
+  export let data;
+	import { base } from "$app/paths";
+
   // import Notes from "./Notes.svx";
   let list = [1, 2, 3, 4, 5];
-  export let data;
   let items = [];
 
   import {
@@ -27,8 +30,26 @@ layout: mainpage
   } from "$lib/components.js";
 </script>
 
+<nav>
+	{#if data.myPages}
+		<ul>
+			{#each data.myPages as link}
+      {#if !link.bsvelte}
+				<li>
+					<a href="{base}/{link.title}">{link.title}</a>
+          <!-- {:else} -->
+					<!-- <a href="{base}/svelte-course/{link.title}">{link.title}</a> -->
+				</li>
+        {/if}
+			{/each}
+		</ul>
+	{/if}
+</nav>
+
 {#each data.myPages as item}
-<svelte:component this={item.newbody}></svelte:component>
+  {#if !item.bsvelte}
+    <svelte:component this={item.newbody}></svelte:component>
+  {/if}
 {/each}
 
 <style>
