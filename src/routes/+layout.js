@@ -10,7 +10,7 @@ const modules = import.meta.glob([
 let myPages = [];
 let svelte;
 for (let path in modules) {
-	console.log(path);
+	// console.log(path);
 	let fixedPath = path.replace(".svx", "");
 	let post;
 	try {
