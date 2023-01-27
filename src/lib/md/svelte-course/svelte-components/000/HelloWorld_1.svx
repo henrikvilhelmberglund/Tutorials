@@ -1,0 +1,19 @@
+```svelte example Wrapper="/src/lib/Example.svelte"
+
+<h2>My first Svelte component</h2>
+
+<p>Hello World</p>
+
+<a href="https://www.youtube.com/lihautan">Link to Li Hau's youtube</a>
+
+<style>
+  h2 {
+    color: rebeccapurple;
+  }
+  p {
+    color: blue;
+    font-size: 44px;
+  }
+</style>
+
+```
