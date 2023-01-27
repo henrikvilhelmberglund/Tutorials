@@ -1,0 +1,13 @@
+---
+title: Introduction
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2022-11-27
+layout: notes
+---
+
+This is my notes for Li Hau Tan's Svelte course on [freeCodeCamp](https://www.youtube.com/watch?v=UGBJHYpHPvA).
+
+Each page will have my understanding of the content and code examples which show the result and the code.
+
+## Let's go!
