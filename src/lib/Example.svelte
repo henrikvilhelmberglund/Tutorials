@@ -1,7 +1,6 @@
 <script>
 	export let src = undefined;
 	export let meta = undefined;
-
 	// suppress vite-plugin-svelte warning about unused props
 	$: src, meta;
 </script>
@@ -42,16 +41,24 @@
     border-top-left-radius: var(--example-border-radius, 0.25rem);
     border-top-right-radius: var(--example-border-radius, 0.25rem);
   }
+  
+  
 
-  .example {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0.75rem 0;
-    min-height: 3rem;
-  } */
+	.example {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0.75rem 0;
+		min-height: 3rem;
+	} 
+	 
+  */
 
 	pre {
 		margin: 0;
+	}
+
+	* {
+		@apply font-normal text-black;
 	}
 </style>
