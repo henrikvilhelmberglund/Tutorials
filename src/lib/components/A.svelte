@@ -1,7 +1,8 @@
 <script>
-  export let href;
+	export let href = "unknown link";
+	export let rel = "what";
 </script>
 
-<a class="text-1xl font-medium font-sans text-pink-600 underline" {href}>
-  <slot />
+<a class="text-1xl font-sans font-medium text-pink-600 underline" {href}>
+	<slot />
 </a>

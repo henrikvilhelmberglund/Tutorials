@@ -1,0 +1,47 @@
+---
+title: Writing your first Svelte component
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2022-11-27
+layout: notes
+---
+
+<script>
+  import HelloWorld_0 from "/src/lib/md/svelte-course/svelte-components/000/HelloWorld_0.svx"
+  import HelloWorld_1 from "/src/lib/md/svelte-course/svelte-components/000/HelloWorld_1.svx"
+  let stage = 0;
+</script>
+
+There is a [REPL](https://svelte.dev/repl/hello-world?version=3.53.1) at the site where you can write code and run it in the browser.
+
+In a .svelte file you can have a script tag, markup (HTML) and a single style tag that contains all of the styles.
+
+<div>
+<button on:click={()=>stage = 0}>Stage 0: Default</button>
+<button on:click={()=>stage = 1}>Stage 1: Add styling</button>
+</div>
+<div>
+
+  
+{#if stage === 0}
+
+<HelloWorld_0 />
+
+{:else if stage === 1}
+<HelloWorld_1/>
+
+{/if}
+  
+</div>
+
+You can import a .svelte file from anywhere and use it like a class like this:
+
+```svelte
+
+<script>
+  import MyComponent from "/src/lib/MyComponent.svelte"
+</script>
+
+<MyComponent/>
+
+```

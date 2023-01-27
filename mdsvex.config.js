@@ -2,25 +2,26 @@ import { defineMDSveXConfig as defineConfig } from "mdsvex";
 import examples from "mdsvexamples";
 
 const config = defineConfig({
-  extensions: [".svelte.md", ".md", ".svx"],
+	extensions: [".svelte.md", ".md", ".svx"],
 
-  smartypants: {
-    dashes: "oldschool",
-  },
-  layout: {
-    notes: "src/lib/mdsvex-layout-notes.svx",
-    mainpage: "src/lib/mdsvex-layout-mainpage.svx",
-  },
-  remarkPlugins: [
-    examples,
-    {
-      defaults: {
-        Wrapper: "/src/lib/Example.svelte",
-      },
-    },
-  ],
+	smartypants: {
+		dashes: "oldschool",
+		quotes: false
+	},
+	layout: {
+		notes: "src/lib/mdsvex-layout-notes.svx",
+		mainpage: "src/lib/mdsvex-layout-mainpage.svx"
+	},
+	remarkPlugins: [
+		examples,
+		{
+			defaults: {
+				Wrapper: "/src/lib/Example.svelte"
+			}
+		}
+	],
 
-  rehypePlugins: [],
+	rehypePlugins: []
 });
 
 export default config;

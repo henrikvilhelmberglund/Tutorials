@@ -1,5 +1,5 @@
 ---
-title: Code Runner in VSCode
+title: Learning Svelte and SvelteKit part 1
 author: henrikvilhelmberglund
 authorlink: github.com/henrikvilhelmberglund/
 date: 2022-10-05

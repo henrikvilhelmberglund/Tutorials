@@ -1,3 +1,3 @@
-<table class="border-solid border-2 border-pink-300 rounded-lg">
-  <slot />
+<table class="rounded-lg border-2 border-solid border-pink-300">
+	<slot />
 </table>
