@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="/Tutorials/favicon.png" />
+  <link rel="stylesheet" href="/Tutorials/prism-vsc-dark-plus.css">
+  <meta name="viewport" content="width=device-width" />
+  <meta http-equiv="content-security-policy" content="">
+		<link href="/Tutorials/_app/immutable/assets/_layout-834a5097.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/mdsvex-layout-notes-5d6d5db2.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/Strong-f1c850c2.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/005 - Command Center in VSCode-3d969ef8.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/Learning Svelte and SvelteKit part 1-4a0b184b.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/000 - Writing your first Svelte component-ba4856e6.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/_Example-bd8a81fe.css" rel="stylesheet">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/start-eff65504.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/index-2796fafe.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/singletons-5e7eb856.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/paths-b4419565.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/preload-helper-41c905a7.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/_layout.svelte-f50ab55f.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/modules/pages/_layout.js-d1c63a9e.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/dynamic-import-helper-be004503.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/_layout-aa19da80.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/svelte-course/_layout.svelte-246a93b1.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/svelte-course/_slug_/_page.svelte-711a1c09.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/modules/pages/svelte-course/_slug_/_page.js-a82334fa.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/_page-64d3569d.js">
+</head>
+
+<body>
+  <div>
+
+
+<nav class="svelte-1idopbc"><a class="uno-qz86gb svelte-1idopbc" href="/Tutorials/">Home </a>
+	<a class="uno-kk5pwl svelte-1idopbc" href="/Tutorials/svelte-course">Svelte Course
+	</a></nav>
+
+<div class="uno-hk8nma svelte-1idopbc"><p class="uno-lsveny svelte-1idopbc">Warning!</p>
+	<p class="uno-51bdnx svelte-1idopbc">under construction :)</p></div>
+
+<nav><ul><li><a href="/Tutorials/svelte-course/0 - Introduction">0 - Introduction</a>
+					</li><li><a href="/Tutorials/svelte-course/000 - Writing your first Svelte component">000 - Writing your first Svelte component</a>
+					</li><li><a href="/Tutorials/svelte-course/001 - Style your Svelte component">001 - Style your Svelte component</a>
+					</li></ul></nav>
+
+
+
+
+<article class="uno-9uf4sf"><section class="uno-otf0eq"><div class="uno-xj1z8i"><h2 class="uno-sjqek6">Writing your first Svelte component
+</h2></div>
+    <div class="uno-mexwlg"><p class="uno-ddg7b5 text-1xl ">Posted on 2022-11-27 by
+</p>
+      <a class="uno-1irbms text-1xl" href="http://github.com/henrikvilhelmberglund/">henrikvilhelmberglund
+</a></div></section>
+  <section class="uno-dyxbz3"><p class="uno-ddg7b5 text-1xl ">There is a <a class="uno-1irbms text-1xl" href="https://svelte.dev/repl/hello-world?version=3.53.1">REPL
+</a> at the site where you can write code and run it in the browser.
+</p>
+<p class="uno-ddg7b5 text-1xl ">In a .svelte file you can have a script tag, markup (HTML) and a single style tag that contains all of the styles.
+</p>
+<div><button>Stage 0: Default</button>
+<button>Stage 1: Add styling</button></div>
+<div><p class="uno-ddg7b5 text-1xl "><div><div class="root svelte-27svms"><div class="uno-wfsvsy svelte-27svms"><div class="uno-1m54ow example-wrapper svelte-27svms"><div class="example svelte-27svms"><h2>My first Svelte component</h2>
+<p>Hello World</p>
+<a href="https://www.youtube.com/lihautan">Link to Li Hau&#39;s youtube</a></div></div>
+		<pre class="uno-7q88ol language-svelte svelte-27svms"><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">></span></span>My first Svelte component<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>Hello World<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://www.youtube.com/lihautan<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Link to Li Hau's youtube<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><!-- HTML_TAG_END --></pre></div>
+</div></div>
+</p></div>
+<p class="uno-ddg7b5 text-1xl ">You can import a .svelte file from anywhere and use it like a class like this:
+</p>
+<pre class="language-svelte"><!-- HTML_TAG_START --><code class="language-svelte">
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+  <span class="token keyword">import</span> MyComponent <span class="token keyword">from</span> <span class="token string">"/src/lib/MyComponent.svelte"</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>MyComponent</span><span class="token punctuation">/></span></span>
+</code><!-- HTML_TAG_END --></pre></section></article>
+
+
+		<script type="module" data-sveltekit-hydrate="1u7qdnc">
+			import { start } from "/Tutorials/_app/immutable/start-eff65504.js";
+
+			start({
+				env: {},
+				paths: {"base":"/Tutorials","assets":"/Tutorials"},
+				target: document.querySelector('[data-sveltekit-hydrate="1u7qdnc"]').parentNode,
+				version: "1674834099095",
+				hydrate: {
+					node_ids: [0, 2, 6],
+					data: [null,null,null],
+					form: null
+				}
+			});
+		</script>
+	</div>
+</body>
+
+</html>
