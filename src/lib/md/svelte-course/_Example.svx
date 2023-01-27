@@ -9,7 +9,7 @@ layout: notes
 <script>
   import Count from './svelte-components/Count.svelte';
   import Seriously from './svelte-components/Seriously.svelte';
-  import ThrelteTest from './svelte-components/ThrelteTest.svelte';
+  // import ThrelteTest from './svelte-components/ThrelteTest.svelte';
   import Wrap from './svelte-components/Wrap.svelte';
   let count = 0;
 </script>
@@ -28,7 +28,7 @@ much wow
 
 </Seriously>
 
-<ThrelteTest/>
+<!-- <ThrelteTest/> -->
 
 Paragraphs are separated by a blank line. <Count {count}/> <Count {count}/> <Count {count}/>
 
