@@ -1,10 +1,11 @@
 <script>
 	export let data;
+	import { base } from "$app/paths";
 </script>
 
 <nav>
-	<a class="m-4 rounded-lg bg-green-300  p-4 text-black no-underline" href="/"> Home </a>
-	<a class="rounded-lg bg-green-300 p-4 text-black no-underline" href="/svelte-course">
+	<a class="m-4 rounded-lg bg-green-300  p-4 text-black no-underline" href="{base}/"> Home </a>
+	<a class="rounded-lg bg-green-300 p-4 text-black no-underline" href="{base}/svelte-course">
 		Svelte Course
 	</a>
 </nav>
