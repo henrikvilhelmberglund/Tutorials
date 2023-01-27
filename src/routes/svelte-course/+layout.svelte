@@ -9,8 +9,6 @@
 			{#each data.myPages as link}
 				{#if link.bsvelte}
 					<li>
-						<!-- <a href="{base}/{link.title}">{link.title}</a> -->
-						<!-- {:else} -->
 						<a href="{base}/svelte-course/{link.title}">{link.title}</a>
 					</li>
 				{/if}
