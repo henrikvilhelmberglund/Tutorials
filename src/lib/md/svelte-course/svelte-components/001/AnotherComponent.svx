@@ -1,0 +1,13 @@
+```svelte example Wrapper="/src/lib/Example.svelte"
+
+
+<h2>Another component</h2>
+
+<p>Bye world</p>
+
+<a href="https://twitter.com/lihautan">Link to Li Hau's twitter</a>
+<a href="https://twitter.com/henrikvberglund">Link to my twitter</a>
+
+
+
+```
