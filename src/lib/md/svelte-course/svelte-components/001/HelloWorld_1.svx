@@ -1,0 +1,34 @@
+```svelte example Wrapper="/src/lib/Example.svelte"
+
+<h2>My first Svelte component</h2>
+
+<p>Hello World</p>
+
+<a href="https://www.youtube.com/lihautan">Link to Li Hau's youtube</a>
+<a href="https://www.youtube.com/@henrikvilhelmberglund">Link to my youtube</a>
+
+<style>
+  h2 {
+    color: rebeccapurple;
+    animation: zoom 5s infinite;
+    @apply text-center;
+    
+  }
+  p {
+    color: blue;
+    font-size: 44px;
+  }
+  @keyframes zoom {
+    0%, 100% { transform: scale(2)}
+    50% { transform: scale(0.5)}
+  }
+  
+</style>
+
+```
+
+<style>
+  a {
+    font-
+  }
+</style>
