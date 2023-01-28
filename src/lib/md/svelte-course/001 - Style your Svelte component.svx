@@ -9,6 +9,11 @@ layout: notes
 <script>
   import HelloWorld_1 from "/src/lib/md/svelte-course/svelte-components/001/HelloWorld_1.svx"
   import AnotherComponent from "/src/lib/md/svelte-course/svelte-components/001/AnotherComponent.svx"
+  import BigP from "/src/lib/md/svelte-course/svelte-components/001/BigP.svx"
+  import SmallP from "/src/lib/md/svelte-course/svelte-components/001/SmallP.svx"
+  import PAttack from "/src/lib/md/svelte-course/svelte-components/001/PAttack.svx"
+  let big = false;
+  let animation = false;
 </script>
 
 Styles in components are **scoped**. This means that the styles in one component will only apply in that particular component.
@@ -26,3 +31,36 @@ Here we have two components. Even though both have `<h2>` tags and `<p>` tags, t
 This means that it's very easy to write CSS in the components themselves because you don't have to worry about any styles colliding.
 
 If you have a style but it's not being used Svelte will discard it when compiling creating an optimized CSS file.
+
+### Global styles
+
+If you really want to you can also have **global styles**. To do that you write `:global(selector)`
+
+<button on:click={()=>big = !big}>Make p tag {big ? "small" : "big"}</button>
+
+{#if big}
+<BigP/>
+{:else}
+<SmallP/>
+{/if}
+
+Or, like in this case, put them inside a style tag in
+```svelte
+
+<svelte:head>
+  <!-- put style tag with global styles here -->
+</svelte:head>
+
+```
+
+The benefit of this approach is that you can actually **disable the global style** like I did here with a button, whereas the `:global(selector)` approach will apply the global style **everywhere** without an easy way to disable it. 
+
+For animation keyframes you can add `-global-` before the identifier to make it global.
+
+<button on:click={()=>animation = !animation}>{animation ? "Hide" : "Show"} Example</button>
+{#if animation}
+<PAttack/>
+{/if}
+  
+
+
