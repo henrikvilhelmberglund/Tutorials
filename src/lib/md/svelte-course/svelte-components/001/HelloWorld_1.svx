@@ -26,9 +26,3 @@
 </style>
 
 ```
-
-<style>
-  a {
-    font-
-  }
-</style>
