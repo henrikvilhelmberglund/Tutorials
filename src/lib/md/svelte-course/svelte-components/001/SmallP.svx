@@ -1,0 +1,5 @@
+```svelte example Wrapper="/src/lib/Example.svelte"
+
+<p>Phew, p tags are small.</p>
+
+```

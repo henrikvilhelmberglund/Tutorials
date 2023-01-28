@@ -1,0 +1,22 @@
+```svelte example Wrapper="/src/lib/Example.svelte"
+
+<p>
+  Like this!
+</p>
+
+<svelte:head>
+  <style>
+    p {
+      animation: zoomy 3s infinite;
+    }  
+  </style>
+</svelte:head>
+
+<style>
+  @keyframes -global-zoomy {
+     0%, 100% { transform: scale(2)}
+     50% { transform: scale(0.5)}
+   }
+</style>
+
+```

@@ -1,0 +1,26 @@
+```svelte example Wrapper="/src/lib/Example.svelte"
+
+
+<p>Oh no! p tags are huge!</p>
+
+<style>
+  /* normally done like this but you can't disable the global style after applying it
+  so I use <svelte:head> instead to add the global style to the head tag, then remove it
+  
+  :global(p) {
+    color: blue;
+    font-size: 44px;
+  }  
+  */
+</style>
+<svelte:head>
+  <style>
+    p {
+      color: green !important;
+      font-size: 34px;
+    }  
+  </style>
+</svelte:head>
+
+```
+
