@@ -8,7 +8,6 @@ layout: notes
 
 <script>
   import HelloWorld_1 from "/src/lib/md/svelte-course/svelte-components/001/HelloWorld_1.svx"
-  import HelloWorld_2 from "/src/lib/md/svelte-course/svelte-components/001/HelloWorld_1.svelte"
   import AnotherComponent from "/src/lib/md/svelte-course/svelte-components/001/AnotherComponent.svx"
 </script>
 
