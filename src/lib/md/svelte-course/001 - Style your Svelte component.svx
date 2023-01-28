@@ -2,10 +2,28 @@
 title: Style your Svelte Component
 author: henrikvilhelmberglund
 authorlink: github.com/henrikvilhelmberglund/
-date: 2022-11-27
+date: 2023-01-28
 layout: notes
 ---
+
 <script>
+  import HelloWorld_1 from "/src/lib/md/svelte-course/svelte-components/001/HelloWorld_1.svx"
+  import HelloWorld_2 from "/src/lib/md/svelte-course/svelte-components/001/HelloWorld_1.svelte"
+  import AnotherComponent from "/src/lib/md/svelte-course/svelte-components/001/AnotherComponent.svx"
 </script>
 
+Styles in components are **scoped**. This means that the styles in one component will only apply in that particular component.
 
+<div class="flex space-between [&>*]:flex [&>*]:p-4 ">
+  <HelloWorld_1/>
+  <div class="flex flex-col">
+    <div class="h-[5.3rem]"></div>
+    <AnotherComponent/>
+  </div>
+</div>
+
+Here we have two components. Even though both have `<h2>` tags and `<p>` tags, the styles from the left component don't apply to the right component. The same is true for **classes** and **animation keyframes**.
+
+This means that it's very easy to write CSS in the components themselves because you don't have to worry about any styles colliding.
+
+If you have a style but it's not being used Svelte will discard it when compiling creating an optimized CSS file.
