@@ -1,0 +1,9 @@
+```svelte example Wrapper="/src/lib/Example.svelte"
+
+<script>
+  let name = "Reader";
+</script>
+
+<p>Hello {name}</p>
+
+```

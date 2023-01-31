@@ -1,0 +1,27 @@
+---
+title: Adding data to your Svelte component
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-01-28
+layout: notes
+---
+
+<script>
+  import HelloWorld from "/src/lib/md/svelte-course/svelte-components/002/HelloWorld.svx"
+</script>
+```svelte
+<script>
+  
+</script>
+```
+Script tags allow you to add logic and data in your components.
+
+For example we can define a variable in the script tag and then use it in the markup by putting it **inside curly brackets**.
+
+<HelloWorld/>
+
+Note that these variables need to be defined in the **top level** (not in functions).
+
+<style>
+  
+</style>
