@@ -1,0 +1,36 @@
+---
+title: tick()
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-02-02
+layout: notes
+---
+
+<script>
+  import UsingTick from "./UsingTick.svx";
+  import Input from "./Input.svx";
+  import InputWrong from "./InputWrong.svx";
+</script>
+
+
+Tick is a function in Svelte that returns a promise that resolves when the update is finished.
+
+This means that we can for example **console.log() reactive declarations**.
+
+<UsingTick/>
+
+It can also help when you need to do something **after something asynchronous happens**.
+
+For example here we have an input field which turns our input into upper case characters.
+
+If you type something and then click in the middle of the input and type again you will notice that the **cursor jumps to the end** which we don't want.
+
+<InputWrong/>
+
+To fix this we can use **tick()**.
+
+<Input/>
+
+Tick allows you to **wait until DOM updates have been applied**, thus fixing our problem.
+
+It could also help if you want to save the scroll position, add some elements and after that restore the scroll position, in that case just **run tick() after adding the elements**. 

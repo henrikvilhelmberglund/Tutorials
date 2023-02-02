@@ -1,9 +1,0 @@
----
-title: tick()
-author: henrikvilhelmberglund
-authorlink: github.com/henrikvilhelmberglund/
-date: 2023-02-02
-layout: notes
----
-
-Tick is a function in Svelte that returns a promise that resolves when the update is finished.

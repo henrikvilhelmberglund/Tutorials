@@ -1,0 +1,17 @@
+```svelte example Wrapper="/src/lib/Example.svelte"
+<script>
+  import { tick } from "svelte";
+  let value = "";
+  async function onInput(event) {
+    const input = this;
+    let selectionStart = input.selectionStart;
+    let selectionEnd = input.selectionEnd;
+    value = input.value.toUpperCase();
+    await tick();
+    input.selectionStart = selectionStart;
+    input.selectionEnd = selectionEnd;
+  }
+</script>
+
+<input on:input={onInput} {value} type="text">
+```

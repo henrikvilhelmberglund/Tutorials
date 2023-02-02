@@ -1,0 +1,15 @@
+```svelte example Wrapper="/src/lib/Example.svelte"
+<script>
+  let value = "";
+  function onInput(event) {
+    const input = this;
+    let selectionStart = input.selectionStart;
+    let selectionEnd = input.selectionEnd;
+    value = input.value.toUpperCase();
+    input.selectionStart = selectionStart;
+    input.selectionEnd = selectionEnd;
+  }
+</script>
+
+<input on:input={onInput} {value} type="text">
+```
