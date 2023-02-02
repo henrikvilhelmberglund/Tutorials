@@ -8,6 +8,8 @@ layout: notes
 
 <script>
   import HelloWorld from "/src/lib/md/svelte-course/svelte-components/002/HelloWorld.svx"
+  import DynamicImage from "/src/lib/md/svelte-course/svelte-components/002/DynamicImage.svx";
+  import DynamicImageShort from "/src/lib/md/svelte-course/svelte-components/002/DynamicImageShort.svx";
 </script>
 ```svelte
 <script>
@@ -21,6 +23,16 @@ For example we can define a variable in the script tag and then use it in the ma
 <HelloWorld/>
 
 Note that these variables need to be defined in the **top level** (not in functions).
+
+We can also use variables in HTML tags to have **dynamic attributes**.
+
+<DynamicImage/>
+
+If the variable and attribute have the same name we can use a **shorthand**.
+
+<DynamicImageShort></DynamicImageShort>
+
+
 
 <style>
   

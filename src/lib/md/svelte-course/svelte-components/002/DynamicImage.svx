@@ -1,0 +1,7 @@
+```svelte example Wrapper="/src/lib/Example.svelte"
+<script>
+	let url = "https://svelte.dev/images/svelte-android-chrome-192.png";
+</script>
+
+<img src={url} alt="a svelte logo" />
+```
