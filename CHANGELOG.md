@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+### [0.0.6](https://github.com/henrikvilhelmberglund/Tutorials/compare/v0.0.5...v0.0.6) (2023-02-02)
+
+
+### Features
+
+* :sparkles: move svelte-course files to subfolders ([3befac9](https://github.com/henrikvilhelmberglund/Tutorials/commit/3befac9ee8cffe1987de6b3e9cd1381a7882bd43))
+* :sparkles: set title depending on if svelte-course or not, remove janky try catch (may add later for 404) ([46627b0](https://github.com/henrikvilhelmberglund/Tutorials/commit/46627b0110f715803ba4f0e9e1a16473dc215b37))
+* :sparkles: use +page.svx in svelte-course slug ([ee4c098](https://github.com/henrikvilhelmberglund/Tutorials/commit/ee4c098fc828a93036f9427163ec177af4163cd9))
+
 ### [0.0.5](https://github.com/henrikvilhelmberglund/Tutorials/compare/v0.0.4...v0.0.5) (2023-02-02)
 
 
