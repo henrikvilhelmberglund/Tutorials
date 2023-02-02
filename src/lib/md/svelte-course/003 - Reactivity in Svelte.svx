@@ -1,0 +1,53 @@
+---
+title: Reactivity in Svelte
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-02-02
+layout: notes
+---
+
+<script>
+  import Count from "/src/lib/md/svelte-course/svelte-components/003/Count.svx";
+  import CountObject from "/src/lib/md/svelte-course/svelte-components/003/CountObject.svx";
+  import CountObjectWrong from "/src/lib/md/svelte-course/svelte-components/003/CountObjectWrong.svx";
+  import CountArray from "/src/lib/md/svelte-course/svelte-components/003/CountArray.svx";
+  import CountArrayFixed from "/src/lib/md/svelte-course/svelte-components/003/CountArrayFixed.svx";
+  import CountArrayFixed2 from "/src/lib/md/svelte-course/svelte-components/003/CountArrayFixed2.svx";
+</script>
+
+In Svelte we can have something called **Reactivity**, basically meaning: *When we update variables, update the DOM as well.*
+
+One way of achieving this is to simply **assign a variable in the top level**
+
+<Count/>
+
+The variable **type** doesn't really matter, but we **do** need to change the value using one of three methods.
+
+1. Assignment. `count = 10;`
+2. Update statements. `count++;`
+3. Updating/assigning a property. `obj.count++;`
+
+<CountObject/>
+
+Here are some of the things that will **not** trigger reactivity.
+
+### Don't do this
+
+1. Indirect object references
+
+<CountObjectWrong/>
+
+2. Array methods
+
+<CountArray/>
+
+### Instead: spread syntax
+
+Instead of using array methods we can use **spread syntax**.
+
+<CountArrayFixed/>
+
+Or, we can just do **array = array;**. It is a bit ugly but it works!
+
+<CountArrayFixed2/>
+

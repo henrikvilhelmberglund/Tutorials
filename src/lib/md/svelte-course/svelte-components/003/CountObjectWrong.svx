@@ -1,0 +1,22 @@
+```svelte example Wrapper="/src/lib/Example.svelte"
+
+<script>
+  let obj = {
+    count: 0
+  };
+  let myObj = obj;
+  
+  function incrementWrong() {
+    myObj.count++;
+  }
+  function assignToObj() {
+    obj.foo = 1;
+  }
+
+</script>
+
+<div>{obj.count}</div>
+
+<button on:click={()=>incrementWrong()}>This does not update the DOM</button>
+<button on:click={()=>assignToObj()}>But this will trigger the update (assigned in the function)</button>
+```

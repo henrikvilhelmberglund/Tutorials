@@ -1,0 +1,17 @@
+```svelte example Wrapper="/src/lib/Example.svelte"
+
+<script>
+  let array = []
+
+  function increment() {
+    array.push(1);
+    array = array;
+  }
+</script>
+
+<div>{JSON.stringify(array)}</div>
+
+<button on:click={()=>increment()}>Click me</button>
+
+```
+

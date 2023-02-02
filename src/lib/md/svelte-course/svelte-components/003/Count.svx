@@ -1,0 +1,15 @@
+```svelte example Wrapper="/src/lib/Example.svelte"
+
+<script>
+  let count = 0;
+
+  function increment() {
+    count++;
+  }
+</script>
+
+<div>{count}</div>
+
+<button on:click={()=>increment()}>Click me</button>
+
+```

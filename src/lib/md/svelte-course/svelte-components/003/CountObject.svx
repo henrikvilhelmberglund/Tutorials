@@ -1,0 +1,17 @@
+```svelte example Wrapper="/src/lib/Example.svelte"
+
+<script>
+  let obj = {
+    count: 0
+  };
+
+  function increment() {
+    obj.count++;
+  }
+</script>
+
+<div>{obj.count}</div>
+
+<button on:click={()=>increment()}>Click me</button>
+
+```
