@@ -1,0 +1,17 @@
+```svelte example Wrapper="/src/lib/Example.svelte"
+<script>
+  let count = 1;
+  let double = count * 2;
+
+  function increment() {
+    count++;
+  }
+  function decrement() {
+    count--;
+  }
+</script>
+
+<button on:click={decrement}>-</button>
+{count} * 2 = {double}
+<button on:click={increment}>+</button>
+```

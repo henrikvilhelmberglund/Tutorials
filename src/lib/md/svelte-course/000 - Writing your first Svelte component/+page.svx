@@ -7,8 +7,8 @@ layout: notes
 ---
 
 <script>
-  import HelloWorld_0 from "/src/lib/md/svelte-course/svelte-components/000/HelloWorld_0.svx"
-  import HelloWorld_1 from "/src/lib/md/svelte-course/svelte-components/000/HelloWorld_1.svx"
+  import HelloWorld_0 from "./HelloWorld_0.svx"
+  import HelloWorld_1 from "./HelloWorld_1.svx"
   let stage = 0;
 </script>
 

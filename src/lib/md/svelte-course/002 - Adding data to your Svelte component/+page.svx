@@ -7,9 +7,9 @@ layout: notes
 ---
 
 <script>
-  import HelloWorld from "/src/lib/md/svelte-course/svelte-components/002/HelloWorld.svx"
-  import DynamicImage from "/src/lib/md/svelte-course/svelte-components/002/DynamicImage.svx";
-  import DynamicImageShort from "/src/lib/md/svelte-course/svelte-components/002/DynamicImageShort.svx";
+  import HelloWorld from "./HelloWorld.svx"
+  import DynamicImage from "./DynamicImage.svx";
+  import DynamicImageShort from "./DynamicImageShort.svx";
 </script>
 ```svelte
 <script>

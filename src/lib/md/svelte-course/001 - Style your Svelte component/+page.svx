@@ -7,11 +7,11 @@ layout: notes
 ---
 
 <script>
-  import HelloWorld_1 from "/src/lib/md/svelte-course/svelte-components/001/HelloWorld_1.svx"
-  import AnotherComponent from "/src/lib/md/svelte-course/svelte-components/001/AnotherComponent.svx"
-  import BigP from "/src/lib/md/svelte-course/svelte-components/001/BigP.svx"
-  import SmallP from "/src/lib/md/svelte-course/svelte-components/001/SmallP.svx"
-  import PAttack from "/src/lib/md/svelte-course/svelte-components/001/PAttack.svx"
+  import HelloWorld_1 from "./HelloWorld_1.svx"
+  import AnotherComponent from "./AnotherComponent.svx"
+  import BigP from "./BigP.svx"
+  import SmallP from "./SmallP.svx"
+  import PAttack from "./PAttack.svx"
   let big = false;
   let animation = false;
 </script>
