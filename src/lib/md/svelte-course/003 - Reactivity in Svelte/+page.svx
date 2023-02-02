@@ -7,12 +7,12 @@ layout: notes
 ---
 
 <script>
-  import Count from "/src/lib/md/svelte-course/svelte-components/003/Count.svx";
-  import CountObject from "/src/lib/md/svelte-course/svelte-components/003/CountObject.svx";
-  import CountObjectWrong from "/src/lib/md/svelte-course/svelte-components/003/CountObjectWrong.svx";
-  import CountArray from "/src/lib/md/svelte-course/svelte-components/003/CountArray.svx";
-  import CountArrayFixed from "/src/lib/md/svelte-course/svelte-components/003/CountArrayFixed.svx";
-  import CountArrayFixed2 from "/src/lib/md/svelte-course/svelte-components/003/CountArrayFixed2.svx";
+  import Count from "./Count.svx";
+  import CountObject from "./CountObject.svx";
+  import CountObjectWrong from "./CountObjectWrong.svx";
+  import CountArray from "./CountArray.svx";
+  import CountArrayFixed from "./CountArrayFixed.svx";
+  import CountArrayFixed2 from "./CountArrayFixed2.svx";
 </script>
 
 In Svelte we can have something called **Reactivity**, basically meaning: *When we update variables, update the DOM as well.*

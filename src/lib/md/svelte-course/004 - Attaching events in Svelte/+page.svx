@@ -7,12 +7,12 @@ layout: notes
 ---
 
 <script>
-import EventListener from "/src/lib/md/svelte-course/svelte-components/004/EventListener.svx";
-import EventListenerArrowFunction from "/src/lib/md/svelte-course/svelte-components/004/EventListenerArrowFunction.svx";
-import PreventDefault from "/src/lib/md/svelte-course/svelte-components/004/PreventDefault.svx";
-import StopPropagation from "/src/lib/md/svelte-course/svelte-components/004/StopPropagation.svx";
-import Capture from "/src/lib/md/svelte-course/svelte-components/004/Capture.svx";
-import Self from "/src/lib/md/svelte-course/svelte-components/004/Self.svx";
+import EventListener from "./EventListener.svx";
+import EventListenerArrowFunction from "./EventListenerArrowFunction.svx";
+import PreventDefault from "./PreventDefault.svx";
+import StopPropagation from "./StopPropagation.svx";
+import Capture from "./Capture.svx";
+import Self from "./Self.svx";
 </script>
 
 In vanilla JS we do something like this:
