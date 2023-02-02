@@ -2,6 +2,32 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+### [0.0.5](https://github.com/henrikvilhelmberglund/Tutorials/compare/v0.0.4...v0.0.5) (2023-02-02)
+
+
+### Features
+
+* :lipstick: add style in H3 ([7a84382](https://github.com/henrikvilhelmberglund/Tutorials/commit/7a84382c5f775ba849f76751ff166a30943ab4a3))
+* :sparkles: add 001 component ([f2a3c32](https://github.com/henrikvilhelmberglund/Tutorials/commit/f2a3c3262311b45a8efb794a5578d60e8b22baac))
+* :sparkles: add 001 component ([aadb65d](https://github.com/henrikvilhelmberglund/Tutorials/commit/aadb65dca002d28a3d26aefd22338a93e20620e5))
+* :sparkles: add 001 page ([d8c6003](https://github.com/henrikvilhelmberglund/Tutorials/commit/d8c6003d7c181587718ebf2b94aee2e5e3ab2c1f))
+* :sparkles: add example components 001 ([60bd19e](https://github.com/henrikvilhelmberglund/Tutorials/commit/60bd19eaf9acf3d0dec4c4842b4db6d2a31abba1))
+* :sparkles: add postrelease script ([2e2f2de](https://github.com/henrikvilhelmberglund/Tutorials/commit/2e2f2ded0c5bd61004e5cd2e09f66fce510d250f))
+* :sparkles: add svelte course 002 (wip) ([9ba2aed](https://github.com/henrikvilhelmberglund/Tutorials/commit/9ba2aed8af3fa42e68084924c4e9a7c664e8cc5d))
+* :sparkles: add svelte-course 002 ([a9435a6](https://github.com/henrikvilhelmberglund/Tutorials/commit/a9435a681391a68a6146cf3096d8f3000b2f3c0a))
+* :sparkles: add svelte-course 003 ([749a2a2](https://github.com/henrikvilhelmberglund/Tutorials/commit/749a2a29e1c764503837bc2dde14c65ea76c0432))
+* :sparkles: add svelte-course 004 ([bcc2541](https://github.com/henrikvilhelmberglund/Tutorials/commit/bcc254174ae7f6145119371a3b5e7cb622f61d2b))
+* :sparkles: update 000 component ([52b52ed](https://github.com/henrikvilhelmberglund/Tutorials/commit/52b52edf73b0205a9910d30b59d0a36de06d817d))
+* :sparkles: update 001 ([204eb5c](https://github.com/henrikvilhelmberglund/Tutorials/commit/204eb5c9b5842968a180b8159b9a0dae886595e9))
+
+
+### Bug Fixes
+
+* :bug: prevent prettier from messing up .svx files ([0244f90](https://github.com/henrikvilhelmberglund/Tutorials/commit/0244f901a3b4eb848458fc8f681ca01bed99b7b2))
+* :fire: remove extra style tag used in debugging ([da15b8c](https://github.com/henrikvilhelmberglund/Tutorials/commit/da15b8cc9eeb48caa6ae4a4693af55f46d38b525))
+* :fire: remove unused component ([d65f391](https://github.com/henrikvilhelmberglund/Tutorials/commit/d65f391854181836e5283544da28bb1393f5b468))
+* :lipstick: prettier ([4489a35](https://github.com/henrikvilhelmberglund/Tutorials/commit/4489a3540cf03de15c18963964f56b5b24ca282f))
+
 ### [0.0.4](https://github.com/henrikvilhelmberglund/Tutorials/compare/v0.0.3...v0.0.4) (2023-01-27)
 
 

@@ -1,6 +1,6 @@
 {
 	"name": "tutorials",
-	"version": "0.0.4",
+	"version": "0.0.5",
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
@@ -9,7 +9,7 @@
 		"check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch",
 		"release": "commit-and-tag-version",
-    "postrelease": "git push --follow-tags origin main",
+		"postrelease": "git push --follow-tags origin main",
 		"deploy": "npx gh-pages -d build --dotfiles"
 	},
 	"devDependencies": {
