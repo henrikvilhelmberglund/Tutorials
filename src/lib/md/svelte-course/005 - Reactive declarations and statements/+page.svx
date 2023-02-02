@@ -1,0 +1,49 @@
+---
+title: Reactive declarations and statements
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-02-02
+layout: notes
+---
+
+<script>
+  import Count from "./Count.svx";
+  import Double from "./Double.svx";
+  import DoubleFixed from "./DoubleFixed.svx";
+  import DoubleConsole from "./DoubleConsole.svx";
+  import DoubleConsole2 from "./DoubleConsole2.svx";
+</script>
+
+Let's say we have a Count component that shows a doubled value:
+
+<Count/>
+
+This may be fine in simpler components but if we're using **count * 2** in a lot of places we might want to have a variable **let double = count * 2;** instead.
+
+<Double/>
+
+We can see we have a problem though. The variable `double` does not update because we're not updating it in the functions so it is only assigned to **once when the component loads**. Instead of adding a statement to update `double` in all of the functions we can use a **reactive declaration**.
+
+To do that we simply replace **let double = count * 2** with ** $: double = count * 2**.
+
+<DoubleFixed/>
+
+This is a special Svelte syntax that means **when variables to the right of = are changed, rerun this code**. 
+
+When we click the buttons `count` is changed. Since `count` was changed, **$: double = count * 2** will rerun so we get the correct value even though we didn't update the double value in the functions.
+
+### Reactive statements
+
+We can also have **reactive statements**. For example we can log `count` whenever it changes with **$: console.log(count);** which could be useful for debugging.
+
+<DoubleConsole/>
+
+As before the statement will be reevaluated whenever the **variable it depends on (its dependency) is changed**. In this case it is **count** which changes when we click the buttons.
+
+A thing to note is that this does not happen immediately but instead **asynchronously**. 
+
+<DoubleConsole2/>
+
+It does though happen **just before Svelte updates the DOM** (so the value in the DOM is always up to date).
+
+A final thing to note is that the order of reactive declarations doesn't matter since **they will be automatically reordered** by Svelte. However they must be declared in the **top level** (so not in functions).

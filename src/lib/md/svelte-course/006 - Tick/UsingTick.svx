@@ -1,0 +1,24 @@
+```svelte example Wrapper="/src/lib/Example.svelte"
+<script>
+  import { tick } from "svelte";
+  let count = 1;
+  $: double = count * 2;
+
+  function increment() {
+    count++;
+    // This will log the previous value because it did not update yet
+    console.log("Before tick:" + double);
+    // but we can use tick to wait until it is updated
+    tick().then(()=>{
+      console.log("After tick:" + double);
+    });
+  }
+  function decrement() {
+    count--;
+  }
+</script>
+
+<button on:click={decrement}>-</button>
+{count} * 2 = {double}
+<button on:click={increment}>+</button>
+```
