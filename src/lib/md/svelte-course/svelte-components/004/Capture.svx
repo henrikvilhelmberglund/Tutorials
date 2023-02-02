@@ -1,0 +1,20 @@
+```svelte example Wrapper="/src/lib/Example.svelte"
+Without |capture
+<div on:click={() => console.log("Parent")}>
+  Parent
+  <div on:click={() => console.log("Child")}>
+    <!-- output is "Child" then "Parent" -->
+    Child
+  </div>
+</div>
+
+With |capture
+<div on:click|capture={() => console.log("Parent")}>
+  Parent
+  <div on:click={() => console.log("Child")}>
+    <!-- output is "Parent" then "Child" because of |capture -->
+    Child
+  </div>
+</div>
+
+```

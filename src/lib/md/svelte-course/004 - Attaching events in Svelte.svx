@@ -1,0 +1,54 @@
+---
+title: Attaching events in Svelte
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-02-02
+layout: notes
+---
+
+<script>
+import EventListener from "/src/lib/md/svelte-course/svelte-components/004/EventListener.svx";
+import EventListenerArrowFunction from "/src/lib/md/svelte-course/svelte-components/004/EventListenerArrowFunction.svx";
+import PreventDefault from "/src/lib/md/svelte-course/svelte-components/004/PreventDefault.svx";
+import StopPropagation from "/src/lib/md/svelte-course/svelte-components/004/StopPropagation.svx";
+import Capture from "/src/lib/md/svelte-course/svelte-components/004/Capture.svx";
+import Self from "/src/lib/md/svelte-course/svelte-components/004/Self.svx";
+</script>
+
+In vanilla JS we do something like this:
+```js
+let h1 = document.querySelector("h1");
+h1.addEventListener("click", () => { });
+```
+
+but in Svelte we can add event listeners **directly in the markup**.
+
+<EventListener/> 
+
+Of course it's also possible to use arrow functions.
+
+<EventListenerArrowFunction/>
+
+If the component is removed from the DOM the event listeners will **automatically be cleaned up**. 
+
+### Event modifiers
+
+When we have forms in HTML we may want to use the JS `event.preventDefault();`.
+
+In Svelte we can have that as an **event modifier**. After the event name we can add **|** and **preventDefault** to get the same effect without writing code in the script tag.
+
+<PreventDefault/>
+
+There are also other modifiers like **stopPropagation** to prevent bubbling,
+
+<StopPropagation/>
+
+and the .addEventListener() third **options** arguments are also available, for example **capture** to trigger the event in the capture phase.
+
+<Capture/>
+
+Other possible event modifiers are **once**, **passive**, **nonpassive**, **trusted** and **self**.
+
+Self will only trigger if the **event.target is the element itself**.
+
+<Self/>

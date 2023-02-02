@@ -1,0 +1,22 @@
+```svelte example Wrapper="/src/lib/Example.svelte"
+Without |stopPropagation
+<div on:click={() => console.log("Parent")}>
+  Parent
+  <div on:click={() => console.log("Child")}>
+    <!-- output is "Child" then "Parent" -->
+    Child
+  </div>
+</div>
+
+<br>
+
+With |stopPropagation
+<div on:click={() => console.log("Parent")}>
+  Parent
+  <div on:click|stopPropagation={() => console.log("Child")}>
+    <!-- output is only "Child" since we stopped propagation -->
+    Child
+  </div>
+</div>
+
+```

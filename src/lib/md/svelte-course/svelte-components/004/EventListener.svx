@@ -1,0 +1,9 @@
+```svelte example Wrapper="/src/lib/Example.svelte"
+<script>
+  function handleClick() {
+    console.log("you clicked!")
+  }
+</script>
+
+<h1 on:click={handleClick}>Click me</h1> (will show in the console)
+```

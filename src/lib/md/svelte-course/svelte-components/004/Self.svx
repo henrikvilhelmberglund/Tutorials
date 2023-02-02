@@ -1,0 +1,20 @@
+```svelte example Wrapper="/src/lib/Example.svelte"
+Without |self
+<div on:click={() => console.log("Parent")}>
+  Parent
+  <div on:click={() => console.log("Child")}>
+    <!-- output is "Child" then "Parent" -->
+    Child
+  </div>
+</div>
+
+With |self
+<div on:click|self={() => console.log("Parent")}>
+  Parent
+  <div on:click={() => console.log("Child")}>
+    <!-- output is only "Child" because event.target is not the parent div when clicking the child -->
+    Child
+  </div>
+</div>
+
+```
