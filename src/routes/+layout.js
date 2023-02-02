@@ -6,7 +6,7 @@ const modules = import.meta.glob([
 	"$lib/md/svelte-course/*/*.svx",
 	// "$lib/md/svelte-course/*.svx",
 	"!$lib/md/_*.svx",
-	"!$lib/md/svelte-course/_*.svx"
+	"!$lib/md/svelte-course/_*.svx",
 	"!$lib/md/svelte-course/*/_*.svx"
 ]);
 let myPages = [];
