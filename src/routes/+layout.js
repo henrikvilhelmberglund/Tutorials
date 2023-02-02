@@ -7,7 +7,7 @@ const modules = import.meta.glob([
 	// "$lib/md/svelte-course/*.svx",
 	"!$lib/md/_*.svx",
 	"!$lib/md/svelte-course/_*.svx",
-	"!$lib/md/svelte-course/*/_*.svx"
+	"!$lib/md/svelte-course/*/_*.svx",
 ]);
 let myPages = [];
 let svelte;
@@ -41,7 +41,7 @@ for (let path in modules) {
 		link: fixedPath,
 		original: path,
 		newbody: post.default,
-		bsvelte: svelte
+		bsvelte: svelte,
 	});
 }
 
@@ -49,7 +49,7 @@ export async function load({ params }) {
 	return {
 		myPages,
 		titles: modules,
-		title: "Tutorials"
+		title: "Tutorials",
 		// meta: post.metadata
 	};
 }
