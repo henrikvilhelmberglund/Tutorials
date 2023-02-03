@@ -5,5 +5,5 @@
   }
 </script>
 
-<h1 on:click|preventDefault={handleClick}>Click me</h1> (will show in the console)
+<button on:click|preventDefault={handleClick}>Click me</button> (will show in the console)
 ```
