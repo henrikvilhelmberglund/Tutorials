@@ -1,0 +1,108 @@
+---
+title: Components events
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-02-03
+layout: notes
+---
+
+<script>
+  import Profile from "./Profile.md";
+  import ProfileReactive from "./ProfileReactive.md";
+  import ProfileEventDispatcher from "./ProfileEventDispatcher.md";
+</script>
+
+In the last post we learned that **components** can be used like **HTML elements** (after importing them) and **props** can be used like **HTML attributes**.
+
+Here we have a component Profile.svelte where we can add or remove skillpoints and display them.
+
+<Profile/>
+
+As you can see we can also send **functions in props**.
+
+```svelte example Wrapper="/src/lib/Example.svelte"
+<script>
+	import Profile from "./Profile.svelte";
+
+	function onSkillPointChange(newSkillPoints) {
+		console.log("onSkillPointChange: " + newSkillPoints);
+	}
+</script>
+
+<Profile name="Henrik" status="Learning Svelte" {onSkillPointChange} />
+```
+
+We can improve the code in Profile.svelte by **using a reactive statement** for the function prop instead of running it in both to the increment and decrement functions.
+
+<ProfileReactive/>
+
+We have a problem though because we assume that `{onSkillPointChange}` is **always passed in as a functions** so it won't work if we don't pass it in.
+
+There are two ways we can fix this:
+
+- Check if onSkillPointChange is actually a function
+
+```svelte
+$: if (typeof onSkillPointChange === "function") onSkillPointChange(skillPoints);
+```
+
+Here we check if it's a function and if it is we call it.
+
+- Another way is to add a default value for onSkillPointChange:
+
+```svelte
+export let onSkillPointChange = () => {};
+```
+
+We usually want to **avoid strongly coupling components to events** because it's more flexible to only use events when you need them. For example HTML buttons don't require you to add event listeners for every type of interaction by default, instead you can **add them if you need them**.
+
+To make the prop optional we could have a **check to see if it is defined**.
+
+```svelte
+$: if (onSkillPointChange) onSkillPointChange(skillPoints);
+```
+
+There's an **even better way** though, **component events**.
+
+By creating an **event dispatcher** in our child component we can create a **custom event** that the parent can **optionally listen to**.
+
+<ProfileEventDispatcher/>
+
+and to actually use it we add **on:skillPointChange** on the component and in the function take in **event** and send **event.detail**.
+
+```svelte example Wrapper="/src/lib/Example.svelte"
+<script>
+	import ProfileEventDispatcher from "./ProfileEventDispatcher.svelte";
+
+	function onSkillPointChange(event) {
+		console.log("onSkillPointChange: " + event.detail);
+	}
+</script>
+
+<ProfileEventDispatcher
+	name="Henrik"
+	status="Learning Svelte"
+	on:skillPointChange={onSkillPointChange} />
+```
+
+If we do it this way we **don't have to** listen to the event if we don't want to.
+
+```svelte example Wrapper="/src/lib/Example.svelte"
+<script>
+	import ProfileEventDispatcher from "./ProfileEventDispatcher.svelte";
+
+	function onSkillPointChange(event) {
+		console.log("onSkillPointChange: " + event.detail);
+	}
+</script>
+
+<ProfileEventDispatcher
+	name="Henrik"
+	status="Learning Svelte"
+	on:skillPointChange={onSkillPointChange} />
+
+<!-- clicking the buttons here will not log in the console -->
+<ProfileEventDispatcher name="Henrik again" status="Learning about component events" />
+```
+
+By doing this we can make the event **optional**.
