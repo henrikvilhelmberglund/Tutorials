@@ -1,0 +1,140 @@
+---
+title: Components and props
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-02-03
+layout: notes
+---
+
+<script>
+  import OtherComponent from "./OtherComponent.svx"
+  import ObjectDisplay from "./ObjectDisplay.svx"
+  let name = "world";
+</script>
+
+To use another component in a component we need to **import it**. We do this by writing
+```svelte
+<script>
+  import OtherComponent from "./OtherComponent.svelte"
+</script>
+```
+
+where the first `OtherComponent` is the name you want to call it and the second `"./OtherComponent.svelte"` is the path. 
+
+In this case it's a relative path but it could also be an absolute path, or you could use an alias in the path such as **$lib** which in Svelte evaluates to /src/lib.
+
+We can see that a .svelte file's **default export** is the **component itself**.
+
+### Component vs element naming
+
+We use a component by first importing it and then in the markup writing
+
+```svelte
+<OtherComponent/>
+```
+
+Notice that we named our component with **Pascal Case** to differentiate it from HTML elements, such as
+
+```html
+<othercomponent/>
+```
+
+Thus anything that starts with a **capital letter** is a **component** and anything starting with a **lowercase letter** is an **element**.
+
+### Passing data from a parent component to a child
+
+Any component that is used in another component is a **child component**. To pass data from a parent to a child we can use **props**.
+
+We do this by writing the data we want to pass into the component tag itself.
+
+```svelte
+<OtherComponent name={name}/>
+```
+
+or, if the prop name and variable name are the same, use a **shorthand**:
+
+```svelte
+<OtherComponent {name}/>
+```
+
+To actually be able to use this `name` data in the child component we need to add in the child component a **variable called name** and also before the declaration add **export**.
+
+```svelte example Wrapper="/src/lib/Example.svelte"
+<script>
+  // this is in the child component
+  export let name;
+</script>
+
+<h1>Hello {name}!</h1>
+```
+
+This says "Hello undefined!" because we didn't **pass a value to the name prop**, so the default value is **undefined**. We could add a default value though.
+
+```svelte example Wrapper="/src/lib/Example.svelte"
+<script>
+  // this is in the child component
+  export let name = "stranger";
+</script>
+
+<h1>Hello {name}!</h1>
+```
+
+Finally, to add an instance of the child component in the parent component and send data through the `{name}` prop we write this:
+
+```svelte example Wrapper="/src/lib/Example.svelte"
+<script>
+  // this is in the parent component
+import OtherComponent from "./OtherComponent.svx"
+let name = "world";
+</script>
+  
+<OtherComponent {name}/>
+```
+
+Here are some ways we can use to pass (or not pass) props:
+
+```svelte example Wrapper="/src/lib/Example.svelte"
+<script>
+  // this is in the parent component
+import OtherComponent from "./OtherComponent.svx"
+let name = "world";
+</script>
+  
+<OtherComponent {name}/>
+<OtherComponent name={name}/>
+<OtherComponent name="Baxter"/>
+<OtherComponent />
+```
+
+In this case I had **export let name = "stranger";** in the child component so I get "Hello stranger!" instead of "Hello undefined!".
+
+### Spread syntax and props
+
+We can also use **spread syntax** to send our props.
+
+Here is the child:
+
+```svelte example Wrapper="/src/lib/Example.svelte"
+<script>
+	export let name = "stranger";
+  export let email = "stranger@stranger.com"
+</script>
+
+<h1>Hello {name} with email {email}!</h1>
+```
+
+Here is the parent where we import and display the child with our parent variable:
+
+```svelte example Wrapper="/src/lib/Example.svelte"
+<script>
+import ObjectDisplay from "./ObjectDisplay.svx"
+const obj = {
+  name: "Henrik",
+  email: "henrikvilhelmberglund@gmail.com"
+}
+</script>
+  
+<ObjectDisplay {...obj}/>
+```
+
+

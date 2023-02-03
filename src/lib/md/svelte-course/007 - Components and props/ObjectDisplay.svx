@@ -1,0 +1,6 @@
+<script>
+  export let name = "stranger";
+  export let email = "stranger@stranger.com"
+</script>
+
+<h1>Hello {name} with email {email}!</h1>
