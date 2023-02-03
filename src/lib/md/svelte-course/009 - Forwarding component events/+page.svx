@@ -1,0 +1,130 @@
+---
+title: Forwarding component events
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-02-03
+layout: notes
+---
+
+<script>
+  import CustomButton from "./CustomButton.md";
+</script>
+
+By default events **bubble**, meaning if I have an event listener on an element and that element has for example a child button, when I click the button it will also trigger the event listener in the parent.
+
+You can see this when clicking the Element Click me 1 which is inside a div with an event listener.
+
+```svelte example Wrapper="/src/lib/Example.svelte"
+<script>
+	import Parent from "./Parent.svelte";
+	function onElementButtonClick(event) {
+		console.log("onElementButtonClick", event.target.dataset.value);
+	}
+	function onComponentButtonClick(event) {
+		console.log("onComponentButtonClick", event.detail);
+	}
+</script>
+
+Component:
+
+<Parent on:componentButtonClick={onComponentButtonClick} />
+
+<hr />
+
+Element:
+
+<div on:click={onElementButtonClick} on:keydown={onElementButtonClick}>
+	<div>
+		<button data-value="button1">Click me 1</button>
+		<button data-value="button2">Click me 2</button>
+	</div>
+</div>
+
+<style>
+</style>
+```
+
+The problem is that the component buttons don't work because right now the events are **deeply nested and don't bubble**.
+
+We could go step by step, handling the event with **on:componentButtonClick={"{"}onComponentButtonClick}** and create an event dispatcher and dispatch the event in every nested component, but **there is a better way**.
+
+If we are listening to an event and are going to **dispatch the same event**, we can simply add **on:componentButtonClick** to the nested components.
+
+Here are the nested components:
+
+```svelte
+<!-- Parent2.svelte -->
+<script>
+	import Child2 from "./Child2.svelte";
+</script>
+
+<Child2 on:componentButtonClick />
+```
+
+```svelte
+<!-- Child2.svelte -->
+<script>
+	import GrandChild from "./GrandChild.svelte";
+</script>
+
+<GrandChild on:componentButtonClick />
+```
+
+```svelte
+<!-- GrandChild.svelte -->
+<script>
+	import { createEventDispatcher } from "svelte";
+	const dispatch = createEventDispatcher();
+
+	function onClick1() {
+		dispatch("componentButtonClick", "button1");
+	}
+	function onClick2() {
+		dispatch("componentButtonClick", "button2");
+	}
+</script>
+
+<button on:click={onClick1}>Click me 1</button>
+<button on:click={onClick2}>Click me 2</button>
+```
+
+And here is the result after adding **on:componentButtonClick**:
+
+```svelte example Wrapper="/src/lib/Example.svelte"
+<script>
+	import Parent2 from "./Parent2.svelte";
+	function onElementButtonClick(event) {
+		console.log("onElementButtonClick", event.target.dataset.value);
+	}
+	function onComponentButtonClick(event) {
+		console.log("onComponentButtonClick", event.detail);
+	}
+</script>
+
+Component:
+
+<Parent2 on:componentButtonClick={onComponentButtonClick} />
+
+<hr />
+
+Element:
+
+<div on:click={onElementButtonClick} on:keydown={onElementButtonClick}>
+	<div>
+		<button data-value="button1">Click me 1</button>
+		<button data-value="button2">Click me 2</button>
+	</div>
+</div>
+```
+
+We can also do the same thing with **regular DOM elements**, just add for example **on:click** in all nested components and the click event will bubble to the parent.
+
+<CustomButton/>
+
+```svelte example Wrapper="/src/lib/Example.svelte"
+<script>
+	import CustomButton from "./CustomButton.svelte";
+</script>
+
+<CustomButton on:click={() => console.log("you clicked the custom button!")} />
+```
