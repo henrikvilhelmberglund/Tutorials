@@ -36,6 +36,8 @@
 	"type": "module",
 	"dependencies": {
 		"@unocss/reset": "^0.49.1",
-		"mdsvexamples": "^0.3.3"
+		"mdsvexamples": "^0.3.3",
+		"prism-svelte": "^0.5.0",
+		"prismjs": "^1.29.0"
 	}
 }
