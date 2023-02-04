@@ -1,5 +1,6 @@
 // export const modules = import.meta.glob("./*.svx");
 export const prerender = true;
+// export const ssr = false;
 
 const modules = import.meta.glob([
 	"$lib/md/*.svx",
