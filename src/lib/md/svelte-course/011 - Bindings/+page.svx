@@ -1,0 +1,67 @@
+---
+title: Bindings
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-02-04
+layout: notes
+---
+
+<script>
+  import ShowCode from "$lib/ShowCode.svelte"
+  import App from "./App.svelte";
+  import AppRaw from "./App.svelte?raw";
+  import Bind from "./Bind.svelte";
+  import BindRaw from "./Bind.svelte?raw";
+  import BindShorthand from "./BindShorthand.svelte";
+  import BindShorthandRaw from "./BindShorthand.svelte?raw";
+  import Parent from "./Parent.svelte";
+  import ParentRaw from "./Parent.svelte?raw";
+  import Child from "./Child.svelte";
+  import ChildRaw from "./Child.svelte?raw";
+  import ParentBind from "./ParentBind.svelte";
+  import ParentBindRaw from "./ParentBind.svelte?raw";
+  import ChildBind from "./ChildBind.svelte";
+  import ChildBindRaw from "./ChildBind.svelte?raw";
+</script>
+
+Sometimes we want to set a variable from for example an input field.
+
+Here we accomplish this by assigning myValue to the **value of the input field** and also set the **value of the input field** at the same time.
+
+Since we have a variable that is used to set the input field value we can also have a **button that sets myValue which will update the input field reflecting the new value**.
+
+<App/>
+
+<ShowCode code={AppRaw} name="App.svelte"></ShowCode>
+
+This is a very common pattern so Svelte has a directive for it, the **bind:** directive.
+
+We use it with **bind:**, then a **property**, then an **equals sign** and a **variable** we want to bind the property to.
+
+Below we have bound **value** to the variable **myValue** so that whenever we update either the **value** or **myValue** the changes get reflected.
+
+This is known as a **two-way binding**. Changing the **property** will update the **variable**, and changing the **variable** will update the **property**.
+
+<Bind/>
+
+<ShowCode code={BindRaw} name="Bind.svelte"></ShowCode>
+
+And yes, we can have a shorthand for it if the **variable** and **property** have the same name.
+
+<BindShorthand/>
+
+<ShowCode code={BindShorthandRaw} name="BindShorthand.svelte"></ShowCode>
+
+Before we used an **event dispatcher** to send a value to the parent of a child, like this:
+
+<Parent/>
+
+<ShowCode code={ParentRaw} name="Parent.svelte"></ShowCode>
+<ShowCode code={ChildRaw} name="Child.svelte"></ShowCode>
+
+But we could also accomplish this by using **bind:**.
+
+<ParentBind/>
+
+<ShowCode code={ParentBindRaw} name="ParentBind.svelte"></ShowCode>
+<ShowCode code={ChildBindRaw} name="ChildBind.svelte"></ShowCode>
