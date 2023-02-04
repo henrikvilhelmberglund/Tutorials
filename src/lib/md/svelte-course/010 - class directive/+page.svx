@@ -1,0 +1,43 @@
+---
+title: "class: directive"
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-02-04
+layout: notes
+---
+
+<script>
+ 
+  import ShowCode from "$lib/ShowCode.svelte"
+  import App from "./App.svelte";
+  import AppRaw from './App.svelte?raw'
+  import ClassDirective from "./ClassDirective.svelte";
+  import ClassDirectiveRaw from "./ClassDirective.svelte?raw";
+  import ClassDirective2 from "./ClassDirective2.svelte";
+  import ClassDirective2Raw from "./ClassDirective2.svelte?raw";
+  
+	import "prism-svelte";
+	// const highlighted = Prism.highlight(AppRaw, Prism.languages.svelte, "svelte");
+  </script>
+
+We know how to set a class using the **class attribute**:
+
+<App/>
+
+<ShowCode code={AppRaw} name="App.svelte"></ShowCode>
+
+But in Svelte there's another way to set classes using something called a **class directive**.
+
+A directive in Svelte is **anything with a colon**.
+
+To write a class directive we write **class:** followed by the **class name**, followed by an **equals sign** and the **condition for the class to apply**.
+
+<ClassDirective/>
+
+<ShowCode code={ClassDirectiveRaw} name="ClassDirective.svelte"></ShowCode>
+
+We can use a **shorthand** by setting the expression to a **reactive variable**.
+
+<ClassDirective2/>
+
+<ShowCode code={ClassDirective2Raw} name="ClassDirective2.svelte"></ShowCode>
