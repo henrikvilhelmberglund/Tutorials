@@ -1,0 +1,60 @@
+---
+title: "Component lifecycle events"
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-02-05
+layout: notes
+---
+
+<script>
+  import App from "./App.svelte";
+  import AppRaw from "./App.svelte?raw";
+  import App2 from "./App2.svelte";
+  import App2Raw from "./App2.svelte?raw";
+  import App3 from "./App3.svelte";
+  import App3Raw from "./App3.svelte?raw";
+  import Component from "./Component.svelte";
+  import ComponentRaw from "./Component.svelte?raw";
+  import Component2 from "./Component2.svelte";
+  import Component2Raw from "./Component2.svelte?raw";
+  import Component3 from "./Component3.svelte";
+  import Component3Raw from "./Component3.svelte?raw";
+  import Foo from "./foo.js?raw";
+  import MarkUpdate from "./markUpdate?raw";
+  import ShowCode from "$lib/ShowCode.svelte";
+</script>
+
+There are 4 lifecycle events in Svelte:
+
+- beforeUpdate
+- onMount
+- afterUpdate
+- onDestroy
+
+Here we have a component with a checkbox that if checked displays another component containing these lifecycle events.
+
+<App/>
+<ShowCode code={AppRaw} name="App.svelte"/>
+<ShowCode code={ComponentRaw} name="Component.svelte"/>
+
+If we toggle it we can see that the lifecycle events run in this order: **beforeUpdate, onMount, afterUpdate** when it is **checked** and **onDestroy** when the check is **removed** and the component disappears.
+
+If we check the checkbox and click the button **beforeUpdate** and **afterUpdate** will run each time we click the button.
+
+If we update the state in afterUpdate it could lead to infinite loops (since it would trigger another update) so Svelte only runs the afterUpdate event **once** to prevent this.
+
+Another thing to note is that these events need to be at the **top level** because they are run when the component initializes.
+
+We could though put the lifecycle event **in a function** and then run the function as long as it's still in the top level. This could help if we have many components sharing the same lifecycle logic.
+
+<App2/>
+<ShowCode code={Component2Raw} name="Component2.svelte"/>
+<ShowCode code={Foo} name="foo.js"/>
+
+In the next example we have a file called **markUpdate.js** which will add outlines to our button using an **action**.
+
+... we will talk more about this later (I hope).
+
+<App3/>
+<ShowCode code={Component3Raw} name="Component3.svelte"/>
+<ShowCode code={MarkUpdate} name="markUpdate.js"/>
