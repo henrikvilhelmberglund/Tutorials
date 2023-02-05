@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="/Tutorials/favicon.png" />
+  <link rel="stylesheet" href="/Tutorials/prism-vsc-dark-plus.css">
+  <meta name="viewport" content="width=device-width" />
+  <meta http-equiv="content-security-policy" content="">
+		<link href="/Tutorials/_app/immutable/assets/_layout-834a5097.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/mdsvex-layout-notes-5d6d5db2.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/Strong-210af2f1.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/005 - Command Center in VSCode-3d969ef8.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/Learning Svelte and SvelteKit part 1-4a0b184b.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/Example-332e9834.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/HelloWorld_1-e8530f87.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/_page-fea723ac.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/HelloWorld_1-d771becf.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/PAttack-335b6bab.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/_page-68192e0c.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/_page-8a46b28a.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/_page-534beb13.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/ShowCode-4157962a.css" rel="stylesheet">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/start-36864b77.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/index-bc81051f.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/singletons-b36565ae.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/paths-b4419565.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/preload-helper-41c905a7.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/_layout.svelte-0088b0e0.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/modules/pages/_layout.js-e5a6d40c.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/dynamic-import-helper-be004503.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/_layout-8a81aad8.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/svelte-course/_layout.svelte-a7c15f7f.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/svelte-course/_slug_/_page.svelte-f8948e68.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/modules/pages/svelte-course/_slug_/_page.js-877f5428.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/_page-6085e23b.js">
+</head>
+
+<body>
+  <div>
+
+
+<nav class="svelte-1idopbc"><a class="uno-qz86gb svelte-1idopbc" href="/Tutorials/">Home </a>
+	<a class="uno-kk5pwl svelte-1idopbc" href="/Tutorials/svelte-course">Svelte Course
+	</a></nav>
+
+<div class="uno-hk8nma svelte-1idopbc"><p class="uno-lsveny svelte-1idopbc">Warning!</p>
+	<p class="uno-51bdnx svelte-1idopbc">under construction :)</p></div>
+
+<nav><ul><li><a href="/Tutorials/svelte-course/0 - Introduction">0 - Introduction</a>
+					</li><li><a href="/Tutorials/svelte-course/000 - Writing your first Svelte component">000 - Writing your first Svelte component</a>
+					</li><li><a href="/Tutorials/svelte-course/001 - Style your Svelte component">001 - Style your Svelte component</a>
+					</li><li><a href="/Tutorials/svelte-course/002 - Adding data to your Svelte component">002 - Adding data to your Svelte component</a>
+					</li><li><a href="/Tutorials/svelte-course/003 - Reactivity in Svelte">003 - Reactivity in Svelte</a>
+					</li><li><a href="/Tutorials/svelte-course/004 - Attaching events in Svelte">004 - Attaching events in Svelte</a>
+					</li><li><a href="/Tutorials/svelte-course/005 - Reactive declarations and statements">005 - Reactive declarations and statements</a>
+					</li><li><a href="/Tutorials/svelte-course/006 - tick()">006 - tick()</a>
+					</li><li><a href="/Tutorials/svelte-course/007 - Components and props">007 - Components and props</a>
+					</li><li><a href="/Tutorials/svelte-course/008 - Component events">008 - Component events</a>
+					</li><li><a href="/Tutorials/svelte-course/009 - Forwarding component events">009 - Forwarding component events</a>
+					</li><li><a href="/Tutorials/svelte-course/010 - class directive">010 - class directive</a>
+					</li><li><a href="/Tutorials/svelte-course/011 - Bindings">011 - Bindings</a>
+					</li><li><a href="/Tutorials/svelte-course/012 - bind group">012 - bind group</a>
+					</li><li><a href="/Tutorials/svelte-course/013 - bind this">013 - bind this</a>
+					</li><li><a href="/Tutorials/svelte-course/014 - Component lifecycle events">014 - Component lifecycle events</a>
+					</li></ul></nav>
+
+
+
+
+<article class="uno-9uf4sf"><section class="uno-otf0eq"><div class="uno-xj1z8i"><h2 class="uno-sjqek6">Component lifecycle events
+</h2></div>
+    <div class="uno-mexwlg"><p class="uno-ddg7b5 text-1xl ">Posted on 2023-02-05 by
+</p>
+      <a class="uno-1irbms text-1xl" href="http://github.com/henrikvilhelmberglund/">henrikvilhelmberglund
+</a></div></section>
+  <section class="uno-dyxbz3"><p class="uno-ddg7b5 text-1xl ">There are 4 lifecycle events in Svelte:
+</p>
+<ul class="uno-prji6t"><li class="uno-d5cktv text-1xl">beforeUpdate
+</li>
+<li class="uno-d5cktv text-1xl">onMount
+</li>
+<li class="uno-d5cktv text-1xl">afterUpdate
+</li>
+<li class="uno-d5cktv text-1xl">onDestroy
+</li>
+</ul>
+<p class="uno-ddg7b5 text-1xl ">Here we have a component with a checkbox that if checked displays another component containing these lifecycle events.
+</p>
+<input type="checkbox" name="" id="">
+
+
+
+
+<div class="uno-w8hybr"><pre class="uno-ua6jff language-svelte"><p class="uno-c47bek">App.svelte</p>
+<code style="font-family: 'Maple', Menlo, Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', 'Courier New', monospace;"><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+	<span class="token keyword">import</span> Component <span class="token keyword">from</span> <span class="token string">"./Component.svelte"</span><span class="token punctuation">;</span>
+	<span class="token keyword">let</span> condition<span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>checkbox<span class="token punctuation">"</span></span> <span class="token attr-name"><span class="token namespace">bind:</span>checked=</span><span class="token language-javascript"><span class="token punctuation">{</span>condition<span class="token punctuation">}</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+
+<span class="token language-javascript"><span class="token punctuation">{</span>#<span class="token keyword">if</span> condition<span class="token punctuation">}</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Component</span> <span class="token punctuation">/></span></span>
+<span class="token language-javascript"><span class="token punctuation">{</span><span class="token operator">/</span><span class="token keyword">if</span><span class="token punctuation">}</span></span>
+<!-- HTML_TAG_END --></code>
+  </pre>
+</div>
+
+
+<div class="uno-w8hybr"><pre class="uno-ua6jff language-svelte"><p class="uno-c47bek">Component.svelte</p>
+<code style="font-family: 'Maple', Menlo, Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', 'Courier New', monospace;"><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+	<span class="token keyword">import</span> <span class="token punctuation">{</span> onMount<span class="token punctuation">,</span> onDestroy<span class="token punctuation">,</span> beforeUpdate<span class="token punctuation">,</span> afterUpdate <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"svelte"</span><span class="token punctuation">;</span>
+	<span class="token keyword">let</span> count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+	<span class="token function">onMount</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+		console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"onMount"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">onDestroy</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+		console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"onDestroy"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">beforeUpdate</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+		console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"beforeUpdate"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">afterUpdate</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+		console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"afterUpdate"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token keyword">function</span> <span class="token function">update</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		count<span class="token operator">++</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name"><span class="token namespace">on:</span>click=</span><span class="token language-javascript"><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token function">update</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token punctuation">></span></span>Click me<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+<span class="token language-javascript"><span class="token punctuation">{</span>count<span class="token punctuation">}</span></span>
+<!-- HTML_TAG_END --></code>
+  </pre>
+</div>
+<p class="uno-ddg7b5 text-1xl ">If we toggle it we can see that the lifecycle events run in this order: <strong class="uno-paw6yi">beforeUpdate, onMount, afterUpdate
+</strong> when it is <strong class="uno-paw6yi">checked
+</strong> and <strong class="uno-paw6yi">onDestroy
+</strong> when the check is <strong class="uno-paw6yi">removed
+</strong> and the component disappears.
+</p>
+<p class="uno-ddg7b5 text-1xl ">If we check the checkbox and click the button <strong class="uno-paw6yi">beforeUpdate
+</strong> and <strong class="uno-paw6yi">afterUpdate
+</strong> will run each time we click the button.
+</p>
+<p class="uno-ddg7b5 text-1xl ">If we update the state in afterUpdate it could lead to infinite loops (since it would trigger another update) so Svelte only runs the afterUpdate event <strong class="uno-paw6yi">once
+</strong> to prevent this.
+</p>
+<p class="uno-ddg7b5 text-1xl ">Another thing to note is that these events need to be at the <strong class="uno-paw6yi">top level
+</strong> because they are run when the component initializes.
+</p>
+<p class="uno-ddg7b5 text-1xl ">We could though put the lifecycle event <strong class="uno-paw6yi">in a function
+</strong> and then run the function as long as it&#39;s still in the top level. This could help if we have many components sharing the same lifecycle logic.
+</p>
+<input type="checkbox" name="" id="">
+
+
+
+
+<div class="uno-w8hybr"><pre class="uno-ua6jff language-svelte"><p class="uno-c47bek">Component2.svelte</p>
+<code style="font-family: 'Maple', Menlo, Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', 'Courier New', monospace;"><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+	<span class="token keyword">import</span> <span class="token punctuation">{</span> onDestroy<span class="token punctuation">,</span> beforeUpdate<span class="token punctuation">,</span> afterUpdate <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"svelte"</span><span class="token punctuation">;</span>
+	<span class="token keyword">import</span> <span class="token punctuation">{</span> foo <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"./foo"</span><span class="token punctuation">;</span>
+	<span class="token keyword">let</span> count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+	<span class="token comment">// this will run onMount() from foo.js</span>
+	<span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token function">onDestroy</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+		console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"onDestroy"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">beforeUpdate</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+		console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"beforeUpdate"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">afterUpdate</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+		console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"afterUpdate"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token keyword">function</span> <span class="token function">update</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		count<span class="token operator">++</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name"><span class="token namespace">on:</span>click=</span><span class="token language-javascript"><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token function">update</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token punctuation">></span></span>Click me<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+<span class="token language-javascript"><span class="token punctuation">{</span>count<span class="token punctuation">}</span></span>
+<!-- HTML_TAG_END --></code>
+  </pre>
+</div>
+
+
+<div class="uno-w8hybr"><pre class="uno-ua6jff language-svelte"><p class="uno-c47bek">foo.js</p>
+<code style="font-family: 'Maple', Menlo, Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', 'Courier New', monospace;"><!-- HTML_TAG_START -->import <span class="token language-javascript"><span class="token punctuation">{</span> onMount <span class="token punctuation">}</span></span> from "svelte";
+export function foo() <span class="token language-javascript"><span class="token punctuation">{</span>
+	<span class="token function">onMount</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+		console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"onMount"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></span>
+<!-- HTML_TAG_END --></code>
+  </pre>
+</div>
+<p class="uno-ddg7b5 text-1xl ">In the next example we have a file called <strong class="uno-paw6yi">markUpdate.js
+</strong> which will add outlines to our button using an <strong class="uno-paw6yi">action
+</strong>.
+</p>
+<p class="uno-ddg7b5 text-1xl ">… we will talk more about this later (I hope).
+</p>
+<input type="checkbox" name="" id="">
+
+
+
+
+<div class="uno-w8hybr"><pre class="uno-ua6jff language-svelte"><p class="uno-c47bek">Component3.svelte</p>
+<code style="font-family: 'Maple', Menlo, Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', 'Courier New', monospace;"><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+	<span class="token keyword">import</span> <span class="token punctuation">{</span> onDestroy<span class="token punctuation">,</span> beforeUpdate<span class="token punctuation">,</span> afterUpdate <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"svelte"</span><span class="token punctuation">;</span>
+	<span class="token keyword">import</span> markUpdate <span class="token keyword">from</span> <span class="token string">"./markUpdate"</span><span class="token punctuation">;</span>
+	<span class="token keyword">let</span> count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+	<span class="token keyword">const</span> action <span class="token operator">=</span> <span class="token function">markUpdate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token function">onDestroy</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+		console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"onDestroy"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">beforeUpdate</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+		console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"beforeUpdate"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token function">afterUpdate</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+		console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"afterUpdate"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token keyword">function</span> <span class="token function">update</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		count<span class="token operator">++</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name"><span class="token namespace">use:</span>action</span> <span class="token attr-name"><span class="token namespace">on:</span>click=</span><span class="token language-javascript"><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token function">update</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token punctuation">></span></span>Click me<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+<span class="token language-javascript"><span class="token punctuation">{</span>count<span class="token punctuation">}</span></span>
+<!-- HTML_TAG_END --></code>
+  </pre>
+</div>
+
+
+<div class="uno-w8hybr"><pre class="uno-ua6jff language-svelte"><p class="uno-c47bek">markUpdate.js</p>
+<code style="font-family: 'Maple', Menlo, Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', 'Courier New', monospace;"><!-- HTML_TAG_START -->import <span class="token language-javascript"><span class="token punctuation">{</span> beforeUpdate<span class="token punctuation">,</span> onMount <span class="token punctuation">}</span></span> from "svelte";
+
+export default function () {
+	let elements = new Set();
+
+	beforeUpdate(() => {
+		elements.forEach((element) => <span class="token language-javascript"><span class="token punctuation">{</span>
+			element<span class="token punctuation">.</span>style<span class="token punctuation">.</span>outlineColor <span class="token operator">=</span> <span class="token string">"red"</span><span class="token punctuation">;</span>
+			<span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+				<span class="token keyword">if</span> <span class="token punctuation">(</span>elements<span class="token punctuation">.</span><span class="token function">has</span><span class="token punctuation">(</span>element<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+					element<span class="token punctuation">.</span>style<span class="token punctuation">.</span>outlineColor <span class="token operator">=</span> <span class="token string">"black"</span><span class="token punctuation">;</span>
+				<span class="token punctuation">}</span>
+			<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span></span>);
+	});
+
+	onMount(() => <span class="token language-javascript"><span class="token punctuation">{</span>
+		elements<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">element</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+			element<span class="token punctuation">.</span>style<span class="token punctuation">.</span>outline <span class="token operator">=</span> <span class="token string">"2px solid black"</span><span class="token punctuation">;</span>
+			element<span class="token punctuation">.</span>style<span class="token punctuation">.</span>margin <span class="token operator">=</span> <span class="token string">"8px"</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span></span>);
+
+	return function markUpdateAction(node) <span class="token language-javascript"><span class="token punctuation">{</span>
+		elements<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>node<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token keyword">return</span> <span class="token punctuation">{</span>
+			<span class="token function">destroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				elements<span class="token punctuation">.</span><span class="token function">delete</span><span class="token punctuation">(</span>node<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span><span class="token punctuation">,</span>
+		<span class="token punctuation">}</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span></span>;
+}
+<!-- HTML_TAG_END --></code>
+  </pre>
+</div></section></article>
+
+
+		<script type="module" data-sveltekit-hydrate="13t1nk6">
+			import { start } from "/Tutorials/_app/immutable/start-36864b77.js";
+
+			start({
+				env: {},
+				paths: {"base":"/Tutorials","assets":"/Tutorials"},
+				target: document.querySelector('[data-sveltekit-hydrate="13t1nk6"]').parentNode,
+				version: "1675624929792",
+				hydrate: {
+					node_ids: [0, 2, 6],
+					data: [null,null,null],
+					form: null
+				}
+			});
+		</script>
+	</div>
+</body>
+
+</html>

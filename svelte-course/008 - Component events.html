@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="/Tutorials/favicon.png" />
+  <link rel="stylesheet" href="/Tutorials/prism-vsc-dark-plus.css">
+  <meta name="viewport" content="width=device-width" />
+  <meta http-equiv="content-security-policy" content="">
+		<link href="/Tutorials/_app/immutable/assets/_layout-834a5097.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/mdsvex-layout-notes-5d6d5db2.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/Strong-210af2f1.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/005 - Command Center in VSCode-3d969ef8.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/Learning Svelte and SvelteKit part 1-4a0b184b.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/Example-332e9834.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/HelloWorld_1-e8530f87.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/_page-fea723ac.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/HelloWorld_1-d771becf.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/PAttack-335b6bab.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/_page-68192e0c.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/_page-8a46b28a.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/_page-534beb13.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/ShowCode-4157962a.css" rel="stylesheet">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/start-36864b77.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/index-bc81051f.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/singletons-b36565ae.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/paths-b4419565.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/preload-helper-41c905a7.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/_layout.svelte-0088b0e0.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/modules/pages/_layout.js-e5a6d40c.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/dynamic-import-helper-be004503.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/_layout-8a81aad8.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/svelte-course/_layout.svelte-a7c15f7f.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/svelte-course/_slug_/_page.svelte-f8948e68.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/modules/pages/svelte-course/_slug_/_page.js-877f5428.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/_page-6085e23b.js">
+</head>
+
+<body>
+  <div>
+
+
+<nav class="svelte-1idopbc"><a class="uno-qz86gb svelte-1idopbc" href="/Tutorials/">Home </a>
+	<a class="uno-kk5pwl svelte-1idopbc" href="/Tutorials/svelte-course">Svelte Course
+	</a></nav>
+
+<div class="uno-hk8nma svelte-1idopbc"><p class="uno-lsveny svelte-1idopbc">Warning!</p>
+	<p class="uno-51bdnx svelte-1idopbc">under construction :)</p></div>
+
+<nav><ul><li><a href="/Tutorials/svelte-course/0 - Introduction">0 - Introduction</a>
+					</li><li><a href="/Tutorials/svelte-course/000 - Writing your first Svelte component">000 - Writing your first Svelte component</a>
+					</li><li><a href="/Tutorials/svelte-course/001 - Style your Svelte component">001 - Style your Svelte component</a>
+					</li><li><a href="/Tutorials/svelte-course/002 - Adding data to your Svelte component">002 - Adding data to your Svelte component</a>
+					</li><li><a href="/Tutorials/svelte-course/003 - Reactivity in Svelte">003 - Reactivity in Svelte</a>
+					</li><li><a href="/Tutorials/svelte-course/004 - Attaching events in Svelte">004 - Attaching events in Svelte</a>
+					</li><li><a href="/Tutorials/svelte-course/005 - Reactive declarations and statements">005 - Reactive declarations and statements</a>
+					</li><li><a href="/Tutorials/svelte-course/006 - tick()">006 - tick()</a>
+					</li><li><a href="/Tutorials/svelte-course/007 - Components and props">007 - Components and props</a>
+					</li><li><a href="/Tutorials/svelte-course/008 - Component events">008 - Component events</a>
+					</li><li><a href="/Tutorials/svelte-course/009 - Forwarding component events">009 - Forwarding component events</a>
+					</li><li><a href="/Tutorials/svelte-course/010 - class directive">010 - class directive</a>
+					</li><li><a href="/Tutorials/svelte-course/011 - Bindings">011 - Bindings</a>
+					</li><li><a href="/Tutorials/svelte-course/012 - bind group">012 - bind group</a>
+					</li><li><a href="/Tutorials/svelte-course/013 - bind this">013 - bind this</a>
+					</li><li><a href="/Tutorials/svelte-course/014 - Component lifecycle events">014 - Component lifecycle events</a>
+					</li></ul></nav>
+
+
+
+
+<article class="uno-9uf4sf"><section class="uno-otf0eq"><div class="uno-xj1z8i"><h2 class="uno-sjqek6">Components events
+</h2></div>
+    <div class="uno-mexwlg"><p class="uno-ddg7b5 text-1xl ">Posted on 2023-02-03 by
+</p>
+      <a class="uno-1irbms text-1xl" href="http://github.com/henrikvilhelmberglund/">henrikvilhelmberglund
+</a></div></section>
+  <section class="uno-dyxbz3"><p class="uno-ddg7b5 text-1xl ">In the last post we learned that <strong class="uno-paw6yi">components
+</strong> can be used like <strong class="uno-paw6yi">HTML elements
+</strong> (after importing them) and <strong class="uno-paw6yi">props
+</strong> can be used like <strong class="uno-paw6yi">HTML attributes
+</strong>.
+</p>
+<p class="uno-ddg7b5 text-1xl ">Here we have a component Profile.svelte where we can add or remove skillpoints and display them.
+</p>
+<pre class="language-svelte"><!-- HTML_TAG_START --><code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+	<span class="token keyword">export</span> <span class="token keyword">let</span> name<span class="token punctuation">;</span>
+	<span class="token keyword">export</span> <span class="token keyword">let</span> status<span class="token punctuation">;</span>
+	<span class="token keyword">export</span> <span class="token keyword">let</span> onSkillPointChange<span class="token punctuation">;</span>
+
+	<span class="token keyword">let</span> skillPoints <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+	<span class="token keyword">function</span> <span class="token function">decrementSkillPoints</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		<span class="token keyword">if</span> <span class="token punctuation">(</span>skillPoints <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+			skillPoints<span class="token operator">--</span><span class="token punctuation">;</span>
+		<span class="token punctuation">&#125;</span>
+		<span class="token function">onSkillPointChange</span><span class="token punctuation">(</span>skillPoints<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
+	<span class="token keyword">function</span> <span class="token function">incrementSkillPoints</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		skillPoints<span class="token operator">++</span><span class="token punctuation">;</span>
+		<span class="token function">onSkillPointChange</span><span class="token punctuation">(</span>skillPoints<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>section</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dl</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dt</span><span class="token punctuation">></span></span>Name<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dt</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dd</span><span class="token punctuation">></span></span><span class="token language-javascript"><span class="token punctuation">&#123;</span>name<span class="token punctuation">&#125;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dd</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dt</span><span class="token punctuation">></span></span>Status<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dt</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dd</span><span class="token punctuation">></span></span><span class="token language-javascript"><span class="token punctuation">&#123;</span>status<span class="token punctuation">&#125;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dd</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dl</span><span class="token punctuation">></span></span>
+
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>flex gap-5 p-2 [&amp;>*]:text-2xl<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>px-8<span class="token punctuation">"</span></span> <span class="token attr-name"><span class="token namespace">on:</span>click=</span><span class="token language-javascript"><span class="token punctuation">&#123;</span>decrementSkillPoints<span class="token punctuation">&#125;</span></span><span class="token punctuation">></span></span>-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>self-center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token language-javascript"><span class="token punctuation">&#123;</span>skillPoints<span class="token punctuation">&#125;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>px-8<span class="token punctuation">"</span></span> <span class="token attr-name"><span class="token namespace">on:</span>click=</span><span class="token language-javascript"><span class="token punctuation">&#123;</span>incrementSkillPoints<span class="token punctuation">&#125;</span></span><span class="token punctuation">></span></span>+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>section</span><span class="token punctuation">></span></span></code><!-- HTML_TAG_END --></pre>
+<p class="uno-ddg7b5 text-1xl ">As you can see we can also send <strong class="uno-paw6yi">functions in props
+</strong>.
+</p>
+<div><div class="root svelte-27svms"><div class="uno-wfsvsy svelte-27svms"><div class="uno-1m54ow example-wrapper svelte-27svms"><div class="example svelte-27svms"><section><dl><dt>Name</dt><dd>Henrik</dd><dt>Status</dt><dd>Learning Svelte</dd></dl>
+
+	<div class="uno-489k2i"><button class="uno-aceyp3">-</button>
+		<p class="uno-xmm86m">5</p>
+		<button class="uno-aceyp3">+</button></div>
+</section></div></div>
+		<pre class="uno-7q88ol language-svelte svelte-27svms"><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+	<span class="token keyword">import</span> Profile <span class="token keyword">from</span> <span class="token string">"./Profile.svelte"</span><span class="token punctuation">;</span>
+
+	<span class="token keyword">function</span> <span class="token function">onSkillPointChange</span><span class="token punctuation">(</span><span class="token parameter">newSkillPoints</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"onSkillPointChange: "</span> <span class="token operator">+</span> newSkillPoints<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Profile</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Henrik<span class="token punctuation">"</span></span> <span class="token attr-name">status</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Learning Svelte<span class="token punctuation">"</span></span> <span class="token language-javascript"><span class="token punctuation">{</span>onSkillPointChange<span class="token punctuation">}</span></span> <span class="token punctuation">/></span></span><!-- HTML_TAG_END --></pre></div>
+</div></div>
+<p class="uno-ddg7b5 text-1xl ">We can improve the code in Profile.svelte by <strong class="uno-paw6yi">using a reactive statement
+</strong> for the function prop instead of running it in both to the increment and decrement functions.
+</p>
+<pre class="language-svelte"><!-- HTML_TAG_START --><code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+	<span class="token keyword">export</span> <span class="token keyword">let</span> name<span class="token punctuation">;</span>
+	<span class="token keyword">export</span> <span class="token keyword">let</span> status<span class="token punctuation">;</span>
+	<span class="token keyword">export</span> <span class="token keyword">let</span> onSkillPointChange<span class="token punctuation">;</span>
+
+	<span class="token keyword">let</span> skillPoints <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+
+	<span class="token comment">// This will rerun whenever skillPoints changes</span>
+	<span class="token literal-property property">$</span><span class="token operator">:</span> <span class="token function">onSkillPointChange</span><span class="token punctuation">(</span>skillPoints<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token keyword">function</span> <span class="token function">decrementSkillPoints</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		<span class="token keyword">if</span> <span class="token punctuation">(</span>skillPoints <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+			skillPoints<span class="token operator">--</span><span class="token punctuation">;</span>
+		<span class="token punctuation">&#125;</span>
+	<span class="token punctuation">&#125;</span>
+	<span class="token keyword">function</span> <span class="token function">incrementSkillPoints</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		skillPoints<span class="token operator">++</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>section</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dl</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dt</span><span class="token punctuation">></span></span>Name<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dt</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dd</span><span class="token punctuation">></span></span><span class="token language-javascript"><span class="token punctuation">&#123;</span>name<span class="token punctuation">&#125;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dd</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dt</span><span class="token punctuation">></span></span>Status<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dt</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dd</span><span class="token punctuation">></span></span><span class="token language-javascript"><span class="token punctuation">&#123;</span>status<span class="token punctuation">&#125;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dd</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dl</span><span class="token punctuation">></span></span>
+
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>flex gap-5 p-2 [&amp;>*]:text-2xl<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>px-8<span class="token punctuation">"</span></span> <span class="token attr-name"><span class="token namespace">on:</span>click=</span><span class="token language-javascript"><span class="token punctuation">&#123;</span>decrementSkillPoints<span class="token punctuation">&#125;</span></span><span class="token punctuation">></span></span>-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>self-center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token language-javascript"><span class="token punctuation">&#123;</span>skillPoints<span class="token punctuation">&#125;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>px-8<span class="token punctuation">"</span></span> <span class="token attr-name"><span class="token namespace">on:</span>click=</span><span class="token language-javascript"><span class="token punctuation">&#123;</span>incrementSkillPoints<span class="token punctuation">&#125;</span></span><span class="token punctuation">></span></span>+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>section</span><span class="token punctuation">></span></span></code><!-- HTML_TAG_END --></pre>
+<p class="uno-ddg7b5 text-1xl ">We have a problem though because we assume that <code>{onSkillPointChange}</code> is <strong class="uno-paw6yi">always passed in as a functions
+</strong> so it won&#39;t work if we don&#39;t pass it in.
+</p>
+<p class="uno-ddg7b5 text-1xl ">There are two ways we can fix this:
+</p>
+<ul class="uno-prji6t"><li class="uno-d5cktv text-1xl">Check if onSkillPointChange is actually a function
+</li>
+</ul>
+<pre class="language-svelte"><!-- HTML_TAG_START --><code class="language-svelte">$: if (typeof onSkillPointChange === "function") onSkillPointChange(skillPoints);</code><!-- HTML_TAG_END --></pre>
+<p class="uno-ddg7b5 text-1xl ">Here we check if it&#39;s a function and if it is we call it.
+</p>
+<ul class="uno-prji6t"><li class="uno-d5cktv text-1xl">Another way is to add a default value for onSkillPointChange:
+</li>
+</ul>
+<pre class="language-svelte"><!-- HTML_TAG_START --><code class="language-svelte">export let onSkillPointChange = () => <span class="token language-javascript"><span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span></span>;</code><!-- HTML_TAG_END --></pre>
+<p class="uno-ddg7b5 text-1xl ">We usually want to <strong class="uno-paw6yi">avoid strongly coupling components to events
+</strong> because it&#39;s more flexible to only use events when you need them. For example HTML buttons don&#39;t require you to add event listeners for every type of interaction by default, instead you can <strong class="uno-paw6yi">add them if you need them
+</strong>.
+</p>
+<p class="uno-ddg7b5 text-1xl ">To make the prop optional we could have a <strong class="uno-paw6yi">check to see if it is defined
+</strong>.
+</p>
+<pre class="language-svelte"><!-- HTML_TAG_START --><code class="language-svelte">$: if (onSkillPointChange) onSkillPointChange(skillPoints);</code><!-- HTML_TAG_END --></pre>
+<p class="uno-ddg7b5 text-1xl ">There&#39;s an <strong class="uno-paw6yi">even better way
+</strong> though, <strong class="uno-paw6yi">component events
+</strong>.
+</p>
+<p class="uno-ddg7b5 text-1xl ">By creating an <strong class="uno-paw6yi">event dispatcher
+</strong> in our child component we can create a <strong class="uno-paw6yi">custom event
+</strong> that the parent can <strong class="uno-paw6yi">optionally listen to
+</strong>.
+</p>
+<pre class="language-svelte"><!-- HTML_TAG_START --><code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+  <span class="token keyword">import</span> <span class="token punctuation">&#123;</span> createEventDispatcher <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">"svelte"</span><span class="token punctuation">;</span>
+	<span class="token keyword">export</span> <span class="token keyword">let</span> name<span class="token punctuation">;</span>
+	<span class="token keyword">export</span> <span class="token keyword">let</span> status<span class="token punctuation">;</span>
+
+  <span class="token comment">// this must be top level</span>
+  <span class="token keyword">const</span> dispatch <span class="token operator">=</span> <span class="token function">createEventDispatcher</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token keyword">let</span> skillPoints <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// skillPointChange is the name of the custom event</span>
+	<span class="token literal-property property">$</span><span class="token operator">:</span> <span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token string">"skillPointChange"</span><span class="token punctuation">,</span> skillPoints<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token keyword">function</span> <span class="token function">decrementSkillPoints</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		<span class="token keyword">if</span> <span class="token punctuation">(</span>skillPoints <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+			skillPoints<span class="token operator">--</span><span class="token punctuation">;</span>
+		<span class="token punctuation">&#125;</span>
+	<span class="token punctuation">&#125;</span>
+	<span class="token keyword">function</span> <span class="token function">incrementSkillPoints</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+		skillPoints<span class="token operator">++</span><span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>section</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dl</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dt</span><span class="token punctuation">></span></span>Name<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dt</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dd</span><span class="token punctuation">></span></span><span class="token language-javascript"><span class="token punctuation">&#123;</span>name<span class="token punctuation">&#125;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dd</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dt</span><span class="token punctuation">></span></span>Status<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dt</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dd</span><span class="token punctuation">></span></span><span class="token language-javascript"><span class="token punctuation">&#123;</span>status<span class="token punctuation">&#125;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dd</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dl</span><span class="token punctuation">></span></span>
+
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>flex gap-5 p-2 [&amp;>*]:text-2xl<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>px-8<span class="token punctuation">"</span></span> <span class="token attr-name"><span class="token namespace">on:</span>click=</span><span class="token language-javascript"><span class="token punctuation">&#123;</span>decrementSkillPoints<span class="token punctuation">&#125;</span></span><span class="token punctuation">></span></span>-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>self-center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token language-javascript"><span class="token punctuation">&#123;</span>skillPoints<span class="token punctuation">&#125;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>px-8<span class="token punctuation">"</span></span> <span class="token attr-name"><span class="token namespace">on:</span>click=</span><span class="token language-javascript"><span class="token punctuation">&#123;</span>incrementSkillPoints<span class="token punctuation">&#125;</span></span><span class="token punctuation">></span></span>+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>section</span><span class="token punctuation">></span></span></code><!-- HTML_TAG_END --></pre>
+<p class="uno-ddg7b5 text-1xl ">and to actually use it we add <strong class="uno-paw6yi">on:skillPointChange
+</strong> on the component and in the function take in <strong class="uno-paw6yi">event
+</strong> and send <strong class="uno-paw6yi">event.detail
+</strong>.
+</p>
+<div><div class="root svelte-27svms"><div class="uno-wfsvsy svelte-27svms"><div class="uno-1m54ow example-wrapper svelte-27svms"><div class="example svelte-27svms"><section><dl><dt>Name</dt><dd>Henrik</dd><dt>Status</dt><dd>Learning Svelte</dd></dl>
+
+	<div class="uno-cv1akr"><button class="uno-rd8bzo">-</button>
+		<p class="uno-n58vzb">5</p>
+		<button class="uno-rd8bzo">+</button></div>
+</section></div></div>
+		<pre class="uno-7q88ol language-svelte svelte-27svms"><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+	<span class="token keyword">import</span> ProfileEventDispatcher <span class="token keyword">from</span> <span class="token string">"./ProfileEventDispatcher.svelte"</span><span class="token punctuation">;</span>
+
+	<span class="token keyword">function</span> <span class="token function">onSkillPointChange</span><span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"onSkillPointChange: "</span> <span class="token operator">+</span> event<span class="token punctuation">.</span>detail<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ProfileEventDispatcher</span>
+	<span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Henrik<span class="token punctuation">"</span></span>
+	<span class="token attr-name">status</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Learning Svelte<span class="token punctuation">"</span></span>
+	<span class="token attr-name"><span class="token namespace">on:</span>skillPointChange=</span><span class="token language-javascript"><span class="token punctuation">{</span>onSkillPointChange<span class="token punctuation">}</span></span> <span class="token punctuation">/></span></span><!-- HTML_TAG_END --></pre></div>
+</div></div>
+<p class="uno-ddg7b5 text-1xl ">If we do it this way we <strong class="uno-paw6yi">don&#39;t have to
+</strong> listen to the event if we don&#39;t want to.
+</p>
+<div><div class="root svelte-27svms"><div class="uno-wfsvsy svelte-27svms"><div class="uno-1m54ow example-wrapper svelte-27svms"><div class="example svelte-27svms"><section><dl><dt>Name</dt><dd>Henrik</dd><dt>Status</dt><dd>Learning Svelte</dd></dl>
+
+	<div class="uno-cv1akr"><button class="uno-rd8bzo">-</button>
+		<p class="uno-n58vzb">5</p>
+		<button class="uno-rd8bzo">+</button></div>
+</section>
+
+<section><dl><dt>Name</dt><dd>Henrik again</dd><dt>Status</dt><dd>Learning about component events</dd></dl>
+
+	<div class="uno-cv1akr"><button class="uno-rd8bzo">-</button>
+		<p class="uno-n58vzb">5</p>
+		<button class="uno-rd8bzo">+</button></div>
+</section></div></div>
+		<pre class="uno-7q88ol language-svelte svelte-27svms"><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+	<span class="token keyword">import</span> ProfileEventDispatcher <span class="token keyword">from</span> <span class="token string">"./ProfileEventDispatcher.svelte"</span><span class="token punctuation">;</span>
+
+	<span class="token keyword">function</span> <span class="token function">onSkillPointChange</span><span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"onSkillPointChange: "</span> <span class="token operator">+</span> event<span class="token punctuation">.</span>detail<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ProfileEventDispatcher</span>
+	<span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Henrik<span class="token punctuation">"</span></span>
+	<span class="token attr-name">status</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Learning Svelte<span class="token punctuation">"</span></span>
+	<span class="token attr-name"><span class="token namespace">on:</span>skillPointChange=</span><span class="token language-javascript"><span class="token punctuation">{</span>onSkillPointChange<span class="token punctuation">}</span></span> <span class="token punctuation">/></span></span>
+
+<span class="token comment">&lt;!-- clicking the buttons here will not log in the console --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ProfileEventDispatcher</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Henrik again<span class="token punctuation">"</span></span> <span class="token attr-name">status</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Learning about component events<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span><!-- HTML_TAG_END --></pre></div>
+</div></div>
+<p class="uno-ddg7b5 text-1xl ">By doing this we can make the event <strong class="uno-paw6yi">optional
+</strong>.
+</p></section></article>
+
+
+		<script type="module" data-sveltekit-hydrate="nv9bhy">
+			import { start } from "/Tutorials/_app/immutable/start-36864b77.js";
+
+			start({
+				env: {},
+				paths: {"base":"/Tutorials","assets":"/Tutorials"},
+				target: document.querySelector('[data-sveltekit-hydrate="nv9bhy"]').parentNode,
+				version: "1675624929792",
+				hydrate: {
+					node_ids: [0, 2, 6],
+					data: [null,null,null],
+					form: null
+				}
+			});
+		</script>
+	</div>
+</body>
+
+</html>

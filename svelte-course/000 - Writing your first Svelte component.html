@@ -12,23 +12,28 @@
 		<link href="/Tutorials/_app/immutable/assets/Strong-210af2f1.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/005 - Command Center in VSCode-3d969ef8.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/Learning Svelte and SvelteKit part 1-4a0b184b.css" rel="stylesheet">
-		<link href="/Tutorials/_app/immutable/assets/000 - Writing your first Svelte component-e8530f87.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/Example-332e9834.css" rel="stylesheet">
-		<link href="/Tutorials/_app/immutable/assets/001 - Style your Svelte component-859d2e9c.css" rel="stylesheet">
-		<link href="/Tutorials/_app/immutable/assets/_Example-bd8a81fe.css" rel="stylesheet">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/start-ab576000.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/index-ef26d8d7.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/singletons-53bc33a0.js">
+		<link href="/Tutorials/_app/immutable/assets/HelloWorld_1-e8530f87.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/_page-fea723ac.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/HelloWorld_1-d771becf.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/PAttack-335b6bab.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/_page-68192e0c.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/_page-8a46b28a.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/_page-534beb13.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/ShowCode-4157962a.css" rel="stylesheet">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/start-36864b77.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/index-bc81051f.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/singletons-b36565ae.js">
 		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/paths-b4419565.js">
 		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/preload-helper-41c905a7.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/_layout.svelte-4d6ce702.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/modules/pages/_layout.js-3cc47295.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/_layout.svelte-0088b0e0.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/modules/pages/_layout.js-e5a6d40c.js">
 		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/dynamic-import-helper-be004503.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/_layout-ece90143.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/svelte-course/_layout.svelte-06ee96b2.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/svelte-course/_slug_/_page.svelte-26e27c38.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/modules/pages/svelte-course/_slug_/_page.js-07701e25.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/_page-68b29732.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/_layout-8a81aad8.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/svelte-course/_layout.svelte-a7c15f7f.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/svelte-course/_slug_/_page.svelte-f8948e68.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/modules/pages/svelte-course/_slug_/_page.js-877f5428.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/_page-6085e23b.js">
 </head>
 
 <body>
@@ -48,6 +53,16 @@
 					</li><li><a href="/Tutorials/svelte-course/002 - Adding data to your Svelte component">002 - Adding data to your Svelte component</a>
 					</li><li><a href="/Tutorials/svelte-course/003 - Reactivity in Svelte">003 - Reactivity in Svelte</a>
 					</li><li><a href="/Tutorials/svelte-course/004 - Attaching events in Svelte">004 - Attaching events in Svelte</a>
+					</li><li><a href="/Tutorials/svelte-course/005 - Reactive declarations and statements">005 - Reactive declarations and statements</a>
+					</li><li><a href="/Tutorials/svelte-course/006 - tick()">006 - tick()</a>
+					</li><li><a href="/Tutorials/svelte-course/007 - Components and props">007 - Components and props</a>
+					</li><li><a href="/Tutorials/svelte-course/008 - Component events">008 - Component events</a>
+					</li><li><a href="/Tutorials/svelte-course/009 - Forwarding component events">009 - Forwarding component events</a>
+					</li><li><a href="/Tutorials/svelte-course/010 - class directive">010 - class directive</a>
+					</li><li><a href="/Tutorials/svelte-course/011 - Bindings">011 - Bindings</a>
+					</li><li><a href="/Tutorials/svelte-course/012 - bind group">012 - bind group</a>
+					</li><li><a href="/Tutorials/svelte-course/013 - bind this">013 - bind this</a>
+					</li><li><a href="/Tutorials/svelte-course/014 - Component lifecycle events">014 - Component lifecycle events</a>
 					</li></ul></nav>
 
 
@@ -89,14 +104,14 @@
 </code><!-- HTML_TAG_END --></pre></section></article>
 
 
-		<script type="module" data-sveltekit-hydrate="1nf65kt">
-			import { start } from "/Tutorials/_app/immutable/start-ab576000.js";
+		<script type="module" data-sveltekit-hydrate="1w8929p">
+			import { start } from "/Tutorials/_app/immutable/start-36864b77.js";
 
 			start({
 				env: {},
 				paths: {"base":"/Tutorials","assets":"/Tutorials"},
-				target: document.querySelector('[data-sveltekit-hydrate="1nf65kt"]').parentNode,
-				version: "1675369218360",
+				target: document.querySelector('[data-sveltekit-hydrate="1w8929p"]').parentNode,
+				version: "1675624929792",
 				hydrate: {
 					node_ids: [0, 2, 6],
 					data: [null,null,null],
