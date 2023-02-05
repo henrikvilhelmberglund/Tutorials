@@ -1,0 +1,51 @@
+---
+title: "bind:this"
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-02-05
+layout: notes
+---
+
+<script>
+  import App from "./App.svelte";
+  import AppRaw from "./App.svelte?raw";
+  import App2 from "./App2.svelte";
+  import App2Raw from "./App2.svelte?raw";
+  import App3 from "./App3.svelte";
+  import App3Raw from "./App3.svelte?raw";
+  import App4 from "./App4.svelte";
+  import App4Raw from "./App4.svelte?raw";
+  import ShowCode from "$lib/ShowCode.svelte";
+  import Component from "./Component.svelte";
+  import ComponentRaw from "./Component.svelte?raw";
+  import Component2 from "./Component2.svelte";
+  import Component2Raw from "./Component2.svelte?raw";
+</script>
+
+If we want to get a reference to a DOM element we can use **bind:this**. bind:this is a **one-way binding**.
+
+If we have a variable and assign an element to it using bind:this and try to console.log() immediately it we will get **undefined** because it is getting defined **when Svelte creates the element and mounts it onto the DOM**.
+
+To get around this we can use the **onMount lifecycle event** that is run when **the component is mounted onto the DOM**.
+
+<App/>
+<ShowCode code={AppRaw} name="App.svelte"/>
+
+To be clear, if we don't use the element right away the onMount event isn't necessarily needed. In a simple case this would be enough:
+
+<App2/>
+<ShowCode code={App2Raw} name="App2.svelte"/>
+
+If we use bind:this on a **component** we get access to its props as well.
+
+<App3/>
+<ShowCode code={App3Raw} name="App3.svelte"/>
+<ShowCode code={ComponentRaw} name="Component.svelte"/>
+
+We do need **`<svelte:options accessors />`** in order to get access to the **count** variable since it wasn't readonly, but for **functions** we don't need it.
+
+<App4/>
+<ShowCode code={App4Raw} name="App4.svelte"/>
+<ShowCode code={Component2Raw} name="Component2.svelte"/>
+
+This way we can export functions from a component and use it in another component where we bind to it using **bind:this** so we can use its **methods**.
