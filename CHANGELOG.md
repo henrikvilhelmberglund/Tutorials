@@ -2,6 +2,34 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+### [0.0.7](https://github.com/henrikvilhelmberglund/Tutorials/compare/v0.0.6...v0.0.7) (2023-02-05)
+
+
+### Features
+
+* :lipstick: add font for code blocks ([002a8af](https://github.com/henrikvilhelmberglund/Tutorials/commit/002a8afd13131ca41b9e0f3836fb5dedba1851bb))
+* :package: add prism for highlighting ([53176f6](https://github.com/henrikvilhelmberglund/Tutorials/commit/53176f6bfd057bc67b5101e091ff26bca066937b))
+* :sparkles: add "trailingComma": "es5" in .prettierrc ([777ac00](https://github.com/henrikvilhelmberglund/Tutorials/commit/777ac003184844a2758d680f82e78ef477199c06))
+* :sparkles: add ShowCode component that uses prism to highlight code coming from ?raw imports ([5cf21ef](https://github.com/henrikvilhelmberglund/Tutorials/commit/5cf21ef34ab58c567a6ade2c3137f9fbab6aace7))
+* :sparkles: add svelte-course 006 - tick() renamed from Tick ([701d67a](https://github.com/henrikvilhelmberglund/Tutorials/commit/701d67a339ec3218adb86f2b64045d43239fc956))
+* :sparkles: add svelte-course 007 ([45290a3](https://github.com/henrikvilhelmberglund/Tutorials/commit/45290a36fa3036cc1c46b6f5fc1e00d78b4e08b6))
+* :sparkles: add svelte-course 008 ([4f7f1dc](https://github.com/henrikvilhelmberglund/Tutorials/commit/4f7f1dc4b8803d9e5599f090333ed0320ad27bcd))
+* :sparkles: add svelte-course 009 ([9a02f69](https://github.com/henrikvilhelmberglund/Tutorials/commit/9a02f69df1e5f2d87337f6faed17ebfd26d1ef1f))
+* :sparkles: add svelte-course 009 (and stage everything this time) ([c9528a2](https://github.com/henrikvilhelmberglund/Tutorials/commit/c9528a287d23db14d4c5326d4ccc02e65503d033))
+* :sparkles: add svelte-course 010 ([bbb5361](https://github.com/henrikvilhelmberglund/Tutorials/commit/bbb5361610ce51a46c5045afca35c48288989dcb))
+* :sparkles: add svelte-course 012 ([b696120](https://github.com/henrikvilhelmberglund/Tutorials/commit/b6961200b07efb446a4350de38aac83e80bf86a9))
+* :sparkles: add svelte-course 013 ([d6e0e51](https://github.com/henrikvilhelmberglund/Tutorials/commit/d6e0e516f2bae1fd1c0f2a06a4e5af843b7adc10))
+* :sparkles: add svelte-course 014 ([4c6229c](https://github.com/henrikvilhelmberglund/Tutorials/commit/4c6229c1c962d98627e2a2a2ee515392695c4a79))
+* :sparkles: add svelte-course 11 ([c3f360e](https://github.com/henrikvilhelmberglund/Tutorials/commit/c3f360ecff1f457dad2be61746b6281302b28648))
+* :sparkles: reenable SSR ([817f6c2](https://github.com/henrikvilhelmberglund/Tutorials/commit/817f6c26512ed501acd65abd8d78f1702b6b4e86))
+
+
+### Bug Fixes
+
+* :art: edit comment ([1f0e805](https://github.com/henrikvilhelmberglund/Tutorials/commit/1f0e80556b511f48549c115c787eef21bda750d7))
+* :bug: add missing comma ([488d87a](https://github.com/henrikvilhelmberglund/Tutorials/commit/488d87af17537243d9f718cddddd68e11a6d70a8))
+* :wheelchair: change h1 to button ([d99de73](https://github.com/henrikvilhelmberglund/Tutorials/commit/d99de730593982f3a4259a246bd3e726096cf27d))
+
 ### [0.0.6](https://github.com/henrikvilhelmberglund/Tutorials/compare/v0.0.5...v0.0.6) (2023-02-02)
 
 
