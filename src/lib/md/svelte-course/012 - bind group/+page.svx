@@ -1,0 +1,24 @@
+---
+title: "bind:group"
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-02-05
+layout: notes
+---
+
+<script>
+  import App from "./App.svelte";
+  import AppRaw from "./App.svelte?raw";
+  import ShowCode from "$lib/ShowCode.svelte";
+  
+</script>
+
+For radio buttons or checkboxes you can use the **bind:group** binding.
+
+Using this we can have a two way binding with a **group** of checkboxes or radio buttons.
+
+<App/>
+<ShowCode code={AppRaw} name="App.svelte"/>
+
+For checkboxes we want an **array** to store our values in but for radio buttons we can have a single value.
+
