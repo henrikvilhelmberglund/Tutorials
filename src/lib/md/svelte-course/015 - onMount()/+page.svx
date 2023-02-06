@@ -1,0 +1,60 @@
+---
+title: "onMount()"
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-02-06
+layout: notes
+---
+
+<script>
+  import App from "./App.svelte";
+  import AppRaw from "./App.svelte?raw";
+  import App2 from "./App2.svelte";
+  import App2Raw from "./App2.svelte?raw";
+  import App3 from "./App3.svelte";
+  import App3Raw from "./App3.svelte?raw";
+  import Example1Raw from "./Example1.svelte?raw";
+  import Example1v2Raw from "./Example1v2.svelte?raw";
+  import Example1v3Raw from "./Example1v3.svelte?raw";
+  import Example2Raw from "./Example2.svelte?raw";
+  import Example2v3Raw from "./Example2v3.svelte?raw";
+  import ShowCode from "$lib/ShowCode.svelte";
+</script>
+
+<App/>
+<ShowCode code={AppRaw} name="App.svelte"/>
+
+In the first example we have an interval that increments a count variable every second.
+
+<ShowCode code={Example1Raw} name="Example1.svelte"/>
+
+In the second example we fetch and use onMount to prevent the fetch from running when server rendered (and instead wait until it is mounted).
+
+<ShowCode code={Example2Raw} name="Example2.svelte"/>
+
+One problem we have is that when we uncheck the checkbox the **interval is still running** (you can see this in the console).
+
+We need to remember to clean them up.
+
+Here's one way to do it:
+
+<App2/>
+<ShowCode code={Example1v2Raw} name="Example1v2.svelte"/>
+
+But since this is a very common pattern in Svelte there's another way to do it.
+
+You can **return a function** in onMount and it will be called when the component is destroyed.
+
+<App3/>
+<ShowCode code={Example1v3Raw} name="Example1v3.svelte"/>
+
+This way we **don't need to import onDestroy** and we can **define the variable in onMount** as well.
+
+We can also use the return in onMount to **cancel the fetch when quickly checking and unchecking**.
+
+<App3/>
+<ShowCode code={Example2v3Raw} name="Example2v3.svelte"/>
+
+(open the network tab to see this, you may need to set throttling to slow 3G because the images are tiny)
+
+It's important to note that **onMount does not render during SSR (server side rendering)**.
