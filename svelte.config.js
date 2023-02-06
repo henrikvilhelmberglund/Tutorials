@@ -18,21 +18,21 @@ const config = {
 			assets: "build",
 			fallback: null,
 			precompress: false,
-			strict: true
+			strict: true,
 		}),
 		paths: {
-			base: dev ? "" : "/Tutorials"
-		}
+			base: dev ? "" : "/Tutorials",
+		},
 	},
 	vitePlugin: {
 		experimental: {
 			inspector: {
-				holdMode: true
-			}
-		}
+				holdMode: true,
+			},
+		},
 	},
 
-	preprocess: [vitePreprocess(), mdsvex(mdsvexConfig)]
+	preprocess: [vitePreprocess(), mdsvex(mdsvexConfig)],
 };
 
 export default config;
