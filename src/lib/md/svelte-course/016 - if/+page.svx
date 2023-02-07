@@ -1,0 +1,36 @@
+---
+title: "{#if}"
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-02-07
+layout: notes
+---
+
+<script>
+  import App from "./App.svelte";
+  import AppRaw from "./App.svelte?raw";
+  import ShowCode from "$lib/ShowCode.svelte";
+</script>
+
+The if block `{#if}` allows us to show or hide content based on a certain condition.
+
+To start the if block we start with curly brackets **`{}`**, inside of them type **#** and then **if**. Next we type the condition **condition1**.
+
+To close the if block we start with curly brackets again and inside type **/if**.
+
+We can also have **else** and **else if** in our if blocks.
+
+Just type **`{:else}`** or **`{:else if}`** inside the if block.
+
+<App/>
+<ShowCode code={AppRaw} name="App.svelte"/>
+
+If the **condition is true** the contents of the if block **will be shown**.
+
+### The logic block pattern
+
+Other logic blocks in Svelte follow the above pattern. 
+
+First insert curly braces so we can type code, after that we **start** the block with **#**, we **continue** the block with **:** and we **exit** the block with **/**.
+
+We can also **nest** logic blocks just like in Javascript.
