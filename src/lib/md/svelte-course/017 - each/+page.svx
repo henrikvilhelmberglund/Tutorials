@@ -1,0 +1,99 @@
+---
+title: "{#each}"
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-02-07
+layout: notes
+---
+
+<script>
+  import App from "./App.svelte";
+  import AppRaw from "./App.svelte?raw";
+  import App2 from "./App2.svelte";
+  import App2Raw from "./App2.svelte?raw";
+  import App3 from "./App3.svelte";
+  import App3Raw from "./App3.svelte?raw";
+  import App4 from "./App4.svelte";
+  import App4Raw from "./App4.svelte?raw";
+  import App5 from "./App5.svelte";
+  import App5Raw from "./App5.svelte?raw";
+  import App6 from "./App6.svelte";
+  import App6Raw from "./App6.svelte?raw";
+  import App7 from "./App7.svelte";
+  import App7Raw from "./App7.svelte?raw";
+  import App8 from "./App8.svelte";
+  import App8Raw from "./App8.svelte?raw";
+  import App9 from "./App9.svelte";
+  import App9Raw from "./App9.svelte?raw";
+  import ShowCode from "$lib/ShowCode.svelte";
+</script>
+
+Svelte has another logic block called the **`{#each}`** block.
+
+Let's say I have an array of colors and I want to show all of them in a list.
+
+Usually you would do this:
+
+<App/>
+<ShowCode code={AppRaw} name="App.svelte"/>
+
+But it gets annoying quickly when you want to add a color since you would need to edit the code in two places.
+
+In Javascript we could have some kind of for loop:
+
+```js
+let colors = ["red", "green", "blue"];
+for (const color of colors) {
+	console.log("color");
+}
+```
+
+And in Svelte we have something similar, the **`{#each}`** logic block.
+
+<!-- <ShowCode code={App2Raw} name="App2.svelte"/> -->
+
+<ShowCode code={App2Raw} name="App2">
+  <App2/>
+</ShowCode>
+
+Let's try with an object:
+
+<ShowCode code={App3Raw} name="App3">
+  <App3/>
+</ShowCode>
+
+We can also use **destructuring syntax**:
+
+<ShowCode code={App4Raw} name="App4">
+  <App4/>
+</ShowCode>
+
+We can have a **default value** that will be shown when the value is undefined:
+
+<ShowCode code={App5Raw} name="App5">
+  <App5/>
+</ShowCode>
+
+Nested each blocks:
+
+<ShowCode code={App6Raw} name="App6">
+  <App6/>
+</ShowCode>
+
+If you add a variable after a comma after the item name you can use it as an **index**:
+
+<ShowCode code={App7Raw} name="App7">
+  <App7/>
+</ShowCode>
+
+If you have an empty array you can display something else using **`{:else}`**:
+
+<ShowCode code={App8Raw} name="App8">
+  <App8/>
+</ShowCode>
+
+If your array is undefined you can avoid getting errors by adding **||[]** after the array.
+
+<ShowCode code={App9Raw} name="App9">
+  <App9/>
+</ShowCode>
