@@ -1,0 +1,77 @@
+---
+title: "keyed {#each}"
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-02-07
+layout: notes
+---
+
+<script>
+  import Embed from "$lib/Embed.svelte"
+  import Youtube from "svelte-youtube-embed";
+  import App from "./App.svelte";
+  import AppRaw from "./App.svelte?raw";
+  import App2 from "./App2.svelte";
+  import App2Raw from "./App2.svelte?raw";
+  import App3 from "./App3.svelte";
+  import App3Raw from "./App3.svelte?raw";
+  import App4 from "./App4.svelte";
+  import App4Raw from "./App4.svelte?raw";
+  import App5 from "./App5.svelte";
+  import App5Raw from "./App5.svelte?raw";
+  import ComponentRaw from "./Component.svelte?raw";
+  import ShowCode from "$lib/ShowCode.svelte";
+</script>
+
+In Svelte there's a **keyed each block**.
+
+In the each block Svelte thinks "what is **showing** and what is **going to show**?" and if what is showing and what is going to show **doesn't change, nothing happens, the elements are reused**.
+
+You can see this if you right click red and inspect before clicking the button.
+
+<ShowCode code={AppRaw} name="App.svelte">
+  <App/>
+</ShowCode>
+
+After clicking the button you should notice that only the newly added element flashes in the element list because **the other elements didn't change**.
+
+What happens if we push the yellow color into the array at another position though?
+
+<ShowCode code={App2Raw} name="App2.svelte">
+  <App2/>
+</ShowCode>
+
+As you can see in the developer tools **two elements flash** because the text of the **blue** element was changed into **yellow** and a **new element** was added with the text set to **blue**.
+
+In the below example it's more clear that we're **changing the text** because the **initial color doesn't change**.
+
+<ShowCode code={App3Raw} name="App3.svelte">
+  <App3/>
+</ShowCode>
+<ShowCode code={ComponentRaw} name="Component.svelte"></ShowCode>
+
+So, is there a way to tell Svelte that we want to **rearrange** the elements?
+
+Yes, using the **keyed each block**. You can think of the **key** as an **identifier**, meaning, "use this key to **compare**".
+
+<ShowCode code={App4Raw} name="App4.svelte">
+  <App4/>
+</ShowCode>
+
+If you click the button you can see that only **one element flashes** because the other ones are simply rearranged.
+
+You also got an error if you click it multiple times as you **cannot have duplicate keys in a keyed each block**.
+
+Even if we reverse the array like in the example below it works:
+
+<ShowCode code={App5Raw} name="App5.svelte">
+  <App5/>
+</ShowCode>
+
+Keyed each blocks will become important when we use **transitions** since we need to keep **references** to the elements for them to **move correctly**.
+
+Here is a nice video where Li Hau Tan explains **`keyed {#each}`** visually:
+
+<Embed>
+  <Youtube id="itcf8S8Az74"/>
+</Embed>
