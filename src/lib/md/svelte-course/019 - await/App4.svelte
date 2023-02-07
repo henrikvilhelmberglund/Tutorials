@@ -20,9 +20,9 @@ Selected breed: {selectedBreed}
 <hr w-full />
 
 {#await getRandomDogImage(selectedBreed)}
-<p>loading...</p>
+	<p>loading...</p>
 {:then obj}
-<img src={obj.message} alt="dog" />
+	<img src={obj.message} alt="dog" />
 {:catch error}
-<p>oops! error! {error}</p>
+	<p>oops! error! {error}</p>
 {/await}
