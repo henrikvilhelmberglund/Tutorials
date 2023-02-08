@@ -1,15 +1,15 @@
 {
   ".svelte-kit/generated/nodes/0.js": {
-    "file": "_app/immutable/chunks/0-ea1cee82.js",
+    "file": "_app/immutable/chunks/0-a1cfa0d4.js",
     "imports": [
-      "__layout-8a81aad8.js",
+      "__layout-a146d79b.js",
       "src/routes/+layout.svelte"
     ],
     "isDynamicEntry": true,
     "src": ".svelte-kit/generated/nodes/0.js"
   },
   ".svelte-kit/generated/nodes/1.js": {
-    "file": "_app/immutable/chunks/1-ecd21034.js",
+    "file": "_app/immutable/chunks/1-68dac868.js",
     "imports": [
       "node_modules/@sveltejs/kit/src/runtime/components/error.svelte"
     ],
@@ -17,7 +17,7 @@
     "src": ".svelte-kit/generated/nodes/1.js"
   },
   ".svelte-kit/generated/nodes/2.js": {
-    "file": "_app/immutable/chunks/2-8904f26c.js",
+    "file": "_app/immutable/chunks/2-ba7381c6.js",
     "imports": [
       "src/routes/svelte-course/+layout.svelte"
     ],
@@ -25,7 +25,7 @@
     "src": ".svelte-kit/generated/nodes/2.js"
   },
   ".svelte-kit/generated/nodes/3.js": {
-    "file": "_app/immutable/chunks/3-b8e10597.js",
+    "file": "_app/immutable/chunks/3-a9f41210.js",
     "imports": [
       "src/routes/[slug]/+layout.svelte"
     ],
@@ -33,7 +33,7 @@
     "src": ".svelte-kit/generated/nodes/3.js"
   },
   ".svelte-kit/generated/nodes/4.js": {
-    "file": "_app/immutable/chunks/4-9470dfe4.js",
+    "file": "_app/immutable/chunks/4-19aaa51b.js",
     "imports": [
       "src/routes/+page.svx"
     ],
@@ -41,7 +41,7 @@
     "src": ".svelte-kit/generated/nodes/4.js"
   },
   ".svelte-kit/generated/nodes/5.js": {
-    "file": "_app/immutable/chunks/5-bbc80581.js",
+    "file": "_app/immutable/chunks/5-55058ca7.js",
     "imports": [
       "src/routes/svelte-course/+page.svx"
     ],
@@ -49,18 +49,18 @@
     "src": ".svelte-kit/generated/nodes/5.js"
   },
   ".svelte-kit/generated/nodes/6.js": {
-    "file": "_app/immutable/chunks/6-1ae7ca4e.js",
+    "file": "_app/immutable/chunks/6-603843ea.js",
     "imports": [
-      "__page-6085e23b.js",
+      "__page-f21c8aa6.js",
       "src/routes/svelte-course/[slug]/+page.svelte"
     ],
     "isDynamicEntry": true,
     "src": ".svelte-kit/generated/nodes/6.js"
   },
   ".svelte-kit/generated/nodes/7.js": {
-    "file": "_app/immutable/chunks/7-16c98df6.js",
+    "file": "_app/immutable/chunks/7-d221cd59.js",
     "imports": [
-      "__page-9f7564e1.js",
+      "__page-ca068692.js",
       "src/routes/[slug]/+page.svelte"
     ],
     "isDynamicEntry": true,
@@ -71,89 +71,93 @@
     "src": "Example.css"
   },
   "ShowCode.css": {
-    "file": "_app/immutable/assets/ShowCode-4157962a.css",
+    "file": "_app/immutable/assets/ShowCode-55a0cfff.css",
     "src": "ShowCode.css"
   },
   "Strong.css": {
     "file": "_app/immutable/assets/Strong-210af2f1.css",
     "src": "Strong.css"
   },
-  "_Example-db4caf26.js": {
+  "_Example-63ebad4c.js": {
     "css": [
       "_app/immutable/assets/Example-332e9834.css"
     ],
-    "file": "_app/immutable/chunks/Example-db4caf26.js",
+    "file": "_app/immutable/chunks/Example-63ebad4c.js",
     "imports": [
-      "_index-bc81051f.js"
+      "_index-99d2d53b.js"
     ]
   },
-  "_H1-7d6dc3b6.js": {
+  "_H1-e4f97159.js": {
     "css": [
       "_app/immutable/assets/Strong-210af2f1.css"
     ],
-    "file": "_app/immutable/chunks/H1-7d6dc3b6.js",
+    "file": "_app/immutable/chunks/H1-e4f97159.js",
     "imports": [
-      "_index-bc81051f.js"
+      "_index-99d2d53b.js"
     ]
   },
-  "_H3-db45ddec.js": {
+  "_H3-fdd254f4.js": {
     "css": [
       "_app/immutable/assets/Strong-210af2f1.css"
     ],
-    "file": "_app/immutable/chunks/H3-db45ddec.js",
+    "file": "_app/immutable/chunks/H3-fdd254f4.js",
     "imports": [
-      "_index-bc81051f.js"
+      "_index-99d2d53b.js"
     ]
   },
-  "_H4-efe5b86b.js": {
-    "file": "_app/immutable/chunks/H4-efe5b86b.js",
+  "_H4-d9e7780d.js": {
+    "file": "_app/immutable/chunks/H4-d9e7780d.js",
     "imports": [
-      "_index-bc81051f.js"
+      "_index-99d2d53b.js"
     ]
   },
-  "_H5-70d77b94.js": {
-    "file": "_app/immutable/chunks/H5-70d77b94.js",
+  "_H5-efe2ca3b.js": {
+    "file": "_app/immutable/chunks/H5-efe2ca3b.js",
     "imports": [
-      "_index-bc81051f.js"
+      "_index-99d2d53b.js"
     ]
   },
-  "_Li-c401e699.js": {
+  "_Li-37aa5478.js": {
     "css": [
       "_app/immutable/assets/Strong-210af2f1.css"
     ],
-    "file": "_app/immutable/chunks/Li-c401e699.js",
+    "file": "_app/immutable/chunks/Li-37aa5478.js",
     "imports": [
-      "_index-bc81051f.js"
+      "_index-99d2d53b.js"
     ]
   },
-  "_ShowCode-3bfd614a.js": {
+  "_ShowCode-f7790b45.js": {
+    "file": "_app/immutable/chunks/ShowCode-f7790b45.js",
+    "imports": [
+      "_index-99d2d53b.js",
+      "_ShowCode.svelte_svelte_type_style_lang-de6c27e3.js"
+    ]
+  },
+  "_ShowCode.svelte_svelte_type_style_lang-de6c27e3.js": {
     "css": [
-      "_app/immutable/assets/ShowCode-4157962a.css"
+      "_app/immutable/assets/ShowCode-55a0cfff.css"
     ],
-    "file": "_app/immutable/chunks/ShowCode-3bfd614a.js",
-    "imports": [
-      "_index-bc81051f.js"
-    ]
+    "file": "_app/immutable/chunks/ShowCode.svelte_svelte_type_style_lang-de6c27e3.js"
   },
-  "_Strong-a34d9bbd.js": {
-    "css": [
-      "_app/immutable/assets/Strong-210af2f1.css"
-    ],
-    "file": "_app/immutable/chunks/Strong-a34d9bbd.js",
-    "imports": [
-      "_index-bc81051f.js"
-    ]
-  },
-  "_Ul-ffcf7b7e.js": {
+  "_Strong-0fe50ee4.js": {
     "css": [
       "_app/immutable/assets/Strong-210af2f1.css"
     ],
-    "file": "_app/immutable/chunks/Ul-ffcf7b7e.js",
+    "file": "_app/immutable/chunks/Strong-0fe50ee4.js",
     "imports": [
-      "_index-bc81051f.js"
+      "_index-99d2d53b.js"
     ]
   },
-  "__layout-8a81aad8.js": {
+  "_Ul-f6a0e6dc.js": {
+    "css": [
+      "_app/immutable/assets/Strong-210af2f1.css"
+    ],
+    "file": "_app/immutable/chunks/Ul-f6a0e6dc.js",
+    "imports": [
+      "_index-99d2d53b.js"
+    ]
+  },
+  "__layout-a146d79b.js": {
     "dynamicImports": [
       "src/lib/md/000 - Code Runner in VSCode.svx",
       "src/lib/md/001 - Live Preview in VSCode.svx",
@@ -210,6 +214,12 @@
       "src/lib/md/svelte-course/012 - bind group/+page.svx",
       "src/lib/md/svelte-course/013 - bind this/+page.svx",
       "src/lib/md/svelte-course/014 - Component lifecycle events/+page.svx",
+      "src/lib/md/svelte-course/015 - onMount()/+page.svx",
+      "src/lib/md/svelte-course/016 - if/+page.svx",
+      "src/lib/md/svelte-course/017 - each/+page.svx",
+      "src/lib/md/svelte-course/018 - keyed each/+page.svx",
+      "src/lib/md/svelte-course/019 - await/+page.svx",
+      "src/lib/md/svelte-course/099 - test/+page.svx",
       "src/lib/md/svelte-course/0 - Introduction/+page.svx",
       "src/lib/md/svelte-course/000 - Writing your first Svelte component/+page.svx",
       "src/lib/md/svelte-course/001 - Style your Svelte component/+page.svx",
@@ -226,6 +236,12 @@
       "src/lib/md/svelte-course/012 - bind group/+page.svx",
       "src/lib/md/svelte-course/013 - bind this/+page.svx",
       "src/lib/md/svelte-course/014 - Component lifecycle events/+page.svx",
+      "src/lib/md/svelte-course/015 - onMount()/+page.svx",
+      "src/lib/md/svelte-course/016 - if/+page.svx",
+      "src/lib/md/svelte-course/017 - each/+page.svx",
+      "src/lib/md/svelte-course/018 - keyed each/+page.svx",
+      "src/lib/md/svelte-course/019 - await/+page.svx",
+      "src/lib/md/svelte-course/099 - test/+page.svx",
       "src/lib/md/000 - Code Runner in VSCode.svx",
       "src/lib/md/001 - Live Preview in VSCode.svx",
       "src/lib/md/002 - Snippets in VSCode.svx",
@@ -234,13 +250,29 @@
       "src/lib/md/005 - Command Center in VSCode.svx",
       "src/lib/md/Learning Svelte and SvelteKit part 1.svx"
     ],
-    "file": "_app/immutable/chunks/_layout-8a81aad8.js",
+    "file": "_app/immutable/chunks/_layout-a146d79b.js",
     "imports": [
       "_preload-helper-41c905a7.js",
       "_dynamic-import-helper-be004503.js"
     ]
   },
-  "__page-6085e23b.js": {
+  "__page-ca068692.js": {
+    "dynamicImports": [
+      "src/lib/md/000 - Code Runner in VSCode.svx",
+      "src/lib/md/001 - Live Preview in VSCode.svx",
+      "src/lib/md/002 - Snippets in VSCode.svx",
+      "src/lib/md/003 - Multi command snippets in VSCode.svx",
+      "src/lib/md/004 - Viewing (and debugging) a Live Server project using the Edge Devtools extension copy.svx",
+      "src/lib/md/005 - Command Center in VSCode.svx",
+      "src/lib/md/Learning Svelte and SvelteKit part 1.svx"
+    ],
+    "file": "_app/immutable/chunks/_page-ca068692.js",
+    "imports": [
+      "_preload-helper-41c905a7.js",
+      "_dynamic-import-helper-be004503.js"
+    ]
+  },
+  "__page-f21c8aa6.js": {
     "dynamicImports": [
       "src/lib/md/svelte-course/0 - Introduction/+page.svx",
       "src/lib/md/svelte-course/000 - Writing your first Svelte component/+page.svx",
@@ -257,25 +289,15 @@
       "src/lib/md/svelte-course/011 - Bindings/+page.svx",
       "src/lib/md/svelte-course/012 - bind group/+page.svx",
       "src/lib/md/svelte-course/013 - bind this/+page.svx",
-      "src/lib/md/svelte-course/014 - Component lifecycle events/+page.svx"
+      "src/lib/md/svelte-course/014 - Component lifecycle events/+page.svx",
+      "src/lib/md/svelte-course/015 - onMount()/+page.svx",
+      "src/lib/md/svelte-course/016 - if/+page.svx",
+      "src/lib/md/svelte-course/017 - each/+page.svx",
+      "src/lib/md/svelte-course/018 - keyed each/+page.svx",
+      "src/lib/md/svelte-course/019 - await/+page.svx",
+      "src/lib/md/svelte-course/099 - test/+page.svx"
     ],
-    "file": "_app/immutable/chunks/_page-6085e23b.js",
-    "imports": [
-      "_preload-helper-41c905a7.js",
-      "_dynamic-import-helper-be004503.js"
-    ]
-  },
-  "__page-9f7564e1.js": {
-    "dynamicImports": [
-      "src/lib/md/000 - Code Runner in VSCode.svx",
-      "src/lib/md/001 - Live Preview in VSCode.svx",
-      "src/lib/md/002 - Snippets in VSCode.svx",
-      "src/lib/md/003 - Multi command snippets in VSCode.svx",
-      "src/lib/md/004 - Viewing (and debugging) a Live Server project using the Edge Devtools extension copy.svx",
-      "src/lib/md/005 - Command Center in VSCode.svx",
-      "src/lib/md/Learning Svelte and SvelteKit part 1.svx"
-    ],
-    "file": "_app/immutable/chunks/_page-9f7564e1.js",
+    "file": "_app/immutable/chunks/_page-f21c8aa6.js",
     "imports": [
       "_preload-helper-41c905a7.js",
       "_dynamic-import-helper-be004503.js"
@@ -284,26 +306,26 @@
   "_dynamic-import-helper-be004503.js": {
     "file": "_app/immutable/chunks/dynamic-import-helper-be004503.js"
   },
-  "_index-bc81051f.js": {
-    "file": "_app/immutable/chunks/index-bc81051f.js"
+  "_index-99d2d53b.js": {
+    "file": "_app/immutable/chunks/index-99d2d53b.js"
   },
-  "_mdsvex-layout-mainpage-28d2c485.js": {
+  "_mdsvex-layout-mainpage-947e05db.js": {
     "css": [
       "_app/immutable/assets/Strong-210af2f1.css"
     ],
-    "file": "_app/immutable/chunks/mdsvex-layout-mainpage-28d2c485.js",
+    "file": "_app/immutable/chunks/mdsvex-layout-mainpage-947e05db.js",
     "imports": [
-      "_index-bc81051f.js"
+      "_index-99d2d53b.js"
     ]
   },
-  "_mdsvex-layout-notes-19848e84.js": {
+  "_mdsvex-layout-notes-8e572572.js": {
     "css": [
       "_app/immutable/assets/mdsvex-layout-notes-5d6d5db2.css",
       "_app/immutable/assets/Strong-210af2f1.css"
     ],
-    "file": "_app/immutable/chunks/mdsvex-layout-notes-19848e84.js",
+    "file": "_app/immutable/chunks/mdsvex-layout-notes-8e572572.js",
     "imports": [
-      "_index-bc81051f.js"
+      "_index-99d2d53b.js"
     ]
   },
   "_paths-b4419565.js": {
@@ -312,10 +334,10 @@
   "_preload-helper-41c905a7.js": {
     "file": "_app/immutable/chunks/preload-helper-41c905a7.js"
   },
-  "_singletons-b36565ae.js": {
-    "file": "_app/immutable/chunks/singletons-b36565ae.js",
+  "_singletons-9cfb5813.js": {
+    "file": "_app/immutable/chunks/singletons-9cfb5813.js",
     "imports": [
-      "_index-bc81051f.js",
+      "_index-99d2d53b.js",
       "_paths-b4419565.js"
     ]
   },
@@ -334,10 +356,10 @@
       ".svelte-kit/generated/nodes/6.js",
       ".svelte-kit/generated/nodes/7.js"
     ],
-    "file": "_app/immutable/start-36864b77.js",
+    "file": "_app/immutable/start-c3b6d81c.js",
     "imports": [
-      "_index-bc81051f.js",
-      "_singletons-b36565ae.js",
+      "_index-99d2d53b.js",
+      "_singletons-9cfb5813.js",
       "_preload-helper-41c905a7.js",
       "_paths-b4419565.js"
     ],
@@ -345,75 +367,75 @@
     "src": "node_modules/@sveltejs/kit/src/runtime/client/start.js"
   },
   "node_modules/@sveltejs/kit/src/runtime/components/error.svelte": {
-    "file": "_app/immutable/components/error.svelte-eef974ad.js",
+    "file": "_app/immutable/components/error.svelte-f486f4f9.js",
     "imports": [
-      "_index-bc81051f.js",
-      "_singletons-b36565ae.js"
+      "_index-99d2d53b.js",
+      "_singletons-9cfb5813.js"
     ],
     "isEntry": true,
     "src": "node_modules/@sveltejs/kit/src/runtime/components/error.svelte"
   },
   "src/lib/md/000 - Code Runner in VSCode.svx": {
-    "file": "_app/immutable/chunks/000 - Code Runner in VSCode-7317b9c7.js",
+    "file": "_app/immutable/chunks/000 - Code Runner in VSCode-8c5c7f5d.js",
     "imports": [
-      "_index-bc81051f.js",
-      "_mdsvex-layout-notes-19848e84.js",
-      "_H1-7d6dc3b6.js",
-      "_H5-70d77b94.js",
-      "_Li-c401e699.js",
-      "_Strong-a34d9bbd.js"
+      "_index-99d2d53b.js",
+      "_mdsvex-layout-notes-8e572572.js",
+      "_H1-e4f97159.js",
+      "_H5-efe2ca3b.js",
+      "_Li-37aa5478.js",
+      "_Strong-0fe50ee4.js"
     ],
     "isDynamicEntry": true,
     "src": "src/lib/md/000 - Code Runner in VSCode.svx"
   },
   "src/lib/md/001 - Live Preview in VSCode.svx": {
-    "file": "_app/immutable/chunks/001 - Live Preview in VSCode-d48822d2.js",
+    "file": "_app/immutable/chunks/001 - Live Preview in VSCode-099a2347.js",
     "imports": [
-      "_index-bc81051f.js",
-      "_mdsvex-layout-notes-19848e84.js",
-      "_H1-7d6dc3b6.js",
-      "_H5-70d77b94.js",
-      "_Li-c401e699.js"
+      "_index-99d2d53b.js",
+      "_mdsvex-layout-notes-8e572572.js",
+      "_H1-e4f97159.js",
+      "_H5-efe2ca3b.js",
+      "_Li-37aa5478.js"
     ],
     "isDynamicEntry": true,
     "src": "src/lib/md/001 - Live Preview in VSCode.svx"
   },
   "src/lib/md/002 - Snippets in VSCode.svx": {
-    "file": "_app/immutable/chunks/002 - Snippets in VSCode-6d78f453.js",
+    "file": "_app/immutable/chunks/002 - Snippets in VSCode-3806e081.js",
     "imports": [
-      "_index-bc81051f.js",
-      "_mdsvex-layout-notes-19848e84.js",
-      "_H1-7d6dc3b6.js",
-      "_H5-70d77b94.js",
-      "_Li-c401e699.js",
-      "_H3-db45ddec.js"
+      "_index-99d2d53b.js",
+      "_mdsvex-layout-notes-8e572572.js",
+      "_H1-e4f97159.js",
+      "_H5-efe2ca3b.js",
+      "_Li-37aa5478.js",
+      "_H3-fdd254f4.js"
     ],
     "isDynamicEntry": true,
     "src": "src/lib/md/002 - Snippets in VSCode.svx"
   },
   "src/lib/md/003 - Multi command snippets in VSCode.svx": {
-    "file": "_app/immutable/chunks/003 - Multi command snippets in VSCode-112acc45.js",
+    "file": "_app/immutable/chunks/003 - Multi command snippets in VSCode-f6884918.js",
     "imports": [
-      "_index-bc81051f.js",
-      "_mdsvex-layout-notes-19848e84.js",
-      "_H1-7d6dc3b6.js",
-      "_H4-efe5b86b.js",
-      "_H5-70d77b94.js",
-      "_Li-c401e699.js"
+      "_index-99d2d53b.js",
+      "_mdsvex-layout-notes-8e572572.js",
+      "_H1-e4f97159.js",
+      "_H4-d9e7780d.js",
+      "_H5-efe2ca3b.js",
+      "_Li-37aa5478.js"
     ],
     "isDynamicEntry": true,
     "src": "src/lib/md/003 - Multi command snippets in VSCode.svx"
   },
   "src/lib/md/004 - Viewing (and debugging) a Live Server project using the Edge Devtools extension copy.svx": {
-    "file": "_app/immutable/chunks/004 - Viewing (and debugging) a Live Server project using the Edge Devtools extension copy-b4dec3c5.js",
+    "file": "_app/immutable/chunks/004 - Viewing (and debugging) a Live Server project using the Edge Devtools extension copy-16f37f1c.js",
     "imports": [
-      "_index-bc81051f.js",
-      "_mdsvex-layout-notes-19848e84.js",
-      "_H1-7d6dc3b6.js",
-      "_H4-efe5b86b.js",
-      "_H3-db45ddec.js",
-      "_Li-c401e699.js",
-      "_Ul-ffcf7b7e.js"
+      "_index-99d2d53b.js",
+      "_mdsvex-layout-notes-8e572572.js",
+      "_H1-e4f97159.js",
+      "_H4-d9e7780d.js",
+      "_H3-fdd254f4.js",
+      "_Li-37aa5478.js",
+      "_Ul-f6a0e6dc.js"
     ],
     "isDynamicEntry": true,
     "src": "src/lib/md/004 - Viewing (and debugging) a Live Server project using the Edge Devtools extension copy.svx"
@@ -427,17 +449,17 @@
       "_app/immutable/assets/005 - Command Center in VSCode-3d969ef8.css",
       "_app/immutable/assets/Strong-210af2f1.css"
     ],
-    "file": "_app/immutable/chunks/005 - Command Center in VSCode-3710b440.js",
+    "file": "_app/immutable/chunks/005 - Command Center in VSCode-4d75e92e.js",
     "imports": [
-      "_index-bc81051f.js",
-      "_mdsvex-layout-notes-19848e84.js",
-      "_H1-7d6dc3b6.js",
-      "_H3-db45ddec.js",
-      "_H4-efe5b86b.js",
-      "_H5-70d77b94.js",
-      "_Li-c401e699.js",
-      "_Ul-ffcf7b7e.js",
-      "_Strong-a34d9bbd.js"
+      "_index-99d2d53b.js",
+      "_mdsvex-layout-notes-8e572572.js",
+      "_H1-e4f97159.js",
+      "_H3-fdd254f4.js",
+      "_H4-d9e7780d.js",
+      "_H5-efe2ca3b.js",
+      "_Li-37aa5478.js",
+      "_Ul-f6a0e6dc.js",
+      "_Strong-0fe50ee4.js"
     ],
     "isDynamicEntry": true,
     "src": "src/lib/md/005 - Command Center in VSCode.svx"
@@ -450,33 +472,33 @@
     "css": [
       "_app/immutable/assets/Learning Svelte and SvelteKit part 1-4a0b184b.css"
     ],
-    "file": "_app/immutable/chunks/Learning Svelte and SvelteKit part 1-5c8c2c1e.js",
+    "file": "_app/immutable/chunks/Learning Svelte and SvelteKit part 1-3deaf68d.js",
     "imports": [
-      "_index-bc81051f.js",
-      "_mdsvex-layout-notes-19848e84.js",
-      "_H1-7d6dc3b6.js",
-      "_H3-db45ddec.js",
-      "_Ul-ffcf7b7e.js",
-      "_Strong-a34d9bbd.js",
-      "_Li-c401e699.js"
+      "_index-99d2d53b.js",
+      "_mdsvex-layout-notes-8e572572.js",
+      "_H1-e4f97159.js",
+      "_H3-fdd254f4.js",
+      "_Ul-f6a0e6dc.js",
+      "_Strong-0fe50ee4.js",
+      "_Li-37aa5478.js"
     ],
     "isDynamicEntry": true,
     "src": "src/lib/md/Learning Svelte and SvelteKit part 1.svx"
   },
   "src/lib/md/svelte-course/0 - Introduction/+page.svx": {
-    "file": "_app/immutable/chunks/_page-1ae173b4.js",
+    "file": "_app/immutable/chunks/_page-d77edcaa.js",
     "imports": [
-      "_index-bc81051f.js",
-      "_mdsvex-layout-notes-19848e84.js"
+      "_index-99d2d53b.js",
+      "_mdsvex-layout-notes-8e572572.js"
     ],
     "isDynamicEntry": true,
     "src": "src/lib/md/svelte-course/0 - Introduction/+page.svx"
   },
   "src/lib/md/svelte-course/000 - Writing your first Svelte component/+page.svx": {
-    "file": "_app/immutable/chunks/_page-916902c8.js",
+    "file": "_app/immutable/chunks/_page-632ff31f.js",
     "imports": [
-      "_index-bc81051f.js",
-      "_mdsvex-layout-notes-19848e84.js",
+      "_index-99d2d53b.js",
+      "_mdsvex-layout-notes-8e572572.js",
       "src/lib/md/svelte-course/000 - Writing your first Svelte component/HelloWorld_0.svx",
       "src/lib/md/svelte-course/000 - Writing your first Svelte component/HelloWorld_1.svx"
     ],
@@ -484,10 +506,10 @@
     "src": "src/lib/md/svelte-course/000 - Writing your first Svelte component/+page.svx"
   },
   "src/lib/md/svelte-course/000 - Writing your first Svelte component/HelloWorld_0.svx": {
-    "file": "_app/immutable/chunks/HelloWorld_0-59193111.js",
+    "file": "_app/immutable/chunks/HelloWorld_0-63b7bd42.js",
     "imports": [
-      "_index-bc81051f.js",
-      "_Example-db4caf26.js"
+      "_index-99d2d53b.js",
+      "_Example-63ebad4c.js"
     ],
     "isDynamicEntry": true,
     "src": "src/lib/md/svelte-course/000 - Writing your first Svelte component/HelloWorld_0.svx"
@@ -500,10 +522,10 @@
     "css": [
       "_app/immutable/assets/HelloWorld_1-e8530f87.css"
     ],
-    "file": "_app/immutable/chunks/HelloWorld_1-1b8ceedb.js",
+    "file": "_app/immutable/chunks/HelloWorld_1-f522bed2.js",
     "imports": [
-      "_index-bc81051f.js",
-      "_Example-db4caf26.js"
+      "_index-99d2d53b.js",
+      "_Example-63ebad4c.js"
     ],
     "isDynamicEntry": true,
     "src": "src/lib/md/svelte-course/000 - Writing your first Svelte component/HelloWorld_1.svx"
@@ -516,35 +538,35 @@
     "css": [
       "_app/immutable/assets/_page-fea723ac.css"
     ],
-    "file": "_app/immutable/chunks/_page-4e1db7f3.js",
+    "file": "_app/immutable/chunks/_page-83af992c.js",
     "imports": [
-      "_index-bc81051f.js",
-      "_mdsvex-layout-notes-19848e84.js",
+      "_index-99d2d53b.js",
+      "_mdsvex-layout-notes-8e572572.js",
       "src/lib/md/svelte-course/001 - Style your Svelte component/HelloWorld_1.svx",
       "src/lib/md/svelte-course/001 - Style your Svelte component/AnotherComponent.svx",
       "src/lib/md/svelte-course/001 - Style your Svelte component/BigP.svx",
       "src/lib/md/svelte-course/001 - Style your Svelte component/SmallP.svx",
       "src/lib/md/svelte-course/001 - Style your Svelte component/PAttack.svx",
-      "_H3-db45ddec.js",
-      "_Strong-a34d9bbd.js"
+      "_H3-fdd254f4.js",
+      "_Strong-0fe50ee4.js"
     ],
     "isDynamicEntry": true,
     "src": "src/lib/md/svelte-course/001 - Style your Svelte component/+page.svx"
   },
   "src/lib/md/svelte-course/001 - Style your Svelte component/AnotherComponent.svx": {
-    "file": "_app/immutable/chunks/AnotherComponent-84e274f0.js",
+    "file": "_app/immutable/chunks/AnotherComponent-37a35f2b.js",
     "imports": [
-      "_index-bc81051f.js",
-      "_Example-db4caf26.js"
+      "_index-99d2d53b.js",
+      "_Example-63ebad4c.js"
     ],
     "isDynamicEntry": true,
     "src": "src/lib/md/svelte-course/001 - Style your Svelte component/AnotherComponent.svx"
   },
   "src/lib/md/svelte-course/001 - Style your Svelte component/BigP.svx": {
-    "file": "_app/immutable/chunks/BigP-5714a59a.js",
+    "file": "_app/immutable/chunks/BigP-e93f4b73.js",
     "imports": [
-      "_index-bc81051f.js",
-      "_Example-db4caf26.js"
+      "_index-99d2d53b.js",
+      "_Example-63ebad4c.js"
     ],
     "isDynamicEntry": true,
     "src": "src/lib/md/svelte-course/001 - Style your Svelte component/BigP.svx"
@@ -557,10 +579,10 @@
     "css": [
       "_app/immutable/assets/HelloWorld_1-d771becf.css"
     ],
-    "file": "_app/immutable/chunks/HelloWorld_1-0ce955a0.js",
+    "file": "_app/immutable/chunks/HelloWorld_1-d6603f17.js",
     "imports": [
-      "_index-bc81051f.js",
-      "_Example-db4caf26.js"
+      "_index-99d2d53b.js",
+      "_Example-63ebad4c.js"
     ],
     "isDynamicEntry": true,
     "src": "src/lib/md/svelte-course/001 - Style your Svelte component/HelloWorld_1.svx"
@@ -573,333 +595,333 @@
     "css": [
       "_app/immutable/assets/PAttack-335b6bab.css"
     ],
-    "file": "_app/immutable/chunks/PAttack-88bfa7a7.js",
+    "file": "_app/immutable/chunks/PAttack-ad7503c5.js",
     "imports": [
-      "_index-bc81051f.js",
-      "_Example-db4caf26.js"
+      "_index-99d2d53b.js",
+      "_Example-63ebad4c.js"
     ],
     "isDynamicEntry": true,
     "src": "src/lib/md/svelte-course/001 - Style your Svelte component/PAttack.svx"
   },
   "src/lib/md/svelte-course/001 - Style your Svelte component/SmallP.svx": {
-    "file": "_app/immutable/chunks/SmallP-099d171a.js",
+    "file": "_app/immutable/chunks/SmallP-f1431229.js",
     "imports": [
-      "_index-bc81051f.js",
-      "_Example-db4caf26.js"
+      "_index-99d2d53b.js",
+      "_Example-63ebad4c.js"
     ],
     "isDynamicEntry": true,
     "src": "src/lib/md/svelte-course/001 - Style your Svelte component/SmallP.svx"
   },
   "src/lib/md/svelte-course/002 - Adding data to your Svelte component/+page.svx": {
-    "file": "_app/immutable/chunks/_page-5b6a98d5.js",
+    "file": "_app/immutable/chunks/_page-95090aa6.js",
     "imports": [
-      "_index-bc81051f.js",
-      "_mdsvex-layout-notes-19848e84.js",
+      "_index-99d2d53b.js",
+      "_mdsvex-layout-notes-8e572572.js",
       "src/lib/md/svelte-course/002 - Adding data to your Svelte component/HelloWorld.svx",
       "src/lib/md/svelte-course/002 - Adding data to your Svelte component/DynamicImage.svx",
       "src/lib/md/svelte-course/002 - Adding data to your Svelte component/DynamicImageShort.svx",
-      "_Strong-a34d9bbd.js"
+      "_Strong-0fe50ee4.js"
     ],
     "isDynamicEntry": true,
     "src": "src/lib/md/svelte-course/002 - Adding data to your Svelte component/+page.svx"
   },
   "src/lib/md/svelte-course/002 - Adding data to your Svelte component/DynamicImage.svx": {
-    "file": "_app/immutable/chunks/DynamicImage-f04e9b26.js",
+    "file": "_app/immutable/chunks/DynamicImage-34b9c9cd.js",
     "imports": [
-      "_index-bc81051f.js",
-      "_Example-db4caf26.js"
+      "_index-99d2d53b.js",
+      "_Example-63ebad4c.js"
     ],
     "isDynamicEntry": true,
     "src": "src/lib/md/svelte-course/002 - Adding data to your Svelte component/DynamicImage.svx"
   },
   "src/lib/md/svelte-course/002 - Adding data to your Svelte component/DynamicImageShort.svx": {
-    "file": "_app/immutable/chunks/DynamicImageShort-12f527f9.js",
+    "file": "_app/immutable/chunks/DynamicImageShort-b18ffda5.js",
     "imports": [
-      "_index-bc81051f.js",
-      "_Example-db4caf26.js"
+      "_index-99d2d53b.js",
+      "_Example-63ebad4c.js"
     ],
     "isDynamicEntry": true,
     "src": "src/lib/md/svelte-course/002 - Adding data to your Svelte component/DynamicImageShort.svx"
   },
   "src/lib/md/svelte-course/002 - Adding data to your Svelte component/HelloWorld.svx": {
-    "file": "_app/immutable/chunks/HelloWorld-a65753a6.js",
+    "file": "_app/immutable/chunks/HelloWorld-226246f0.js",
     "imports": [
-      "_index-bc81051f.js",
-      "_Example-db4caf26.js"
+      "_index-99d2d53b.js",
+      "_Example-63ebad4c.js"
     ],
     "isDynamicEntry": true,
     "src": "src/lib/md/svelte-course/002 - Adding data to your Svelte component/HelloWorld.svx"
   },
   "src/lib/md/svelte-course/003 - Reactivity in Svelte/+page.svx": {
-    "file": "_app/immutable/chunks/_page-d10df57f.js",
+    "file": "_app/immutable/chunks/_page-38cdbda2.js",
     "imports": [
-      "_index-bc81051f.js",
-      "_mdsvex-layout-notes-19848e84.js",
+      "_index-99d2d53b.js",
+      "_mdsvex-layout-notes-8e572572.js",
       "src/lib/md/svelte-course/003 - Reactivity in Svelte/Count.svx",
       "src/lib/md/svelte-course/003 - Reactivity in Svelte/CountObject.svx",
       "src/lib/md/svelte-course/003 - Reactivity in Svelte/CountObjectWrong.svx",
       "src/lib/md/svelte-course/003 - Reactivity in Svelte/CountArray.svx",
       "src/lib/md/svelte-course/003 - Reactivity in Svelte/CountArrayFixed.svx",
       "src/lib/md/svelte-course/003 - Reactivity in Svelte/CountArrayFixed2.svx",
-      "_Li-c401e699.js",
-      "_H3-db45ddec.js",
-      "_Strong-a34d9bbd.js"
+      "_Li-37aa5478.js",
+      "_H3-fdd254f4.js",
+      "_Strong-0fe50ee4.js"
     ],
     "isDynamicEntry": true,
     "src": "src/lib/md/svelte-course/003 - Reactivity in Svelte/+page.svx"
   },
   "src/lib/md/svelte-course/003 - Reactivity in Svelte/Count.svx": {
-    "file": "_app/immutable/chunks/Count-a8db4f5e.js",
+    "file": "_app/immutable/chunks/Count-c0d277ba.js",
     "imports": [
-      "_index-bc81051f.js",
-      "_Example-db4caf26.js"
+      "_index-99d2d53b.js",
+      "_Example-63ebad4c.js"
     ],
     "isDynamicEntry": true,
     "src": "src/lib/md/svelte-course/003 - Reactivity in Svelte/Count.svx"
   },
   "src/lib/md/svelte-course/003 - Reactivity in Svelte/CountArray.svx": {
-    "file": "_app/immutable/chunks/CountArray-a46b0254.js",
+    "file": "_app/immutable/chunks/CountArray-1efd3cb3.js",
     "imports": [
-      "_index-bc81051f.js",
-      "_Example-db4caf26.js"
+      "_index-99d2d53b.js",
+      "_Example-63ebad4c.js"
     ],
     "isDynamicEntry": true,
     "src": "src/lib/md/svelte-course/003 - Reactivity in Svelte/CountArray.svx"
   },
   "src/lib/md/svelte-course/003 - Reactivity in Svelte/CountArrayFixed.svx": {
-    "file": "_app/immutable/chunks/CountArrayFixed-4a9a83e7.js",
+    "file": "_app/immutable/chunks/CountArrayFixed-339a15fb.js",
     "imports": [
-      "_index-bc81051f.js",
-      "_Example-db4caf26.js"
+      "_index-99d2d53b.js",
+      "_Example-63ebad4c.js"
     ],
     "isDynamicEntry": true,
     "src": "src/lib/md/svelte-course/003 - Reactivity in Svelte/CountArrayFixed.svx"
   },
   "src/lib/md/svelte-course/003 - Reactivity in Svelte/CountArrayFixed2.svx": {
-    "file": "_app/immutable/chunks/CountArrayFixed2-0ee6143b.js",
+    "file": "_app/immutable/chunks/CountArrayFixed2-43ad664c.js",
     "imports": [
-      "_index-bc81051f.js",
-      "_Example-db4caf26.js"
+      "_index-99d2d53b.js",
+      "_Example-63ebad4c.js"
     ],
     "isDynamicEntry": true,
     "src": "src/lib/md/svelte-course/003 - Reactivity in Svelte/CountArrayFixed2.svx"
   },
   "src/lib/md/svelte-course/003 - Reactivity in Svelte/CountObject.svx": {
-    "file": "_app/immutable/chunks/CountObject-a80b50fa.js",
+    "file": "_app/immutable/chunks/CountObject-6646010f.js",
     "imports": [
-      "_index-bc81051f.js",
-      "_Example-db4caf26.js"
+      "_index-99d2d53b.js",
+      "_Example-63ebad4c.js"
     ],
     "isDynamicEntry": true,
     "src": "src/lib/md/svelte-course/003 - Reactivity in Svelte/CountObject.svx"
   },
   "src/lib/md/svelte-course/003 - Reactivity in Svelte/CountObjectWrong.svx": {
-    "file": "_app/immutable/chunks/CountObjectWrong-02980fe7.js",
+    "file": "_app/immutable/chunks/CountObjectWrong-e4aecccf.js",
     "imports": [
-      "_index-bc81051f.js",
-      "_Example-db4caf26.js"
+      "_index-99d2d53b.js",
+      "_Example-63ebad4c.js"
     ],
     "isDynamicEntry": true,
     "src": "src/lib/md/svelte-course/003 - Reactivity in Svelte/CountObjectWrong.svx"
   },
   "src/lib/md/svelte-course/004 - Attaching events in Svelte/+page.svx": {
-    "file": "_app/immutable/chunks/_page-3b699103.js",
+    "file": "_app/immutable/chunks/_page-05ce7652.js",
     "imports": [
-      "_index-bc81051f.js",
-      "_mdsvex-layout-notes-19848e84.js",
+      "_index-99d2d53b.js",
+      "_mdsvex-layout-notes-8e572572.js",
       "src/lib/md/svelte-course/004 - Attaching events in Svelte/EventListener.svx",
       "src/lib/md/svelte-course/004 - Attaching events in Svelte/EventListenerArrowFunction.svx",
       "src/lib/md/svelte-course/004 - Attaching events in Svelte/PreventDefault.svx",
       "src/lib/md/svelte-course/004 - Attaching events in Svelte/StopPropagation.svx",
       "src/lib/md/svelte-course/004 - Attaching events in Svelte/Capture.svx",
       "src/lib/md/svelte-course/004 - Attaching events in Svelte/Self.svx",
-      "_H3-db45ddec.js",
-      "_Strong-a34d9bbd.js"
+      "_H3-fdd254f4.js",
+      "_Strong-0fe50ee4.js"
     ],
     "isDynamicEntry": true,
     "src": "src/lib/md/svelte-course/004 - Attaching events in Svelte/+page.svx"
   },
   "src/lib/md/svelte-course/004 - Attaching events in Svelte/Capture.svx": {
-    "file": "_app/immutable/chunks/Capture-8f8b5128.js",
+    "file": "_app/immutable/chunks/Capture-51006c13.js",
     "imports": [
-      "_index-bc81051f.js",
-      "_Example-db4caf26.js"
+      "_index-99d2d53b.js",
+      "_Example-63ebad4c.js"
     ],
     "isDynamicEntry": true,
     "src": "src/lib/md/svelte-course/004 - Attaching events in Svelte/Capture.svx"
   },
   "src/lib/md/svelte-course/004 - Attaching events in Svelte/EventListener.svx": {
-    "file": "_app/immutable/chunks/EventListener-57b097a4.js",
+    "file": "_app/immutable/chunks/EventListener-3895ebff.js",
     "imports": [
-      "_index-bc81051f.js",
-      "_Example-db4caf26.js"
+      "_index-99d2d53b.js",
+      "_Example-63ebad4c.js"
     ],
     "isDynamicEntry": true,
     "src": "src/lib/md/svelte-course/004 - Attaching events in Svelte/EventListener.svx"
   },
   "src/lib/md/svelte-course/004 - Attaching events in Svelte/EventListenerArrowFunction.svx": {
-    "file": "_app/immutable/chunks/EventListenerArrowFunction-f9a3afce.js",
+    "file": "_app/immutable/chunks/EventListenerArrowFunction-ecd2b1e9.js",
     "imports": [
-      "_index-bc81051f.js",
-      "_Example-db4caf26.js"
+      "_index-99d2d53b.js",
+      "_Example-63ebad4c.js"
     ],
     "isDynamicEntry": true,
     "src": "src/lib/md/svelte-course/004 - Attaching events in Svelte/EventListenerArrowFunction.svx"
   },
   "src/lib/md/svelte-course/004 - Attaching events in Svelte/PreventDefault.svx": {
-    "file": "_app/immutable/chunks/PreventDefault-bdf99c0f.js",
+    "file": "_app/immutable/chunks/PreventDefault-48db660f.js",
     "imports": [
-      "_index-bc81051f.js",
-      "_Example-db4caf26.js"
+      "_index-99d2d53b.js",
+      "_Example-63ebad4c.js"
     ],
     "isDynamicEntry": true,
     "src": "src/lib/md/svelte-course/004 - Attaching events in Svelte/PreventDefault.svx"
   },
   "src/lib/md/svelte-course/004 - Attaching events in Svelte/Self.svx": {
-    "file": "_app/immutable/chunks/Self-73372a21.js",
+    "file": "_app/immutable/chunks/Self-ce4f56b4.js",
     "imports": [
-      "_index-bc81051f.js",
-      "_Example-db4caf26.js"
+      "_index-99d2d53b.js",
+      "_Example-63ebad4c.js"
     ],
     "isDynamicEntry": true,
     "src": "src/lib/md/svelte-course/004 - Attaching events in Svelte/Self.svx"
   },
   "src/lib/md/svelte-course/004 - Attaching events in Svelte/StopPropagation.svx": {
-    "file": "_app/immutable/chunks/StopPropagation-56ef22b6.js",
+    "file": "_app/immutable/chunks/StopPropagation-1ce6b2ca.js",
     "imports": [
-      "_index-bc81051f.js",
-      "_Example-db4caf26.js"
+      "_index-99d2d53b.js",
+      "_Example-63ebad4c.js"
     ],
     "isDynamicEntry": true,
     "src": "src/lib/md/svelte-course/004 - Attaching events in Svelte/StopPropagation.svx"
   },
   "src/lib/md/svelte-course/005 - Reactive declarations and statements/+page.svx": {
-    "file": "_app/immutable/chunks/_page-0197f697.js",
+    "file": "_app/immutable/chunks/_page-978e44d4.js",
     "imports": [
-      "_index-bc81051f.js",
-      "_mdsvex-layout-notes-19848e84.js",
+      "_index-99d2d53b.js",
+      "_mdsvex-layout-notes-8e572572.js",
       "src/lib/md/svelte-course/005 - Reactive declarations and statements/Count.svx",
       "src/lib/md/svelte-course/005 - Reactive declarations and statements/Double.svx",
       "src/lib/md/svelte-course/005 - Reactive declarations and statements/DoubleFixed.svx",
       "src/lib/md/svelte-course/005 - Reactive declarations and statements/DoubleConsole.svx",
       "src/lib/md/svelte-course/005 - Reactive declarations and statements/DoubleConsole2.svx",
-      "_H3-db45ddec.js",
-      "_Strong-a34d9bbd.js"
+      "_H3-fdd254f4.js",
+      "_Strong-0fe50ee4.js"
     ],
     "isDynamicEntry": true,
     "src": "src/lib/md/svelte-course/005 - Reactive declarations and statements/+page.svx"
   },
   "src/lib/md/svelte-course/005 - Reactive declarations and statements/Count.svx": {
-    "file": "_app/immutable/chunks/Count-8c290b98.js",
+    "file": "_app/immutable/chunks/Count-79c4751c.js",
     "imports": [
-      "_index-bc81051f.js",
-      "_Example-db4caf26.js"
+      "_index-99d2d53b.js",
+      "_Example-63ebad4c.js"
     ],
     "isDynamicEntry": true,
     "src": "src/lib/md/svelte-course/005 - Reactive declarations and statements/Count.svx"
   },
   "src/lib/md/svelte-course/005 - Reactive declarations and statements/Double.svx": {
-    "file": "_app/immutable/chunks/Double-5832e643.js",
+    "file": "_app/immutable/chunks/Double-946bd030.js",
     "imports": [
-      "_index-bc81051f.js",
-      "_Example-db4caf26.js"
+      "_index-99d2d53b.js",
+      "_Example-63ebad4c.js"
     ],
     "isDynamicEntry": true,
     "src": "src/lib/md/svelte-course/005 - Reactive declarations and statements/Double.svx"
   },
   "src/lib/md/svelte-course/005 - Reactive declarations and statements/DoubleConsole.svx": {
-    "file": "_app/immutable/chunks/DoubleConsole-8a88bbae.js",
+    "file": "_app/immutable/chunks/DoubleConsole-1a40b810.js",
     "imports": [
-      "_index-bc81051f.js",
-      "_Example-db4caf26.js"
+      "_index-99d2d53b.js",
+      "_Example-63ebad4c.js"
     ],
     "isDynamicEntry": true,
     "src": "src/lib/md/svelte-course/005 - Reactive declarations and statements/DoubleConsole.svx"
   },
   "src/lib/md/svelte-course/005 - Reactive declarations and statements/DoubleConsole2.svx": {
-    "file": "_app/immutable/chunks/DoubleConsole2-f75d26b9.js",
+    "file": "_app/immutable/chunks/DoubleConsole2-fb872b4a.js",
     "imports": [
-      "_index-bc81051f.js",
-      "_Example-db4caf26.js"
+      "_index-99d2d53b.js",
+      "_Example-63ebad4c.js"
     ],
     "isDynamicEntry": true,
     "src": "src/lib/md/svelte-course/005 - Reactive declarations and statements/DoubleConsole2.svx"
   },
   "src/lib/md/svelte-course/005 - Reactive declarations and statements/DoubleFixed.svx": {
-    "file": "_app/immutable/chunks/DoubleFixed-412041f4.js",
+    "file": "_app/immutable/chunks/DoubleFixed-5589cdbd.js",
     "imports": [
-      "_index-bc81051f.js",
-      "_Example-db4caf26.js"
+      "_index-99d2d53b.js",
+      "_Example-63ebad4c.js"
     ],
     "isDynamicEntry": true,
     "src": "src/lib/md/svelte-course/005 - Reactive declarations and statements/DoubleFixed.svx"
   },
   "src/lib/md/svelte-course/006 - tick()/+page.svx": {
-    "file": "_app/immutable/chunks/_page-d0199fc0.js",
+    "file": "_app/immutable/chunks/_page-f9bf84c5.js",
     "imports": [
-      "_index-bc81051f.js",
-      "_mdsvex-layout-notes-19848e84.js",
+      "_index-99d2d53b.js",
+      "_mdsvex-layout-notes-8e572572.js",
       "src/lib/md/svelte-course/006 - tick()/UsingTick.svx",
       "src/lib/md/svelte-course/006 - tick()/Input.svx",
       "src/lib/md/svelte-course/006 - tick()/InputWrong.svx",
-      "_Strong-a34d9bbd.js"
+      "_Strong-0fe50ee4.js"
     ],
     "isDynamicEntry": true,
     "src": "src/lib/md/svelte-course/006 - tick()/+page.svx"
   },
   "src/lib/md/svelte-course/006 - tick()/Input.svx": {
-    "file": "_app/immutable/chunks/Input-7d36eb42.js",
+    "file": "_app/immutable/chunks/Input-e3002dfe.js",
     "imports": [
-      "_index-bc81051f.js",
-      "_Example-db4caf26.js"
+      "_index-99d2d53b.js",
+      "_Example-63ebad4c.js"
     ],
     "isDynamicEntry": true,
     "src": "src/lib/md/svelte-course/006 - tick()/Input.svx"
   },
   "src/lib/md/svelte-course/006 - tick()/InputWrong.svx": {
-    "file": "_app/immutable/chunks/InputWrong-846bcdc3.js",
+    "file": "_app/immutable/chunks/InputWrong-fc5836c3.js",
     "imports": [
-      "_index-bc81051f.js",
-      "_Example-db4caf26.js"
+      "_index-99d2d53b.js",
+      "_Example-63ebad4c.js"
     ],
     "isDynamicEntry": true,
     "src": "src/lib/md/svelte-course/006 - tick()/InputWrong.svx"
   },
   "src/lib/md/svelte-course/006 - tick()/UsingTick.svx": {
-    "file": "_app/immutable/chunks/UsingTick-3a01e115.js",
+    "file": "_app/immutable/chunks/UsingTick-57dee495.js",
     "imports": [
-      "_index-bc81051f.js",
-      "_Example-db4caf26.js"
+      "_index-99d2d53b.js",
+      "_Example-63ebad4c.js"
     ],
     "isDynamicEntry": true,
     "src": "src/lib/md/svelte-course/006 - tick()/UsingTick.svx"
   },
   "src/lib/md/svelte-course/007 - Components and props/+page.svx": {
-    "file": "_app/immutable/chunks/_page-87ba80e7.js",
+    "file": "_app/immutable/chunks/_page-f6d768a7.js",
     "imports": [
-      "_index-bc81051f.js",
-      "_mdsvex-layout-notes-19848e84.js",
-      "_Example-db4caf26.js",
+      "_index-99d2d53b.js",
+      "_mdsvex-layout-notes-8e572572.js",
+      "_Example-63ebad4c.js",
       "src/lib/md/svelte-course/007 - Components and props/OtherComponent.svx",
       "src/lib/md/svelte-course/007 - Components and props/ObjectDisplay.svx",
-      "_H3-db45ddec.js",
-      "_Strong-a34d9bbd.js"
+      "_H3-fdd254f4.js",
+      "_Strong-0fe50ee4.js"
     ],
     "isDynamicEntry": true,
     "src": "src/lib/md/svelte-course/007 - Components and props/+page.svx"
   },
   "src/lib/md/svelte-course/007 - Components and props/ObjectDisplay.svx": {
-    "file": "_app/immutable/chunks/ObjectDisplay-4018016b.js",
+    "file": "_app/immutable/chunks/ObjectDisplay-b899682f.js",
     "imports": [
-      "_index-bc81051f.js"
+      "_index-99d2d53b.js"
     ],
     "isDynamicEntry": true,
     "src": "src/lib/md/svelte-course/007 - Components and props/ObjectDisplay.svx"
   },
   "src/lib/md/svelte-course/007 - Components and props/OtherComponent.svx": {
-    "file": "_app/immutable/chunks/OtherComponent-f7d0b9f2.js",
+    "file": "_app/immutable/chunks/OtherComponent-270a683d.js",
     "imports": [
-      "_index-bc81051f.js"
+      "_index-99d2d53b.js"
     ],
     "isDynamicEntry": true,
     "src": "src/lib/md/svelte-course/007 - Components and props/OtherComponent.svx"
@@ -912,14 +934,14 @@
     "css": [
       "_app/immutable/assets/_page-68192e0c.css"
     ],
-    "file": "_app/immutable/chunks/_page-de7bc998.js",
+    "file": "_app/immutable/chunks/_page-063be033.js",
     "imports": [
-      "_index-bc81051f.js",
-      "_mdsvex-layout-notes-19848e84.js",
-      "_Example-db4caf26.js",
-      "_Ul-ffcf7b7e.js",
-      "_Strong-a34d9bbd.js",
-      "_Li-c401e699.js"
+      "_index-99d2d53b.js",
+      "_mdsvex-layout-notes-8e572572.js",
+      "_Example-63ebad4c.js",
+      "_Ul-f6a0e6dc.js",
+      "_Strong-0fe50ee4.js",
+      "_Li-37aa5478.js"
     ],
     "isDynamicEntry": true,
     "src": "src/lib/md/svelte-course/008 - Component events/+page.svx"
@@ -932,12 +954,12 @@
     "css": [
       "_app/immutable/assets/_page-8a46b28a.css"
     ],
-    "file": "_app/immutable/chunks/_page-29c8af73.js",
+    "file": "_app/immutable/chunks/_page-47ea0ce7.js",
     "imports": [
-      "_index-bc81051f.js",
-      "_mdsvex-layout-notes-19848e84.js",
-      "_Example-db4caf26.js",
-      "_Strong-a34d9bbd.js"
+      "_index-99d2d53b.js",
+      "_mdsvex-layout-notes-8e572572.js",
+      "_Example-63ebad4c.js",
+      "_Strong-0fe50ee4.js"
     ],
     "isDynamicEntry": true,
     "src": "src/lib/md/svelte-course/009 - Forwarding component events/+page.svx"
@@ -950,72 +972,167 @@
     "css": [
       "_app/immutable/assets/_page-534beb13.css"
     ],
-    "file": "_app/immutable/chunks/_page-bbaee70d.js",
+    "file": "_app/immutable/chunks/_page-d69c4d9c.js",
     "imports": [
-      "_index-bc81051f.js",
-      "_mdsvex-layout-notes-19848e84.js",
-      "_ShowCode-3bfd614a.js",
-      "_Strong-a34d9bbd.js"
+      "_index-99d2d53b.js",
+      "_mdsvex-layout-notes-8e572572.js",
+      "_ShowCode-f7790b45.js",
+      "_ShowCode.svelte_svelte_type_style_lang-de6c27e3.js",
+      "_Strong-0fe50ee4.js"
     ],
     "isDynamicEntry": true,
     "src": "src/lib/md/svelte-course/010 - class directive/+page.svx"
   },
   "src/lib/md/svelte-course/011 - Bindings/+page.svx": {
-    "file": "_app/immutable/chunks/_page-c41f6320.js",
+    "file": "_app/immutable/chunks/_page-d010bbee.js",
     "imports": [
-      "_index-bc81051f.js",
-      "_mdsvex-layout-notes-19848e84.js",
-      "_ShowCode-3bfd614a.js",
-      "_Strong-a34d9bbd.js"
+      "_index-99d2d53b.js",
+      "_mdsvex-layout-notes-8e572572.js",
+      "_ShowCode-f7790b45.js",
+      "_Strong-0fe50ee4.js"
     ],
     "isDynamicEntry": true,
     "src": "src/lib/md/svelte-course/011 - Bindings/+page.svx"
   },
   "src/lib/md/svelte-course/012 - bind group/+page.svx": {
-    "file": "_app/immutable/chunks/_page-161b5c73.js",
+    "file": "_app/immutable/chunks/_page-2ced83f6.js",
     "imports": [
-      "_index-bc81051f.js",
-      "_mdsvex-layout-notes-19848e84.js",
-      "_ShowCode-3bfd614a.js",
-      "_Strong-a34d9bbd.js"
+      "_index-99d2d53b.js",
+      "_mdsvex-layout-notes-8e572572.js",
+      "_ShowCode-f7790b45.js",
+      "_Strong-0fe50ee4.js"
     ],
     "isDynamicEntry": true,
     "src": "src/lib/md/svelte-course/012 - bind group/+page.svx"
   },
   "src/lib/md/svelte-course/013 - bind this/+page.svx": {
-    "file": "_app/immutable/chunks/_page-ee07d43e.js",
+    "file": "_app/immutable/chunks/_page-31135236.js",
     "imports": [
-      "_index-bc81051f.js",
-      "_mdsvex-layout-notes-19848e84.js",
-      "_ShowCode-3bfd614a.js",
-      "_Strong-a34d9bbd.js"
+      "_index-99d2d53b.js",
+      "_mdsvex-layout-notes-8e572572.js",
+      "_ShowCode-f7790b45.js",
+      "_Strong-0fe50ee4.js"
     ],
     "isDynamicEntry": true,
     "src": "src/lib/md/svelte-course/013 - bind this/+page.svx"
   },
   "src/lib/md/svelte-course/014 - Component lifecycle events/+page.svx": {
-    "file": "_app/immutable/chunks/_page-4bd0cc18.js",
+    "file": "_app/immutable/chunks/_page-f6394325.js",
     "imports": [
-      "_index-bc81051f.js",
-      "_mdsvex-layout-notes-19848e84.js",
-      "_ShowCode-3bfd614a.js",
-      "_Ul-ffcf7b7e.js",
-      "_Li-c401e699.js",
-      "_Strong-a34d9bbd.js"
+      "_index-99d2d53b.js",
+      "_mdsvex-layout-notes-8e572572.js",
+      "_ShowCode-f7790b45.js",
+      "_Ul-f6a0e6dc.js",
+      "_Li-37aa5478.js",
+      "_Strong-0fe50ee4.js"
     ],
     "isDynamicEntry": true,
     "src": "src/lib/md/svelte-course/014 - Component lifecycle events/+page.svx"
+  },
+  "src/lib/md/svelte-course/015 - onMount()/+page.svx": {
+    "file": "_app/immutable/chunks/_page-68fc3fc9.js",
+    "imports": [
+      "_index-99d2d53b.js",
+      "_mdsvex-layout-notes-8e572572.js",
+      "_ShowCode-f7790b45.js",
+      "_Strong-0fe50ee4.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/lib/md/svelte-course/015 - onMount()/+page.svx"
+  },
+  "src/lib/md/svelte-course/016 - if/+page.css": {
+    "file": "_app/immutable/assets/_page-2fa50034.css",
+    "src": "src/lib/md/svelte-course/016 - if/+page.css"
+  },
+  "src/lib/md/svelte-course/016 - if/+page.svx": {
+    "css": [
+      "_app/immutable/assets/_page-2fa50034.css"
+    ],
+    "file": "_app/immutable/chunks/_page-4c9acf12.js",
+    "imports": [
+      "_index-99d2d53b.js",
+      "_mdsvex-layout-notes-8e572572.js",
+      "_ShowCode-f7790b45.js",
+      "_H3-fdd254f4.js",
+      "_Strong-0fe50ee4.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/lib/md/svelte-course/016 - if/+page.svx"
+  },
+  "src/lib/md/svelte-course/017 - each/+page.css": {
+    "file": "_app/immutable/assets/_page-9f516fc6.css",
+    "src": "src/lib/md/svelte-course/017 - each/+page.css"
+  },
+  "src/lib/md/svelte-course/017 - each/+page.svx": {
+    "css": [
+      "_app/immutable/assets/_page-9f516fc6.css"
+    ],
+    "file": "_app/immutable/chunks/_page-1fc0d425.js",
+    "imports": [
+      "_index-99d2d53b.js",
+      "_mdsvex-layout-notes-8e572572.js",
+      "_ShowCode-f7790b45.js",
+      "_Strong-0fe50ee4.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/lib/md/svelte-course/017 - each/+page.svx"
+  },
+  "src/lib/md/svelte-course/018 - keyed each/+page.css": {
+    "file": "_app/immutable/assets/_page-c186df43.css",
+    "src": "src/lib/md/svelte-course/018 - keyed each/+page.css"
+  },
+  "src/lib/md/svelte-course/018 - keyed each/+page.svx": {
+    "css": [
+      "_app/immutable/assets/_page-c186df43.css"
+    ],
+    "file": "_app/immutable/chunks/_page-7da78d67.js",
+    "imports": [
+      "_index-99d2d53b.js",
+      "_mdsvex-layout-notes-8e572572.js",
+      "_ShowCode-f7790b45.js",
+      "_Strong-0fe50ee4.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/lib/md/svelte-course/018 - keyed each/+page.svx"
+  },
+  "src/lib/md/svelte-course/019 - await/+page.svx": {
+    "file": "_app/immutable/chunks/_page-d25c748a.js",
+    "imports": [
+      "_index-99d2d53b.js",
+      "_mdsvex-layout-notes-8e572572.js",
+      "_ShowCode-f7790b45.js",
+      "_Strong-0fe50ee4.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/lib/md/svelte-course/019 - await/+page.svx"
+  },
+  "src/lib/md/svelte-course/099 - test/+page.css": {
+    "file": "_app/immutable/assets/_page-56761b59.css",
+    "src": "src/lib/md/svelte-course/099 - test/+page.css"
+  },
+  "src/lib/md/svelte-course/099 - test/+page.svx": {
+    "css": [
+      "_app/immutable/assets/_page-56761b59.css"
+    ],
+    "file": "_app/immutable/chunks/_page-19f0bcdf.js",
+    "imports": [
+      "_index-99d2d53b.js",
+      "_mdsvex-layout-notes-8e572572.js",
+      "_ShowCode.svelte_svelte_type_style_lang-de6c27e3.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/lib/md/svelte-course/099 - test/+page.svx"
   },
   "src/routes/+layout.css": {
     "file": "_app/immutable/assets/_layout-834a5097.css",
     "src": "src/routes/+layout.css"
   },
   "src/routes/+layout.js": {
-    "file": "_app/immutable/modules/pages/_layout.js-e5a6d40c.js",
+    "file": "_app/immutable/modules/pages/_layout.js-4890776b.js",
     "imports": [
       "_preload-helper-41c905a7.js",
       "_dynamic-import-helper-be004503.js",
-      "__layout-8a81aad8.js"
+      "__layout-a146d79b.js"
     ],
     "isEntry": true,
     "src": "src/routes/+layout.js"
@@ -1024,9 +1141,9 @@
     "css": [
       "_app/immutable/assets/_layout-834a5097.css"
     ],
-    "file": "_app/immutable/components/pages/_layout.svelte-0088b0e0.js",
+    "file": "_app/immutable/components/pages/_layout.svelte-56e796bb.js",
     "imports": [
-      "_index-bc81051f.js",
+      "_index-99d2d53b.js",
       "_paths-b4419565.js"
     ],
     "isEntry": true,
@@ -1036,46 +1153,46 @@
     "css": [
       "_app/immutable/assets/Strong-210af2f1.css"
     ],
-    "file": "_app/immutable/components/pages/_page.svx-36889649.js",
+    "file": "_app/immutable/components/pages/_page.svx-f2dd7c54.js",
     "imports": [
-      "_index-bc81051f.js",
-      "_mdsvex-layout-mainpage-28d2c485.js",
+      "_index-99d2d53b.js",
+      "_mdsvex-layout-mainpage-947e05db.js",
       "_paths-b4419565.js"
     ],
     "isEntry": true,
     "src": "src/routes/+page.svx"
   },
   "src/routes/[slug]/+layout.svelte": {
-    "file": "_app/immutable/components/pages/_slug_/_layout.svelte-c5f78c89.js",
+    "file": "_app/immutable/components/pages/_slug_/_layout.svelte-208c1a1d.js",
     "imports": [
-      "_index-bc81051f.js",
+      "_index-99d2d53b.js",
       "_paths-b4419565.js"
     ],
     "isEntry": true,
     "src": "src/routes/[slug]/+layout.svelte"
   },
   "src/routes/[slug]/+page.js": {
-    "file": "_app/immutable/modules/pages/_slug_/_page.js-9f745ddf.js",
+    "file": "_app/immutable/modules/pages/_slug_/_page.js-424f9732.js",
     "imports": [
       "_preload-helper-41c905a7.js",
       "_dynamic-import-helper-be004503.js",
-      "__page-9f7564e1.js"
+      "__page-ca068692.js"
     ],
     "isEntry": true,
     "src": "src/routes/[slug]/+page.js"
   },
   "src/routes/[slug]/+page.svelte": {
-    "file": "_app/immutable/components/pages/_slug_/_page.svelte-6539e3ef.js",
+    "file": "_app/immutable/components/pages/_slug_/_page.svelte-24a66cbb.js",
     "imports": [
-      "_index-bc81051f.js"
+      "_index-99d2d53b.js"
     ],
     "isEntry": true,
     "src": "src/routes/[slug]/+page.svelte"
   },
   "src/routes/svelte-course/+layout.svelte": {
-    "file": "_app/immutable/components/pages/svelte-course/_layout.svelte-a7c15f7f.js",
+    "file": "_app/immutable/components/pages/svelte-course/_layout.svelte-31ee5ba2.js",
     "imports": [
-      "_index-bc81051f.js",
+      "_index-99d2d53b.js",
       "_paths-b4419565.js"
     ],
     "isEntry": true,
@@ -1085,28 +1202,28 @@
     "css": [
       "_app/immutable/assets/Strong-210af2f1.css"
     ],
-    "file": "_app/immutable/components/pages/svelte-course/_page.svx-6a6a3767.js",
+    "file": "_app/immutable/components/pages/svelte-course/_page.svx-45033976.js",
     "imports": [
-      "_index-bc81051f.js",
-      "_mdsvex-layout-mainpage-28d2c485.js"
+      "_index-99d2d53b.js",
+      "_mdsvex-layout-mainpage-947e05db.js"
     ],
     "isEntry": true,
     "src": "src/routes/svelte-course/+page.svx"
   },
   "src/routes/svelte-course/[slug]/+page.js": {
-    "file": "_app/immutable/modules/pages/svelte-course/_slug_/_page.js-877f5428.js",
+    "file": "_app/immutable/modules/pages/svelte-course/_slug_/_page.js-9400b09c.js",
     "imports": [
       "_preload-helper-41c905a7.js",
       "_dynamic-import-helper-be004503.js",
-      "__page-6085e23b.js"
+      "__page-f21c8aa6.js"
     ],
     "isEntry": true,
     "src": "src/routes/svelte-course/[slug]/+page.js"
   },
   "src/routes/svelte-course/[slug]/+page.svelte": {
-    "file": "_app/immutable/components/pages/svelte-course/_slug_/_page.svelte-f8948e68.js",
+    "file": "_app/immutable/components/pages/svelte-course/_slug_/_page.svelte-3778455b.js",
     "imports": [
-      "_index-bc81051f.js"
+      "_index-99d2d53b.js"
     ],
     "isEntry": true,
     "src": "src/routes/svelte-course/[slug]/+page.svelte"

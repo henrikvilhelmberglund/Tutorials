@@ -20,20 +20,24 @@
 		<link href="/Tutorials/_app/immutable/assets/_page-68192e0c.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/_page-8a46b28a.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/_page-534beb13.css" rel="stylesheet">
-		<link href="/Tutorials/_app/immutable/assets/ShowCode-4157962a.css" rel="stylesheet">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/start-36864b77.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/index-bc81051f.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/singletons-b36565ae.js">
+		<link href="/Tutorials/_app/immutable/assets/ShowCode-55a0cfff.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/_page-2fa50034.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/_page-9f516fc6.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/_page-c186df43.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/_page-56761b59.css" rel="stylesheet">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/start-c3b6d81c.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/index-99d2d53b.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/singletons-9cfb5813.js">
 		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/paths-b4419565.js">
 		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/preload-helper-41c905a7.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/_layout.svelte-0088b0e0.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/modules/pages/_layout.js-e5a6d40c.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/_layout.svelte-56e796bb.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/modules/pages/_layout.js-4890776b.js">
 		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/dynamic-import-helper-be004503.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/_layout-8a81aad8.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/svelte-course/_layout.svelte-a7c15f7f.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/svelte-course/_slug_/_page.svelte-f8948e68.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/modules/pages/svelte-course/_slug_/_page.js-877f5428.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/_page-6085e23b.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/_layout-a146d79b.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/svelte-course/_layout.svelte-31ee5ba2.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/svelte-course/_slug_/_page.svelte-3778455b.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/modules/pages/svelte-course/_slug_/_page.js-9400b09c.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/_page-f21c8aa6.js">
 </head>
 
 <body>
@@ -63,6 +67,12 @@
 					</li><li><a href="/Tutorials/svelte-course/012 - bind group">012 - bind group</a>
 					</li><li><a href="/Tutorials/svelte-course/013 - bind this">013 - bind this</a>
 					</li><li><a href="/Tutorials/svelte-course/014 - Component lifecycle events">014 - Component lifecycle events</a>
+					</li><li><a href="/Tutorials/svelte-course/015 - onMount()">015 - onMount()</a>
+					</li><li><a href="/Tutorials/svelte-course/016 - if">016 - if</a>
+					</li><li><a href="/Tutorials/svelte-course/017 - each">017 - each</a>
+					</li><li><a href="/Tutorials/svelte-course/018 - keyed each">018 - keyed each</a>
+					</li><li><a href="/Tutorials/svelte-course/019 - await">019 - await</a>
+					</li><li><a href="/Tutorials/svelte-course/099 - test">099 - test</a>
 					</li></ul></nav>
 
 
@@ -83,8 +93,11 @@
 </div>
 
 
-<div class="uno-w8hybr"><pre class="uno-ua6jff language-svelte"><p class="uno-c47bek">App.svelte</p>
-<code style="font-family: 'Maple', Menlo, Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', 'Courier New', monospace;"><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+<div>
+
+	<div class="uno-w8hybr"><button class="uno-tuphnz">🔼</button>
+			<p class="uno-zyb7av">App.svelte</p>
+				<pre class="uno-e7g21a language-svelte">					<code style="font-family: 'Maple', Menlo, Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', 'Courier New', monospace;"><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
 	<span class="token keyword">let</span> profit <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
 
@@ -105,7 +118,7 @@
 	<span class="token punctuation">}</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span>
 <!-- HTML_TAG_END --></code>
-  </pre>
+        </pre></div>
 </div>
 <p class="uno-ddg7b5 text-1xl ">But in Svelte there&#39;s another way to set classes using something called a <strong class="uno-paw6yi">class directive
 </strong>.
@@ -125,8 +138,11 @@
 </div>
 
 
-<div class="uno-w8hybr"><pre class="uno-ua6jff language-svelte"><p class="uno-c47bek">ClassDirective.svelte</p>
-<code style="font-family: 'Maple', Menlo, Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', 'Courier New', monospace;"><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+<div>
+
+	<div class="uno-w8hybr"><button class="uno-tuphnz">🔼</button>
+			<p class="uno-zyb7av">ClassDirective.svelte</p>
+				<pre class="uno-e7g21a language-svelte">					<code style="font-family: 'Maple', Menlo, Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', 'Courier New', monospace;"><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
 	<span class="token keyword">let</span> profit <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
 
@@ -147,7 +163,7 @@
 	<span class="token punctuation">}</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span>
 <!-- HTML_TAG_END --></code>
-  </pre>
+        </pre></div>
 </div>
 <p class="uno-ddg7b5 text-1xl ">We can use a <strong class="uno-paw6yi">shorthand
 </strong> by setting the expression to a <strong class="uno-paw6yi">reactive variable
@@ -160,8 +176,11 @@
 </div>
 
 
-<div class="uno-w8hybr"><pre class="uno-ua6jff language-svelte"><p class="uno-c47bek">ClassDirective2.svelte</p>
-<code style="font-family: 'Maple', Menlo, Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', 'Courier New', monospace;"><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+<div>
+
+	<div class="uno-w8hybr"><button class="uno-tuphnz">🔼</button>
+			<p class="uno-zyb7av">ClassDirective2.svelte</p>
+				<pre class="uno-e7g21a language-svelte">					<code style="font-family: 'Maple', Menlo, Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', 'Courier New', monospace;"><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
 	<span class="token keyword">let</span> profit <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
 	<span class="token literal-property property">$</span><span class="token operator">:</span> negative <span class="token operator">=</span> profit <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">;</span>
 	<span class="token literal-property property">$</span><span class="token operator">:</span> positive <span class="token operator">=</span> profit <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">;</span>
@@ -186,18 +205,18 @@
 	<span class="token punctuation">}</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span>
 <!-- HTML_TAG_END --></code>
-  </pre>
+        </pre></div>
 </div></section></article>
 
 
-		<script type="module" data-sveltekit-hydrate="9zel7o">
-			import { start } from "/Tutorials/_app/immutable/start-36864b77.js";
+		<script type="module" data-sveltekit-hydrate="1575scz">
+			import { start } from "/Tutorials/_app/immutable/start-c3b6d81c.js";
 
 			start({
 				env: {},
 				paths: {"base":"/Tutorials","assets":"/Tutorials"},
-				target: document.querySelector('[data-sveltekit-hydrate="9zel7o"]').parentNode,
-				version: "1675624929792",
+				target: document.querySelector('[data-sveltekit-hydrate="1575scz"]').parentNode,
+				version: "1675835625610",
 				hydrate: {
 					node_ids: [0, 2, 6],
 					data: [null,null,null],
