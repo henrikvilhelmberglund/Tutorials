@@ -16,24 +16,15 @@ layout: notes
   import App4 from "./App4.svelte";
   import App4Raw from "./App4.svelte?raw";
   import ShowCode from "$lib/ShowCode.svelte";
+  import ShowMany from "$lib/ShowMany.svelte";
 </script>
 
 Here we have a component that fetches the selected dog breed as an image using Dog API.
 
-Right now it's a bit wonky because every time you change the dog breed you get a **missing image icon** while the image is loading.
-
-<ShowCode code={AppRaw} name="App.svelte"><App/></ShowCode>
-
-We could try to use another if statement to display a loading text:
-
-<ShowCode code={App2Raw} name="App2.svelte"><App2/></ShowCode>
-
-Maybe an async await version:
-
-<ShowCode code={App3Raw} name="App3.svelte"><App3/></ShowCode>
-
-This does work but there is an even better way to do this, we can use the **`{#await}` block**.
-
-<ShowCode code={App4Raw} name="App4.svelte"><App4/></ShowCode>
+<ShowMany name={[
+{name: "App", comp:App, raw:AppRaw, text: "Right now it's a bit wonky because every time you change the dog breed you get a <b class='what'>missing image icon</b> while the image is loading."},
+{name: "App2", comp:App2, raw:App2Raw, text: "We could try to use another if statement to display a loading text:"},
+{name: "App3", comp:App3, raw:App3Raw, text: "Maybe an async await version:"},
+{name: "App4", comp:App4, raw:App4Raw, text: "That works but there is an even better way to do this, we can use the <b>{#await} block</b>."}]} />
 
 One thing to note is that you can skip some of the blocks if you don't need them, for example the loading text or the error handling.
