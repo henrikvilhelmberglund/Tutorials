@@ -22,7 +22,7 @@ layout: notes
 Here we have a component that fetches the selected dog breed as an image using Dog API.
 
 <ShowMany name={[
-{name: "App", comp:App, raw:AppRaw, text: "Right now it's a bit wonky because every time you change the dog breed you get a <b class='what'>missing image icon</b> while the image is loading."},
+{name: "App", comp:App, raw:AppRaw, text: "Right now it's a bit wonky because every time you change the dog breed you get a <b>missing image icon</b> while the image is loading."},
 {name: "App2", comp:App2, raw:App2Raw, text: "We could try to use another if statement to display a loading text:"},
 {name: "App3", comp:App3, raw:App3Raw, text: "Maybe an async await version:"},
 {name: "App4", comp:App4, raw:App4Raw, text: "That works but there is an even better way to do this, we can use the <b>{#await} block</b>."}]} />
