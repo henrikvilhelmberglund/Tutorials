@@ -6,22 +6,22 @@ const config = defineConfig({
 
 	smartypants: {
 		dashes: "oldschool",
-		quotes: false
+		quotes: false,
 	},
 	layout: {
 		notes: "src/lib/mdsvex-layout-notes.svx",
-		mainpage: "src/lib/mdsvex-layout-mainpage.svx"
+		mainpage: "src/lib/mdsvex-layout-mainpage.svx",
 	},
 	remarkPlugins: [
 		examples,
 		{
 			defaults: {
-				Wrapper: "/src/lib/Example.svelte"
-			}
-		}
+				Wrapper: "/src/lib/Example.svelte",
+			},
+		},
 	],
 
-	rehypePlugins: []
+	rehypePlugins: [],
 });
 
 export default config;
