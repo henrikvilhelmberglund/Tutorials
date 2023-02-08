@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+### [0.0.8](https://github.com/henrikvilhelmberglund/Tutorials/compare/v0.0.7...v0.0.8) (2023-02-08)
+
+
+### Features
+
+* :package: add svelte-youtube-embed ([f844177](https://github.com/henrikvilhelmberglund/Tutorials/commit/f84417753866257d0bf7db7185d9f137fe081388))
+* :sparkles: add 099 - test for testing ShowMany ([7687b68](https://github.com/henrikvilhelmberglund/Tutorials/commit/7687b68a8ca8f803ff54a55fb65832bfe1a0776a))
+* :sparkles: add Embed wrapper for making the youtube embed iframe bigger ([c7098ac](https://github.com/henrikvilhelmberglund/Tutorials/commit/c7098ac924a7b55daae307c1d8faf3044d8e9e16))
+* :sparkles: add scuffed minimize button for ShowCode ([17e83a7](https://github.com/henrikvilhelmberglund/Tutorials/commit/17e83a7b70407e07ee03b0dcf6a540784093c6e9))
+* :sparkles: add ShowMany that shows a lot of components with a tab interface ([6a35d5f](https://github.com/henrikvilhelmberglund/Tutorials/commit/6a35d5fdf3c8a892a66dcac90a92b82faa415bf0))
+* :sparkles: add slots functionality to ShowCode ([7e2b66a](https://github.com/henrikvilhelmberglund/Tutorials/commit/7e2b66a98bc6e07659c96c4f8619fede7fdd863e))
+* :sparkles: add svelte-course 015 ([b7978ae](https://github.com/henrikvilhelmberglund/Tutorials/commit/b7978aece6a22f71d6156ba8a97d4676368273fc))
+* :sparkles: add svelte-course 016 ([df2ff5e](https://github.com/henrikvilhelmberglund/Tutorials/commit/df2ff5e1892fc9d965a3289cd6b4479780d12d17))
+* :sparkles: add svelte-course 017 ([e991593](https://github.com/henrikvilhelmberglund/Tutorials/commit/e991593df9e2f8b5ce1d9bd68f2088d8742dcde1))
+* :sparkles: add svelte-course 018 ([c612b5f](https://github.com/henrikvilhelmberglund/Tutorials/commit/c612b5f8db14dacf2709ad27bbbe3d39b47807d0))
+* :sparkles: add svelte-course 019 ([0a9f838](https://github.com/henrikvilhelmberglund/Tutorials/commit/0a9f83838d6604f02a480bdac676c6628a840b0c))
+
+
+### Bug Fixes
+
+* :lipstick: fix indent ([1fb47c8](https://github.com/henrikvilhelmberglund/Tutorials/commit/1fb47c8ae19923e91fe28534323a13c317982718))
+* :lipstick: make top border round when no slots ([6f60ed8](https://github.com/henrikvilhelmberglund/Tutorials/commit/6f60ed8c813c16755c881ffbad5c8c54ddc04eed))
+
 ### [0.0.7](https://github.com/henrikvilhelmberglund/Tutorials/compare/v0.0.6...v0.0.7) (2023-02-05)
 
 
