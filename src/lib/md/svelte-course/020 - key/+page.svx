@@ -1,0 +1,42 @@
+---
+title: "{#key}"
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-02-09
+layout: notes
+---
+
+<script>
+  import Count from "./Count.svelte";
+  import CountRaw from "./Count.svelte?raw";
+  import CountKey from "./CountKey.svelte";
+  import CountKeyRaw from "./CountKey.svelte?raw";
+  import CountFade from "./CountFade.svelte";
+  import CountFadeRaw from "./CountFade.svelte?raw";
+  import CountFadeKey from "./CountFadeKey.svelte";
+  import CountFadeKeyRaw from "./CountFadeKey.svelte?raw";
+  import ShowMany from "$lib/ShowMany.svelte";
+  import ShowCode from "$lib/ShowCode.svelte";
+  import App from "./App.svelte";
+  import AppRaw from "./App.svelte?raw";
+  import App2 from "./App2.svelte";
+  import App2Raw from "./App2.svelte?raw";
+  import Chat from "./Chat.svelte";
+  import ChatRaw from "./Chat.svelte?raw";
+  </script>
+
+Sometimes we may want to **recreate elements or components** when something has **changed**.
+
+<ShowMany name={[
+{name: "Count", comp:Count, raw:CountRaw, text: "Imagine that you wanted to clear the input field whenever you clicked the button."},
+{name: "CountKey", comp:CountKey, raw:CountKeyRaw, text: "Just add a key block wrapping the input with the variable that should trigger the recreation of the element!"},
+{name: "CountFade", comp:CountFade, raw:CountFadeRaw, text: "We could add a transition that fades in, however it only shows once."},
+{name: "CountFadeKey", comp:CountFadeKey, raw:CountFadeKeyRaw, text: "But if we add a key block it fades in every time it's recreated when the count variable changes!"},
+]
+}/>
+
+<ShowMany name={[{name: "App", comp:App, raw:AppRaw, text: "Here we have a chat app where we can select a friend and see their messages. But, when clicking, the component using the friend prop doesn't update."},
+{name: "App2", comp:App2, raw:App2Raw, text: "To fix this we can simply surround the Chat component with a key block referencing selectedFriend. Every time we select a new friend the Chat component is recreated!"}]}/>
+<ShowCode code={ChatRaw} name="Chat.svelte"/>
+
+In this case, rather than creating a **reset function** that **resets the whole state** we could simply **use the key block** to destroy the component and **reinitialize a new one**.
