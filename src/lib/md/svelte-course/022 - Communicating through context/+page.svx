@@ -1,0 +1,63 @@
+---
+title: Communicating through context
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-02-10
+layout: notes
+---
+
+<script>
+  import App from "./App.svelte";
+  import AppRaw from "./App.svelte?raw";
+  import Parent from "./Parent.svelte";
+  import ParentRaw from "./Parent.svelte?raw";
+  import Child from "./Child.svelte";
+  import ChildRaw from "./Child.svelte?raw";
+  import App2 from "./App2.svelte";
+  import App2Raw from "./App2.svelte?raw";
+  import Parent2 from "./Parent2.svelte";
+  import Parent2Raw from "./Parent2.svelte?raw";
+  import Child2 from "./Child2.svelte";
+  import Child2Raw from "./Child2.svelte?raw";
+  import App3 from "./App3.svelte";
+  import App3Raw from "./App3.svelte?raw";
+  import Parent3 from "./Parent3.svelte";
+  import Parent3Raw from "./Parent3.svelte?raw";
+  import Child3 from "./Child3.svelte";
+  import Child3Raw from "./Child3.svelte?raw";
+  import ShowMany from "$lib/ShowMany.svelte";
+</script>
+
+getContext and setContext are run at **component initialization**. Even if we change the context later it won't update.
+
+<ShowMany name={[
+{name: "App", comp:App, raw:AppRaw, text: "Here we have a component with a color picker. We want to update the colors of the children using that color picker. How do we do that?"},
+{name: "Parent", comp:App, raw:ParentRaw},
+{name: "Child", comp:App, raw:ChildRaw},
+]}/>
+
+We could have the color variable be an **object** instead.
+
+<ShowMany name={[
+{name: "App2", comp:App2, raw:App2Raw, text: "Here we're sending the whole object using context."},
+{name: "Parent2", comp:App2, raw:Parent2Raw},
+{name: "Child2", comp:App2, raw:Child2Raw},
+]}/>
+
+If we want to go from child to parent we can use **callbacks** or **events** instead.
+
+In the above example we're doing this by forwarding dispatched events (on:click) that run a function in the parent.
+
+Let's try doing it using context instead:
+
+<ShowMany name={[
+{name: "App3", comp:App3, raw:App3Raw, text: "Any children within this component can read the onClick function from the click context."},
+{name: "Parent3", comp:App3, raw:Parent3Raw},
+{name: "Child3", comp:App3, raw:Child3Raw},
+]}/>
+
+By doing that we could remove the dispatched events and events from the parents and just **run the function inside the child** using getContext.
+
+We can also pass different data up by changing the function inputs.
+
+Here the child is a **publisher of events** and the app is a **subscriber of the events**.
