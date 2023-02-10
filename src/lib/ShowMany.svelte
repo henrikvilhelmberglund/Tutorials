@@ -2,6 +2,10 @@
 	export let name;
 	let i = 0;
 	let selected = name[0];
+	let oldtext;
+	$: if (selected.text) {
+		oldtext = selected.text;
+	}
 	let show = true;
 	import Prism from "prismjs";
 	import "prism-svelte";
@@ -18,11 +22,14 @@
 	<div class="text-1xl self-center pl-4 font-sans font-medium text-blue-600">
 		{@html selected.text}
 	</div>
+{:else if oldtext}
+	<div class="text-1xl self-center pl-4 font-sans font-medium text-blue-600">
+		{@html oldtext}
+	</div>
 {/if}
 
 <div>
-	<div
-		class="rounded-b-0 rounded-xl border-4 border-b-0 border-solid border-orange-500 p-2">
+	<div class="rounded-b-0 rounded-xl border-4 border-b-0 border-solid border-orange-500 p-2">
 		<svelte:component this={selected.comp} />
 	</div>
 
