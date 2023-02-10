@@ -1,0 +1,85 @@
+---
+title: getContext
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-02-10
+layout: notes
+---
+
+<script>
+  import App from "./App.svelte";
+  import AppRaw from "./App.svelte?raw";
+  import Parent from "./Parent.svelte";
+  import ParentRaw from "./Parent.svelte?raw";
+  import Child from "./Child.svelte";
+  import ChildRaw from "./Child.svelte?raw";
+  import Child2 from "./Child2.svelte";
+  import Child2Raw from "./Child2.svelte?raw";
+  import GrandChildA from "./GrandChildA.svelte";
+  import GrandChildARaw from "./GrandChildA.svelte?raw";
+  import GrandChildB from "./GrandChildB.svelte";
+  import GrandChildBRaw from "./GrandChildB.svelte?raw";
+  import Appv2 from "./Appv2.svelte";
+  import Appv2Raw from "./Appv2.svelte?raw";
+  import Appv3 from "./Appv3.svelte";
+  import Appv3Raw from "./Appv3.svelte?raw";
+  import Parentv2 from "./Parentv2.svelte";
+  import Parentv2Raw from "./Parentv2.svelte?raw";
+  import Parent2 from "./Parent2.svelte";
+  import Parent2Raw from "./Parent2.svelte?raw";
+  import Childv2 from "./Childv2.svelte";
+  import Childv2Raw from "./Childv2.svelte?raw";
+  import Child2v2 from "./Child2v2.svelte";
+  import Child2v2Raw from "./Child2v2.svelte?raw";
+  import GrandChildAv2 from "./GrandChildAv2.svelte";
+  import GrandChildAv2Raw from "./GrandChildAv2.svelte?raw";
+  import GrandChildBv2 from "./GrandChildBv2.svelte";
+  import GrandChildBv2Raw from "./GrandChildBv2.svelte?raw";
+  import ShowMany from "$lib/ShowMany.svelte";
+</script>
+
+**Context** is a way to pass data from a component to **all of its children**.
+
+<ShowMany name={[
+{name: "App", comp:App, raw:AppRaw, text: "Here we have a component with many children where we just pass a color as a prop."},
+{name: "Parent", comp:App, raw:ParentRaw},
+{name: "Child", comp:App, raw:ChildRaw},
+{name: "Child2", comp:App, raw:Child2Raw},
+{name: "GrandChildA", comp:App, raw:GrandChildARaw},
+{name: "GrandChildB", comp:App, raw:GrandChildBRaw}
+]} />
+
+It is a bit inefficient though because we need to pass the props in every child component to its children.
+
+Instead we can use **getContext** and **setContext**.
+
+<ShowMany name={[
+{name: "Appv2", comp:Appv2, raw:Appv2Raw},
+{name: "Parentv2", comp:Appv2, raw:Parentv2Raw},
+{name: "Childv2", comp:Appv2, raw:Childv2Raw},
+{name: "Child2v2", comp:Appv2, raw:Child2v2Raw},
+{name: "GrandChildAv2", comp:Appv2, raw:GrandChildAv2Raw},
+{name: "GrandChildBv2", comp:Appv2, raw:GrandChildBv2Raw}
+]} />
+
+We could also create a file **context.js** where we export a key as an object **export const key = {"{"}** that we then import in the files.
+
+This wil make sure that we can't have collisions with our contexts (rather than using strings).
+
+Now that we're using **context** we can do things like this:
+
+<ShowMany name={[
+{name: "Appv3", comp:Appv3, raw:Appv3Raw, text: "Here I added a Parent2 component that sets the color using context to blue. Its child, GrandChildAv2, will use that context to get the new color."},
+{name: "Parent2", comp:Appv3, raw:Parent2Raw},
+{name: "Parentv2", comp:Appv3, raw:Parentv2Raw},
+{name: "Childv2", comp:Appv3, raw:Childv2Raw},
+{name: "Child2v2", comp:Appv3, raw:Child2v2Raw},
+{name: "GrandChildAv2", comp:Appv3, raw:GrandChildAv2Raw},
+{name: "GrandChildBv2", comp:Appv3, raw:GrandChildBv2Raw}
+]} />
+
+It is important to note that you could also **override** the context within a child, which will then give the **new context** to **its children**.
+
+If you want to retain the parent context for that child component but override in the children, the setContext() needs to be **below** getContext() in that file.
+
+Also, you can only set and get context in the **top level** (during component initialization).
