@@ -2,6 +2,33 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+### [0.0.9](https://github.com/henrikvilhelmberglund/Tutorials/compare/v0.0.8...v0.0.9) (2023-02-12)
+
+
+### Features
+
+* :sparkles: add ability to input text at the top that changes per component in ShowMany ([1d0e934](https://github.com/henrikvilhelmberglund/Tutorials/commit/1d0e934f90285c0a661fdace6f976db9bc78aad4))
+* :sparkles: add svelte-course 020 ([8995295](https://github.com/henrikvilhelmberglund/Tutorials/commit/89952957b6dd5fba1566cd747b6f61de5e09b3cf))
+* :sparkles: add svelte-course 021 ([bbeb082](https://github.com/henrikvilhelmberglund/Tutorials/commit/bbeb0826f3ba78cd78b642d5037a8a309801fe2a))
+* :sparkles: add svelte-course 022 ([891d54e](https://github.com/henrikvilhelmberglund/Tutorials/commit/891d54ebb7b93d5e066c8adfad3b6d7e7a10ad05))
+* :sparkles: add svelte-course 023 ([fbb4086](https://github.com/henrikvilhelmberglund/Tutorials/commit/fbb4086dd4fe23439235e3dd5fdb2eca635820d1))
+* :sparkles: add svelte-course 024 ([49604f3](https://github.com/henrikvilhelmberglund/Tutorials/commit/49604f3ece2014dd62ec7dd2f7572f30f1868071))
+* :sparkles: add svelte-course 025 ([5f2e541](https://github.com/henrikvilhelmberglund/Tutorials/commit/5f2e5410ad5577018edfaefe0a6c7bf83dcdc097))
+* :sparkles: add svelte-course 027 ([95dd162](https://github.com/henrikvilhelmberglund/Tutorials/commit/95dd1627d034cb25138fdaae44d75fba9971a24d))
+* :sparkles: add svelte-course 26 ([0604d61](https://github.com/henrikvilhelmberglund/Tutorials/commit/0604d6187fc514c519086fbbb070ecb32ccdd4b4))
+* :sparkles: show only one text in ShowMany if others are missing, if all are missing, show nothing ([ee773aa](https://github.com/henrikvilhelmberglund/Tutorials/commit/ee773aa4699e967d4cefebe633073498a465cad9))
+* :sparkles: update svelte-course 019 (still kind of low on info though) ([57369ba](https://github.com/henrikvilhelmberglund/Tutorials/commit/57369ba37652679882e5789526e7c95955e4ae02))
+* :wheelchair: update styles to support WCAG AA ([1c67ff5](https://github.com/henrikvilhelmberglund/Tutorials/commit/1c67ff56ae4212a18a0bc4d9858bd3217e342b30))
+
+
+### Bug Fixes
+
+* :bug: fix alignment issue ([db54f40](https://github.com/henrikvilhelmberglund/Tutorials/commit/db54f4038139f8b9cba1f7acbf68a719300bf56d))
+* :fire: delete svelte-course 099 (testing thingy) ([eea96d2](https://github.com/henrikvilhelmberglund/Tutorials/commit/eea96d2fd49f91abcaf99bca8827c48862fc02bd))
+* :fire: remove unused class ([5151363](https://github.com/henrikvilhelmberglund/Tutorials/commit/5151363117b9d004a7d780510ad9ae7c2079b232))
+* :lipstick: make ShowMany text look better ([23ecffb](https://github.com/henrikvilhelmberglund/Tutorials/commit/23ecffbb23652c44dd969d6adb73dc5410df94f0))
+* :lipstick: use self-center ([fe6024e](https://github.com/henrikvilhelmberglund/Tutorials/commit/fe6024e77a61bce8f29b0081546bed98bb81d242))
+
 ### [0.0.8](https://github.com/henrikvilhelmberglund/Tutorials/compare/v0.0.7...v0.0.8) (2023-02-08)
 
 
