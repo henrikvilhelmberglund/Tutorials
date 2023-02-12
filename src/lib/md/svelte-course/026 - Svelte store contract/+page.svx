@@ -1,0 +1,86 @@
+---
+title: Svelte store contract
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-02-12
+layout: notes
+---
+
+<script>
+  import App from "./App.svelte";
+  import AppRaw from "./App.svelte?raw";
+  import Input from "./Input.svelte";
+  import InputRaw from "./Input.svelte?raw";
+  import Output from "./Output.svelte";
+  import OutputRaw from "./Output.svelte?raw";
+  import dataRaw from "./data.js?raw";
+  import App2 from "./App2.svelte";
+  import App2Raw from "./App2.svelte?raw";
+  import Input2 from "./Input2.svelte";
+  import Input2Raw from "./Input2.svelte?raw";
+  import Output2 from "./Output2.svelte";
+  import Output2Raw from "./Output2.svelte?raw";
+  import data2Raw from "./data2.js?raw";
+  import App3 from "./App3.svelte";
+  import App3Raw from "./App3.svelte?raw";
+  import Input3 from "./Input3.svelte";
+  import Input3Raw from "./Input3.svelte?raw";
+  import Output3 from "./Output3.svelte";
+  import Output3Raw from "./Output3.svelte?raw";
+  import data3Raw from "./data3.js?raw";
+  import ShowMany from "$lib/ShowMany.svelte";
+
+</script>
+
+Both the **writable** and **readable** stores have a similarity: they follow the **store contract**.
+
+Svelte has a **useful special syntax** for using stores that leverages this store contract. But first, let's see how we do it before using that:
+
+<ShowMany name={[
+{name: "App", comp:App, raw:AppRaw, text: ""},
+{name: "Input", comp:App, raw:InputRaw, text: ""},
+{name: "Output", comp:App, raw:OutputRaw, text: ""},
+{name: "data.js", comp:App, raw:dataRaw, text: ""},
+]}/>
+
+store1 is a **readable store** with the default value 0 that then increases by 1 every second.
+
+store2 is a **writable store** that updates every time you type in the input field.
+
+Both of these stores follow the **store contract**. This allows us to use the special syntax which is a **$** prefix before the variable.
+
+This way we can **assign a value to the store directly** without using set().
+
+When we use the syntax when displaying the value it does three things:
+
+- Subscribes to the store.
+- The value is always updated as the latest value of the store.
+- When unmonted, it will automatically unsubscribe.
+
+<ShowMany name={[
+{name: "App2", comp:App2, raw:App2Raw, text: ""},
+{name: "Input2", comp:App2, raw:Input2Raw, text: "Here we can treat $store2 as a normal variable and assign to it to update the store value."},
+{name: "Output2", comp:App2, raw:Output2Raw, text: "Here we replaced all of the previous code just by using $store1 and $store2."},
+{name: "data2.js", comp:App2, raw:data2Raw, text: ""},
+]}/>
+
+This is the power of the **store contract**. By following it we can reference the store value by using the **$** prefix and also assign to it like if it was a normal variable.
+
+### So what is the store contract?
+
+Your subscriber method needs to:
+
+- Be an object that
+- Takes in a function and call that function **immediately** (synchronously)
+- Returns a function that unsubscribes the function
+- At some point loops through the subscribers list and call them with the value of the store
+- (optional) Implements a set method that takes in a value that you update the store with when using $store as in for example $store = "hello"
+
+If you do that you will be able to use the **$** prefix.
+
+<ShowMany name={[
+{name: "App3", comp:App3, raw:App3Raw, text: "store3 is our new store which fulfills the store contract allowing the use of $store3"},
+{name: "Input3", comp:App3, raw:Input3Raw, text: ""},
+{name: "Output3", comp:App3, raw:Output3Raw, text: ""},
+{name: "data3.js", comp:App3, raw:data3Raw, text: ""},
+]}/>
