@@ -6,10 +6,12 @@
 	$: if (selected.text) {
 		oldtext = selected.text;
 	}
+	let language = "svelte";
+	$: selected.name.includes(".js") ? (language = "js") : (language = "svelte");
 	let show = true;
 	import Prism from "prismjs";
 	import "prism-svelte";
-	$: highlighted = Prism.highlight(selected.raw, Prism.languages.svelte, "svelte");
+	$: highlighted = Prism.highlight(selected.raw, Prism.languages.svelte, language);
 </script>
 
 <!-- {highlighted} -->
@@ -54,7 +56,10 @@
 			</label>
 		{/each}
 		{#if show}
-			<pre class="language-svelte rounded-t-0 !m-0 rounded-xl p-0 !pt-10"><code
+			<pre
+				class="{language === 'svelte'
+					? 'language-svelte'
+					: 'language-javascript'} rounded-t-0 !m-0 rounded-xl p-0 !pt-10"><code
 					style="font-family: 'Maple', Menlo, Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', 'Courier New',
         monospace;">{@html highlighted}</code>
       </pre>
