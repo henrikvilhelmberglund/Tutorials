@@ -9,7 +9,7 @@
   <meta http-equiv="content-security-policy" content="">
 		<link href="/Tutorials/_app/immutable/assets/_layout-834a5097.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/mdsvex-layout-notes-5d6d5db2.css" rel="stylesheet">
-		<link href="/Tutorials/_app/immutable/assets/Strong-210af2f1.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/Strong-e4ea3825.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/005 - Command Center in VSCode-3d969ef8.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/Learning Svelte and SvelteKit part 1-4a0b184b.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/Example-332e9834.css" rel="stylesheet">
@@ -24,20 +24,23 @@
 		<link href="/Tutorials/_app/immutable/assets/_page-2fa50034.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/_page-9f516fc6.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/_page-c186df43.css" rel="stylesheet">
-		<link href="/Tutorials/_app/immutable/assets/_page-56761b59.css" rel="stylesheet">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/start-c3b6d81c.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/index-99d2d53b.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/singletons-9cfb5813.js">
+		<link href="/Tutorials/_app/immutable/assets/ShowMany-8a4e9ef5.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/_page-1b9f34c9.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/_page-50d68a3c.css" rel="stylesheet">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/start-4cd3e800.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/index-78f54c3b.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/singletons-941426a8.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/index-9751f88b.js">
 		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/paths-b4419565.js">
 		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/preload-helper-41c905a7.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/_layout.svelte-56e796bb.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/modules/pages/_layout.js-4890776b.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/_layout.svelte-7dfd6f4a.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/modules/pages/_layout.js-bc7f79d8.js">
 		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/dynamic-import-helper-be004503.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/_layout-a146d79b.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/svelte-course/_layout.svelte-31ee5ba2.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/svelte-course/_slug_/_page.svelte-3778455b.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/modules/pages/svelte-course/_slug_/_page.js-9400b09c.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/_page-f21c8aa6.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/_layout-1f2f2be2.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/svelte-course/_layout.svelte-3af0c301.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/svelte-course/_slug_/_page.svelte-d0662338.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/modules/pages/svelte-course/_slug_/_page.js-bba25014.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/_page-d56bc9b4.js">
 </head>
 
 <body>
@@ -72,7 +75,14 @@
 					</li><li><a href="/Tutorials/svelte-course/017 - each">017 - each</a>
 					</li><li><a href="/Tutorials/svelte-course/018 - keyed each">018 - keyed each</a>
 					</li><li><a href="/Tutorials/svelte-course/019 - await">019 - await</a>
-					</li><li><a href="/Tutorials/svelte-course/099 - test">099 - test</a>
+					</li><li><a href="/Tutorials/svelte-course/020 - key">020 - key</a>
+					</li><li><a href="/Tutorials/svelte-course/021 - getContext">021 - getContext</a>
+					</li><li><a href="/Tutorials/svelte-course/022 - Communicating through context">022 - Communicating through context</a>
+					</li><li><a href="/Tutorials/svelte-course/023 - Intro to Svelte store">023 - Intro to Svelte store</a>
+					</li><li><a href="/Tutorials/svelte-course/024 - writable store">024 - writable store</a>
+					</li><li><a href="/Tutorials/svelte-course/025 - readable store">025 - readable store</a>
+					</li><li><a href="/Tutorials/svelte-course/026 - Svelte store contract">026 - Svelte store contract</a>
+					</li><li><a href="/Tutorials/svelte-course/027 - DOM events as a Svelte store">027 - DOM events as a Svelte store</a>
 					</li></ul></nav>
 
 
@@ -84,16 +94,16 @@
 </p>
       <a class="uno-1irbms text-1xl" href="http://github.com/henrikvilhelmberglund/">henrikvilhelmberglund
 </a></div></section>
-  <section class="uno-dyxbz3"><p class="uno-ddg7b5 text-1xl ">If we want to get a reference to a DOM element we can use <strong class="uno-paw6yi">bind:this
-</strong>. bind:this is a <strong class="uno-paw6yi">one-way binding
+  <section class="uno-dyxbz3"><p class="uno-ddg7b5 text-1xl ">If we want to get a reference to a DOM element we can use <strong class="uno-9ygim0">bind:this
+</strong>. bind:this is a <strong class="uno-9ygim0">one-way binding
 </strong>.
 </p>
-<p class="uno-ddg7b5 text-1xl ">If we have a variable and assign an element to it using bind:this and try to console.log() immediately it we will get <strong class="uno-paw6yi">undefined
-</strong> because it is getting defined <strong class="uno-paw6yi">when Svelte creates the element and mounts it onto the DOM
+<p class="uno-ddg7b5 text-1xl ">If we have a variable and assign an element to it using bind:this and try to console.log() immediately it we will get <strong class="uno-9ygim0">undefined
+</strong> because it is getting defined <strong class="uno-9ygim0">when Svelte creates the element and mounts it onto the DOM
 </strong>.
 </p>
-<p class="uno-ddg7b5 text-1xl ">To get around this we can use the <strong class="uno-paw6yi">onMount lifecycle event
-</strong> that is run when <strong class="uno-paw6yi">the component is mounted onto the DOM
+<p class="uno-ddg7b5 text-1xl ">To get around this we can use the <strong class="uno-9ygim0">onMount lifecycle event
+</strong> that is run when <strong class="uno-9ygim0">the component is mounted onto the DOM
 </strong>.
 </p>
 <input type="text">
@@ -105,7 +115,7 @@
 
 	<div class="uno-w8hybr"><button class="uno-tuphnz">🔼</button>
 			<p class="uno-zyb7av">App.svelte</p>
-				<pre class="uno-e7g21a language-svelte">					<code style="font-family: 'Maple', Menlo, Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', 'Courier New', monospace;"><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+				<pre class="uno-e7g21a language-svelte"><code style="font-family: 'Maple', Menlo, Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', 'Courier New', monospace;"><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
 	<span class="token keyword">import</span> <span class="token punctuation">{</span> onMount <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"svelte"</span><span class="token punctuation">;</span>
 	<span class="token keyword">let</span> element<span class="token punctuation">;</span>
 	<span class="token keyword">function</span> <span class="token function">reset</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -133,7 +143,7 @@
 
 	<div class="uno-w8hybr"><button class="uno-tuphnz">🔼</button>
 			<p class="uno-zyb7av">App2.svelte</p>
-				<pre class="uno-e7g21a language-svelte">					<code style="font-family: 'Maple', Menlo, Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', 'Courier New', monospace;"><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+				<pre class="uno-e7g21a language-svelte"><code style="font-family: 'Maple', Menlo, Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', 'Courier New', monospace;"><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
 	<span class="token keyword">let</span> element<span class="token punctuation">;</span>
 	<span class="token keyword">function</span> <span class="token function">reset</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 		element<span class="token punctuation">.</span>value <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">;</span>
@@ -145,7 +155,7 @@
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name"><span class="token namespace">on:</span>click=</span><span class="token language-javascript"><span class="token punctuation">{</span>reset<span class="token punctuation">}</span></span><span class="token punctuation">></span></span>Reset<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span><!-- HTML_TAG_END --></code>
         </pre></div>
 </div>
-<p class="uno-ddg7b5 text-1xl ">If we use bind:this on a <strong class="uno-paw6yi">component
+<p class="uno-ddg7b5 text-1xl ">If we use bind:this on a <strong class="uno-9ygim0">component
 </strong> we get access to its props as well.
 </p>
 
@@ -162,7 +172,7 @@
 
 	<div class="uno-w8hybr"><button class="uno-tuphnz">🔼</button>
 			<p class="uno-zyb7av">App3.svelte</p>
-				<pre class="uno-e7g21a language-svelte">					<code style="font-family: 'Maple', Menlo, Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', 'Courier New', monospace;"><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+				<pre class="uno-e7g21a language-svelte"><code style="font-family: 'Maple', Menlo, Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', 'Courier New', monospace;"><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
 	<span class="token keyword">let</span> myComponent<span class="token punctuation">;</span>
 	<span class="token keyword">function</span> <span class="token function">logCount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 		console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>myComponent<span class="token punctuation">.</span>count<span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -182,7 +192,7 @@
 
 	<div class="uno-w8hybr"><button class="uno-tuphnz">🔼</button>
 			<p class="uno-zyb7av">Component.svelte</p>
-				<pre class="uno-e7g21a language-svelte">					<code style="font-family: 'Maple', Menlo, Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', 'Courier New', monospace;"><!-- HTML_TAG_START --><span class="token comment">&lt;!-- we also need this to create getters and setters for the component's props --></span>
+				<pre class="uno-e7g21a language-svelte"><code style="font-family: 'Maple', Menlo, Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', 'Courier New', monospace;"><!-- HTML_TAG_START --><span class="token comment">&lt;!-- we also need this to create getters and setters for the component's props --></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">svelte:</span>options</span> <span class="token attr-name">accessors</span> <span class="token punctuation">/></span></span>
 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
@@ -201,9 +211,9 @@
 <!-- HTML_TAG_END --></code>
         </pre></div>
 </div>
-<p class="uno-ddg7b5 text-1xl ">We do need <strong class="uno-paw6yi"><code>&lt;svelte:options accessors /&gt;</code>
-</strong> in order to get access to the <strong class="uno-paw6yi">count
-</strong> variable since it wasn&#39;t readonly, but for <strong class="uno-paw6yi">functions
+<p class="uno-ddg7b5 text-1xl ">We do need <strong class="uno-9ygim0"><code>&lt;svelte:options accessors /&gt;</code>
+</strong> in order to get access to the <strong class="uno-9ygim0">count
+</strong> variable since it wasn&#39;t readonly, but for <strong class="uno-9ygim0">functions
 </strong> we don&#39;t need it.
 </p>
 <button>0</button>
@@ -215,7 +225,7 @@
 
 	<div class="uno-w8hybr"><button class="uno-tuphnz">🔼</button>
 			<p class="uno-zyb7av">App4.svelte</p>
-				<pre class="uno-e7g21a language-svelte">					<code style="font-family: 'Maple', Menlo, Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', 'Courier New', monospace;"><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+				<pre class="uno-e7g21a language-svelte"><code style="font-family: 'Maple', Menlo, Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', 'Courier New', monospace;"><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
 	<span class="token keyword">let</span> myComponent<span class="token punctuation">;</span>
 	<span class="token keyword">function</span> <span class="token function">reset</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 		myComponent<span class="token punctuation">.</span><span class="token function">reset</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -235,7 +245,7 @@
 
 	<div class="uno-w8hybr"><button class="uno-tuphnz">🔼</button>
 			<p class="uno-zyb7av">Component2.svelte</p>
-				<pre class="uno-e7g21a language-svelte">					<code style="font-family: 'Maple', Menlo, Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', 'Courier New', monospace;"><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+				<pre class="uno-e7g21a language-svelte"><code style="font-family: 'Maple', Menlo, Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', 'Courier New', monospace;"><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
 	<span class="token keyword">let</span> count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
 
 	<span class="token comment">// exporting a function as a prop (or, with bind:this, as a method)</span>
@@ -251,20 +261,20 @@
 <!-- HTML_TAG_END --></code>
         </pre></div>
 </div>
-<p class="uno-ddg7b5 text-1xl ">This way we can export functions from a component and use it in another component where we bind to it using <strong class="uno-paw6yi">bind:this
-</strong> so we can use its <strong class="uno-paw6yi">methods
+<p class="uno-ddg7b5 text-1xl ">This way we can export functions from a component and use it in another component where we bind to it using <strong class="uno-9ygim0">bind:this
+</strong> so we can use its <strong class="uno-9ygim0">methods
 </strong>.
 </p></section></article>
 
 
-		<script type="module" data-sveltekit-hydrate="u9z1n2">
-			import { start } from "/Tutorials/_app/immutable/start-c3b6d81c.js";
+		<script type="module" data-sveltekit-hydrate="1y2o3qs">
+			import { start } from "/Tutorials/_app/immutable/start-4cd3e800.js";
 
 			start({
 				env: {},
 				paths: {"base":"/Tutorials","assets":"/Tutorials"},
-				target: document.querySelector('[data-sveltekit-hydrate="u9z1n2"]').parentNode,
-				version: "1675835625610",
+				target: document.querySelector('[data-sveltekit-hydrate="1y2o3qs"]').parentNode,
+				version: "1676238793632",
 				hydrate: {
 					node_ids: [0, 2, 6],
 					data: [null,null,null],

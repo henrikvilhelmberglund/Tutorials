@@ -9,7 +9,7 @@
   <meta http-equiv="content-security-policy" content="">
 		<link href="/Tutorials/_app/immutable/assets/_layout-834a5097.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/mdsvex-layout-notes-5d6d5db2.css" rel="stylesheet">
-		<link href="/Tutorials/_app/immutable/assets/Strong-210af2f1.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/Strong-e4ea3825.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/005 - Command Center in VSCode-3d969ef8.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/Learning Svelte and SvelteKit part 1-4a0b184b.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/Example-332e9834.css" rel="stylesheet">
@@ -24,20 +24,23 @@
 		<link href="/Tutorials/_app/immutable/assets/_page-2fa50034.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/_page-9f516fc6.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/_page-c186df43.css" rel="stylesheet">
-		<link href="/Tutorials/_app/immutable/assets/_page-56761b59.css" rel="stylesheet">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/start-c3b6d81c.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/index-99d2d53b.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/singletons-9cfb5813.js">
+		<link href="/Tutorials/_app/immutable/assets/ShowMany-8a4e9ef5.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/_page-1b9f34c9.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/_page-50d68a3c.css" rel="stylesheet">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/start-4cd3e800.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/index-78f54c3b.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/singletons-941426a8.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/index-9751f88b.js">
 		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/paths-b4419565.js">
 		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/preload-helper-41c905a7.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/_layout.svelte-56e796bb.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/modules/pages/_layout.js-4890776b.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/_layout.svelte-7dfd6f4a.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/modules/pages/_layout.js-bc7f79d8.js">
 		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/dynamic-import-helper-be004503.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/_layout-a146d79b.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/svelte-course/_layout.svelte-31ee5ba2.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/svelte-course/_slug_/_page.svelte-3778455b.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/modules/pages/svelte-course/_slug_/_page.js-9400b09c.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/_page-f21c8aa6.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/_layout-1f2f2be2.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/svelte-course/_layout.svelte-3af0c301.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/svelte-course/_slug_/_page.svelte-d0662338.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/modules/pages/svelte-course/_slug_/_page.js-bba25014.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/_page-d56bc9b4.js">
 </head>
 
 <body>
@@ -72,7 +75,14 @@
 					</li><li><a href="/Tutorials/svelte-course/017 - each">017 - each</a>
 					</li><li><a href="/Tutorials/svelte-course/018 - keyed each">018 - keyed each</a>
 					</li><li><a href="/Tutorials/svelte-course/019 - await">019 - await</a>
-					</li><li><a href="/Tutorials/svelte-course/099 - test">099 - test</a>
+					</li><li><a href="/Tutorials/svelte-course/020 - key">020 - key</a>
+					</li><li><a href="/Tutorials/svelte-course/021 - getContext">021 - getContext</a>
+					</li><li><a href="/Tutorials/svelte-course/022 - Communicating through context">022 - Communicating through context</a>
+					</li><li><a href="/Tutorials/svelte-course/023 - Intro to Svelte store">023 - Intro to Svelte store</a>
+					</li><li><a href="/Tutorials/svelte-course/024 - writable store">024 - writable store</a>
+					</li><li><a href="/Tutorials/svelte-course/025 - readable store">025 - readable store</a>
+					</li><li><a href="/Tutorials/svelte-course/026 - Svelte store contract">026 - Svelte store contract</a>
+					</li><li><a href="/Tutorials/svelte-course/027 - DOM events as a Svelte store">027 - DOM events as a Svelte store</a>
 					</li></ul></nav>
 
 
@@ -84,7 +94,7 @@
 </p>
       <a class="uno-1irbms text-1xl" href="http://github.com/henrikvilhelmberglund/">henrikvilhelmberglund
 </a></div></section>
-  <section class="uno-dyxbz3"><p class="uno-ddg7b5 text-1xl ">Styles in components are <strong class="uno-paw6yi">scoped
+  <section class="uno-dyxbz3"><p class="uno-ddg7b5 text-1xl ">Styles in components are <strong class="uno-9ygim0">scoped
 </strong>. This means that the styles in one component will only apply in that particular component.
 </p>
 <div class="uno-aofwrd space-between"><div><div class="root svelte-27svms"><div class="uno-wfsvsy svelte-27svms"><div class="uno-1m54ow example-wrapper svelte-27svms"><div class="example svelte-27svms"><h2 class="svelte-1lc270m">My first Svelte component</h2>
@@ -128,8 +138,8 @@
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://twitter.com/lihautan<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Link to Li Hau's twitter<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://twitter.com/henrikvberglund<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Link to my twitter<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><!-- HTML_TAG_END --></pre></div>
 </div></div></div></div>
-<p class="uno-ddg7b5 text-1xl ">Here we have two components. Even though both have <code>&lt;h2&gt;</code> tags and <code>&lt;p&gt;</code> tags, the styles from the left component don&#39;t apply to the right component. The same is true for <strong class="uno-paw6yi">classes
-</strong> and <strong class="uno-paw6yi">animation keyframes
+<p class="uno-ddg7b5 text-1xl ">Here we have two components. Even though both have <code>&lt;h2&gt;</code> tags and <code>&lt;p&gt;</code> tags, the styles from the left component don&#39;t apply to the right component. The same is true for <strong class="uno-9ygim0">classes
+</strong> and <strong class="uno-9ygim0">animation keyframes
 </strong>.
 </p>
 <p class="uno-ddg7b5 text-1xl ">This means that it&#39;s very easy to write CSS in the components themselves because you don&#39;t have to worry about any styles colliding.
@@ -138,7 +148,7 @@
 </p>
 <h3 class="uno-k2n0uo">Global styles
 </h3>
-<p class="uno-ddg7b5 text-1xl ">If you really want to you can also have <strong class="uno-paw6yi">global styles
+<p class="uno-ddg7b5 text-1xl ">If you really want to you can also have <strong class="uno-9ygim0">global styles
 </strong>. To do that you write <code>:global(selector)</code>
 </p>
 <button>Make p tag big</button>
@@ -152,8 +162,8 @@
   <span class="token comment">&lt;!-- put style tag with global styles here --></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token namespace">svelte:</span>head</span><span class="token punctuation">></span></span>
 </code><!-- HTML_TAG_END --></pre>
-<p class="uno-ddg7b5 text-1xl ">The benefit of this approach is that you can actually <strong class="uno-paw6yi">disable the global style
-</strong> like I did here with a button, whereas the <code>:global(selector)</code> approach will apply the global style <strong class="uno-paw6yi">everywhere
+<p class="uno-ddg7b5 text-1xl ">The benefit of this approach is that you can actually <strong class="uno-9ygim0">disable the global style
+</strong> like I did here with a button, whereas the <code>:global(selector)</code> approach will apply the global style <strong class="uno-9ygim0">everywhere
 </strong> without an easy way to disable it. 
 </p>
 <p class="uno-ddg7b5 text-1xl ">For animation keyframes you can add <code>-global-</code> before the identifier to make it global.
@@ -162,14 +172,14 @@
 </section></article>
 
 
-		<script type="module" data-sveltekit-hydrate="9krkxh">
-			import { start } from "/Tutorials/_app/immutable/start-c3b6d81c.js";
+		<script type="module" data-sveltekit-hydrate="52lsun">
+			import { start } from "/Tutorials/_app/immutable/start-4cd3e800.js";
 
 			start({
 				env: {},
 				paths: {"base":"/Tutorials","assets":"/Tutorials"},
-				target: document.querySelector('[data-sveltekit-hydrate="9krkxh"]').parentNode,
-				version: "1675835625610",
+				target: document.querySelector('[data-sveltekit-hydrate="52lsun"]').parentNode,
+				version: "1676238793632",
 				hydrate: {
 					node_ids: [0, 2, 6],
 					data: [null,null,null],

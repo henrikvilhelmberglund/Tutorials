@@ -9,7 +9,7 @@
   <meta http-equiv="content-security-policy" content="">
 		<link href="/Tutorials/_app/immutable/assets/_layout-834a5097.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/mdsvex-layout-notes-5d6d5db2.css" rel="stylesheet">
-		<link href="/Tutorials/_app/immutable/assets/Strong-210af2f1.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/Strong-e4ea3825.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/005 - Command Center in VSCode-3d969ef8.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/Learning Svelte and SvelteKit part 1-4a0b184b.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/Example-332e9834.css" rel="stylesheet">
@@ -24,20 +24,23 @@
 		<link href="/Tutorials/_app/immutable/assets/_page-2fa50034.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/_page-9f516fc6.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/_page-c186df43.css" rel="stylesheet">
-		<link href="/Tutorials/_app/immutable/assets/_page-56761b59.css" rel="stylesheet">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/start-c3b6d81c.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/index-99d2d53b.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/singletons-9cfb5813.js">
+		<link href="/Tutorials/_app/immutable/assets/ShowMany-8a4e9ef5.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/_page-1b9f34c9.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/_page-50d68a3c.css" rel="stylesheet">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/start-4cd3e800.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/index-78f54c3b.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/singletons-941426a8.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/index-9751f88b.js">
 		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/paths-b4419565.js">
 		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/preload-helper-41c905a7.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/_layout.svelte-56e796bb.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/modules/pages/_layout.js-4890776b.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/_layout.svelte-7dfd6f4a.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/modules/pages/_layout.js-bc7f79d8.js">
 		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/dynamic-import-helper-be004503.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/_layout-a146d79b.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/_slug_/_layout.svelte-208c1a1d.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/_slug_/_page.svelte-24a66cbb.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/modules/pages/_slug_/_page.js-424f9732.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/_page-ca068692.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/_layout-1f2f2be2.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/_slug_/_layout.svelte-a4b2db03.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/_slug_/_page.svelte-83a6b38e.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/modules/pages/_slug_/_page.js-8235c2dd.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/_page-1b826067.js">
 </head>
 
 <body>
@@ -87,11 +90,11 @@
 </h1>
 <h4 class="">(Note: I&#39;m not using this for console logging right now but still useful as an example)</h4>
 <h5 class="">One key for adding a console.log(); for the line contents with the help of the extension multi-command</h5>
-<ol><li class="uno-d5cktv text-1xl">In extensions in the left side panel search for multi-command and install it
+<ol><li class="uno-yaaaza text-1xl">In extensions in the left side panel search for multi-command and install it
 </li>
-<li class="uno-d5cktv text-1xl">In the Command Palette (View - Command Palette… ) search for settings, select Open Settings (JSON) (not default!) and press enter
+<li class="uno-yaaaza text-1xl">In the Command Palette (View - Command Palette… ) search for settings, select Open Settings (JSON) (not default!) and press enter
 </li>
-<li class="uno-d5cktv text-1xl">Add the following to the bottom (add a comma as well)
+<li class="uno-yaaaza text-1xl">Add the following to the bottom (add a comma as well)
 </li></ol>
 <pre class="language-json"><!-- HTML_TAG_START --><code class="language-json"><span class="token property">"multiCommand.commands"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
         <span class="token punctuation">&#123;</span>
@@ -112,27 +115,27 @@
       <span class="token punctuation">]</span><span class="token punctuation">,</span></code><!-- HTML_TAG_END --></pre>
 <p class="uno-ddg7b5 text-1xl ">This multi command runs four commands:
 </p>
-<ol><li class="uno-d5cktv text-1xl">cursorHome (like pressing Home to jump to the start of the row)
+<ol><li class="uno-yaaaza text-1xl">cursorHome (like pressing Home to jump to the start of the row)
 </li>
-<li class="uno-d5cktv text-1xl">cursorEndSelect (like pressing shift+End for selecting everything to the right on the row)
+<li class="uno-yaaaza text-1xl">cursorEndSelect (like pressing shift+End for selecting everything to the right on the row)
 </li>
-<li class="uno-d5cktv text-1xl">leaveSnippet for leaving the snippet to get back the intellisense suggestions. Usually these are disabled in snippets for not autocompleting by accident when using tab to jump between the parameters. Also in this case leaveSnippet isn&#39;t really necessary because we&#39;re using $0 and not $1 but this could be useful in other cases.
+<li class="uno-yaaaza text-1xl">leaveSnippet for leaving the snippet to get back the intellisense suggestions. Usually these are disabled in snippets for not autocompleting by accident when using tab to jump between the parameters. Also in this case leaveSnippet isn&#39;t really necessary because we&#39;re using $0 and not $1 but this could be useful in other cases.
 </li>
-<li class="uno-d5cktv text-1xl">In the Command Palette (View - Command Palette… ) search for keyboard, then Open Keyboard Shortcuts (JSON) (not default!) and press enter
+<li class="uno-yaaaza text-1xl">In the Command Palette (View - Command Palette… ) search for keyboard, then Open Keyboard Shortcuts (JSON) (not default!) and press enter
 </li>
-<li class="uno-d5cktv text-1xl">Add the following to the bottom and a comma
+<li class="uno-yaaaza text-1xl">Add the following to the bottom and a comma
 </li></ol>
 <pre class="language-json"><!-- HTML_TAG_START --><code class="language-json"><span class="token punctuation">&#123;</span>
         <span class="token property">"key"</span><span class="token operator">:</span> <span class="token string">"ctrl+l"</span><span class="token punctuation">,</span>
         <span class="token property">"command"</span><span class="token operator">:</span> <span class="token string">"multiCommand.createConsoleLog"</span><span class="token punctuation">,</span>
         <span class="token property">"when"</span><span class="token operator">:</span> <span class="token string">"editorLangId == javascript &amp;&amp; editorTextFocus"</span><span class="token punctuation">,</span>
     <span class="token punctuation">&#125;</span><span class="token punctuation">,</span></code><!-- HTML_TAG_END --></pre>
-<ol start="7"><li class="uno-d5cktv text-1xl">Change &quot;key&quot;: if necessary by opening Edit - Preferences - Keyboard Shortcuts, search for ctrl+l and remove the conflicting key, or just pick another key
+<ol start="7"><li class="uno-yaaaza text-1xl">Change &quot;key&quot;: if necessary by opening Edit - Preferences - Keyboard Shortcuts, search for ctrl+l and remove the conflicting key, or just pick another key
 </li>
-<li class="uno-d5cktv text-1xl">In a .js-file press ctrl+l (or whichever key you chose) to add a console.log();
+<li class="uno-yaaaza text-1xl">In a .js-file press ctrl+l (or whichever key you chose) to add a console.log();
 You can also just run it on a row to wrap everything on that row in a console.log();
 </li>
-<li class="uno-d5cktv text-1xl">Success!
+<li class="uno-yaaaza text-1xl">Success!
 </li></ol>
 <p class="uno-ddg7b5 text-1xl ">Tip:  you can add more multicommands, just add the command name and the commands you would like to use in your settings.json file, also &quot;key&quot;,  &quot;command&quot; and &quot;when&quot; in keybindings.json
 More info on snippets <a class="uno-1irbms text-1xl" href="https://code.visualstudio.com/docs/editor/userdefinedsnippets">https://code.visualstudio.com/docs/editor/userdefinedsnippets
@@ -140,14 +143,14 @@ More info on snippets <a class="uno-1irbms text-1xl" href="https://code.visualst
 </p></section></article>
 
 
-		<script type="module" data-sveltekit-hydrate="kjk8dl">
-			import { start } from "/Tutorials/_app/immutable/start-c3b6d81c.js";
+		<script type="module" data-sveltekit-hydrate="4vzavl">
+			import { start } from "/Tutorials/_app/immutable/start-4cd3e800.js";
 
 			start({
 				env: {},
 				paths: {"base":"/Tutorials","assets":"/Tutorials"},
-				target: document.querySelector('[data-sveltekit-hydrate="kjk8dl"]').parentNode,
-				version: "1675835625610",
+				target: document.querySelector('[data-sveltekit-hydrate="4vzavl"]').parentNode,
+				version: "1676238793632",
 				hydrate: {
 					node_ids: [0, 3, 7],
 					data: [null,null,null],

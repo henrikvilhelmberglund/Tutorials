@@ -9,7 +9,7 @@
   <meta http-equiv="content-security-policy" content="">
 		<link href="/Tutorials/_app/immutable/assets/_layout-834a5097.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/mdsvex-layout-notes-5d6d5db2.css" rel="stylesheet">
-		<link href="/Tutorials/_app/immutable/assets/Strong-210af2f1.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/Strong-e4ea3825.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/005 - Command Center in VSCode-3d969ef8.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/Learning Svelte and SvelteKit part 1-4a0b184b.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/Example-332e9834.css" rel="stylesheet">
@@ -24,20 +24,23 @@
 		<link href="/Tutorials/_app/immutable/assets/_page-2fa50034.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/_page-9f516fc6.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/_page-c186df43.css" rel="stylesheet">
-		<link href="/Tutorials/_app/immutable/assets/_page-56761b59.css" rel="stylesheet">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/start-c3b6d81c.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/index-99d2d53b.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/singletons-9cfb5813.js">
+		<link href="/Tutorials/_app/immutable/assets/ShowMany-8a4e9ef5.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/_page-1b9f34c9.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/_page-50d68a3c.css" rel="stylesheet">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/start-4cd3e800.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/index-78f54c3b.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/singletons-941426a8.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/index-9751f88b.js">
 		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/paths-b4419565.js">
 		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/preload-helper-41c905a7.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/_layout.svelte-56e796bb.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/modules/pages/_layout.js-4890776b.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/_layout.svelte-7dfd6f4a.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/modules/pages/_layout.js-bc7f79d8.js">
 		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/dynamic-import-helper-be004503.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/_layout-a146d79b.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/svelte-course/_layout.svelte-31ee5ba2.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/svelte-course/_slug_/_page.svelte-3778455b.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/modules/pages/svelte-course/_slug_/_page.js-9400b09c.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/_page-f21c8aa6.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/_layout-1f2f2be2.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/svelte-course/_layout.svelte-3af0c301.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/svelte-course/_slug_/_page.svelte-d0662338.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/modules/pages/svelte-course/_slug_/_page.js-bba25014.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/_page-d56bc9b4.js">
 </head>
 
 <body>
@@ -72,7 +75,14 @@
 					</li><li><a href="/Tutorials/svelte-course/017 - each">017 - each</a>
 					</li><li><a href="/Tutorials/svelte-course/018 - keyed each">018 - keyed each</a>
 					</li><li><a href="/Tutorials/svelte-course/019 - await">019 - await</a>
-					</li><li><a href="/Tutorials/svelte-course/099 - test">099 - test</a>
+					</li><li><a href="/Tutorials/svelte-course/020 - key">020 - key</a>
+					</li><li><a href="/Tutorials/svelte-course/021 - getContext">021 - getContext</a>
+					</li><li><a href="/Tutorials/svelte-course/022 - Communicating through context">022 - Communicating through context</a>
+					</li><li><a href="/Tutorials/svelte-course/023 - Intro to Svelte store">023 - Intro to Svelte store</a>
+					</li><li><a href="/Tutorials/svelte-course/024 - writable store">024 - writable store</a>
+					</li><li><a href="/Tutorials/svelte-course/025 - readable store">025 - readable store</a>
+					</li><li><a href="/Tutorials/svelte-course/026 - Svelte store contract">026 - Svelte store contract</a>
+					</li><li><a href="/Tutorials/svelte-course/027 - DOM events as a Svelte store">027 - DOM events as a Svelte store</a>
 					</li></ul></nav>
 
 
@@ -86,12 +96,13 @@
 </a></div></section>
   <section class="uno-dyxbz3"><p class="uno-ddg7b5 text-1xl ">Here we have a component that fetches the selected dog breed as an image using Dog API.
 </p>
-<p class="uno-ddg7b5 text-1xl ">Right now it&#39;s a bit wonky because every time you change the dog breed you get a <strong class="uno-paw6yi">missing image icon
-</strong> while the image is loading.
-</p>
 
 
-<div><div class="uno-gi0qzt"><select name="" id=""><option value="affenpinscher">affenpinscher</option><option value="african">african</option><option value="airedale">airedale</option></select>
+
+
+<div class="uno-djcb2y text-1xl"><!-- HTML_TAG_START -->Right now it's a bit wonky because every time you change the dog breed you get a <b>missing image icon</b> while the image is loading.<!-- HTML_TAG_END --></div>
+
+<div><div class="uno-a5c347"><select name="" id=""><option value="affenpinscher">affenpinscher</option><option value="african">african</option><option value="airedale">airedale</option></select>
 
 Selected breed: undefined
 
@@ -99,9 +110,13 @@ Selected breed: undefined
 
 <img alt="dog"></div>
 
-	<div class="uno-w8hybr"><button class="uno-tuphnz">🔼</button>
-        <p class="uno-ww47sm">App.svelte</p>
-			<pre class="uno-lf6xl9 language-svelte"><code style="font-family: 'Maple', Menlo, Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', 'Courier New', monospace;"><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+	<div class="uno-u9dsbt"><button class="uno-ahiawh">🔼</button>
+		<label class="uno-qlv1kz uno-2y2hkt"><input type="radio" name="selected" class="uno-pdic65" id="" value="[object Object]" checked>App
+			</label><label class="uno-qlv1kz uno-blin5q"><input type="radio" name="selected" class="uno-pdic65" id="" value="[object Object]">App2
+			</label><label class="uno-qlv1kz uno-blin5q"><input type="radio" name="selected" class="uno-pdic65" id="" value="[object Object]">App3
+			</label><label class="uno-qlv1kz uno-blin5q"><input type="radio" name="selected" class="uno-pdic65" id="" value="[object Object]">App4
+			</label>
+		<pre class="uno-2zodpv language-svelte"><code style="font-family: 'Maple', Menlo, Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', 'Courier New', monospace;"><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
 	<span class="token keyword">let</span> selectedBreed<span class="token punctuation">;</span>
 	<span class="token keyword">const</span> breeds <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"affenpinscher"</span><span class="token punctuation">,</span> <span class="token string">"african"</span><span class="token punctuation">,</span> <span class="token string">"airedale"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 
@@ -136,184 +151,20 @@ Selected breed: <span class="token language-javascript"><span class="token punct
 	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src=</span><span class="token language-javascript"><span class="token punctuation">{</span>imgSrc<span class="token punctuation">}</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>dog<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
 <span class="token language-javascript"><span class="token punctuation">{</span><span class="token operator">/</span><span class="token keyword">if</span><span class="token punctuation">}</span></span>
 <!-- HTML_TAG_END --></code>
-        </pre></div>
-</div>
-<p class="uno-ddg7b5 text-1xl ">We could try to use another if statement to display a loading text:
-</p>
-
-
-<div><div class="uno-gi0qzt"><select name="" id=""><option value="affenpinscher">affenpinscher</option><option value="african">african</option><option value="airedale">airedale</option></select>
-
-Selected breed: undefined
-
-<hr w-full>
-
-<p>loading...</p></div>
-
-	<div class="uno-w8hybr"><button class="uno-tuphnz">🔼</button>
-        <p class="uno-ww47sm">App2.svelte</p>
-			<pre class="uno-lf6xl9 language-svelte"><code style="font-family: 'Maple', Menlo, Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', 'Courier New', monospace;"><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
-	<span class="token keyword">let</span> selectedBreed<span class="token punctuation">;</span>
-	<span class="token keyword">const</span> breeds <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"affenpinscher"</span><span class="token punctuation">,</span> <span class="token string">"african"</span><span class="token punctuation">,</span> <span class="token string">"airedale"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-
-	<span class="token keyword">let</span> imgSrc<span class="token punctuation">;</span>
-	<span class="token keyword">let</span> isFetching <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
-	<span class="token keyword">let</span> hasError <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
-
-	<span class="token literal-property property">$</span><span class="token operator">:</span> <span class="token function">fetchDogImage</span><span class="token punctuation">(</span>selectedBreed<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-	<span class="token keyword">function</span> <span class="token function">fetchDogImage</span><span class="token punctuation">(</span><span class="token parameter">breed</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-		isFetching <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
-		hasError <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
-		imgSrc <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
-		<span class="token function">fetch</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">https://dog.ceo/api/breed/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>breed<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">/images/random</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
-			<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">response</span><span class="token punctuation">)</span> <span class="token operator">=></span> response<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-			<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">obj</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span>imgSrc <span class="token operator">=</span> obj<span class="token punctuation">.</span>message<span class="token punctuation">)</span><span class="token punctuation">)</span>
-			<span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">error</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span>hasError <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-			<span class="token punctuation">.</span><span class="token function">finally</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span>isFetching <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-	<span class="token punctuation">}</span>
-</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
-
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>select</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name"><span class="token namespace">bind:</span>value=</span><span class="token language-javascript"><span class="token punctuation">{</span>selectedBreed<span class="token punctuation">}</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-	<span class="token each"><span class="token punctuation">{</span><span class="token keyword">#each</span> <span class="token language-javascript">breeds </span><span class="token keyword">as</span> <span class="token language-javascript">breed<span class="token punctuation">}</span></span></span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value=</span><span class="token language-javascript"><span class="token punctuation">{</span>breed<span class="token punctuation">}</span></span><span class="token punctuation">></span></span><span class="token language-javascript"><span class="token punctuation">{</span>breed<span class="token punctuation">}</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
-	<span class="token each"><span class="token punctuation">{</span><span class="token keyword">/each</span><span class="token punctuation">}</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>select</span><span class="token punctuation">></span></span>
-
-Selected breed: <span class="token language-javascript"><span class="token punctuation">{</span>selectedBreed<span class="token punctuation">}</span></span>
-
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>hr</span> <span class="token attr-name">w-full</span> <span class="token punctuation">/></span></span>
-
-<span class="token language-javascript"><span class="token punctuation">{</span>#<span class="token keyword">if</span> hasError<span class="token punctuation">}</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>oops! error!<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
-<span class="token language-javascript"><span class="token punctuation">{</span><span class="token operator">:</span><span class="token keyword">else</span> <span class="token keyword">if</span> isFetching<span class="token punctuation">}</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>loading...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
-<span class="token language-javascript"><span class="token punctuation">{</span><span class="token operator">:</span><span class="token keyword">else</span><span class="token punctuation">}</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src=</span><span class="token language-javascript"><span class="token punctuation">{</span>imgSrc<span class="token punctuation">}</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>dog<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
-<span class="token language-javascript"><span class="token punctuation">{</span><span class="token operator">/</span><span class="token keyword">if</span><span class="token punctuation">}</span></span>
-<!-- HTML_TAG_END --></code>
-        </pre></div>
-</div>
-<p class="uno-ddg7b5 text-1xl ">Maybe an async await version:
-</p>
-
-
-<div><div class="uno-gi0qzt"><select name="" id=""><option value="affenpinscher">affenpinscher</option><option value="african">african</option><option value="airedale">airedale</option></select>
-
-Selected breed: undefined
-
-<hr w-full>
-
-<p>loading...</p></div>
-
-	<div class="uno-w8hybr"><button class="uno-tuphnz">🔼</button>
-        <p class="uno-ww47sm">App3.svelte</p>
-			<pre class="uno-lf6xl9 language-svelte"><code style="font-family: 'Maple', Menlo, Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', 'Courier New', monospace;"><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
-	<span class="token keyword">let</span> selectedBreed<span class="token punctuation">;</span>
-	<span class="token keyword">const</span> breeds <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"affenpinscher"</span><span class="token punctuation">,</span> <span class="token string">"african"</span><span class="token punctuation">,</span> <span class="token string">"airedale"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-
-	<span class="token keyword">let</span> imgSrc<span class="token punctuation">;</span>
-	<span class="token keyword">let</span> isFetching <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
-	<span class="token keyword">let</span> hasError <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
-
-	<span class="token literal-property property">$</span><span class="token operator">:</span> <span class="token function">fetchDogImage</span><span class="token punctuation">(</span>selectedBreed<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-	<span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">fetchDogImage</span><span class="token punctuation">(</span><span class="token parameter">breed</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-		<span class="token keyword">try</span> <span class="token punctuation">{</span>
-			isFetching <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
-			hasError <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
-			imgSrc <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
-			<span class="token keyword">const</span> response <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">https://dog.ceo/api/breed/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>breed<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">/images/random</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-			<span class="token keyword">const</span> obj <span class="token operator">=</span> <span class="token keyword">await</span> response<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-			imgSrc <span class="token operator">=</span> obj<span class="token punctuation">.</span>message<span class="token punctuation">;</span>
-		<span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-			hasError <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
-		<span class="token punctuation">}</span> <span class="token keyword">finally</span> <span class="token punctuation">{</span>
-			isFetching <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
-		<span class="token punctuation">}</span>
-	<span class="token punctuation">}</span>
-</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
-
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>select</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name"><span class="token namespace">bind:</span>value=</span><span class="token language-javascript"><span class="token punctuation">{</span>selectedBreed<span class="token punctuation">}</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-	<span class="token each"><span class="token punctuation">{</span><span class="token keyword">#each</span> <span class="token language-javascript">breeds </span><span class="token keyword">as</span> <span class="token language-javascript">breed<span class="token punctuation">}</span></span></span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value=</span><span class="token language-javascript"><span class="token punctuation">{</span>breed<span class="token punctuation">}</span></span><span class="token punctuation">></span></span><span class="token language-javascript"><span class="token punctuation">{</span>breed<span class="token punctuation">}</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
-	<span class="token each"><span class="token punctuation">{</span><span class="token keyword">/each</span><span class="token punctuation">}</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>select</span><span class="token punctuation">></span></span>
-
-Selected breed: <span class="token language-javascript"><span class="token punctuation">{</span>selectedBreed<span class="token punctuation">}</span></span>
-
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>hr</span> <span class="token attr-name">w-full</span> <span class="token punctuation">/></span></span>
-
-<span class="token language-javascript"><span class="token punctuation">{</span>#<span class="token keyword">if</span> hasError<span class="token punctuation">}</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>oops! error!<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
-<span class="token language-javascript"><span class="token punctuation">{</span><span class="token operator">:</span><span class="token keyword">else</span> <span class="token keyword">if</span> isFetching<span class="token punctuation">}</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>loading...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
-<span class="token language-javascript"><span class="token punctuation">{</span><span class="token operator">:</span><span class="token keyword">else</span><span class="token punctuation">}</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src=</span><span class="token language-javascript"><span class="token punctuation">{</span>imgSrc<span class="token punctuation">}</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>dog<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
-<span class="token language-javascript"><span class="token punctuation">{</span><span class="token operator">/</span><span class="token keyword">if</span><span class="token punctuation">}</span></span>
-<!-- HTML_TAG_END --></code>
-        </pre></div>
-</div>
-<p class="uno-ddg7b5 text-1xl ">This does work but there is an even better way to do this, we can use the <strong class="uno-paw6yi"><code>{#await}</code> block
-</strong>.
-</p>
-
-
-<div><div class="uno-gi0qzt"><select name="" id=""><option value="affenpinscher">affenpinscher</option><option value="african">african</option><option value="airedale">airedale</option></select>
-
-Selected breed: undefined
-
-<hr w-full>
-
-
-	<p>loading...</p>
-</div>
-
-	<div class="uno-w8hybr"><button class="uno-tuphnz">🔼</button>
-        <p class="uno-ww47sm">App4.svelte</p>
-			<pre class="uno-lf6xl9 language-svelte"><code style="font-family: 'Maple', Menlo, Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', 'Courier New', monospace;"><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
-	<span class="token keyword">let</span> selectedBreed<span class="token punctuation">;</span>
-	<span class="token keyword">const</span> breeds <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"affenpinscher"</span><span class="token punctuation">,</span> <span class="token string">"african"</span><span class="token punctuation">,</span> <span class="token string">"airedale"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-
-	<span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">getRandomDogImage</span><span class="token punctuation">(</span><span class="token parameter">breed</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-		<span class="token keyword">const</span> response <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">fetch</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">https://dog.ceo/api/breed/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>breed<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">/images/random</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-		<span class="token keyword">const</span> obj <span class="token operator">=</span> <span class="token keyword">await</span> response<span class="token punctuation">.</span><span class="token function">json</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-		<span class="token keyword">return</span> obj<span class="token punctuation">;</span>
-	<span class="token punctuation">}</span>
-</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
-
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>select</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name"><span class="token namespace">bind:</span>value=</span><span class="token language-javascript"><span class="token punctuation">{</span>selectedBreed<span class="token punctuation">}</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-	<span class="token each"><span class="token punctuation">{</span><span class="token keyword">#each</span> <span class="token language-javascript">breeds </span><span class="token keyword">as</span> <span class="token language-javascript">breed<span class="token punctuation">}</span></span></span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>option</span> <span class="token attr-name">value=</span><span class="token language-javascript"><span class="token punctuation">{</span>breed<span class="token punctuation">}</span></span><span class="token punctuation">></span></span><span class="token language-javascript"><span class="token punctuation">{</span>breed<span class="token punctuation">}</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>option</span><span class="token punctuation">></span></span>
-	<span class="token each"><span class="token punctuation">{</span><span class="token keyword">/each</span><span class="token punctuation">}</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>select</span><span class="token punctuation">></span></span>
-
-Selected breed: <span class="token language-javascript"><span class="token punctuation">{</span>selectedBreed<span class="token punctuation">}</span></span>
-
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>hr</span> <span class="token attr-name">w-full</span> <span class="token punctuation">/></span></span>
-
-<span class="token language-javascript"><span class="token punctuation">{</span>#<span class="token keyword">await</span> <span class="token function">getRandomDogImage</span><span class="token punctuation">(</span>selectedBreed<span class="token punctuation">)</span><span class="token punctuation">}</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>loading...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
-<span class="token language-javascript"><span class="token punctuation">{</span><span class="token operator">:</span>then obj<span class="token punctuation">}</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src=</span><span class="token language-javascript"><span class="token punctuation">{</span>obj<span class="token punctuation">.</span>message<span class="token punctuation">}</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>dog<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
-<span class="token language-javascript"><span class="token punctuation">{</span><span class="token operator">:</span>catch error<span class="token punctuation">}</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>oops! error! <span class="token language-javascript"><span class="token punctuation">{</span>error<span class="token punctuation">}</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
-<span class="token language-javascript"><span class="token punctuation">{</span><span class="token operator">/</span><span class="token keyword">await</span><span class="token punctuation">}</span></span>
-<!-- HTML_TAG_END --></code>
-        </pre></div>
+      </pre></div>
 </div>
 <p class="uno-ddg7b5 text-1xl ">One thing to note is that you can skip some of the blocks if you don&#39;t need them, for example the loading text or the error handling.
 </p></section></article>
 
 
-		<script type="module" data-sveltekit-hydrate="10xh2hn">
-			import { start } from "/Tutorials/_app/immutable/start-c3b6d81c.js";
+		<script type="module" data-sveltekit-hydrate="1y1phk3">
+			import { start } from "/Tutorials/_app/immutable/start-4cd3e800.js";
 
 			start({
 				env: {},
 				paths: {"base":"/Tutorials","assets":"/Tutorials"},
-				target: document.querySelector('[data-sveltekit-hydrate="10xh2hn"]').parentNode,
-				version: "1675835625610",
+				target: document.querySelector('[data-sveltekit-hydrate="1y1phk3"]').parentNode,
+				version: "1676238793632",
 				hydrate: {
 					node_ids: [0, 2, 6],
 					data: [null,null,null],

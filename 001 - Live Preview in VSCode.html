@@ -9,7 +9,7 @@
   <meta http-equiv="content-security-policy" content="">
 		<link href="/Tutorials/_app/immutable/assets/_layout-834a5097.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/mdsvex-layout-notes-5d6d5db2.css" rel="stylesheet">
-		<link href="/Tutorials/_app/immutable/assets/Strong-210af2f1.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/Strong-e4ea3825.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/005 - Command Center in VSCode-3d969ef8.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/Learning Svelte and SvelteKit part 1-4a0b184b.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/Example-332e9834.css" rel="stylesheet">
@@ -24,20 +24,23 @@
 		<link href="/Tutorials/_app/immutable/assets/_page-2fa50034.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/_page-9f516fc6.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/_page-c186df43.css" rel="stylesheet">
-		<link href="/Tutorials/_app/immutable/assets/_page-56761b59.css" rel="stylesheet">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/start-c3b6d81c.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/index-99d2d53b.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/singletons-9cfb5813.js">
+		<link href="/Tutorials/_app/immutable/assets/ShowMany-8a4e9ef5.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/_page-1b9f34c9.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/_page-50d68a3c.css" rel="stylesheet">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/start-4cd3e800.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/index-78f54c3b.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/singletons-941426a8.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/index-9751f88b.js">
 		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/paths-b4419565.js">
 		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/preload-helper-41c905a7.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/_layout.svelte-56e796bb.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/modules/pages/_layout.js-4890776b.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/_layout.svelte-7dfd6f4a.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/modules/pages/_layout.js-bc7f79d8.js">
 		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/dynamic-import-helper-be004503.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/_layout-a146d79b.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/_slug_/_layout.svelte-208c1a1d.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/_slug_/_page.svelte-24a66cbb.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/modules/pages/_slug_/_page.js-424f9732.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/_page-ca068692.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/_layout-1f2f2be2.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/_slug_/_layout.svelte-a4b2db03.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/_slug_/_page.svelte-83a6b38e.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/modules/pages/_slug_/_page.js-8235c2dd.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/_page-1b826067.js">
 </head>
 
 <body>
@@ -88,13 +91,13 @@
 <h2 class="uno-sjqek6">(Warning: Tutorial 004 has a better workflow!)
 </h2>
 <h5 class="">(creates a local web server for showing HTML+CSS+JS in an embedded browser in VSCode instead of opening a separate browser window)</h5>
-<ol><li class="uno-d5cktv text-1xl">In VSCode, find Extensions in the left panel and search for Live Preview
+<ol><li class="uno-yaaaza text-1xl">In VSCode, find Extensions in the left panel and search for Live Preview
 </li>
-<li class="uno-d5cktv text-1xl">Click Live Preview and Install
+<li class="uno-yaaaza text-1xl">Click Live Preview and Install
 </li>
-<li class="uno-d5cktv text-1xl">Create a new file and save it as .html
+<li class="uno-yaaaza text-1xl">Create a new file and save it as .html
 </li>
-<li class="uno-d5cktv text-1xl">Copy paste the following and save
+<li class="uno-yaaaza text-1xl">Copy paste the following and save
 </li></ol>
 <pre class="language-html"><!-- HTML_TAG_START --><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
@@ -105,22 +108,22 @@
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>Hi, this is a paragraph.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code><!-- HTML_TAG_END --></pre>
-<ol start="5"><li class="uno-d5cktv text-1xl">With the .html file active, in the top right click Show Preview
+<ol start="5"><li class="uno-yaaaza text-1xl">With the .html file active, in the top right click Show Preview
 </li>
-<li class="uno-d5cktv text-1xl">An embedded browser is opened where the project HTML+CSS+JS is displayed
+<li class="uno-yaaaza text-1xl">An embedded browser is opened where the project HTML+CSS+JS is displayed
 </li>
-<li class="uno-d5cktv text-1xl">Success! (the page updates in realtime)
+<li class="uno-yaaaza text-1xl">Success! (the page updates in realtime)
 </li></ol></section></article>
 
 
-		<script type="module" data-sveltekit-hydrate="u68ps0">
-			import { start } from "/Tutorials/_app/immutable/start-c3b6d81c.js";
+		<script type="module" data-sveltekit-hydrate="1t3ih2w">
+			import { start } from "/Tutorials/_app/immutable/start-4cd3e800.js";
 
 			start({
 				env: {},
 				paths: {"base":"/Tutorials","assets":"/Tutorials"},
-				target: document.querySelector('[data-sveltekit-hydrate="u68ps0"]').parentNode,
-				version: "1675835625610",
+				target: document.querySelector('[data-sveltekit-hydrate="1t3ih2w"]').parentNode,
+				version: "1676238793632",
 				hydrate: {
 					node_ids: [0, 3, 7],
 					data: [null,null,null],

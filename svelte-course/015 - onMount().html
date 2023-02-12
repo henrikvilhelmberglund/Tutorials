@@ -9,7 +9,7 @@
   <meta http-equiv="content-security-policy" content="">
 		<link href="/Tutorials/_app/immutable/assets/_layout-834a5097.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/mdsvex-layout-notes-5d6d5db2.css" rel="stylesheet">
-		<link href="/Tutorials/_app/immutable/assets/Strong-210af2f1.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/Strong-e4ea3825.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/005 - Command Center in VSCode-3d969ef8.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/Learning Svelte and SvelteKit part 1-4a0b184b.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/Example-332e9834.css" rel="stylesheet">
@@ -24,20 +24,23 @@
 		<link href="/Tutorials/_app/immutable/assets/_page-2fa50034.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/_page-9f516fc6.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/_page-c186df43.css" rel="stylesheet">
-		<link href="/Tutorials/_app/immutable/assets/_page-56761b59.css" rel="stylesheet">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/start-c3b6d81c.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/index-99d2d53b.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/singletons-9cfb5813.js">
+		<link href="/Tutorials/_app/immutable/assets/ShowMany-8a4e9ef5.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/_page-1b9f34c9.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/_page-50d68a3c.css" rel="stylesheet">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/start-4cd3e800.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/index-78f54c3b.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/singletons-941426a8.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/index-9751f88b.js">
 		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/paths-b4419565.js">
 		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/preload-helper-41c905a7.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/_layout.svelte-56e796bb.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/modules/pages/_layout.js-4890776b.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/_layout.svelte-7dfd6f4a.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/modules/pages/_layout.js-bc7f79d8.js">
 		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/dynamic-import-helper-be004503.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/_layout-a146d79b.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/svelte-course/_layout.svelte-31ee5ba2.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/svelte-course/_slug_/_page.svelte-3778455b.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/modules/pages/svelte-course/_slug_/_page.js-9400b09c.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/_page-f21c8aa6.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/_layout-1f2f2be2.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/svelte-course/_layout.svelte-3af0c301.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/svelte-course/_slug_/_page.svelte-d0662338.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/modules/pages/svelte-course/_slug_/_page.js-bba25014.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/_page-d56bc9b4.js">
 </head>
 
 <body>
@@ -72,7 +75,14 @@
 					</li><li><a href="/Tutorials/svelte-course/017 - each">017 - each</a>
 					</li><li><a href="/Tutorials/svelte-course/018 - keyed each">018 - keyed each</a>
 					</li><li><a href="/Tutorials/svelte-course/019 - await">019 - await</a>
-					</li><li><a href="/Tutorials/svelte-course/099 - test">099 - test</a>
+					</li><li><a href="/Tutorials/svelte-course/020 - key">020 - key</a>
+					</li><li><a href="/Tutorials/svelte-course/021 - getContext">021 - getContext</a>
+					</li><li><a href="/Tutorials/svelte-course/022 - Communicating through context">022 - Communicating through context</a>
+					</li><li><a href="/Tutorials/svelte-course/023 - Intro to Svelte store">023 - Intro to Svelte store</a>
+					</li><li><a href="/Tutorials/svelte-course/024 - writable store">024 - writable store</a>
+					</li><li><a href="/Tutorials/svelte-course/025 - readable store">025 - readable store</a>
+					</li><li><a href="/Tutorials/svelte-course/026 - Svelte store contract">026 - Svelte store contract</a>
+					</li><li><a href="/Tutorials/svelte-course/027 - DOM events as a Svelte store">027 - DOM events as a Svelte store</a>
 					</li></ul></nav>
 
 
@@ -93,7 +103,7 @@
 
 	<div class="uno-w8hybr"><button class="uno-tuphnz">🔼</button>
 			<p class="uno-zyb7av">App.svelte</p>
-				<pre class="uno-e7g21a language-svelte">					<code style="font-family: 'Maple', Menlo, Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', 'Courier New', monospace;"><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+				<pre class="uno-e7g21a language-svelte"><code style="font-family: 'Maple', Menlo, Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', 'Courier New', monospace;"><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
 	<span class="token keyword">import</span> Example1 <span class="token keyword">from</span> <span class="token string">"./Example1.svelte"</span><span class="token punctuation">;</span>
 	<span class="token keyword">import</span> Example2 <span class="token keyword">from</span> <span class="token string">"./Example2.svelte"</span><span class="token punctuation">;</span>
 
@@ -116,7 +126,7 @@
 
 	<div class="uno-w8hybr"><button class="uno-tuphnz">🔼</button>
 			<p class="uno-zyb7av">Example1.svelte</p>
-				<pre class="uno-e7g21a language-svelte">					<code style="font-family: 'Maple', Menlo, Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', 'Courier New', monospace;"><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+				<pre class="uno-e7g21a language-svelte"><code style="font-family: 'Maple', Menlo, Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', 'Courier New', monospace;"><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
 	<span class="token keyword">import</span> <span class="token punctuation">{</span> onMount <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"svelte"</span><span class="token punctuation">;</span>
 	<span class="token keyword">let</span> count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
 
@@ -139,7 +149,7 @@
 
 	<div class="uno-w8hybr"><button class="uno-tuphnz">🔼</button>
 			<p class="uno-zyb7av">Example2.svelte</p>
-				<pre class="uno-e7g21a language-svelte">					<code style="font-family: 'Maple', Menlo, Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', 'Courier New', monospace;"><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+				<pre class="uno-e7g21a language-svelte"><code style="font-family: 'Maple', Menlo, Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', 'Courier New', monospace;"><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
 	<span class="token keyword">import</span> <span class="token punctuation">{</span> onMount <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"svelte"</span><span class="token punctuation">;</span>
 	<span class="token keyword">let</span> src<span class="token punctuation">;</span>
 
@@ -162,7 +172,7 @@
 <!-- HTML_TAG_END --></code>
         </pre></div>
 </div>
-<p class="uno-ddg7b5 text-1xl ">One problem we have is that when we uncheck the checkbox the <strong class="uno-paw6yi">interval is still running
+<p class="uno-ddg7b5 text-1xl ">One problem we have is that when we uncheck the checkbox the <strong class="uno-9ygim0">interval is still running
 </strong> (you can see this in the console).
 </p>
 <p class="uno-ddg7b5 text-1xl ">We need to remember to clean them up.
@@ -178,7 +188,7 @@
 
 	<div class="uno-w8hybr"><button class="uno-tuphnz">🔼</button>
 			<p class="uno-zyb7av">Example1v2.svelte</p>
-				<pre class="uno-e7g21a language-svelte">					<code style="font-family: 'Maple', Menlo, Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', 'Courier New', monospace;"><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+				<pre class="uno-e7g21a language-svelte"><code style="font-family: 'Maple', Menlo, Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', 'Courier New', monospace;"><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
 	<span class="token keyword">import</span> <span class="token punctuation">{</span> onMount<span class="token punctuation">,</span> onDestroy <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"svelte"</span><span class="token punctuation">;</span>
 	<span class="token keyword">let</span> count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
 	<span class="token keyword">let</span> intervalId<span class="token punctuation">;</span>
@@ -200,7 +210,7 @@
 </div>
 <p class="uno-ddg7b5 text-1xl ">But since this is a very common pattern in Svelte there&#39;s another way to do it.
 </p>
-<p class="uno-ddg7b5 text-1xl ">You can <strong class="uno-paw6yi">return a function
+<p class="uno-ddg7b5 text-1xl ">You can <strong class="uno-9ygim0">return a function
 </strong> in onMount and it will be called when the component is destroyed.
 </p>
 <input type="checkbox" name="" id="">
@@ -212,7 +222,7 @@
 
 	<div class="uno-w8hybr"><button class="uno-tuphnz">🔼</button>
 			<p class="uno-zyb7av">Example1v3.svelte</p>
-				<pre class="uno-e7g21a language-svelte">					<code style="font-family: 'Maple', Menlo, Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', 'Courier New', monospace;"><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+				<pre class="uno-e7g21a language-svelte"><code style="font-family: 'Maple', Menlo, Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', 'Courier New', monospace;"><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
 	<span class="token keyword">import</span> <span class="token punctuation">{</span> onMount <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"svelte"</span><span class="token punctuation">;</span>
 	<span class="token keyword">let</span> count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
 
@@ -228,11 +238,11 @@
 <!-- HTML_TAG_END --></code>
         </pre></div>
 </div>
-<p class="uno-ddg7b5 text-1xl ">This way we <strong class="uno-paw6yi">don&#39;t need to import onDestroy
-</strong> and we can <strong class="uno-paw6yi">define the variable in onMount
+<p class="uno-ddg7b5 text-1xl ">This way we <strong class="uno-9ygim0">don&#39;t need to import onDestroy
+</strong> and we can <strong class="uno-9ygim0">define the variable in onMount
 </strong> as well.
 </p>
-<p class="uno-ddg7b5 text-1xl ">We can also use the return in onMount to <strong class="uno-paw6yi">cancel the fetch when quickly checking and unchecking
+<p class="uno-ddg7b5 text-1xl ">We can also use the return in onMount to <strong class="uno-9ygim0">cancel the fetch when quickly checking and unchecking
 </strong>.
 </p>
 <input type="checkbox" name="" id="">
@@ -244,7 +254,7 @@
 
 	<div class="uno-w8hybr"><button class="uno-tuphnz">🔼</button>
 			<p class="uno-zyb7av">Example2v3.svelte</p>
-				<pre class="uno-e7g21a language-svelte">					<code style="font-family: 'Maple', Menlo, Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', 'Courier New', monospace;"><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+				<pre class="uno-e7g21a language-svelte"><code style="font-family: 'Maple', Menlo, Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', 'Courier New', monospace;"><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
 	<span class="token keyword">import</span> <span class="token punctuation">{</span> onMount <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"svelte"</span><span class="token punctuation">;</span>
 	<span class="token keyword">let</span> src<span class="token punctuation">;</span>
 
@@ -271,19 +281,19 @@
 </div>
 <p class="uno-ddg7b5 text-1xl ">(open the network tab to see this, you may need to set throttling to slow 3G because the images are tiny)
 </p>
-<p class="uno-ddg7b5 text-1xl ">It&#39;s important to note that <strong class="uno-paw6yi">onMount does not render during SSR (server side rendering)
+<p class="uno-ddg7b5 text-1xl ">It&#39;s important to note that <strong class="uno-9ygim0">onMount does not render during SSR (server side rendering)
 </strong>.
 </p></section></article>
 
 
-		<script type="module" data-sveltekit-hydrate="2eh9nf">
-			import { start } from "/Tutorials/_app/immutable/start-c3b6d81c.js";
+		<script type="module" data-sveltekit-hydrate="ns4n5">
+			import { start } from "/Tutorials/_app/immutable/start-4cd3e800.js";
 
 			start({
 				env: {},
 				paths: {"base":"/Tutorials","assets":"/Tutorials"},
-				target: document.querySelector('[data-sveltekit-hydrate="2eh9nf"]').parentNode,
-				version: "1675835625610",
+				target: document.querySelector('[data-sveltekit-hydrate="ns4n5"]').parentNode,
+				version: "1676238793632",
 				hydrate: {
 					node_ids: [0, 2, 6],
 					data: [null,null,null],

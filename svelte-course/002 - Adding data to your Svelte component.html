@@ -9,7 +9,7 @@
   <meta http-equiv="content-security-policy" content="">
 		<link href="/Tutorials/_app/immutable/assets/_layout-834a5097.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/mdsvex-layout-notes-5d6d5db2.css" rel="stylesheet">
-		<link href="/Tutorials/_app/immutable/assets/Strong-210af2f1.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/Strong-e4ea3825.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/005 - Command Center in VSCode-3d969ef8.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/Learning Svelte and SvelteKit part 1-4a0b184b.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/Example-332e9834.css" rel="stylesheet">
@@ -24,20 +24,23 @@
 		<link href="/Tutorials/_app/immutable/assets/_page-2fa50034.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/_page-9f516fc6.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/_page-c186df43.css" rel="stylesheet">
-		<link href="/Tutorials/_app/immutable/assets/_page-56761b59.css" rel="stylesheet">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/start-c3b6d81c.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/index-99d2d53b.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/singletons-9cfb5813.js">
+		<link href="/Tutorials/_app/immutable/assets/ShowMany-8a4e9ef5.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/_page-1b9f34c9.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/_page-50d68a3c.css" rel="stylesheet">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/start-4cd3e800.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/index-78f54c3b.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/singletons-941426a8.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/index-9751f88b.js">
 		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/paths-b4419565.js">
 		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/preload-helper-41c905a7.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/_layout.svelte-56e796bb.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/modules/pages/_layout.js-4890776b.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/_layout.svelte-7dfd6f4a.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/modules/pages/_layout.js-bc7f79d8.js">
 		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/dynamic-import-helper-be004503.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/_layout-a146d79b.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/svelte-course/_layout.svelte-31ee5ba2.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/svelte-course/_slug_/_page.svelte-3778455b.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/modules/pages/svelte-course/_slug_/_page.js-9400b09c.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/_page-f21c8aa6.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/_layout-1f2f2be2.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/svelte-course/_layout.svelte-3af0c301.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/svelte-course/_slug_/_page.svelte-d0662338.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/modules/pages/svelte-course/_slug_/_page.js-bba25014.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/_page-d56bc9b4.js">
 </head>
 
 <body>
@@ -72,7 +75,14 @@
 					</li><li><a href="/Tutorials/svelte-course/017 - each">017 - each</a>
 					</li><li><a href="/Tutorials/svelte-course/018 - keyed each">018 - keyed each</a>
 					</li><li><a href="/Tutorials/svelte-course/019 - await">019 - await</a>
-					</li><li><a href="/Tutorials/svelte-course/099 - test">099 - test</a>
+					</li><li><a href="/Tutorials/svelte-course/020 - key">020 - key</a>
+					</li><li><a href="/Tutorials/svelte-course/021 - getContext">021 - getContext</a>
+					</li><li><a href="/Tutorials/svelte-course/022 - Communicating through context">022 - Communicating through context</a>
+					</li><li><a href="/Tutorials/svelte-course/023 - Intro to Svelte store">023 - Intro to Svelte store</a>
+					</li><li><a href="/Tutorials/svelte-course/024 - writable store">024 - writable store</a>
+					</li><li><a href="/Tutorials/svelte-course/025 - readable store">025 - readable store</a>
+					</li><li><a href="/Tutorials/svelte-course/026 - Svelte store contract">026 - Svelte store contract</a>
+					</li><li><a href="/Tutorials/svelte-course/027 - DOM events as a Svelte store">027 - DOM events as a Svelte store</a>
 					</li></ul></nav>
 
 
@@ -89,7 +99,7 @@
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code><!-- HTML_TAG_END --></pre>
 <p class="uno-ddg7b5 text-1xl ">Script tags allow you to add logic and data in your components.
 </p>
-<p class="uno-ddg7b5 text-1xl ">For example we can define a variable in the script tag and then use it in the markup by putting it <strong class="uno-paw6yi">inside curly brackets
+<p class="uno-ddg7b5 text-1xl ">For example we can define a variable in the script tag and then use it in the markup by putting it <strong class="uno-9ygim0">inside curly brackets
 </strong>.
 </p>
 <div><div class="root svelte-27svms"><div class="uno-wfsvsy svelte-27svms"><div class="uno-1m54ow example-wrapper svelte-27svms"><div class="example svelte-27svms"><p>Hello Reader</p></div></div>
@@ -99,10 +109,10 @@
 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>Hello <span class="token language-javascript"><span class="token punctuation">{</span>name<span class="token punctuation">}</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span><!-- HTML_TAG_END --></pre></div>
 </div></div>
-<p class="uno-ddg7b5 text-1xl ">Note that these variables need to be defined in the <strong class="uno-paw6yi">top level
+<p class="uno-ddg7b5 text-1xl ">Note that these variables need to be defined in the <strong class="uno-9ygim0">top level
 </strong> (not in functions).
 </p>
-<p class="uno-ddg7b5 text-1xl ">We can also use variables in HTML tags to have <strong class="uno-paw6yi">dynamic attributes
+<p class="uno-ddg7b5 text-1xl ">We can also use variables in HTML tags to have <strong class="uno-9ygim0">dynamic attributes
 </strong>.
 </p>
 <div><div class="root svelte-27svms"><div class="uno-wfsvsy svelte-27svms"><div class="uno-1m54ow example-wrapper svelte-27svms"><div class="example svelte-27svms"><img src="https://svelte.dev/images/svelte-android-chrome-192.png" alt="a svelte logo"></div></div>
@@ -112,7 +122,7 @@
 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src=</span><span class="token language-javascript"><span class="token punctuation">{</span>url<span class="token punctuation">}</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>a svelte logo<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span><!-- HTML_TAG_END --></pre></div>
 </div></div>
-<p class="uno-ddg7b5 text-1xl ">If the variable and attribute have the same name we can use a <strong class="uno-paw6yi">shorthand
+<p class="uno-ddg7b5 text-1xl ">If the variable and attribute have the same name we can use a <strong class="uno-9ygim0">shorthand
 </strong>.
 </p>
 <div><div class="root svelte-27svms"><div class="uno-wfsvsy svelte-27svms"><div class="uno-1m54ow example-wrapper svelte-27svms"><div class="example svelte-27svms"><img src="https://svelte.dev/images/svelte-android-chrome-192.png" alt="a svelte logo"></div></div>
@@ -124,14 +134,14 @@
 </div></div></section></article>
 
 
-		<script type="module" data-sveltekit-hydrate="1161az3">
-			import { start } from "/Tutorials/_app/immutable/start-c3b6d81c.js";
+		<script type="module" data-sveltekit-hydrate="1b3jv85">
+			import { start } from "/Tutorials/_app/immutable/start-4cd3e800.js";
 
 			start({
 				env: {},
 				paths: {"base":"/Tutorials","assets":"/Tutorials"},
-				target: document.querySelector('[data-sveltekit-hydrate="1161az3"]').parentNode,
-				version: "1675835625610",
+				target: document.querySelector('[data-sveltekit-hydrate="1b3jv85"]').parentNode,
+				version: "1676238793632",
 				hydrate: {
 					node_ids: [0, 2, 6],
 					data: [null,null,null],

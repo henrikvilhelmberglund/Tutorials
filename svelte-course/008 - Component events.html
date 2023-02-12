@@ -9,7 +9,7 @@
   <meta http-equiv="content-security-policy" content="">
 		<link href="/Tutorials/_app/immutable/assets/_layout-834a5097.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/mdsvex-layout-notes-5d6d5db2.css" rel="stylesheet">
-		<link href="/Tutorials/_app/immutable/assets/Strong-210af2f1.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/Strong-e4ea3825.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/005 - Command Center in VSCode-3d969ef8.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/Learning Svelte and SvelteKit part 1-4a0b184b.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/Example-332e9834.css" rel="stylesheet">
@@ -24,20 +24,23 @@
 		<link href="/Tutorials/_app/immutable/assets/_page-2fa50034.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/_page-9f516fc6.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/_page-c186df43.css" rel="stylesheet">
-		<link href="/Tutorials/_app/immutable/assets/_page-56761b59.css" rel="stylesheet">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/start-c3b6d81c.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/index-99d2d53b.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/singletons-9cfb5813.js">
+		<link href="/Tutorials/_app/immutable/assets/ShowMany-8a4e9ef5.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/_page-1b9f34c9.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/_page-50d68a3c.css" rel="stylesheet">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/start-4cd3e800.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/index-78f54c3b.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/singletons-941426a8.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/index-9751f88b.js">
 		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/paths-b4419565.js">
 		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/preload-helper-41c905a7.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/_layout.svelte-56e796bb.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/modules/pages/_layout.js-4890776b.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/_layout.svelte-7dfd6f4a.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/modules/pages/_layout.js-bc7f79d8.js">
 		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/dynamic-import-helper-be004503.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/_layout-a146d79b.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/svelte-course/_layout.svelte-31ee5ba2.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/svelte-course/_slug_/_page.svelte-3778455b.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/modules/pages/svelte-course/_slug_/_page.js-9400b09c.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/_page-f21c8aa6.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/_layout-1f2f2be2.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/svelte-course/_layout.svelte-3af0c301.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/svelte-course/_slug_/_page.svelte-d0662338.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/modules/pages/svelte-course/_slug_/_page.js-bba25014.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/_page-d56bc9b4.js">
 </head>
 
 <body>
@@ -72,7 +75,14 @@
 					</li><li><a href="/Tutorials/svelte-course/017 - each">017 - each</a>
 					</li><li><a href="/Tutorials/svelte-course/018 - keyed each">018 - keyed each</a>
 					</li><li><a href="/Tutorials/svelte-course/019 - await">019 - await</a>
-					</li><li><a href="/Tutorials/svelte-course/099 - test">099 - test</a>
+					</li><li><a href="/Tutorials/svelte-course/020 - key">020 - key</a>
+					</li><li><a href="/Tutorials/svelte-course/021 - getContext">021 - getContext</a>
+					</li><li><a href="/Tutorials/svelte-course/022 - Communicating through context">022 - Communicating through context</a>
+					</li><li><a href="/Tutorials/svelte-course/023 - Intro to Svelte store">023 - Intro to Svelte store</a>
+					</li><li><a href="/Tutorials/svelte-course/024 - writable store">024 - writable store</a>
+					</li><li><a href="/Tutorials/svelte-course/025 - readable store">025 - readable store</a>
+					</li><li><a href="/Tutorials/svelte-course/026 - Svelte store contract">026 - Svelte store contract</a>
+					</li><li><a href="/Tutorials/svelte-course/027 - DOM events as a Svelte store">027 - DOM events as a Svelte store</a>
 					</li></ul></nav>
 
 
@@ -84,10 +94,10 @@
 </p>
       <a class="uno-1irbms text-1xl" href="http://github.com/henrikvilhelmberglund/">henrikvilhelmberglund
 </a></div></section>
-  <section class="uno-dyxbz3"><p class="uno-ddg7b5 text-1xl ">In the last post we learned that <strong class="uno-paw6yi">components
-</strong> can be used like <strong class="uno-paw6yi">HTML elements
-</strong> (after importing them) and <strong class="uno-paw6yi">props
-</strong> can be used like <strong class="uno-paw6yi">HTML attributes
+  <section class="uno-dyxbz3"><p class="uno-ddg7b5 text-1xl ">In the last post we learned that <strong class="uno-9ygim0">components
+</strong> can be used like <strong class="uno-9ygim0">HTML elements
+</strong> (after importing them) and <strong class="uno-9ygim0">props
+</strong> can be used like <strong class="uno-9ygim0">HTML attributes
 </strong>.
 </p>
 <p class="uno-ddg7b5 text-1xl ">Here we have a component Profile.svelte where we can add or remove skillpoints and display them.
@@ -124,7 +134,7 @@
 		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>px-8<span class="token punctuation">"</span></span> <span class="token attr-name"><span class="token namespace">on:</span>click=</span><span class="token language-javascript"><span class="token punctuation">&#123;</span>incrementSkillPoints<span class="token punctuation">&#125;</span></span><span class="token punctuation">></span></span>+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
 	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>section</span><span class="token punctuation">></span></span></code><!-- HTML_TAG_END --></pre>
-<p class="uno-ddg7b5 text-1xl ">As you can see we can also send <strong class="uno-paw6yi">functions in props
+<p class="uno-ddg7b5 text-1xl ">As you can see we can also send <strong class="uno-9ygim0">functions in props
 </strong>.
 </p>
 <div><div class="root svelte-27svms"><div class="uno-wfsvsy svelte-27svms"><div class="uno-1m54ow example-wrapper svelte-27svms"><div class="example svelte-27svms"><section><dl><dt>Name</dt><dd>Henrik</dd><dt>Status</dt><dd>Learning Svelte</dd></dl>
@@ -143,7 +153,7 @@
 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Profile</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Henrik<span class="token punctuation">"</span></span> <span class="token attr-name">status</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Learning Svelte<span class="token punctuation">"</span></span> <span class="token language-javascript"><span class="token punctuation">{</span>onSkillPointChange<span class="token punctuation">}</span></span> <span class="token punctuation">/></span></span><!-- HTML_TAG_END --></pre></div>
 </div></div>
-<p class="uno-ddg7b5 text-1xl ">We can improve the code in Profile.svelte by <strong class="uno-paw6yi">using a reactive statement
+<p class="uno-ddg7b5 text-1xl ">We can improve the code in Profile.svelte by <strong class="uno-9ygim0">using a reactive statement
 </strong> for the function prop instead of running it in both to the increment and decrement functions.
 </p>
 <pre class="language-svelte"><!-- HTML_TAG_START --><code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
@@ -180,36 +190,36 @@
 		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>px-8<span class="token punctuation">"</span></span> <span class="token attr-name"><span class="token namespace">on:</span>click=</span><span class="token language-javascript"><span class="token punctuation">&#123;</span>incrementSkillPoints<span class="token punctuation">&#125;</span></span><span class="token punctuation">></span></span>+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
 	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>section</span><span class="token punctuation">></span></span></code><!-- HTML_TAG_END --></pre>
-<p class="uno-ddg7b5 text-1xl ">We have a problem though because we assume that <code>{onSkillPointChange}</code> is <strong class="uno-paw6yi">always passed in as a functions
+<p class="uno-ddg7b5 text-1xl ">We have a problem though because we assume that <code>{onSkillPointChange}</code> is <strong class="uno-9ygim0">always passed in as a functions
 </strong> so it won&#39;t work if we don&#39;t pass it in.
 </p>
 <p class="uno-ddg7b5 text-1xl ">There are two ways we can fix this:
 </p>
-<ul class="uno-prji6t"><li class="uno-d5cktv text-1xl">Check if onSkillPointChange is actually a function
+<ul class="uno-kgkl12"><li class="uno-yaaaza text-1xl">Check if onSkillPointChange is actually a function
 </li>
 </ul>
 <pre class="language-svelte"><!-- HTML_TAG_START --><code class="language-svelte">$: if (typeof onSkillPointChange === "function") onSkillPointChange(skillPoints);</code><!-- HTML_TAG_END --></pre>
 <p class="uno-ddg7b5 text-1xl ">Here we check if it&#39;s a function and if it is we call it.
 </p>
-<ul class="uno-prji6t"><li class="uno-d5cktv text-1xl">Another way is to add a default value for onSkillPointChange:
+<ul class="uno-kgkl12"><li class="uno-yaaaza text-1xl">Another way is to add a default value for onSkillPointChange:
 </li>
 </ul>
 <pre class="language-svelte"><!-- HTML_TAG_START --><code class="language-svelte">export let onSkillPointChange = () => <span class="token language-javascript"><span class="token punctuation">&#123;</span><span class="token punctuation">&#125;</span></span>;</code><!-- HTML_TAG_END --></pre>
-<p class="uno-ddg7b5 text-1xl ">We usually want to <strong class="uno-paw6yi">avoid strongly coupling components to events
-</strong> because it&#39;s more flexible to only use events when you need them. For example HTML buttons don&#39;t require you to add event listeners for every type of interaction by default, instead you can <strong class="uno-paw6yi">add them if you need them
+<p class="uno-ddg7b5 text-1xl ">We usually want to <strong class="uno-9ygim0">avoid strongly coupling components to events
+</strong> because it&#39;s more flexible to only use events when you need them. For example HTML buttons don&#39;t require you to add event listeners for every type of interaction by default, instead you can <strong class="uno-9ygim0">add them if you need them
 </strong>.
 </p>
-<p class="uno-ddg7b5 text-1xl ">To make the prop optional we could have a <strong class="uno-paw6yi">check to see if it is defined
+<p class="uno-ddg7b5 text-1xl ">To make the prop optional we could have a <strong class="uno-9ygim0">check to see if it is defined
 </strong>.
 </p>
 <pre class="language-svelte"><!-- HTML_TAG_START --><code class="language-svelte">$: if (onSkillPointChange) onSkillPointChange(skillPoints);</code><!-- HTML_TAG_END --></pre>
-<p class="uno-ddg7b5 text-1xl ">There&#39;s an <strong class="uno-paw6yi">even better way
-</strong> though, <strong class="uno-paw6yi">component events
+<p class="uno-ddg7b5 text-1xl ">There&#39;s an <strong class="uno-9ygim0">even better way
+</strong> though, <strong class="uno-9ygim0">component events
 </strong>.
 </p>
-<p class="uno-ddg7b5 text-1xl ">By creating an <strong class="uno-paw6yi">event dispatcher
-</strong> in our child component we can create a <strong class="uno-paw6yi">custom event
-</strong> that the parent can <strong class="uno-paw6yi">optionally listen to
+<p class="uno-ddg7b5 text-1xl ">By creating an <strong class="uno-9ygim0">event dispatcher
+</strong> in our child component we can create a <strong class="uno-9ygim0">custom event
+</strong> that the parent can <strong class="uno-9ygim0">optionally listen to
 </strong>.
 </p>
 <pre class="language-svelte"><!-- HTML_TAG_START --><code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
@@ -249,9 +259,9 @@
 		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>px-8<span class="token punctuation">"</span></span> <span class="token attr-name"><span class="token namespace">on:</span>click=</span><span class="token language-javascript"><span class="token punctuation">&#123;</span>incrementSkillPoints<span class="token punctuation">&#125;</span></span><span class="token punctuation">></span></span>+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
 	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>section</span><span class="token punctuation">></span></span></code><!-- HTML_TAG_END --></pre>
-<p class="uno-ddg7b5 text-1xl ">and to actually use it we add <strong class="uno-paw6yi">on:skillPointChange
-</strong> on the component and in the function take in <strong class="uno-paw6yi">event
-</strong> and send <strong class="uno-paw6yi">event.detail
+<p class="uno-ddg7b5 text-1xl ">and to actually use it we add <strong class="uno-9ygim0">on:skillPointChange
+</strong> on the component and in the function take in <strong class="uno-9ygim0">event
+</strong> and send <strong class="uno-9ygim0">event.detail
 </strong>.
 </p>
 <div><div class="root svelte-27svms"><div class="uno-wfsvsy svelte-27svms"><div class="uno-1m54ow example-wrapper svelte-27svms"><div class="example svelte-27svms"><section><dl><dt>Name</dt><dd>Henrik</dd><dt>Status</dt><dd>Learning Svelte</dd></dl>
@@ -273,7 +283,7 @@
 	<span class="token attr-name">status</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Learning Svelte<span class="token punctuation">"</span></span>
 	<span class="token attr-name"><span class="token namespace">on:</span>skillPointChange=</span><span class="token language-javascript"><span class="token punctuation">{</span>onSkillPointChange<span class="token punctuation">}</span></span> <span class="token punctuation">/></span></span><!-- HTML_TAG_END --></pre></div>
 </div></div>
-<p class="uno-ddg7b5 text-1xl ">If we do it this way we <strong class="uno-paw6yi">don&#39;t have to
+<p class="uno-ddg7b5 text-1xl ">If we do it this way we <strong class="uno-9ygim0">don&#39;t have to
 </strong> listen to the event if we don&#39;t want to.
 </p>
 <div><div class="root svelte-27svms"><div class="uno-wfsvsy svelte-27svms"><div class="uno-1m54ow example-wrapper svelte-27svms"><div class="example svelte-27svms"><section><dl><dt>Name</dt><dd>Henrik</dd><dt>Status</dt><dd>Learning Svelte</dd></dl>
@@ -305,19 +315,19 @@
 <span class="token comment">&lt;!-- clicking the buttons here will not log in the console --></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ProfileEventDispatcher</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Henrik again<span class="token punctuation">"</span></span> <span class="token attr-name">status</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Learning about component events<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span><!-- HTML_TAG_END --></pre></div>
 </div></div>
-<p class="uno-ddg7b5 text-1xl ">By doing this we can make the event <strong class="uno-paw6yi">optional
+<p class="uno-ddg7b5 text-1xl ">By doing this we can make the event <strong class="uno-9ygim0">optional
 </strong>.
 </p></section></article>
 
 
-		<script type="module" data-sveltekit-hydrate="m9xe52">
-			import { start } from "/Tutorials/_app/immutable/start-c3b6d81c.js";
+		<script type="module" data-sveltekit-hydrate="98q64s">
+			import { start } from "/Tutorials/_app/immutable/start-4cd3e800.js";
 
 			start({
 				env: {},
 				paths: {"base":"/Tutorials","assets":"/Tutorials"},
-				target: document.querySelector('[data-sveltekit-hydrate="m9xe52"]').parentNode,
-				version: "1675835625610",
+				target: document.querySelector('[data-sveltekit-hydrate="98q64s"]').parentNode,
+				version: "1676238793632",
 				hydrate: {
 					node_ids: [0, 2, 6],
 					data: [null,null,null],

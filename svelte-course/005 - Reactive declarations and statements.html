@@ -9,7 +9,7 @@
   <meta http-equiv="content-security-policy" content="">
 		<link href="/Tutorials/_app/immutable/assets/_layout-834a5097.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/mdsvex-layout-notes-5d6d5db2.css" rel="stylesheet">
-		<link href="/Tutorials/_app/immutable/assets/Strong-210af2f1.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/Strong-e4ea3825.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/005 - Command Center in VSCode-3d969ef8.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/Learning Svelte and SvelteKit part 1-4a0b184b.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/Example-332e9834.css" rel="stylesheet">
@@ -24,20 +24,23 @@
 		<link href="/Tutorials/_app/immutable/assets/_page-2fa50034.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/_page-9f516fc6.css" rel="stylesheet">
 		<link href="/Tutorials/_app/immutable/assets/_page-c186df43.css" rel="stylesheet">
-		<link href="/Tutorials/_app/immutable/assets/_page-56761b59.css" rel="stylesheet">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/start-c3b6d81c.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/index-99d2d53b.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/singletons-9cfb5813.js">
+		<link href="/Tutorials/_app/immutable/assets/ShowMany-8a4e9ef5.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/_page-1b9f34c9.css" rel="stylesheet">
+		<link href="/Tutorials/_app/immutable/assets/_page-50d68a3c.css" rel="stylesheet">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/start-4cd3e800.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/index-78f54c3b.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/singletons-941426a8.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/index-9751f88b.js">
 		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/paths-b4419565.js">
 		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/preload-helper-41c905a7.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/_layout.svelte-56e796bb.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/modules/pages/_layout.js-4890776b.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/_layout.svelte-7dfd6f4a.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/modules/pages/_layout.js-bc7f79d8.js">
 		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/dynamic-import-helper-be004503.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/_layout-a146d79b.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/svelte-course/_layout.svelte-31ee5ba2.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/svelte-course/_slug_/_page.svelte-3778455b.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/modules/pages/svelte-course/_slug_/_page.js-9400b09c.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/_page-f21c8aa6.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/_layout-1f2f2be2.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/svelte-course/_layout.svelte-3af0c301.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/components/pages/svelte-course/_slug_/_page.svelte-d0662338.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/modules/pages/svelte-course/_slug_/_page.js-bba25014.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/_page-d56bc9b4.js">
 </head>
 
 <body>
@@ -72,7 +75,14 @@
 					</li><li><a href="/Tutorials/svelte-course/017 - each">017 - each</a>
 					</li><li><a href="/Tutorials/svelte-course/018 - keyed each">018 - keyed each</a>
 					</li><li><a href="/Tutorials/svelte-course/019 - await">019 - await</a>
-					</li><li><a href="/Tutorials/svelte-course/099 - test">099 - test</a>
+					</li><li><a href="/Tutorials/svelte-course/020 - key">020 - key</a>
+					</li><li><a href="/Tutorials/svelte-course/021 - getContext">021 - getContext</a>
+					</li><li><a href="/Tutorials/svelte-course/022 - Communicating through context">022 - Communicating through context</a>
+					</li><li><a href="/Tutorials/svelte-course/023 - Intro to Svelte store">023 - Intro to Svelte store</a>
+					</li><li><a href="/Tutorials/svelte-course/024 - writable store">024 - writable store</a>
+					</li><li><a href="/Tutorials/svelte-course/025 - readable store">025 - readable store</a>
+					</li><li><a href="/Tutorials/svelte-course/026 - Svelte store contract">026 - Svelte store contract</a>
+					</li><li><a href="/Tutorials/svelte-course/027 - DOM events as a Svelte store">027 - DOM events as a Svelte store</a>
 					</li></ul></nav>
 
 
@@ -104,8 +114,8 @@
 <span class="token language-javascript"><span class="token punctuation">{</span>count<span class="token punctuation">}</span></span> * 2 = <span class="token language-javascript"><span class="token punctuation">{</span>count <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">}</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name"><span class="token namespace">on:</span>click=</span><span class="token language-javascript"><span class="token punctuation">{</span>increment<span class="token punctuation">}</span></span><span class="token punctuation">></span></span>+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span><!-- HTML_TAG_END --></pre></div>
 </div></div>
-<p class="uno-ddg7b5 text-1xl ">This may be fine in simpler components but if we&#39;re using <strong class="uno-paw6yi">count * 2
-</strong> in a lot of places we might want to have a variable <strong class="uno-paw6yi">let double = count * 2;
+<p class="uno-ddg7b5 text-1xl ">This may be fine in simpler components but if we&#39;re using <strong class="uno-9ygim0">count * 2
+</strong> in a lot of places we might want to have a variable <strong class="uno-9ygim0">let double = count * 2;
 </strong> instead.
 </p>
 <div><div class="root svelte-27svms"><div class="uno-wfsvsy svelte-27svms"><div class="uno-1m54ow example-wrapper svelte-27svms"><div class="example svelte-27svms"><button>-</button>
@@ -127,12 +137,12 @@
 <span class="token language-javascript"><span class="token punctuation">{</span>count<span class="token punctuation">}</span></span> * 2 = <span class="token language-javascript"><span class="token punctuation">{</span>double<span class="token punctuation">}</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name"><span class="token namespace">on:</span>click=</span><span class="token language-javascript"><span class="token punctuation">{</span>increment<span class="token punctuation">}</span></span><span class="token punctuation">></span></span>+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span><!-- HTML_TAG_END --></pre></div>
 </div></div>
-<p class="uno-ddg7b5 text-1xl ">We can see we have a problem though. The variable <code>double</code> does not update because we&#39;re not updating it in the functions so it is only assigned to <strong class="uno-paw6yi">once when the component loads
-</strong>. Instead of adding a statement to update <code>double</code> in all of the functions we can use a <strong class="uno-paw6yi">reactive declaration
+<p class="uno-ddg7b5 text-1xl ">We can see we have a problem though. The variable <code>double</code> does not update because we&#39;re not updating it in the functions so it is only assigned to <strong class="uno-9ygim0">once when the component loads
+</strong>. Instead of adding a statement to update <code>double</code> in all of the functions we can use a <strong class="uno-9ygim0">reactive declaration
 </strong>.
 </p>
-<p class="uno-ddg7b5 text-1xl ">To do that we simply replace <strong class="uno-paw6yi">let double = count * 2
-</strong> with <strong class="uno-paw6yi">$: double = count * 2
+<p class="uno-ddg7b5 text-1xl ">To do that we simply replace <strong class="uno-9ygim0">let double = count * 2
+</strong> with <strong class="uno-9ygim0">$: double = count * 2
 </strong>.
 </p>
 <div><div class="root svelte-27svms"><div class="uno-wfsvsy svelte-27svms"><div class="uno-1m54ow example-wrapper svelte-27svms"><div class="example svelte-27svms"><button>-</button>
@@ -154,16 +164,16 @@
 <span class="token language-javascript"><span class="token punctuation">{</span>count<span class="token punctuation">}</span></span> * 2 = <span class="token language-javascript"><span class="token punctuation">{</span>double<span class="token punctuation">}</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name"><span class="token namespace">on:</span>click=</span><span class="token language-javascript"><span class="token punctuation">{</span>increment<span class="token punctuation">}</span></span><span class="token punctuation">></span></span>+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span><!-- HTML_TAG_END --></pre></div>
 </div></div>
-<p class="uno-ddg7b5 text-1xl ">This is a special Svelte syntax that means <strong class="uno-paw6yi">when variables to the right of = are changed, rerun this code
+<p class="uno-ddg7b5 text-1xl ">This is a special Svelte syntax that means <strong class="uno-9ygim0">when variables to the right of = are changed, rerun this code
 </strong>. 
 </p>
-<p class="uno-ddg7b5 text-1xl ">When we click the buttons <code>count</code> is changed. Since <code>count</code> was changed, <strong class="uno-paw6yi">$: double = count * 2
+<p class="uno-ddg7b5 text-1xl ">When we click the buttons <code>count</code> is changed. Since <code>count</code> was changed, <strong class="uno-9ygim0">$: double = count * 2
 </strong> will rerun so we get the correct value even though we didn&#39;t update the double value in the functions.
 </p>
 <h3 class="uno-k2n0uo">Reactive statements
 </h3>
-<p class="uno-ddg7b5 text-1xl ">We can also have <strong class="uno-paw6yi">reactive statements
-</strong>. For example we can log <code>count</code> whenever it changes with <strong class="uno-paw6yi">$: console.log(count);
+<p class="uno-ddg7b5 text-1xl ">We can also have <strong class="uno-9ygim0">reactive statements
+</strong>. For example we can log <code>count</code> whenever it changes with <strong class="uno-9ygim0">$: console.log(count);
 </strong> which could be useful for debugging.
 </p>
 <div><div class="root svelte-27svms"><div class="uno-wfsvsy svelte-27svms"><div class="uno-1m54ow example-wrapper svelte-27svms"><div class="example svelte-27svms"><button>-</button>
@@ -186,11 +196,11 @@
 <span class="token language-javascript"><span class="token punctuation">{</span>count<span class="token punctuation">}</span></span> * 2 = <span class="token language-javascript"><span class="token punctuation">{</span>double<span class="token punctuation">}</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name"><span class="token namespace">on:</span>click=</span><span class="token language-javascript"><span class="token punctuation">{</span>increment<span class="token punctuation">}</span></span><span class="token punctuation">></span></span>+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span><!-- HTML_TAG_END --></pre></div>
 </div></div>
-<p class="uno-ddg7b5 text-1xl ">As before the statement will be reevaluated whenever the <strong class="uno-paw6yi">variable it depends on (its dependency) is changed
-</strong>. In this case it is <strong class="uno-paw6yi">count
+<p class="uno-ddg7b5 text-1xl ">As before the statement will be reevaluated whenever the <strong class="uno-9ygim0">variable it depends on (its dependency) is changed
+</strong>. In this case it is <strong class="uno-9ygim0">count
 </strong> which changes when we click the buttons.
 </p>
-<p class="uno-ddg7b5 text-1xl ">A thing to note is that this does not happen immediately but instead <strong class="uno-paw6yi">asynchronously
+<p class="uno-ddg7b5 text-1xl ">A thing to note is that this does not happen immediately but instead <strong class="uno-9ygim0">asynchronously
 </strong>. 
 </p>
 <div><div class="root svelte-27svms"><div class="uno-wfsvsy svelte-27svms"><div class="uno-1m54ow example-wrapper svelte-27svms"><div class="example svelte-27svms"><button>-</button>
@@ -214,23 +224,23 @@
 <span class="token language-javascript"><span class="token punctuation">{</span>count<span class="token punctuation">}</span></span> * 2 = <span class="token language-javascript"><span class="token punctuation">{</span>double<span class="token punctuation">}</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name"><span class="token namespace">on:</span>click=</span><span class="token language-javascript"><span class="token punctuation">{</span>increment<span class="token punctuation">}</span></span><span class="token punctuation">></span></span>+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span><!-- HTML_TAG_END --></pre></div>
 </div></div>
-<p class="uno-ddg7b5 text-1xl ">It does though happen <strong class="uno-paw6yi">just before Svelte updates the DOM
+<p class="uno-ddg7b5 text-1xl ">It does though happen <strong class="uno-9ygim0">just before Svelte updates the DOM
 </strong> (so the value in the DOM is always up to date).
 </p>
-<p class="uno-ddg7b5 text-1xl ">A final thing to note is that the order of reactive declarations doesn&#39;t matter since <strong class="uno-paw6yi">they will be automatically reordered
-</strong> by Svelte. However they must be declared in the <strong class="uno-paw6yi">top level
+<p class="uno-ddg7b5 text-1xl ">A final thing to note is that the order of reactive declarations doesn&#39;t matter since <strong class="uno-9ygim0">they will be automatically reordered
+</strong> by Svelte. However they must be declared in the <strong class="uno-9ygim0">top level
 </strong> (so not in functions).
 </p></section></article>
 
 
-		<script type="module" data-sveltekit-hydrate="1cfuu68">
-			import { start } from "/Tutorials/_app/immutable/start-c3b6d81c.js";
+		<script type="module" data-sveltekit-hydrate="1iw3cxm">
+			import { start } from "/Tutorials/_app/immutable/start-4cd3e800.js";
 
 			start({
 				env: {},
 				paths: {"base":"/Tutorials","assets":"/Tutorials"},
-				target: document.querySelector('[data-sveltekit-hydrate="1cfuu68"]').parentNode,
-				version: "1675835625610",
+				target: document.querySelector('[data-sveltekit-hydrate="1iw3cxm"]').parentNode,
+				version: "1676238793632",
 				hydrate: {
 					node_ids: [0, 2, 6],
 					data: [null,null,null],
