@@ -1,0 +1,41 @@
+---
+title: writable store
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-02-12
+layout: notes
+---
+
+<script>
+  import App from "./App.svelte";
+  import AppRaw from "./App.svelte?raw";
+  import Input from "./Input.svelte";
+  import InputRaw from "./Input.svelte?raw";
+  import Output from "./Output.svelte";
+  import OutputRaw from "./Output.svelte?raw";
+  import dataRaw from "./data.js?raw";
+  import ShowMany from "$lib/ShowMany.svelte";
+</script>
+
+Svelte has a few built-in **store functions**, one of them being the **writable store**.
+
+We use them by **importing them from "svelte/store"** like this:
+
+```js
+import { writable, readable } from "svelte/store";
+```
+
+**writable** is a store where we can both **read** and **write**, and **readable** is a store that is **read only**.
+
+Both of these stores have a method called **subscribe** that allows you to **subscribe to the store**.
+
+The writable store has a method called **set** that allows you to **set (and update) the value**.
+
+<ShowMany name={[
+{name: "App", comp:App, raw:AppRaw, text: ""},
+{name: "Input", comp:App, raw:InputRaw, text: ""},
+{name: "Output", comp:App, raw:OutputRaw, text: ""},
+{name: "data.js", comp:App, raw:dataRaw, text: ""},
+]}/>
+
+As you can see we could remove a lot of code by using the built in **writable store** functionality.
