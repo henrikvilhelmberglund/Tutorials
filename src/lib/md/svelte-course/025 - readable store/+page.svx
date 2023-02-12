@@ -1,0 +1,47 @@
+---
+title: readable store
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-02-12
+layout: notes
+---
+
+<script>
+  import App from "./App.svelte";
+  import AppRaw from "./App.svelte?raw";
+  import Output from "./Output.svelte";
+  import OutputRaw from "./Output.svelte?raw";
+  import dataRaw from "./data.js?raw";
+  import App2 from "./App2.svelte";
+  import App2Raw from "./App2.svelte?raw";
+  import Output2 from "./Output2.svelte";
+  import Output2Raw from "./Output2.svelte?raw";
+  import data2Raw from "./data2.js?raw";
+  import ShowMany from "$lib/ShowMany.svelte";
+</script>
+
+The **readable store** is a **read only** store. But, if it's read only, how does the value change?
+
+Like before the first argument in **readable()** is the **initial value** of the store.
+
+In addition, readable stores have a **mandatory second argument** which is a so called **start stop notifier**.
+
+This function is run when **someone subscribes** to the store for the **first time**.
+
+You can also have a **clean up function** as a **return statement** that will run when the subscribers **all unsubscribe** so there are **0** subscribers.
+
+The parameter for the **start stop notifier** is **set** (same as the writable store method).
+
+<ShowMany name={[
+{name: "App", comp:App, raw:AppRaw, text: "Here we can see the value changing from \"hello\" to \"world\" since we use set() after a Timeout."},
+{name: "Output", comp:App, raw:OutputRaw, text: ""},
+{name: "data.js", comp:App, raw:dataRaw, text: ""},
+]}/>
+
+Here is an example where we console log when we subscribe and unsubscribe:
+
+<ShowMany name={[
+{name: "App2", comp:App2, raw:App2Raw, text: "Check the console to see the messages."},
+{name: "Output2", comp:App2, raw:Output2Raw, text: ""},
+{name: "data2.js", comp:App2, raw:data2Raw, text: ""},
+]}/>
