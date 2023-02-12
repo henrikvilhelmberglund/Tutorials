@@ -1,0 +1,36 @@
+---
+title: DOM events as a Svelte store
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-02-12
+layout: notes
+---
+
+<script>
+  import App from "./App.svelte";
+  import AppRaw from "./App.svelte?raw";
+  import App2 from "./App2.svelte";
+  import App2Raw from "./App2.svelte?raw";
+  import Child from "./Child.svelte";
+  import ChildRaw from "./Child.svelte?raw";
+  import mousePosition from "./mousePosition";
+  import mousePositionRaw from "./mousePosition?raw";
+  import ShowMany from "$lib/ShowMany.svelte";
+  let MyComponent;
+</script>
+
+Here we are going to try to convert the following example into a Svelte store:
+
+<ShowMany name={[{name: "App.svelte", comp:App, raw:AppRaw, text: ""}]}/>
+
+Here it is as a Svelte store:
+
+<ShowMany name={[
+{name: "App2.svelte", comp:App2, raw:App2Raw, text: ""},
+{name: "Child.svelte", comp:App2, raw:ChildRaw, text: ""},
+{name: "mousePosition.js", comp:App2, raw:mousePositionRaw, text: ""}
+]}/>
+
+This page has no real explanation because this page basically broke the whole site until I found out you could have on onMount after the export in mousePosition.js (no idea if this is how it should work), but basically this is a readable store that handles DOM events as the store values.
+
+May revisit later!
