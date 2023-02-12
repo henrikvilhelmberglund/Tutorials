@@ -1,0 +1,103 @@
+---
+title: Intro to Svelte store
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-02-12
+layout: notes
+---
+
+<script>
+  import App from "./App.svelte";
+  import AppRaw from "./App.svelte?raw";
+  import Sample from "./Sample.svelte";
+  import SampleRaw from "./Sample.svelte?raw";
+  import Input from "./Input.svelte";
+  import InputRaw from "./Input.svelte?raw";
+  import Output from "./Output.svelte";
+  import OutputRaw from "./Output.svelte?raw";
+  import App2 from "./App2.svelte";
+  import App2Raw from "./App2.svelte?raw";
+  import Input2 from "./Input2.svelte";
+  import Input2Raw from "./Input2.svelte?raw";
+  import Output2 from "./Output2.svelte";
+  import Output2Raw from "./Output2.svelte?raw";
+  import App3 from "./App3.svelte";
+  import App3Raw from "./App3.svelte?raw";
+  import dataRaw from "./data.js?raw";
+  import Input3 from "./Input3.svelte";
+  import Input3Raw from "./Input3.svelte?raw";
+  import Output3 from "./Output3.svelte";
+  import Output3Raw from "./Output3.svelte?raw";
+  import App4 from "./App4.svelte";
+  import App4Raw from "./App4.svelte?raw";
+  import data2Raw from "./data2.js?raw";
+  import Input4 from "./Input4.svelte";
+  import Input4Raw from "./Input4.svelte?raw";
+  import Output4 from "./Output4.svelte";
+  import Output4Raw from "./Output4.svelte?raw";
+  import App5 from "./App5.svelte";
+  import App5Raw from "./App5.svelte?raw";
+  import data3Raw from "./data3.js?raw";
+  import ShowMany from "$lib/ShowMany.svelte";
+</script>
+
+How do we share states across two components?
+
+Here we have a component that we're later going two split into two components, each handling a different task.
+
+<ShowMany name={[{name: "App", comp:App, raw:AppRaw, text: ""},
+{name: "Sample", comp:App, raw:SampleRaw}
+]}/>
+
+After splitting it we have this:
+
+<ShowMany name={[{name: "App2", comp:App2, raw:App2Raw, text: ""},
+{name: "Input", comp:App, raw:InputRaw},
+{name: "Output", comp:App, raw:OutputRaw},
+]}/>
+
+How do we share the **value** variable?
+
+We could have **value** in App2.svelte and pass the value by **props** or **context**, but perhaps we don't want have that value variable in App2.svelte since it's really only loading the components.
+
+We could instead have another file called **data.js** where we put the value variable and the function to update it, and import these into the Input and Output components.
+
+<ShowMany name={[{name: "App3", comp:App3, raw:App3Raw, text: ""},
+{name: "Input2", comp:App3, raw:Input2Raw},
+{name: "Output2", comp:App3, raw:Output2Raw},
+{name: "data.js", comp:App3, raw:dataRaw},
+]}/>
+
+However, when we type we notice that it **doesn't work**! This is because **data.js** is a **Javascript file** and not a .svelte file, so the **value** variable isn't **reactive**.
+
+Is there a way we can fix this?
+
+We could try having a **subscription model** (event listener style) where we subscribe to the changes in data.js, when there's a change, we can rerender by ourselvees.
+
+<ShowMany name={[{name: "App4", comp:App4, raw:App4Raw, text: ""},
+{name: "Input3", comp:App4, raw:Input3Raw},
+{name: "Output3", comp:App4, raw:Output3Raw},
+{name: "data2.js", comp:App4, raw:data2Raw},
+]}/>
+
+We subscribe to the data and whenever the data changes we get notified and update the internal state (the _value variable) and since that was assigned in a .svelte file whenever _value changes we **rerender**.
+
+**This** is the concept of a **Svelte store**. 
+
+You can have a variable or some kind of state in your application that is not a part of your app component hierarchy, meaning it can live in a separate .js file.
+
+We can then import that file and use the store in **any component** without paying attention to the relationships between the components.
+
+After that we provide a **way to change the value** and a way to **subscribe** to that value so when it changes **you get notified**.
+
+Whenever we subscribe we also need a way to **unsubscribe**. 
+
+<ShowMany name={[{name: "App5", comp:App5, raw:App5Raw, text: ""},
+{name: "Input4", comp:App5, raw:Input4Raw},
+{name: "Output4", comp:App5, raw:Output4Raw},
+{name: "data3.js", comp:App5, raw:data3Raw},
+]}/>
+
+Unsubscribing in this way using onMount will make sure the subscribed function is removed when the component is **unmonted**. 
+
+We can implement a **store** like this by ourselves or use the **store creation functions provided in Svelte** which we'll do next.
