@@ -19,11 +19,13 @@
 {/each} -->
 
 {#if selected.text}
-	<div class="text-1xl self-center pl-4 font-sans font-medium text-blue-600">
+	<div
+		class="text-1xl self-center rounded-xl bg-orange-300 pl-4 font-sans font-medium text-orange-900">
 		{@html selected.text}
 	</div>
 {:else if oldtext}
-	<div class="text-1xl self-center pl-4 font-sans font-medium text-blue-600">
+	<div
+		class="text-1xl self-center rounded-xl bg-orange-300 pl-4 font-sans font-medium text-orange-900">
 		{@html oldtext}
 	</div>
 {/if}
