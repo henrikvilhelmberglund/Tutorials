@@ -1,0 +1,46 @@
+---
+title: derived() Svelte store
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-02-12
+layout: notes
+---
+
+<script>
+  import App from "./App.svelte";
+  import AppRaw from "./App.svelte?raw";
+  import App2 from "./App2.svelte";
+  import App2Raw from "./App2.svelte?raw";
+  import App3 from "./App3.svelte";
+  import App3Raw from "./App3.svelte?raw";
+  import App3v2 from "./App3v2.svelte";
+  import App3v2Raw from "./App3v2.svelte?raw";
+  import App3v3 from "./App3v3.svelte";
+  import App3v3Raw from "./App3v3.svelte?raw";
+  import App3v4 from "./App3v4.svelte";
+  import App3v4Raw from "./App3v4.svelte?raw";
+  import App3v5 from "./App3v5.svelte";
+  import App3v5Raw from "./App3v5.svelte?raw";
+  import App3v6 from "./App3v6.svelte";
+  import App3v6Raw from "./App3v6.svelte?raw";
+  import ShowMany from "$lib/ShowMany.svelte";
+</script>
+
+Derived stores are a way to **create stores from existing stores**.
+
+<ShowMany name={[{name: "App", comp:App, raw:AppRaw, text: "The derived store takes an existing store and a function to apply to the value."}]}/>
+
+You can derive from **one store** or from **many stores**.
+
+<ShowMany name={[{name: "App2", comp:App2, raw:App2Raw, text: "Here the store called multiplication is derived from two stores."}]}/>
+
+You can also get the derived value **synchronously** or **asynchronously**.
+
+<ShowMany name={[
+{name: "App3", comp:App3, raw:App3Raw, text: "When adding the second parameter 'set' the derived function is assumed to be asynchronous and the return statement doesn't do anything anymore."},
+{name: "App3v2", comp:App3v2, raw:App3v2Raw, text: "We can define an initial value like this:"},
+{name: "App3v3", comp:App3v3, raw:App3v3Raw, text: "To set the store value in this asynchronous version we use set()."},
+{name: "App3v4", comp:App3v4, raw:App3v4Raw, text: "If we wrap the set() in a setTimeout it will trigger after one second."},
+{name: "App3v5", comp:App3v5, raw:App3v5Raw, text: "As before we should make sure we clean up the function in the return statement. Here the timer stops updating if we continue typing until we stop."},
+{name: "App3v6", comp:App3v6, raw:App3v6Raw, text: "We can also create an derived store with multiple stores and an asynchronous function."},
+]}/>
