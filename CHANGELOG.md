@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+### [0.0.10](https://github.com/henrikvilhelmberglund/Tutorials/compare/v0.0.9...v0.0.10) (2023-03-27)
+
+
+### Features
+
+* :sparkles: add 031 higher order store ([a175972](https://github.com/henrikvilhelmberglund/Tutorials/commit/a1759726b39b32bded0b70f542a4e0753c8298e5))
+* :sparkles: split layout.js code into page.js to not load everything at the start ([5da7a7c](https://github.com/henrikvilhelmberglund/Tutorials/commit/5da7a7cc26c0b5035fc76df5c5fb60860172ae63))
+* :sparkles: add 030 tweened() and spring() ([9b0899f](https://github.com/henrikvilhelmberglund/Tutorials/commit/9b0899f6e5db54f2685599406f1314e43ae50c17))
+* :sparkles: add 029 tweened() ([455403b](https://github.com/henrikvilhelmberglund/Tutorials/commit/455403b89c0dc9a4071c701eb461a7d1689e3021))
+* :memo: add TODO to move post loading from layout later (unnecessary to load everything for the slugs) ([18cc811](https://github.com/henrikvilhelmberglund/Tutorials/commit/18cc8110c86aa8a0d797e5efcb7e50b1e5fcdfc8))
+* :art: awesome commit ([#5](https://github.com/henrikvilhelmberglund/Tutorials/issues/5)) ([19ef074](https://github.com/henrikvilhelmberglund/Tutorials/commit/19ef0740edcf17589bb97ea61c482fd200aa1ccc))
+* :sparkles: add svelte-course 028 ([97c64fd](https://github.com/henrikvilhelmberglund/Tutorials/commit/97c64fd7afdac117e3dc24e2062950a01d73c60b))
+* :sparkles: add language detection for prism from ShowMany name ([07e403e](https://github.com/henrikvilhelmberglund/Tutorials/commit/07e403e8497a899080244b01dd275517445a6e28))
+
+
+### Bug Fixes
+
+* :bug: fix build, move Nav ([c1b76a6](https://github.com/henrikvilhelmberglund/Tutorials/commit/c1b76a6d6ba3f61a18360f46e406d6d6c02ffc8c))
+* :bug: fix SSR part 2 ([78aa2ff](https://github.com/henrikvilhelmberglund/Tutorials/commit/78aa2ffa66a7bc48d5f729a15afbd01995e0fe9f))
+* :bug: fix SSR part 1 ([312cc36](https://github.com/henrikvilhelmberglund/Tutorials/commit/312cc3626b4f5893075d5d0bb82f6befcb18005d))
+* :bug: sort CHANGELOG by date instead of commit title order ([5398ed4](https://github.com/henrikvilhelmberglund/Tutorials/commit/5398ed4d4dd40dda22c97c0867596e971a26d349))
+
 ### [0.0.9](https://github.com/henrikvilhelmberglund/Tutorials/compare/v0.0.8...v0.0.9) (2023-02-12)
 
 
