@@ -1,0 +1,33 @@
+---
+title: tweened() and spring()
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-03-27
+layout: notes
+---
+
+<script>
+  import App from "./App.svelte";
+  import AppRaw from "./App.svelte?raw";
+  import Tweened from "./Tweened.svelte";
+  import TweenedRaw from "./Tweened.svelte?raw";
+  import TweenedObject from "./TweenedObject.svelte";
+  import TweenedObjectRaw from "./TweenedObject.svelte?raw";
+  import TweenedInterpolate from "./TweenedInterpolate.svelte";
+  import TweenedInterpolateRaw from "./TweenedInterpolate.svelte?raw";
+  import Spring from "./Spring.svelte";
+  import SpringRaw from "./Spring.svelte?raw";
+
+  import ShowMany from "$lib/ShowMany.svelte";
+</script>
+
+In addition to **tweened()** there's also **spring()**. Let's see the differences between them!
+
+<ShowMany name={[{name: "App", comp:App, raw:AppRaw, text: "Here is our starting point with no tweening or spring. The value changes instantly."},
+{name: "Tweened", comp:Tweened, raw:TweenedRaw, text: "Here we use tweened(). The value smoothly changes."},
+{name: "TweenedObject", comp:TweenedObject, raw:TweenedObjectRaw, text: "We can also tween values in objects and arrays. Here's an example with an object. Of course nested objects/arrays/values works too."},
+{name: "TweenedInterpolate", comp:TweenedInterpolate, raw:TweenedInterpolateRaw, text: "We can not tween strings by default, however if we implement an interpolate function we can do that too."},
+{name: "Spring", comp:Spring, raw:SpringRaw, text: "By using the stiffness and damping properties we can customize the behavior of our spring. We can also use value.set() with a second parameter of {hard: true} in order to instantly switch to the value if we want to."},
+]}/>
+
+As you can see tweened() is great when we want a value to animate smoothly instead of switching instantly.
