@@ -25,6 +25,8 @@ for (let path in modules) {
 			// console.log(
 			// 	`$lib/md/svelte-course/${fixedPath.substring(fixedPath.lastIndexOf("/") + 1)}/+page.svx`
 			// );
+
+			// TODO I probably don't want to do this in the layout, I only want the titles for the nav
 			post = await import(
 				`$lib/md/svelte-course/${fixedPath.substring(fixedPath.lastIndexOf("/") + 1)}/+page.svx`
 			);
