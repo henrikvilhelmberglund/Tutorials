@@ -1,0 +1,34 @@
+---
+title: tweened() Svelte store
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-03-27
+layout: notes
+---
+
+<script>
+  import App from "./App.svelte";
+  import AppRaw from "./App.svelte?raw";
+  import App2 from "./App2.svelte";
+  import App2Raw from "./App2.svelte?raw";
+  import App3 from "./App3.svelte";
+  import App3Raw from "./App3.svelte?raw";
+  import App4 from "./App4.svelte";
+  import App4Raw from "./App4.svelte?raw";
+  import App5 from "./App5.svelte";
+  import App5Raw from "./App5.svelte?raw";
+  import ShowMany from "$lib/ShowMany.svelte";
+</script>
+
+Our store is a bit boring because it just changes the value instantly. We can make it more interesting by tweening the values.
+
+If we use the tweened() store the value will move smoothly whenever it changes. First we'll make a custom version.
+
+<ShowMany name={[{name: "App", comp:App, raw:AppRaw, text: "Here is our starting point."},
+{name: "App2", comp:App2, raw:App2Raw, text: "We implement a custom store using the store contract: returns an object and contains a subscribe method. Here we cheat a bit by just using the writable store."},
+{name: "App3", comp:App3, raw:App3Raw, text: "That was a lot of work though. Thankfully Svelte has a tweened store built in already!"},
+{name: "App4", comp:App4, raw:App4Raw, text: "We can set a custom duration by passing a parameter with an object."},
+{name: "App5", comp:App5, raw:App5Raw, text: "There's also delay and easing."},
+]}/>
+
+As you can see tweened() is great when we want a value to animate smoothly instead of switching instantly.
