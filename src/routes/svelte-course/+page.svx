@@ -3,6 +3,7 @@ layout: mainpage
 ---
 
 <script>
+  import { base } from "$app/paths";
   // import Notes from "./Notes.svx";
   let list = [1, 2, 3, 4, 5];
   export let data;
@@ -26,6 +27,20 @@ layout: mainpage
     Strong,
   } from "$lib/components.js";
 </script>
+
+<nav>
+	{#if data.myPages}
+		<ul>
+			{#each data.myPages as link}
+      {#if link.bsvelte}
+				<li>
+					<a href="{base}/svelte-course/{link.title}">{link.title}</a>
+				</li>
+        {/if}
+			{/each}
+		</ul>
+	{/if}
+</nav>
 
 {#each data.myPages as item}
 {#if item.bsvelte}
