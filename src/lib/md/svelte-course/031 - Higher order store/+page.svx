@@ -1,0 +1,44 @@
+---
+title: Higher order store
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-03-27
+layout: notes
+---
+
+<script>
+  import AppInit from "./AppInit.svelte";
+  import AppInitRaw from "./AppInit.svelte?raw";
+  import App from "./App.svelte";
+  import AppRaw from "./App.svelte?raw";
+  import App2 from "./App2.svelte";
+  import App2Raw from "./App2.svelte?raw";
+  import App3 from "./App3.svelte";
+  import App3Raw from "./App3.svelte?raw";
+  import App4 from "./App4.svelte";
+  import App4Raw from "./App4.svelte?raw";
+  import App5 from "./App5.svelte";
+  import App5Raw from "./App5.svelte?raw";
+  import MousePositionRaw from "./mousePosition?raw";
+  import DebounceRaw from "./debounce?raw";
+  import ThrottleRaw from "./throttle?raw";
+  import ReadonlyRaw from "./readonly?raw";
+  import SpringRaw from "./spring?raw";
+  import ShowMany from "$lib/ShowMany.svelte";
+</script>
+
+In functional programming there is something called "higher order functions" which are functions that take in a function and return a new enhanced function.
+
+<ShowMany name={[
+{name: "AppInit", comp:AppInit, raw:AppInitRaw, text: "This is here to prevent you from seeing an angry red square when loading the index. Select the next one to see the first example!"},
+{name: "App", comp:App, raw:AppRaw, text: "Here we have a red square that follows our mouse cursor using a custom store."},
+{name: "mousePosition.js", comp:App, raw:MousePositionRaw, text: ""},
+{name: "App2", comp:App2, raw:App2Raw, text: "Here we use a higher order store debounce that debounces our red square."},
+{name: "debounce.js", comp:App2, raw:DebounceRaw, text: ""},
+{name: "App3", comp:App3, raw:App3Raw, text: "Here we have a throttled store that only updates so often."},
+{name: "throttle.js", comp:App3, raw:ThrottleRaw, text: ""},
+{name: "App4", comp:App4, raw:App4Raw, text: "Here we have a readonly store that doesn't allow you to change the value (second input field)."},
+{name: "readonly.js", comp:App4, raw:ReadonlyRaw, text: ""},
+{name: "App5", comp:App5, raw:App5Raw, text: "Here we have a higher order spring store that makes our red box springy."},
+{name: "spring.js", comp:App5, raw:SpringRaw, text: ""},
+]}/>
