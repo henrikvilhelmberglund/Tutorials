@@ -1,0 +1,44 @@
+---
+title: Reactive class property using stores
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-03-28
+layout: notes
+---
+
+<script>
+
+  import NotAnApp from "./NotAnApp.svelte";
+  import NotAnAppRaw from "./NotAnApp.svelte?raw";
+  import App from "./App.svelte";
+  import AppRaw from "./App.svelte?raw";
+  import App2 from "./App2.svelte";
+  import App2Raw from "./App2.svelte?raw";
+  import App3 from "./App3.svelte";
+  import App3Raw from "./App3.svelte?raw";
+  import App4 from "./App4.svelte";
+  import App4Raw from "./App4.svelte?raw";
+  import ClockRaw from "./clock.js?raw";
+  import Clock2Raw from "./clock2.js?raw";
+  import Clock3Raw from "./clock3.js?raw";
+  import Clock4Raw from "./clock4.js?raw";
+  import ShowMany from "$lib/ShowMany.svelte";
+  
+
+</script>
+
+How can we turn a class property into a store? By default class properties do not give reactivity unless the class itself changes somehow.
+
+<ShowMany name={[
+{name: "NotAnApp", comp:NotAnApp, raw:NotAnAppRaw, text: "Here we can see that the console.log() doesn't trigger."},
+{name: "App", comp:App, raw:AppRaw, text: "One method is to use create a store from the class and use $clock.time."},
+{name: "clock.js", comp:App, raw:ClockRaw, text: ""},
+{name: "App2", comp:App2, raw:App2Raw, text: "We can simplify this further by using a writable store."},
+{name: "clock2.js", comp:App2, raw:Clock2Raw, text: ""},
+{name: "App3", comp:App3, raw:App3Raw, text: "Another method is to use create a store from the property and use $timeStore."},
+{name: "clock3.js", comp:App3, raw:Clock3Raw, text: ""},
+{name: "App4", comp:App4, raw:App4Raw, text: "Finally we can have a private store."},
+{name: "clock4.js", comp:App4, raw:Clock4Raw, text: ""},
+]}/>
+
+Which one is the best? Uh... I'll get back to you!
