@@ -1,0 +1,56 @@
+---
+title: Undo redo with Svelte stores
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-03-30
+layout: notes
+---
+
+<script>
+	import App from "./App.svelte";
+	import AppRaw from "./App.svelte?raw";
+	import App2 from "./App2.svelte";
+	import App2Raw from "./App2.svelte?raw";
+	import App3 from "./App3.svelte";
+	import App3Raw from "./App3.svelte?raw";
+	import App4 from "./App4.svelte";
+	import App4Raw from "./App4.svelte?raw";
+	import App5 from "./App5.svelte";
+	import App5Raw from "./App5.svelte?raw";
+	import App6 from "./App6.svelte";
+	import App6Raw from "./App6.svelte?raw";
+	import approach1Raw from "./approach1?raw";
+	import approach2Raw from "./approach2?raw";
+	import approach3Raw from "./approach3?raw";
+	import approach4Raw from "./approach4?raw";
+	import approach5Raw from "./approach5?raw";
+	import ShowMany from "$lib/ShowMany.svelte";
+</script>
+
+Here we want to implement undo/redo using Svelte stores.
+
+<ShowMany
+name={[
+{ name: "App", comp: App, raw: AppRaw, text: "This is the first approach: storing a history of actions applied to the store" },
+{ name: "approach1.js", comp: App, raw: approach1Raw, text: "" },
+{ name: "App2", comp: App2, raw: App2Raw, text: "This is the second approach: storing a history of store value snapshots" },
+{ name: "approach2.js", comp: App2, raw: approach2Raw, text: "" }
+]} />
+
+Both of these approaches works fine if we want to store a primary type like **numbers** or **strings**.
+
+But, what if we want to store an **object**?
+
+<ShowMany
+name={[
+{ name: "App3", comp: App3, raw: App3Raw, text: "Here we are going to use an object! ... except it doesn't work because we're referencing the same object in our store."},
+{ name: "approach3.js", comp: App3, raw: approach3Raw, text: "" },
+{ name: "App4", comp: App4, raw: App4Raw, text: "First we will try a clone() method that uses JSON.parse() and JSON.stringify(). It's not always ideal because it will not work with circular references and any functions in the properties will get removed. Here it is fine because we've got a simple store."},
+{ name: "approach4.js", comp: App4, raw: approach4Raw, text: "" },
+{ name: "App5", comp: App5, raw: App5Raw, text: "Next we will try utilizing immutability by using the spread syntax when assigning our values. That way we won't reference the same object."},
+{ name: "approach5.js", comp: App5, raw: approach5Raw, text: "" },
+{ name: "App6", comp: App6, raw: App6Raw, text: "Finally we will try the library \"immer\" to have a nicer syntax. We didn't change anything in approach5.js so just reusing that one."},
+]} />
+
+<style>
+</style>
