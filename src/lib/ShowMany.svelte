@@ -11,7 +11,14 @@
 	let show = true;
 	import Prism from "prismjs";
 	import "prism-svelte";
-	$: highlighted = Prism.highlight(selected.raw, Prism.languages.svelte, language);
+	let highlighted;
+	$: {
+		if (language === "svelte") {
+			highlighted = Prism.highlight(selected.raw, Prism.languages.svelte, language);
+		} else if (language === "js") {
+			highlighted = Prism.highlight(selected.raw, Prism.languages.javascript, language);
+		}
+	}
 </script>
 
 <!-- {highlighted} -->
