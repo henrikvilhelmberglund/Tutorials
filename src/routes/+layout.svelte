@@ -1,6 +1,8 @@
 <script>
 	export let data;
 	import { base } from "$app/paths";
+	// TODO enable reset and fix CSS
+	// import '@unocss/reset/antfu.css'
 </script>
 
 <nav>
