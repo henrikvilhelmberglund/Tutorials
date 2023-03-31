@@ -1,0 +1,51 @@
+---
+title: get() Svelte store value
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-03-31
+layout: notes
+---
+
+<script>
+	import App from "./App.svelte";
+	import AppRaw from "./App.svelte?raw";
+  import storeRaw from "./store.js?raw";
+	import App2 from "./App2.svelte";
+	import App2Raw from "./App2.svelte?raw";
+	import App3 from "./App3.svelte";
+	import App3Raw from "./App3.svelte?raw";
+  import store2Raw from "./store2.js?raw";
+
+	import ShowMany from "$lib/ShowMany.svelte";
+
+</script>
+
+Sometimes we may want to get the value of a Svelte store outside of a Svelte component.
+
+Inside of a Svelte component it is easy, just add a dollar prefix to the store name. By doing so we automatically subscribe to the store and get its value.
+
+<ShowMany
+name={[
+{ name: "App", comp: App, raw: AppRaw, text: "Warning: this is a contrived example!" },
+{ name: "store.js", comp: App, raw: storeRaw, text: "" },
+]} />
+
+If we added the function to the Svelte component instead we can't use let $store inside of the function because stores have to be defined **in the top level**.
+
+We can use _store instead and it will work!
+
+<ShowMany
+name={[
+{ name: "App2", comp: App2, raw: App2Raw, text: "It works!" },
+]} />
+
+There is an even easier way to get the value of a store, we simply use **get()**.
+
+<ShowMany
+name={[
+  { name: "store2.js", comp: App3, raw: store2Raw, text: "" },
+  { name: "App3", comp: App3, raw: App3Raw, text: "" },
+]} />
+
+<style>
+</style>
