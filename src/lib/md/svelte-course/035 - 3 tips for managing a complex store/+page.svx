@@ -1,0 +1,113 @@
+---
+title: 3 tips for managing a complex store
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-03-31
+layout: notes
+---
+
+<script>
+	import App from "./App.svelte";
+	import AppRaw from "./App.svelte?raw";
+	import AddTodoRaw from "./AddTodo.svelte?raw";
+	import dataRaw from "./data.js?raw";
+	import EditProfileRaw from "./EditProfile.svelte?raw";
+	import markUpdateRaw from "./markUpdate.js?raw";
+	import NavbarRaw from "./Navbar.svelte?raw";
+	import NotificationRaw from "./Notification.svelte?raw";
+	import TodoListRaw from "./TodoList.svelte?raw";
+	import waitRaw from "./wait.js?raw";
+
+	import Excerpt  from "./Excerpt.svelte";
+	import ExcerptRaw from "./Excerpt.svelte?raw";
+  
+	import App2 from "./App2.svelte";
+	import App2Raw from "./App2.svelte?raw";
+	import AddTodo2Raw from "./AddTodo2.svelte?raw";
+	import data2Raw from "./data2.js?raw";
+	import EditProfile2Raw from "./EditProfile2.svelte?raw";
+	import markUpdate2Raw from "./markUpdate2.js?raw";
+	import Navbar2Raw from "./Navbar2.svelte?raw";
+	import Notification2Raw from "./Notification2.svelte?raw";
+	import TodoList2Raw from "./TodoList2.svelte?raw";
+	import wait2Raw from "./wait2.js?raw";
+
+	import ShowMany from "$lib/ShowMany.svelte";
+
+</script>
+
+Managing a complex store can be tricky and Li Hau Tan has 3 tips for optimizing complex stores.
+
+Let's begin by showing a demo application.
+
+<ShowMany
+name={[
+{ name: "App", comp: App, raw: AppRaw, text: "This kind of works but we have a problem. Whenever we add 3 todos, all of them disappear!" },
+{name: "AddTodo", comp:App, raw:AddTodoRaw, text: ""},
+{name: "EditProfile", comp:App, raw:EditProfileRaw, text: ""},
+{name: "Navbar", comp:App, raw:NavbarRaw, text: ""},
+{name: "Notification", comp:App, raw:NotificationRaw, text: ""},
+{name: "TodoList", comp:App, raw:TodoListRaw, text: ""},
+{name: "data.js", comp:App, raw:dataRaw, text: ""},
+{name: "markUpdate.js", comp:App, raw:markUpdateRaw, text: ""},
+{name: "wait.js", comp:App, raw:waitRaw, text: ""}
+]} />
+
+First off, we are using markUpdate.js which shows where our states are getting updated by showing them with a red border. We can see this causes a problem because changing our profile name changes the state everywhere even though the profile name doesn't really have anything to do with the todos or notifications. This is also something we can improve.
+
+For the bug itself we can search for `$data.todos` and see where we are changing it, but we don't find the bug that way... 😵
+
+Debugging complex stores like this can be very hard since we can change the store from **all components** in basically **any way we like**.
+
+One way we could improve this is to introduce an **action** that is the only thing that is allowed to edit the store. If we do this we can trace and find from where the action to edit the store came from.
+
+Our error is in the component **Notification** where we left in some debugging code by mistake:
+
+<ShowMany
+name={[
+{ name: "excerpt from Notification", comp: Excerpt, raw: ExcerptRaw, text: "We found our problem!" },
+]} />
+
+Let's make a better version of our app by:
+
+- making smaller stores, for example user doesn't need to be in the main store
+- creating derived stores for things that only require small things like "length of todos" to avoid extra update cycles
+- putting all our functions that modify the store **in one place**!
+
+<ShowMany
+name={[
+{ name: "App2", comp: App2, raw: App2Raw, text: "" },
+{name: "AddTodo2", comp:App2, raw:AddTodo2Raw, text: ""},
+{name: "EditProfile2", comp:App2, raw:EditProfile2Raw, text: ""},
+{name: "Navbar2", comp:App2, raw:Navbar2Raw, text: ""},
+{name: "Notification2", comp:App2, raw:Notification2Raw, text: ""},
+{name: "TodoList2", comp:App2, raw:TodoList2Raw, text: ""},
+{name: "data2.js", comp:App2, raw:data2Raw, text: ""},
+{name: "markUpdate2.js", comp:App2, raw:markUpdate2Raw, text: ""},
+{name: "wait2.js", comp:App2, raw:wait2Raw, text: ""}
+]} />
+
+After editing data2.js we can see that adding a smaller user store helped because now when we edit the user name **only the navbar updates**.
+
+In the same way when toggling a todo to be done the **navbar doesn't update** because we're using **derived stores for the smaller .length and so data**.
+
+Here are Li Hau Tan's tips:
+
+### Tip 1:
+
+If you have a complex state, avoid manipulating the writable store directly.
+
+Use state management libraries, such as state machines or reducers to help manage the state changes.
+
+### Tip 2:
+
+Have a small self-contained store.
+
+### Tip 3:
+
+If you have a large store, create a derived store out of it, so your component does not have to subscribe to all changes made to the store.
+
+Making the store immutable or proxy-based can allow us to subscribe to part of the store too!
+
+<style>
+</style>
