@@ -1,0 +1,55 @@
+---
+title: Reactive context
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-03-31
+layout: notes
+---
+
+<script>
+	import App from "./App.svelte";
+	import AppRaw from "./App.svelte?raw";
+	import Child from "./Child.svelte";
+	import ChildRaw from "./Child.svelte?raw";
+	import Grandchildren from "./Grandchildren.svelte";
+	import GrandchildrenRaw from "./Grandchildren.svelte?raw";
+	import App2 from "./App2.svelte";
+	import App2Raw from "./App2.svelte?raw";
+	import Child2 from "./Child2.svelte";
+	import Child2Raw from "./Child2.svelte?raw";
+	import Grandchildren2 from "./Grandchildren2.svelte";
+	import Grandchildren2Raw from "./Grandchildren2.svelte?raw";
+
+	import ShowMany from "$lib/ShowMany.svelte";
+</script>
+
+If we want our data to not be linked to our components in any way we could use an **external store**, but here we want to share the data between only the main component, the children and the grandchildren.
+
+That's why we will use **context** here.
+
+setContext() takes a **key** and a **value** as parameters. The context is set and get upon **component initialization** (whenever it is mounted in the DOM).
+
+This means that we can **set an initial value** but after that if we increase count in one of the components **the other won't change** because we're getting the value by value, **not by reference**.
+
+This is the reason we're going to use a store in combination with context.
+
+<ShowMany
+name={[
+{ name: "App", comp: App, raw: AppRaw, text: "This is an example where the value is synced once at component initialization but then loses sync." },
+{ name: "Child", comp: App, raw: ChildRaw, text: "" },
+{ name: "Grandchildren", comp: App, raw: GrandchildrenRaw, text: "" },
+]} />
+
+Let's try to sync the value using a store.
+
+<ShowMany
+name={[
+{ name: "App2", comp: App2, raw: App2Raw, text: "Here we're using a writable store." },
+{ name: "Child2", comp: App2, raw: Child2Raw, text: "" },
+{ name: "Grandchildren2", comp: App2, raw: Grandchildren2Raw, text: "" },
+]} />
+
+It works! If we want to sync values down the chain of components we can use **store in combination with context**.
+
+<style>
+</style>
