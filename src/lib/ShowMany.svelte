@@ -39,7 +39,7 @@
 	</div>
 {/if}
 
-<div>
+<div class="w-200 container mx-auto">
 	<div class="rounded-b-0 rounded-xl border-4 border-b-0 border-solid border-orange-500 p-2">
 		<svelte:component this={selected.comp} />
 	</div>
@@ -49,8 +49,7 @@
 			>{show ? "🔼" : "🔽"}</button>
 		{#each Object.entries(name) as [index, obj]}
 			<label
-				class="rounded-r-0 rounded-bl-0 rounded-t-0 -top-4 left-0 mr-2 rounded-xl rounded-br-xl {obj.name ===
-				selected.name
+				class="rounded-b-0 mr-2 rounded-md pb-px {obj.name === selected.name
 					? 'bg-orange-500'
 					: 'bg-slate-300 hover:bg-orange-300'} p-1 text-black">
 				<input
