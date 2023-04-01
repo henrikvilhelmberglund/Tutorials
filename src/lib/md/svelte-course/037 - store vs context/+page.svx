@@ -1,0 +1,148 @@
+---
+title: Store vs context
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-03-31
+layout: notes
+---
+
+<script>
+  import { base } from "$app/paths";
+	import App from "./App.svelte";
+	import AppRaw from "./App.svelte?raw";
+	import Parent1 from "./Parent1.svelte";
+	import Parent1Raw from "./Parent1.svelte?raw";
+	import Parent2 from "./Parent2.svelte";
+	import Parent2Raw from "./Parent2.svelte?raw";
+	import Child from "./Child.svelte";
+	import ChildRaw from "./Child.svelte?raw";
+  import storeRaw from "./store?raw";
+  import XY from "./XY.svelte";
+
+	import ShowMany from "$lib/ShowMany.svelte";
+
+
+  import GlobalStatic from "./GlobalStatic.svelte";
+  import GlobalStaticRaw from "./GlobalStatic.svelte?raw";
+  import Button from "./Button.svelte";
+  import ButtonRaw from "./Button.svelte?raw";
+  import Controller from "./Controller.svelte";
+  import ControllerRaw from "./Controller.svelte?raw";
+  import Form from "./Form.svelte";
+  import FormRaw from "./Form.svelte?raw";
+  import Game from "./Game.svelte";
+  import GameRaw from "./Game.svelte?raw";
+  import dataRaw from "./data?raw";
+  
+  import LocalStatic from "./LocalStatic.svelte";
+  import LocalStaticRaw from "./LocalStatic.svelte?raw";
+  import Button2 from "./Button2.svelte";
+  import Button2Raw from "./Button2.svelte?raw";
+  import Controller2 from "./Controller2.svelte";
+  import Controller2Raw from "./Controller2.svelte?raw";
+  import Form2 from "./Form2.svelte";
+  import Form2Raw from "./Form2.svelte?raw";
+  import Game2 from "./Game2.svelte";
+  import Game2Raw from "./Game2.svelte?raw";
+
+  import GlobalDynamic from "./GlobalDynamic.svelte";
+  import GlobalDynamicRaw from "./GlobalDynamic.svelte?raw";
+  import Button3 from "./Button3.svelte";
+  import Button3Raw from "./Button3.svelte?raw";
+  import Controller3 from "./Controller3.svelte";
+  import Controller3Raw from "./Controller3.svelte?raw";
+  import Form3 from "./Form3.svelte";
+  import Form3Raw from "./Form3.svelte?raw";
+  import Game3 from "./Game3.svelte";
+  import Game3Raw from "./Game3.svelte?raw";
+  import data3Raw from "./data3?raw";
+
+  import LocalDynamic from "./LocalDynamic.svelte";
+  import LocalDynamicRaw from "./LocalDynamic.svelte?raw";
+  import Button4 from "./Button4.svelte";
+  import Button4Raw from "./Button4.svelte?raw";
+  import Controller4 from "./Controller4.svelte";
+  import Controller4Raw from "./Controller4.svelte?raw";
+  import Form4 from "./Form4.svelte";
+  import Form4Raw from "./Form4.svelte?raw";
+  import Game4 from "./Game4.svelte";
+  import Game4Raw from "./Game4.svelte?raw";
+  let selected;
+
+
+
+</script>
+
+What is the difference between stores and context? Let's find out!
+
+<ShowMany
+name={[
+{ name: "App", comp: App, raw: AppRaw, text: "" },
+{ name: "Parent1", comp: App, raw: Parent1Raw, text: "" },
+{ name: "Parent2", comp: App, raw: Parent2Raw, text: "" },
+{ name: "Child", comp: App, raw: ChildRaw, text: "" },
+{ name: "store.js", comp: App, raw: storeRaw, text: "" },
+]} />
+
+Here we have an example where Parent1 and Parent2 are identical. They both import a Child component.
+
+If you change the Store slider you can see that **both of the sliders move** (and the childrens' values **both update**), but if you change the context slider **only one of them move** (and **one of** the children's value updates).
+
+This is because stores **share their data everywhere** and context **only shares data between related components**. That is, only the Child instance in Parent1 will listen to Parent1's context and only the Child instance in Parent2 will listen to Parent2's context.
+
+This also means that stores and context **are not mutually exclusive**. We could have a context that uses stores to get a **reactive context**. [See this for more info]({base}/svelte-course/034%20-%20Reactive%20context)
+
+### When should I use a store and when should I use context?
+
+Here is another way to think about this question. Click the buttons to see the different components!
+
+<XY bind:selected></XY>
+
+{#if selected === "Global Static"}
+<ShowMany
+name={[
+{ name: "GlobalStatic", comp: GlobalStatic, raw: GlobalStaticRaw, text: "Global Static means that the colors are global and statically imported from a data.js file. No stores or context are needed." },
+{ name: "Button", comp: GlobalStatic, raw: ButtonRaw, text: "" },
+{ name: "Controller", comp: GlobalStatic, raw: ControllerRaw, text: "" },
+{ name: "Form", comp: GlobalStatic, raw: FormRaw, text: "" },
+{ name: "Game", comp: GlobalStatic, raw: GameRaw, text: "" },
+{ name: "data.js", comp: GlobalStatic, raw: dataRaw, text: "" },
+]} />
+
+{:else if selected === "Local Static"}
+<ShowMany
+name={[
+{ name: "LocalStatic", comp: LocalStatic, raw: LocalStaticRaw, text: "Local Static means that the colors are local since we're using context but also static since we're not using a store. The reason we're using context instead of props is that the place that sets the color is very high up in the component tree: LocalStatic.svelte. Since we use context any children can use getContext() and we don't have to pass props from parent -> child -> grandchild and so on." },
+{ name: "Button2", comp: LocalStatic, raw: Button2Raw, text: "" },
+{ name: "Controller2", comp: LocalStatic, raw: Controller2Raw, text: "" },
+{ name: "Form2", comp: LocalStatic, raw: Form2Raw, text: "" },
+{ name: "Game2", comp: LocalStatic, raw: Game2Raw, text: "" },
+]} />
+
+{:else if selected === "Global Dynamic"}
+
+<ShowMany
+name={[
+{ name: "GlobalDynamic", comp: GlobalDynamic, raw: GlobalDynamicRaw, text: "Global Dynamic means that the colors are global but we're using a store to have a dynamic color value that's coming from a color picker." },
+{ name: "Button3", comp: GlobalDynamic, raw: Button3Raw, text: "" },
+{ name: "Controller3", comp: GlobalDynamic, raw: Controller3Raw, text: "" },
+{ name: "Form3", comp: GlobalDynamic, raw: Form3Raw, text: "" },
+{ name: "Game3", comp: GlobalDynamic, raw: Game3Raw, text: "" },
+{ name: "data3.js", comp: GlobalDynamic, raw: data3Raw, text: "" },
+]} />
+
+{:else if selected === "Local Dynamic"}
+
+<ShowMany
+name={[
+{ name: "LocalDynamic", comp: LocalDynamic, raw: LocalDynamicRaw, text: "Local Dynamic means that the colors are local since we're using context and dynamic since we're using multiple stores." },
+{ name: "Button4", comp: LocalDynamic, raw: Button4Raw, text: "" },
+{ name: "Controller4", comp: LocalDynamic, raw: Controller4Raw, text: "" },
+{ name: "Form4", comp: LocalDynamic, raw: Form4Raw, text: "" },
+{ name: "Game4", comp: LocalDynamic, raw: Game4Raw, text: "" },
+]} />
+
+{/if}
+
+<style>
+</style>
