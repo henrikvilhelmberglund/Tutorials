@@ -1,5 +1,5 @@
 <script>
-	let xy = { x: ["Static", "Dynamic"], y: ["Global", "Local"] };
+	export let xy;
 
 	let arr = [];
 
@@ -9,15 +9,8 @@
 		}
 	}
 
-	let descriptions = {
-		"Global Dynamic": "",
-		"Global Static": "",
-		"Local Dynamic": "Local dynamic description here",
-		"Local Static":
-			"The colors depend on where the component resides in the component tree. Uses context.",
-	};
 
-	export let selected = "Global Static";
+	export let selected;
 </script>
 
 <div class="grid grid-cols-3 grid-rows-3 gap-4">
@@ -55,11 +48,6 @@
 	{/each}
 </div>
 
-<!-- {#if selected}
-	<p class="text-lg">
-		{descriptions[selected]}
-	</p>
-{/if} -->
 <style>
 	* {
 		font-family: sans-serif;

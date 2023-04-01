@@ -17,7 +17,7 @@ layout: notes
 	import Child from "./Child.svelte";
 	import ChildRaw from "./Child.svelte?raw";
   import storeRaw from "./store?raw";
-  import XY from "./XY.svelte";
+  import XY from "$lib/XY.svelte";
 
 	import ShowMany from "$lib/ShowMany.svelte";
 
@@ -67,8 +67,9 @@ layout: notes
   import Form4Raw from "./Form4.svelte?raw";
   import Game4 from "./Game4.svelte";
   import Game4Raw from "./Game4.svelte?raw";
-  let selected;
+  let selected = "Global Static";
 
+  let xy = { x: ["Static", "Dynamic"], y: ["Global", "Local"] };
 
 
 </script>
@@ -96,7 +97,7 @@ This also means that stores and context **are not mutually exclusive**. We could
 
 Here is another way to think about this question. Click the buttons to see the different components!
 
-<XY bind:selected></XY>
+<XY bind:selected {xy}></XY>
 
 {#if selected === "Global Static"}
 <ShowMany
