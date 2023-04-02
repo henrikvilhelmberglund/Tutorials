@@ -1,0 +1,45 @@
+---
+title: What if the Svelte action feature does not exist?
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-04-02
+layout: notes
+---
+
+<script>
+  import App from "./App.svelte";
+  import AppRaw from "./App.svelte?raw";
+  import App2 from "./App2.svelte";
+  import App2Raw from "./App2.svelte?raw";
+  import App3 from "./App3.svelte";
+  import App3Raw from "./App3.svelte?raw";
+  import App4 from "./App4.svelte";
+  import App4Raw from "./App4.svelte?raw";
+  import ShowMany from "$lib/ShowMany.svelte";
+</script>
+
+We can think of a hypothetical scenario where Svelte does not have the feature Svelte actions.
+
+Would this make what we want to do impossible? Or still possible, just harder?
+
+In the first case we can think of the feature as an **enabling** feature where it allows us to do something new.
+
+In the second case we can think of the feature as an **facilitating** feature where it helps us do something that could already be done in an easier way.
+
+<ShowMany name={[{name: "App", comp:App, raw:AppRaw, text: "Here is our demo app using actions. In App2, let's rewrite it without actions."},
+{name: "App2", comp:App2, raw:App2Raw, text: "Here is our demo app without actions. As you can see it works. What's the point of actions then?"}
+]}/>
+
+We might want to have **several elements with actions**. See this:
+
+<ShowMany name={[{name: "App3", comp:App3, raw:App3Raw, text: "We've got multiple buttons with the same action and it still works."},
+]}/>
+
+How would we do this without actions? Let's see.
+
+<ShowMany name={[{name: "App4", comp:App4, raw:App4Raw, text: "This works but is really ugly since we had to duplicate a lot of things."},
+]}/>
+
+We can see that a major benefit of actions is that they **encapsulate** the function and create new instances of the function that **are scoped to each element**.
+
+This means that we can **easily reuse actions** without creating extra variables/functions for each element.
