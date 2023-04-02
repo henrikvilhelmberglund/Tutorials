@@ -1,0 +1,44 @@
+---
+title: Creating events with Svelte actions
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-04-02
+layout: notes
+---
+
+<script>
+  import ShowMany from "$lib/ShowMany.svelte";
+  import App from "./App.svelte";
+  import AppRaw from "./App.svelte?raw";
+  import App2 from "./App2.svelte";
+  import App2Raw from "./App2.svelte?raw";
+
+  import Example1 from "./Example1.svelte";
+  import Example1Raw from "./Example1.svelte?raw";
+  import Example2 from "./Example2.svelte";
+  import Example2Raw from "./Example2.svelte?raw";
+  import Result1 from "./Result1.svelte";
+  import Result1Raw from "./Result1.svelte?raw";
+  import Result2 from "./Result2.svelte";
+  import Result2Raw from "./Result2.svelte?raw";
+</script>
+
+How do we create events using actions? Here's an example:
+
+<ShowMany name={[
+{name: "Example1", comp:App, raw:Example1Raw, text: "This is before we added an action, we're using a callback."},
+{name: "Result1", comp:App, raw:Result1Raw, text: "We added an action using dispatchEvent()."},
+{name: "App", comp:App, raw:AppRaw, text: "This is the wrapper that displays both of the components."},
+]}/>
+
+Another example here where we create an action and an event:
+
+<ShowMany name={[
+{name: "Example2", comp:App2, raw:Example2Raw, text: "This is before we added an action."},
+{name: "Result2", comp:App2, raw:Result2Raw, text: "Again, we added element.dispatchEvent(new CustomEvent(\"tripleClick\")); which allows us to use on:tripleClick. Nice!"},
+{name: "App2", comp:App2, raw:App2Raw, text: "This is the wrapper that displays both of the components."},
+]}/>
+
+I added an extra button to make it more obvious that we can have several elements that use the **same action**, with **differing custom event implementations**, which could be pretty useful.
+
+One important thing is to **not forget to remove the event listeners in destroy()!**
