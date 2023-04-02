@@ -1,0 +1,24 @@
+---
+title: Dynamic parameters in Svelte actions
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-04-02
+layout: notes
+---
+
+<script>
+  import App from "./App.svelte";
+  import AppRaw from "./App.svelte?raw";
+  import App2 from "./App2.svelte";
+  import App2Raw from "./App2.svelte?raw";
+  import ShowMany from "$lib/ShowMany.svelte";
+</script>
+
+As we said before, Svelte actions are run when the component is **initialized** (mounted to the DOM). How do we make a dynamic parameter then? How do we make the action do something when the variable changes?
+
+<ShowMany name={[{name: "App", comp:App, raw:AppRaw, text: "Here our div using an action doesn't update when we change the name."}]}/>
+
+Luckily for us you can have another function in the action return statement called **update()**. It will run every time the params change. Let's try it!
+
+<ShowMany name={[{name: "App2", comp:App2, raw:App2Raw, text: "If we add an update() function in the return statement we can do something when the params change."}]}/>
+
