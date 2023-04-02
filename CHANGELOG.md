@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+### [0.0.11](https://github.com/henrikvilhelmberglund/Tutorials/compare/v0.0.10...v0.0.11) (2023-04-02)
+
+
+### Features
+
+* :sparkles: add 038 intro to svelte action ([c831340](https://github.com/henrikvilhelmberglund/Tutorials/commit/c831340ad2d5c35dacd6ccb51fe4ed90ef49a4fb))
+* :sparkles: make XY component generic ([5acd646](https://github.com/henrikvilhelmberglund/Tutorials/commit/5acd64653e24fb306446b0c3e964c86c4917086b))
+* :sparkles: add 037 store vs context ([f9605aa](https://github.com/henrikvilhelmberglund/Tutorials/commit/f9605aa9a5c44531b0dd2458a21c3b8e3a14ad5b))
+* :memo: add TODO ([292be8a](https://github.com/henrikvilhelmberglund/Tutorials/commit/292be8a58364a23b8f89882dfa1b5df4195aaf1b))
+* :sparkles: add 036 get() Svelte store value ([8620027](https://github.com/henrikvilhelmberglund/Tutorials/commit/8620027bca4ffdb7ea8f3807f3753bedc8cd44c1))
+* :sparkles: add 035 3 tips  for managing a complex store ([164ddf3](https://github.com/henrikvilhelmberglund/Tutorials/commit/164ddf37b331e059d608112e4ddc6b4c441a05d8))
+* :sparkles: add 034 reactive context ([f9d52e7](https://github.com/henrikvilhelmberglund/Tutorials/commit/f9d52e70cf15f45d0fb2288ec7d5ac48bd3dc1e6))
+* :sparkles: add 033 undo redo with svelte store ([87b0617](https://github.com/henrikvilhelmberglund/Tutorials/commit/87b06178fd1007ff2139defde9709018117871eb))
+* :sparkles: add 032 reactive class property ([706a4fa](https://github.com/henrikvilhelmberglund/Tutorials/commit/706a4faa30e7025f01df74b8636acd4fadc9f4c8))
+
+
+### Bug Fixes
+
+* :wheelchair: WCAG ([174cc85](https://github.com/henrikvilhelmberglund/Tutorials/commit/174cc858f870b46eae33db991ccc0f413237d521))
+* :lipstick: update styling for ShowMany to prevent layout shifting ([b758bd4](https://github.com/henrikvilhelmberglund/Tutorials/commit/b758bd43f0862f83a344e163743b22a1c79a1367))
+* :lipstick: add bottom padding for notes mdsvex layout to prevent layout shifting ([206de58](https://github.com/henrikvilhelmberglund/Tutorials/commit/206de58044a5d4df595f27e6dd24863a24ad4ddc))
+* :bug: fix JS syntax highlighting ([9cd5443](https://github.com/henrikvilhelmberglund/Tutorials/commit/9cd54430a27fb67817a41704c875192fb546eaea))
+
 ### [0.0.10](https://github.com/henrikvilhelmberglund/Tutorials/compare/v0.0.9...v0.0.10) (2023-03-27)
 
 
