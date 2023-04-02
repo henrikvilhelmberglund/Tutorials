@@ -1,0 +1,57 @@
+---
+title: Reusing event listeners with Svelte actions
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-04-02
+layout: notes
+---
+
+<script>
+  import ShowMany from "$lib/ShowMany.svelte";
+  import App from "./App.svelte";
+  import AppRaw from "./App.svelte?raw";
+  import App2 from "./App2.svelte";
+  import App2Raw from "./App2.svelte?raw";
+  import App3 from "./App3.svelte";
+  import App3Raw from "./App3.svelte?raw";
+  import Example1 from "./Example1.svelte";
+  import Example1Raw from "./Example1.svelte?raw";
+  import Example2 from "./Example2.svelte";
+  import Example2Raw from "./Example2.svelte?raw";
+  import Example3 from "./Example3.svelte";
+  import Example3Raw from "./Example3.svelte?raw";
+  import Result1 from "./Result1.svelte";
+  import Result1Raw from "./Result1.svelte?raw";
+  import Result2 from "./Result2.svelte";
+  import Result2Raw from "./Result2.svelte?raw";
+  import Result3 from "./Result3.svelte";
+  import Result3Raw from "./Result3.svelte?raw";
+</script>
+
+Here we're going to compare event listeners with actions. Meaning, we will rewrite the code using event listeners as code using actions instead.
+
+<ShowMany name={[
+{name: "Example1", comp:App, raw:Example1Raw, text: "Here we're using currentTarget to avoid binding to multiple variables. Very vanilla JS!"},
+{name: "Result1", comp:App, raw:Result1Raw, text: "Here it is using actions. It is a bit longer since we need to add the event listeners ourselves."},
+{name: "App", comp:App, raw:AppRaw, text: "This is the wrapper that displays both of the components."},
+]}/>
+
+Next example:
+
+<ShowMany name={[
+{name: "Example2", comp:App2, raw:Example2Raw, text: "Here we use a higher order function to create a new function. This could lead to lower performance since we do this whenever input1, input2 or input3 changes."},
+{name: "Result2", comp:App2, raw:Result2Raw, text: "Here it is using actions. There's no need to create new functions when inputs change so it could have higher performance."},
+{name: "App2", comp:App2, raw:App2Raw, text: "This is the wrapper that displays both of the components."},
+]}/>
+
+Final example:
+
+<ShowMany name={[
+{name: "Example3", comp:App3, raw:Example3Raw, text: "Here we wait for user input to display a div if the input was the same as our secret."},
+{name: "Result3", comp:App3, raw:Result3Raw, text: "Here it is using actions. We can easily have multiple inputs with differing secrets."},
+{name: "App3", comp:App3, raw:App3Raw, text: "This is the wrapper that displays both of the components."},
+]}/>
+
+So when should you use event listeners and when should you use actions? **It depends**. Preference of course but also what you're looking for, do you need multiple elements with the same function? Maybe use actions. Is it a one-off thing? Maybe event listeners.
+
+Both methods work! 😊
