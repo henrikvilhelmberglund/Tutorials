@@ -2,6 +2,12 @@
 	export let name;
 	let i = 0;
 	let selected = name[0];
+
+	name.forEach((singleName) => {
+		if (!singleName.name.includes(".js") && !singleName.name.includes(".svelte")) {
+			singleName.name += ".svelte";
+		}
+	});
 	let oldtext;
 	$: if (selected.text) {
 		oldtext = selected.text;
