@@ -1,0 +1,57 @@
+---
+title: Integrating UI libraries with Svelte actions
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-04-02
+layout: notes
+---
+
+<script>
+  import UsingBind from "./UsingBind.svelte";
+  import UsingBindRaw from "./UsingBind.svelte?raw";
+  import UsingAction from "./UsingAction.svelte";
+  import UsingActionRaw from "./UsingAction.svelte?raw";
+  import UsingActionMultipleButtons from "./UsingActionMultipleButtons.svelte";
+  import UsingActionMultipleButtonsRaw from "./UsingActionMultipleButtons.svelte?raw";
+  import UsingActionMultipleButtonsParams from "./UsingActionMultipleButtonsParams.svelte";
+  import UsingActionMultipleButtonsParamsRaw from "./UsingActionMultipleButtonsParams.svelte?raw";
+  import UsingActionMultipleButtonsParamsUpdate from "./UsingActionMultipleButtonsParamsUpdate.svelte";
+  import UsingActionMultipleButtonsParamsUpdateRaw from "./UsingActionMultipleButtonsParamsUpdate.svelte?raw";
+  import UsingActionOpen from "./UsingActionOpen.svelte";
+  import UsingActionOpenRaw from "./UsingActionOpen.svelte?raw";
+ 
+  import ShowMany from "$lib/ShowMany.svelte";
+</script>
+
+Let's say we found a cool UI library with a datetime picker that we wanted to use. Could we integrate it with Svelte? Let's see.
+
+Here is the datetimer picker we're going to use: [https://flatpickr.js.org](https://flatpickr.js.org)
+
+<ShowMany name={[
+{name: "UsingBind", comp:UsingBind, raw:UsingBindRaw, text: "Click the button to show the date picker!"},
+{name: "UsingAction", comp:UsingAction, raw:UsingActionRaw, text: "Click the button to show the date picker!"},
+]}/>
+
+The benefit of actions is that we can easily have \*\*several buttons with datepickers.
+
+<ShowMany name={[
+{name: "UsingActionMultipleButtons", comp:UsingActionMultipleButtons, raw:UsingActionMultipleButtonsRaw, text: "This would be harder when binding to buttons since we would need a separate variable and function for each button."},
+]}></ShowMany>
+
+Another benefit is that we can **easily pass parameters**.
+
+<ShowMany name={[
+{name: "UsingActionMultipleButtonsParams", comp:UsingActionMultipleButtonsParams, raw:UsingActionMultipleButtonsParamsRaw, text: "We simply pass our config as an object inside the action, then pass the config to flatpickr() inside our function. Super easy!"},
+]}></ShowMany>
+
+We can even have a variable that sets our config. We just need to implement update() in our action function.
+
+<ShowMany name={[
+{name: "UsingActionMultipleButtonsParamsUpdate", comp:UsingActionMultipleButtonsParamsUpdate, raw:UsingActionMultipleButtonsParamsUpdateRaw, text: "We simply pass our config as an object inside the action, then pass the config to flatpickr() inside our function. Super easy!"},
+]}></ShowMany>
+
+We could also have a checkbox that uses the libraries methods to open and close itself.
+
+<ShowMany name={[
+  {name: "UsingActionOpen", comp:UsingActionOpen, raw:UsingActionOpenRaw, text: ""},
+  ]}></ShowMany>
