@@ -37,12 +37,5 @@
   fixed top-24 left-[50%] rounded-md border-solid border-black bg-green-400 p-8 text-2xl ">
 		Hello, I am a beautiful modal!
 	</div>
-	<div class="blur-me fixed top-0 left-0 z-50 h-full w-full" />
+	<div class="fixed top-0 left-0 z-50 h-full w-full backdrop-blur-lg" />
 {/if}
-
-<style>
-	/* UnoCSS being slighty broken for now :) */
-	.blur-me {
-		backdrop-filter: blur(16px);
-	}
-</style>
