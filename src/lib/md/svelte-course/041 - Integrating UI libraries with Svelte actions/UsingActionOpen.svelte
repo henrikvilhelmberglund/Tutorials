@@ -1,4 +1,5 @@
 <script>
+  import flatpickr from "flatpickr";
 	function datepicker(element, open) {
 		const calender = flatpickr(element);
 
@@ -17,11 +18,6 @@
 	}
 	let checked = false;
 </script>
-
-<svelte:head>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
-	<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-</svelte:head>
 
 <input type="checkbox" bind:checked />
 <button use:datepicker={checked}>Datepicker</button>

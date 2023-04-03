@@ -1,4 +1,5 @@
 <script>
+  import flatpickr from "flatpickr";
 	function datepicker(element, config) {
 		const calender = flatpickr(element, config);
 
@@ -10,11 +11,6 @@
 	}
 	let showMonths = 3;
 </script>
-
-<svelte:head>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
-	<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-</svelte:head>
 
 <input type="number" bind:value={showMonths} />
 
