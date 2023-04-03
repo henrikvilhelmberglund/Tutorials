@@ -1,0 +1,27 @@
+---
+title: use:clickOutside
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-04-03
+layout: notes
+---
+
+<script>
+  import ShowMany from "$lib/ShowMany.svelte";
+  import App from "./App.svelte";
+  import AppRaw from "./App.svelte?raw"; 
+  import App2 from "./App2.svelte";
+  import App2Raw from "./App2.svelte?raw"; 
+
+</script>
+
+This is an example of **use:clickOutside** which logs to console whenever you click outside of the element.
+<ShowMany name={[
+{name: "App", comp:App, raw:AppRaw, text: "Here we have two input fields. The order of the bind directive and use directive are different in each input. Type in each field and see what happens."},
+]}/>
+
+Let's make it a bit more fancy:
+
+<ShowMany name={[
+{name: "App2", comp:App2, raw:App2Raw, text: "The right input field doesn't bind because we're using event.stopImmediatePropagation()."},
+]}/>
