@@ -19,7 +19,7 @@
 				nextElementToFocus = nextNextElementToFocus;
 			},
 			destroy() {
-				element.removeElementListener("keydown", nextOnEnter);
+				element.removeEventListener("keydown", nextOnEnter);
 			},
 		};
 	}
