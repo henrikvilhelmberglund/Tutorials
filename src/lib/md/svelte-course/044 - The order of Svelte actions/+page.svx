@@ -1,0 +1,34 @@
+---
+title: The order of Svelte actions
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-04-03
+layout: notes
+---
+
+<script>
+  import ShowMany from "$lib/ShowMany.svelte";
+  import App from "./App.svelte";
+  import AppRaw from "./App.svelte?raw"; 
+  import App2 from "./App2.svelte";
+  import App2Raw from "./App2.svelte?raw"; 
+
+</script>
+
+Does the order of Svelte actions matter? **Yes!** Let's find out why.
+
+<ShowMany name={[
+{name: "App", comp:App, raw:AppRaw, text: "Here we have two input fields. The order of the bind directive and use directive are different in each input. Type in each field and see what happens."},
+]}/>
+
+As you can see the left input always ends with a **lowercase letter*. This is because we're binding to the value **before our action** so the saved result doesn't include the result of the action function.
+
+The right input ends with an **uppercase letter** since we're binding **after we have run the action**.
+
+Note that if you have event.stopImmediatePropagation() in your code the action will "eat" the event and prevent the bind.
+
+<ShowMany name={[
+{name: "App2", comp:App2, raw:App2Raw, text: "The right input field doesn't bind because we're using event.stopImmediatePropagation()."},
+]}/>
+
+So, pay attention to **directive order** and functions like **event.stopImmediatePropagation()** in order to use actions successfully.
