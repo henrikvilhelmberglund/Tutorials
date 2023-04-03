@@ -23,6 +23,11 @@ layout: notes
   import ShowMany from "$lib/ShowMany.svelte";
 </script>
 
+<svelte:head>
+
+  <link rel="stylesheet" href="node_modules/flatpickr/dist/flatpickr.min.css">
+</svelte:head>
+
 Let's say we found a cool UI library with a datetime picker that we wanted to use. Could we integrate it with Svelte? Let's see.
 
 Here is the datetimer picker we're going to use: [https://flatpickr.js.org](https://flatpickr.js.org)
@@ -53,5 +58,5 @@ We can even have a variable that sets our config. We just need to implement upda
 We could also have a checkbox that uses the libraries methods to open and close itself.
 
 <ShowMany name={[
-  {name: "UsingActionOpen", comp:UsingActionOpen, raw:UsingActionOpenRaw, text: ""},
-  ]}></ShowMany>
+{name: "UsingActionOpen", comp:UsingActionOpen, raw:UsingActionOpenRaw, text: ""},
+]}></ShowMany>
