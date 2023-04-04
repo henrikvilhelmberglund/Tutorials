@@ -1,0 +1,45 @@
+---
+title: use:tooltip
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-04-03
+layout: notes
+---
+
+<script>
+  import ShowMany from "$lib/ShowMany.svelte";
+  import App from "./App.svelte";
+  import AppRaw from "./App.svelte?raw"; 
+  import App2 from "./App2.svelte";
+  import App2Raw from "./App2.svelte?raw"; 
+  import App3 from "./App3.svelte";
+  import App3Raw from "./App3.svelte?raw"; 
+	import ElementWithTooltip from "./ElementWithTooltip.svelte";
+  import ElementWithTooltipRaw from "./ElementWithTooltip.svelte?raw";
+import Tooltip from "./Tooltip.svelte";
+import TooltipRaw from "./Tooltip.svelte?raw";
+import tooltipRaw from "./tooltip?raw";
+
+</script>
+
+This is an example of **use:tooltip** which changes the tooltip displayed when hovering over an element.
+
+With HTML you can have a tooltip with a title="" attribute on an element. For example:
+
+<ShowMany name={[
+{name: "ElementWithTooltip", comp:ElementWithTooltip, raw:ElementWithTooltipRaw, text: ""},
+]}/>
+
+But we would like something more fancy. First let's write it as a **component** and then we'll refactor it to an **action**.
+
+<ShowMany name={[
+{name: "App2", comp:App2, raw:App2Raw, text: "This is our Tooltip component!"},
+{name: "Tooltip", comp:App2, raw:TooltipRaw, text: ""},
+]}/>
+
+Now let's rewrite it as an action.
+
+<ShowMany name={[
+{name: "App3", comp:App3, raw:App3Raw, text: "This is our tooltip action!"},
+{name: "tooltip.js", comp:App3, raw:tooltipRaw, text: ""},
+]}/>
