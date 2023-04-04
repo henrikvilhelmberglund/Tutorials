@@ -8,6 +8,7 @@ import presetUno from "@unocss/preset-uno";
 const config = {
 	plugins: [
 		UnoCSS({
+      include: [/\.svelte$/, /\.svx$/, /\.js$/],
 			mode: "svelte-scoped",
 			presets: [
 				presetUno(),
@@ -15,17 +16,17 @@ const config = {
 					prefix: "i-",
 					extraProperties: {
 						display: "inline-block",
-						"vertical-align": "middle"
-					}
-				})
-			]
+						"vertical-align": "middle",
+					},
+				}),
+			],
 		}),
 		sveltekit(),
-		examples
+		examples,
 	],
 	build: {
-		target: "esnext"
-	}
+		target: "esnext",
+	},
 };
 
 export default config;
