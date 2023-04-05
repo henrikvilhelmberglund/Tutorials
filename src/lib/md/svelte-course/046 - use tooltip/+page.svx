@@ -14,11 +14,16 @@ layout: notes
   import App2Raw from "./App2.svelte?raw"; 
   import App3 from "./App3.svelte";
   import App3Raw from "./App3.svelte?raw"; 
+  import App4 from "./App4.svelte";
+  import App4Raw from "./App4.svelte?raw"; 
 	import ElementWithTooltip from "./ElementWithTooltip.svelte";
   import ElementWithTooltipRaw from "./ElementWithTooltip.svelte?raw";
 import Tooltip from "./Tooltip.svelte";
 import TooltipRaw from "./Tooltip.svelte?raw";
 import tooltipRaw from "./tooltip?raw";
+import TooltipFromAction from "./TooltipFromAction.svelte";
+import TooltipFromActionRaw from "./TooltipFromAction.svelte?raw";
+import tooltip2Raw from "./tooltip2?raw";
 
 </script>
 
@@ -43,3 +48,12 @@ Now let's rewrite it as an action.
 {name: "App3", comp:App3, raw:App3Raw, text: "This is our tooltip action!"},
 {name: "tooltip.js", comp:App3, raw:tooltipRaw, text: ""},
 ]}/>
+
+There is also a third way, we can use **both** a component and an action!
+
+<ShowMany name={[
+  {name: "App4", comp:App4, raw:App4Raw, text: "This is our component and action combined!"},
+  {name: "TooltipFromAction", comp:App4, raw:TooltipFromActionRaw, text: ""},
+  {name: "tooltip2.js", comp:App4, raw:tooltip2Raw, text: ""},
+  ]}/>
+  
