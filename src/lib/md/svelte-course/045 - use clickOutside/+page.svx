@@ -17,11 +17,11 @@ layout: notes
 
 This is an example of **use:clickOutside** which logs to console whenever you click outside of the element.
 <ShowMany name={[
-{name: "App", comp:App, raw:AppRaw, text: "Here we have two input fields. The order of the bind directive and use directive are different in each input. Type in each field and see what happens."},
+{name: "App", comp:App, raw:AppRaw, text: ""},
 ]}/>
 
 Let's make it a bit more fancy:
 
 <ShowMany name={[
-{name: "App2", comp:App2, raw:App2Raw, text: "The right input field doesn't bind because we're using event.stopImmediatePropagation()."},
+{name: "App2", comp:App2, raw:App2Raw, text: ""},
 ]}/>
