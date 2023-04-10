@@ -1,0 +1,24 @@
+---
+title: use:viewport
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-04-06
+layout: notes
+---
+
+<script>
+  import ShowMany from "$lib/ShowMany.svelte";
+  import App from "./App.svelte";
+  import AppRaw from "./App.svelte?raw"; 
+  import useViewportActionRaw from "./useViewportAction?raw";
+
+</script>
+
+This is an example of **use:viewport** which will tell us when an element **enters** the viewport or **leaves** the viewport.
+
+<ShowMany name={[
+{name: "App", comp:App, raw:AppRaw, text: ""},
+{name: "useViewportAction.js", comp:App, raw:useViewportActionRaw, text: ""},
+]}/>
+
+An important thing here is the **lazy initialization** of the action. The IntersectionObserver is only created when it is **needed**. We also reuse the observer if we already have one. Without this this whole page broke. 🤯
