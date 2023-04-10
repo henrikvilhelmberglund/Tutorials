@@ -1,0 +1,28 @@
+---
+title: use:popper with PopperJS
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-04-10
+layout: notes
+---
+
+<script>
+  import ShowMany from "$lib/ShowMany.svelte";
+  import App from "./App.svelte";
+  import AppRaw from "./App.svelte?raw"; 
+  import usePopperRaw from "./usePopper?raw";
+
+</script>
+
+We have used actions on a single element but now we want to use PopperJS which needs two elements, an element and a tooltip element. How do we do this?
+
+One approach we could try is to have function that returns **two actions**.
+
+<ShowMany name={[
+{name: "App", comp:App, raw:AppRaw, text: "Try changing the dropdown!"},
+{name: "usePopper.js", comp:App, raw:usePopperRaw, text: ""},
+]}/>
+
+We assign the variables (which are action functions) with destructuring and can them use them as **actions**.
+
+We only create the popper instance when **both the element and tooltips exist** and then can use the fancy PopperJS tooltip functionality.
