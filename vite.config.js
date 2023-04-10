@@ -3,12 +3,13 @@ import examples from "mdsvexamples/vite";
 import UnoCSS from "unocss/vite";
 import presetIcons from "@unocss/preset-icons";
 import presetUno from "@unocss/preset-uno";
+import transformerDirectives from "@unocss/transformer-directives";
 
 /** @type {import('vite').UserConfig} */
 const config = {
 	plugins: [
 		UnoCSS({
-      include: [/\.svelte$/, /\.svx$/, /\.js$/],
+			include: [/\.svelte$/, /\.svx$/, /\.js$/],
 			mode: "svelte-scoped",
 			presets: [
 				presetUno(),
@@ -20,6 +21,7 @@ const config = {
 					},
 				}),
 			],
+			transformers: [transformerDirectives()],
 		}),
 		sveltekit(),
 		examples,
