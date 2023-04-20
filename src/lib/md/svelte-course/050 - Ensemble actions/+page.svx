@@ -1,0 +1,59 @@
+---
+title: Ensemble actions
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-04-20
+layout: notes
+---
+
+<script>
+  import ShowMany from "$lib/ShowMany.svelte";
+  import Example1 from "./Example1.svelte";
+  import Example1Raw from "./Example1.svelte?raw";
+  import Example1Final from "./Example1Final.svelte";
+  import Example1FinalRaw from "./Example1Final.svelte?raw";
+  import getDragAndDropActionsRaw from "./dragAndDropActions?raw";
+  import Example2 from "./Example2.svelte";
+  import Example2Raw from "./Example2.svelte?raw";
+  import example2Raw from "./example2?raw";
+  import Example2Other from "./Example2Other.svelte";
+  import Example2OtherRaw from "./Example2Other.svelte?raw";
+  import Example3 from "./Example3.svelte";
+  import Example3Raw from "./Example3.svelte?raw";
+  import example3Raw from "./example3?raw";
+
+</script>
+
+Usually an action interacts with a **single element**, however it's possible that we may want to have an action that interacts with a **group of elements**.
+
+<ShowMany name={[
+{name: "Example1", comp:Example1, raw:Example1Raw, text: "Here we have a few balls we can drop into a box to add text to the box. We have set up so we can't drop C into the first box and can't drop A into the second box."},
+]}/>
+
+Next let's try using actions instead:
+
+<ShowMany name={[
+{name: "Example1Final", comp:Example1Final, raw:Example1FinalRaw, text: "Here is the same thing but using actions. We use dragAndDropActions.js to export a function that creates our actions."},
+{name: "dragAndDropActions.js", comp:Example1Final, raw:getDragAndDropActionsRaw, text: ""},
+]}/>
+
+Note that we don't need to have the pair of actions used in the same component.
+
+In the next example we have a div and button that both light up when we click the button.
+
+<ShowMany name={[
+{name: "Example2", comp:Example2, raw:Example2Raw, text: "The elements use the same action which adds them all to a Set and thus they are all run when any action is triggered."},
+{name: "example2.js", comp:Example2, raw:example2Raw, text: ""},
+{name: "Example2Other", comp:Example2, raw:Example2OtherRaw, text: "We can even pass the action into another component and it still works!"},
+]}/>
+
+This is only possible because we're **creating a function that returns an action**. This means that if several elements then use this action they are **grouped**.
+
+Finally we have an action which we apply to many elements, then color them based on their value.
+
+<ShowMany name={[
+{name: "Example3", comp:Example3, raw:Example3Raw, text: ""},
+{name: "example3.js", comp:Example3, raw:example3Raw, text: ""},
+]}/>
+
+An interesting thing here is our action isn't a function but instead an **object with methods**. This works too!
