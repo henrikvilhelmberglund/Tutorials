@@ -1,0 +1,32 @@
+---
+title: use:lazyImage
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-04-20
+layout: notes
+---
+
+<script>
+  import ShowMany from "$lib/ShowMany.svelte";
+  import App from "./App.svelte";
+  import AppRaw from "./App.svelte?raw"; 
+  import useViewportActionRaw from "./useViewportAction?raw";
+  import lazyImageActionRaw from "./lazyImageAction?raw";
+
+</script>
+
+Here we're going to use an action to only load an image when it's in the viewport. We could try to **reuse the use:viewport action**, but it's in a .js file instead of a .svelte file.
+
+Let's try to make it work.
+
+<ShowMany name={[
+{name: "App", comp:App, raw:AppRaw, text: ""},
+{name: "lazyImageActionRaw.js", comp:App, raw:lazyImageActionRaw, text: ""},
+{name: "useViewportAction.js", comp:App, raw:useViewportActionRaw, text: ""},
+]}/>
+
+If we want to use an action in a .js file we can just simply **run the function** (here with a variable reference to it as well).
+
+Since we could reuse our old action it was very easy. We simply import our old action and add new event listeners for the events created in the old action.
+
+We put a **data-src** attribute in the img tag instead of a **src** one to prevent it from loading when the page loads.
