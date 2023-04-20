@@ -46,7 +46,7 @@
 {/if}
 
 <div class="w-200 container mx-auto">
-	<div class="rounded-b-0 rounded-xl border-4 border-b-0 border-solid border-orange-500 p-2">
+	<div class="rounded-b-0 rounded-xl border-4 border-b-0 border-solid border-orange-500 p-2 svelty">
 		<svelte:component this={selected.comp} />
 	</div>
 
@@ -84,4 +84,21 @@
 	:global(div b) {
 		@apply font-extrabold text-pink-500;
 	}
+
+	:global(.svelty button) {
+    color: #333;
+    background-color: #f4f4f4;
+    outline: none;
+}
+
+:global(.svelty input, button, select, textarea) {
+    font-family: inherit;
+    font-size: inherit;
+    -webkit-padding: 0.4em 0;
+    padding: 0.4em;
+    margin: 0 0 0.5em 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+}
 </style>
