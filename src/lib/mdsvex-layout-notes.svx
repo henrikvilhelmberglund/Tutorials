@@ -44,7 +44,7 @@
   export let date = "Unknown date";
   export let layout = "unknown layout";
 </script>
-<article class="flex flex-col justify-center items-center m-12">
+<article class="flex flex-col justify-start items-center m-12">
   <section class="from-slate-300 bg-gradient-to-b to-slate-100 rounded-xl p-4 m-4">
     <div class="flex flex-col justify-center items-center">
       {#if title}
@@ -66,5 +66,4 @@
 </article>
 
 <style>
- 
 </style>
