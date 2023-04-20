@@ -1,0 +1,50 @@
+---
+title: "<slot/>"
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-04-20
+layout: notes
+---
+
+<script>
+  import ShowMany from "$lib/ShowMany.svelte";
+  import App from "./App.svelte";
+  import AppRaw from "./App.svelte?raw";
+  import Component from "./Component.svelte";
+  import ComponentRaw from "./Component.svelte?raw";
+  import App2 from "./App2.svelte";
+  import App2Raw from "./App2.svelte?raw";
+  import Component2 from "./Component2.svelte";
+  import Component2Raw from "./Component2.svelte?raw";
+  import App3 from "./App3.svelte";
+  import App3Raw from "./App3.svelte?raw";
+  import Component3 from "./Component3.svelte";
+  import Component3Raw from "./Component3.svelte?raw";
+
+
+</script>
+
+Slots are a way to **compose components**.
+
+> Compose components?
+
+In HTML you can have elements inside of elements, for example `<div><span></span></div>`. With slots we can do the same thing, we can put **elements** or **other components** inside of our components.
+
+<ShowMany name={[
+{name: "App", comp:App, raw:AppRaw, text: "Here is a simple example. We can put the slot anywhere, before or after the text. Here it is inside an if block that is controlled by the checkbox."},
+{name: "Component", comp:App, raw:ComponentRaw, text: ""},
+]}/>
+
+What if nothing was passed into a slot? We can have a **fallback**:
+
+<ShowMany name={[
+{name: "App2", comp:App2, raw:App2Raw, text: "We can have a fallback by adding content inside of the slot tag."},
+{name: "Component2", comp:App2, raw:Component2Raw, text: ""},
+]}/>
+
+Finally we can have **named slots**. Note that a slot without a name is named **default** so you can't use that.
+
+<ShowMany name={[
+{name: "App3", comp:App3, raw:App3Raw, text: "If we want a named slot with a single element we can add it as a slot attribute, but if we want to group multiple elements we can have a slot template with a slot attribute which wraps all elements inside."},
+{name: "Component3", comp:App3, raw:Component3Raw, text: ""},
+]}/>
