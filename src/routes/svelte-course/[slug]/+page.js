@@ -49,5 +49,6 @@ export async function load({ params }) {
 			postContent: post.default,
 			// meta: post.metadata
 		},
+		slug: params.slug,
 	};
 }
