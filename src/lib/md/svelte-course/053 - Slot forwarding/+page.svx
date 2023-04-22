@@ -1,0 +1,50 @@
+---
+title: "<slot/> forwarding"
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-04-22
+layout: notes
+---
+
+<script>
+  import ShowMany from "$lib/ShowMany.svelte";
+  import App from "./App.svelte";
+  import AppRaw from "./App.svelte?raw";
+  import App2 from "./App2.svelte";
+  import App2Raw from "./App2.svelte?raw";
+  import A from "./A.svelte";
+  import ARaw from "./A.svelte?raw";
+  import B from "./B.svelte";
+  import BRaw from "./B.svelte?raw";
+  import C from "./C.svelte";
+  import CRaw from "./C.svelte?raw";
+  import A2 from "./A2.svelte";
+  import A2Raw from "./A2.svelte?raw";
+  import B2 from "./B2.svelte";
+  import B2Raw from "./B2.svelte?raw";
+  import C2 from "./C2.svelte";
+  import C2Raw from "./C2.svelte?raw";
+
+</script>
+
+What is **slot forwarding**?
+
+In this example we want to have two divs with the attribute slot="header". However this is impossible because slot attributes need to be **unique**.
+
+We can fix this by using a **`{"<"}svelte:fragment>`** tag instead.
+
+<ShowMany name={[
+{name: "B", comp:App, raw:BRaw, text: ""},
+{name: "C", comp:App, raw:CRaw, text: ""},
+{name: "App", comp:App, raw:AppRaw, text: ""},
+{name: "A", comp:App, raw:ARaw, text: ""},
+]}/>
+
+In the next example we have three buttons. Clicking any of them will increase the sum. 
+
+<ShowMany name={[
+{name: "A2", comp:App2, raw:A2Raw, text: "Here we don't have props in the components script tags but instead in the slots."},
+{name: "B2", comp:App2, raw:B2Raw, text: ""},
+{name: "C2", comp:App2, raw:C2Raw, text: ""},
+{name: "App2", comp:App2, raw:App2Raw, text: ""},
+]}/>
