@@ -45,7 +45,7 @@
 	</div>
 {/if}
 
-<div class="w-200 container mx-auto">
+<div class="w-[80%] container mx-auto">
 	<div class="rounded-b-0 rounded-xl border-4 border-b-0 border-solid border-orange-500 p-2 svelty">
 		<svelte:component this={selected.comp} />
 	</div>
