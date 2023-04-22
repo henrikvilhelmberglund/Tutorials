@@ -5,13 +5,17 @@
 </script>
 
 <div class="flex">
-	<nav class="bg-slate-700">
+	<nav class="bg-white">
 		{#if data.myPages}
 			<div class="flex flex-col [&>*]:m-4">
 				{#each data.myPages as link}
 					{#if link.bsvelte}
-						<a class="my-2 hover:(outline-4 outline-black outline-solid) rounded-lg bg-slate-100 p-2" href="{base}/svelte-course/{link.title}"
-							>{link.title}</a>
+						{link.title}
+						<br />
+						<a
+							class:!bg-orange-400={link.title === data.slug}
+							class="hover:(outline-4 outline-solid) my-2 rounded-lg bg-slate-200 p-2 outline-black"
+							href="{base}/svelte-course/{link.title}">{link.title}</a>
 					{/if}
 				{/each}
 			</div>
