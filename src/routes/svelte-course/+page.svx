@@ -5,6 +5,7 @@ layout: mainpage
 <script>
   import { base } from "$app/paths";
   import { onMount } from "svelte";
+  import Nav from "$lib/Nav.svelte";
   // import Notes from "./Notes.svx";
   let list = [1, 2, 3, 4, 5];
   export let data;
@@ -33,27 +34,26 @@ layout: mainpage
   });
 </script>
 
-<nav>
-	{#if data.myPages}
-		<ul>
-			{#each data.myPages as link}
-				{#if link.bsvelte}
-					<li>
-						<a href="{base}/svelte-course/{link.title}">{link.title}</a>
-					</li>
-				{/if}
-			{/each}
-		</ul>
-	{/if}
-</nav>
+<div class="flex">
 
-{#if mounted}
-{#each data.myPages as item}
+{#if data.myPages}
+
+<Nav {data} subroute={"/svelte-course"} />
+
+{/if}
+
+<div>
+  
+  {#if mounted}
+  {#each data.myPages as item}
 {#if item.bsvelte}
 <svelte:component this={item.newbody}></svelte:component>
 {/if}
 {/each}
 {/if}
+</div>
+
+</div>
 
 <style>
 

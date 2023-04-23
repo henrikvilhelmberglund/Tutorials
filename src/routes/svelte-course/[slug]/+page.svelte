@@ -2,24 +2,11 @@
 	import { base } from "$app/paths";
 	export let data;
 	//const { title, date, thumbnail } = data.meta;
+	import Nav from "$lib/Nav.svelte";
 </script>
 
 <div class="flex">
-	<nav class="w-[10%] bg-white">
-		{#if data.myPages}
-			<div class="flex flex-col [&>*]:m-4">
-				{#each data.myPages as link}
-					{#if link.bsvelte}
-						<br />
-						<a
-							class:!bg-orange-400={link.title === data.slug}
-							class="hover:(outline-4 outline-solid) my-1 rounded-lg bg-slate-200 p-2 outline-black"
-							href="{base}/svelte-course/{link.title}">{link.title}</a>
-					{/if}
-				{/each}
-			</div>
-		{/if}
-	</nav>
+	<Nav {data} subroute={"/svelte-course"} />
 
 	<svelte:component this={data.body.postContent} />
 </div>

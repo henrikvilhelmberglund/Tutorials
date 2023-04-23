@@ -1,4 +1,5 @@
 <script>
+	import Nav from "$lib/Nav.svelte";
 	export let data;
 	//const { title, date, thumbnail } = data.meta;
 </script>
@@ -11,4 +12,10 @@
 -->
 <!-- {JSON.stringify(data.body)} -->
 
-<svelte:component this={data.body.postContent} />
+<div class="flex">
+	<Nav {data} />
+
+	<div>
+		<svelte:component this={data.body.postContent} />
+	</div>
+</div>
