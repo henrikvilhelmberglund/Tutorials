@@ -1,4 +1,7 @@
 <script>
+	import Prism from "prismjs";
+	import "prism-svelte";
+
 	export let name;
 	let i = 0;
 	let selected = name[0];
@@ -15,8 +18,6 @@
 	let language = "svelte";
 	$: selected.name.includes(".js") ? (language = "js") : (language = "svelte");
 	let show = true;
-	import Prism from "prismjs";
-	import "prism-svelte";
 	let highlighted;
 	$: {
 		if (language === "svelte") {
@@ -45,17 +46,15 @@
 	</div>
 {/if}
 
-<div class="w-[80%] container mx-auto">
-	<div class="rounded-b-0 rounded-xl border-4 border-b-0 border-solid border-orange-500 p-2 svelty">
+<div class="container mx-auto w-[80%]">
+	<div class="rounded-b-0 svelty rounded-xl border-4 border-b-0 border-solid border-orange-500 p-2">
 		<svelte:component this={selected.comp} />
 	</div>
 
 	<div class="relative">
-		<button on:click={() => (show = !show)} class="absolute top-0 right-0"
-			>{show ? "🔼" : "🔽"}</button>
 		{#each Object.entries(name) as [index, obj]}
 			<label
-				class="rounded-b-0 mr-2 rounded-md pb-px {obj.name === selected.name
+				class="rounded-b-0 mr-2 rounded-md pb-[2px] {obj.name === selected.name
 					? 'bg-orange-500'
 					: 'bg-slate-300 hover:bg-orange-300'} p-1 text-black">
 				<input
@@ -71,10 +70,9 @@
 			<pre
 				class="{language === 'svelte'
 					? 'language-svelte'
-					: 'language-javascript'} rounded-t-0 !m-0 rounded-xl p-0 !pt-10"><code
+					: 'language-javascript'} rounded-t-0 !m-0 rounded-xl p-0 !pt-2"><code
 					style="font-family: 'Maple', Menlo, Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', 'Courier New',
-        monospace;">{@html highlighted}</code>
-      </pre>
+        monospace;">{@html highlighted}</code></pre>
 		{/if}
 	</div>
 </div>
@@ -86,19 +84,19 @@
 	}
 
 	:global(.svelty button) {
-    color: #333;
-    background-color: #f4f4f4;
-    outline: none;
-}
+		color: #333;
+		background-color: #f4f4f4;
+		outline: none;
+	}
 
-:global(.svelty input, button, select, textarea) {
-    font-family: inherit;
-    font-size: inherit;
-    -webkit-padding: 0.4em 0;
-    padding: 0.4em;
-    margin: 0 0 0.5em 0;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 2px;
-}
+	:global(.svelty input, button, select, textarea) {
+		font-family: inherit;
+		font-size: inherit;
+		-webkit-padding: 0.4em 0;
+		padding: 0.4em;
+		margin: 0 0 0.5em 0;
+		box-sizing: border-box;
+		border: 1px solid #ccc;
+		border-radius: 2px;
+	}
 </style>
