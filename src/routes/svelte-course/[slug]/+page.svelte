@@ -5,7 +5,7 @@
 </script>
 
 <div class="flex">
-	<nav class="bg-white">
+	<nav class="w-[10%] bg-white">
 		{#if data.myPages}
 			<div class="flex flex-col [&>*]:m-4">
 				{#each data.myPages as link}
