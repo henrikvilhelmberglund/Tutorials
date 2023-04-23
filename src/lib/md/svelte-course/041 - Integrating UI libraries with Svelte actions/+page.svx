@@ -23,10 +23,6 @@ layout: notes
   import ShowMany from "$lib/ShowMany.svelte";
 </script>
 
-<svelte:head>
-
-  <link rel="stylesheet" href="node_modules/flatpickr/dist/flatpickr.min.css">
-</svelte:head>
 
 Let's say we found a cool UI library with a datetime picker that we wanted to use. Could we integrate it with Svelte? Let's see.
 
