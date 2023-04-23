@@ -1,0 +1,4 @@
+import{c as m,a as d}from"./index.815b7d38.js";import{aj as $,ak as _}from"./index.37298988.js";function C(o,{delay:s=0,duration:c=400,easing:n=m,amount:a=5,opacity:e=0}={}){const t=getComputedStyle(o),r=+t.opacity,i=t.filter==="none"?"":t.filter,u=r*(1-e),[f,l]=_(a);return{delay:s,duration:c,easing:n,css:(p,y)=>`opacity: ${r-u*y}; filter: ${i} blur(${y*f}${l});`}}function S(o,{delay:s=0,duration:c=400,easing:n=$}={}){const a=+getComputedStyle(o).opacity;return{delay:s,duration:c,easing:n,css:e=>`opacity: ${e*a}`}}function O(o,{delay:s=0,duration:c=400,easing:n=d,start:a=0,opacity:e=0}={}){const t=getComputedStyle(o),r=+t.opacity,i=t.transform==="none"?"":t.transform,u=1-a,f=r*(1-e);return{delay:s,duration:c,easing:n,css:(l,p)=>`
+			transform: ${i} scale(${1-u*p});
+			opacity: ${r-f*p}
+		`}}export{C as b,S as f,O as s};

@@ -1,0 +1,31 @@
+var E=Object.freeze,J=Object.defineProperty;var x=(o,s)=>E(J(o,"raw",{value:E(s||o.slice())}));import{S as U,i as z,s as A,k as $,q as k,a as j,l as v,m as h,r as f,h as u,c as C,b as i,D,P as B,u as H,H as y,T as K,y as F,z as G,A as I,g as m,d,B as P,C as Q,E as R,F as V,G as W,Q as L,e as S,R as M}from"./index.37298988.js";import{E as X}from"./Example.0a49acc8.js";function Y(o){let s,e,t,n,a,l,_,r,g,b,w;return{c(){s=$("button"),e=k("-"),t=j(),n=k(o[0]),a=k(" * 2 = "),l=k(o[1]),_=j(),r=$("button"),g=k("+")},l(p){s=v(p,"BUTTON",{});var c=h(s);e=f(c,"-"),c.forEach(u),t=C(p),n=f(p,o[0]),a=f(p," * 2 = "),l=f(p,o[1]),_=C(p),r=v(p,"BUTTON",{});var T=h(r);g=f(T,"+"),T.forEach(u)},m(p,c){i(p,s,c),D(s,e),i(p,t,c),i(p,n,c),i(p,a,c),i(p,l,c),i(p,_,c),i(p,r,c),D(r,g),b||(w=[B(s,"click",o[3]),B(r,"click",o[2])],b=!0)},p(p,[c]){c&1&&H(n,p[0]),c&2&&H(l,p[1])},i:y,o:y,d(p){p&&u(s),p&&u(t),p&&u(n),p&&u(a),p&&u(l),p&&u(_),p&&u(r),b=!1,K(w)}}}function Z(o,s,e){let t,n=1;function a(){e(0,n++,n),console.log(t)}function l(){e(0,n--,n)}return o.$$.update=()=>{o.$$.dirty&1&&e(1,t=n*2)},[n,t,a,l]}class nn extends U{constructor(s){super(),z(this,s,Z,Y,A,{})}}const sn=o=>({}),q=o=>({slot:"example"}),an=o=>({}),N=o=>({slot:"code"});function tn(o){let s,e;return s=new nn({}),{c(){F(s.$$.fragment)},l(t){G(s.$$.fragment,t)},m(t,n){I(s,t,n),e=!0},i(t){e||(m(s.$$.fragment,t),e=!0)},o(t){d(s.$$.fragment,t),e=!1},d(t){P(s,t)}}}function en(o){let s;const e=o[0].default,t=Q(e,o,o[1],q),n=t||tn();return{c(){n&&n.c()},l(a){n&&n.l(a)},m(a,l){n&&n.m(a,l),s=!0},p(a,l){t&&t.p&&(!s||l&2)&&R(t,e,a,a[1],s?W(e,a[1],l,sn):V(a[1]),q)},i(a){s||(m(n,a),s=!0)},o(a){d(n,a),s=!1},d(a){n&&n.d(a)}}}function on(o){let s,e=`<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+  <span class="token keyword">let</span> count <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token literal-property property">$</span><span class="token operator">:</span> double <span class="token operator">=</span> count <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">function</span> <span class="token function">increment</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    count<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token comment">// This will log the previous value because it did not update yet</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>double<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">function</span> <span class="token function">decrement</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    count<span class="token operator">--</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name"><span class="token namespace">on:</span>click=</span><span class="token language-javascript"><span class="token punctuation">{</span>decrement<span class="token punctuation">}</span></span><span class="token punctuation">></span></span>-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+<span class="token language-javascript"><span class="token punctuation">{</span>count<span class="token punctuation">}</span></span> * 2 = <span class="token language-javascript"><span class="token punctuation">{</span>double<span class="token punctuation">}</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name"><span class="token namespace">on:</span>click=</span><span class="token language-javascript"><span class="token punctuation">{</span>increment<span class="token punctuation">}</span></span><span class="token punctuation">></span></span>+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>`,t;return{c(){s=new L(!1),t=S(),this.h()},l(n){s=M(n,!1),t=S(),this.h()},h(){s.a=t},m(n,a){s.m(e,n,a),i(n,t,a)},p:y,d(n){n&&u(t),n&&s.d()}}}function pn(o){let s;const e=o[0].default,t=Q(e,o,o[1],N),n=t||on();return{c(){n&&n.c()},l(a){n&&n.l(a)},m(a,l){n&&n.m(a,l),s=!0},p(a,l){t&&t.p&&(!s||l&2)&&R(t,e,a,a[1],s?W(e,a[1],l,an):V(a[1]),N)},i(a){s||(m(n,a),s=!0)},o(a){d(n,a),s=!1},d(a){n&&n.d(a)}}}var O;function ln(o){let s,e,t;return e=new X({props:{src:String.raw(O||(O=x([`<script>
+let count = 1;
+$: double = count * 2;
+function increment() {
+count++;
+// This will log the previous value because it did not update yet
+console.log(double);
+}
+function decrement() {
+count--;
+}
+<\/script>
+<button on:click={decrement}>-</button>
+{count} * 2 = {double}
+<button on:click={increment}>+</button>`]))),meta:{Wrapper:"/src/lib/Example.svelte",example:!0},$$slots:{code:[pn],example:[en]},$$scope:{ctx:o}}}),{c(){s=$("div"),F(e.$$.fragment)},l(n){s=v(n,"DIV",{});var a=h(s);G(e.$$.fragment,a),a.forEach(u)},m(n,a){i(n,s,a),I(e,s,null),t=!0},p(n,[a]){const l={};a&2&&(l.$$scope={dirty:a,ctx:n}),e.$set(l)},i(n){t||(m(e.$$.fragment,n),t=!0)},o(n){d(e.$$.fragment,n),t=!1},d(n){n&&u(s),P(e)}}}function cn(o,s,e){let{$$slots:t={},$$scope:n}=s;return o.$$set=a=>{"$$scope"in a&&e(1,n=a.$$scope)},[t,n]}class fn extends U{constructor(s){super(),z(this,s,cn,ln,A,{})}}export{fn as default};
