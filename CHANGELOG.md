@@ -2,6 +2,70 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+### [0.0.12](https://github.com/henrikvilhelmberglund/Tutorials/compare/v0.0.11...v0.0.12) (2023-04-23)
+
+
+### Features
+
+* :sparkles: use Nav ([bf995f3](https://github.com/henrikvilhelmberglund/Tutorials/commit/bf995f304dfab29f5438c3553c67e33f8b775b06))
+* :sparkles: use Nav ([2229ee0](https://github.com/henrikvilhelmberglund/Tutorials/commit/2229ee02aaffd9116b21c0cf62ef3165225d5d44))
+* :sparkles: add Nav.svelte ([747e0a7](https://github.com/henrikvilhelmberglund/Tutorials/commit/747e0a7b87da7a812109d2b37f482e7d2a57ae3e))
+* :bento: add flatpickr.min.css ([41ed62c](https://github.com/henrikvilhelmberglund/Tutorials/commit/41ed62c14e988dcb8b41f8bd67b509e5483aa58f))
+* :lipstick: add flatpickr to app.html stylesheet link ([1bcc402](https://github.com/henrikvilhelmberglund/Tutorials/commit/1bcc4027d9402586e7b8fa496919fa588fdb57fa))
+* :sparkles: add svelte-course 055 infinite list ([af820ae](https://github.com/henrikvilhelmberglund/Tutorials/commit/af820ae4307b309d0880d1b9fe2a1228326d6adb))
+* :lipstick: improve styling ([dc42e69](https://github.com/henrikvilhelmberglund/Tutorials/commit/dc42e693cd4878c7c6571432d7e1965bcbfda75d))
+* :art: prettier ([30858bb](https://github.com/henrikvilhelmberglund/Tutorials/commit/30858bb96a24e5e743bb153c47ce675ac7a21e63))
+* :sparkles: add svelte-course 054 $$slots ([f0eab0c](https://github.com/henrikvilhelmberglund/Tutorials/commit/f0eab0c5a74cb2bccc539b209664f3e586e8f559))
+* :sparkles: add svelte-course 053 slot forwarding ([ddb8109](https://github.com/henrikvilhelmberglund/Tutorials/commit/ddb81097783b514acd09ee12bf171d81eabcd471))
+* :lipstick: add min width ([2dc1fbd](https://github.com/henrikvilhelmberglund/Tutorials/commit/2dc1fbd18586487293ed45b5b03615ec6e7eb546))
+* :sparkles: add svelte-course 052 passing data across slot ([5590eee](https://github.com/henrikvilhelmberglund/Tutorials/commit/5590eee84249a68782982d14bfeabd67243af104))
+* :lipstick: if slug is the same as the title color the active link orange ([77e13cb](https://github.com/henrikvilhelmberglund/Tutorials/commit/77e13cb26188835d22356301400d381eb86986ae))
+* :sparkles: add slug to load function return ([b5f0605](https://github.com/henrikvilhelmberglund/Tutorials/commit/b5f060572b041026115dac259e79571b6b019006))
+* :sparkles: add svelte-course 051 slot ([e7b4fc1](https://github.com/henrikvilhelmberglund/Tutorials/commit/e7b4fc1d2cc1c38872711d8698fe49d305a74f35))
+* :lipstick: add REPL like styling ([f709035](https://github.com/henrikvilhelmberglund/Tutorials/commit/f709035dd9c17d4c70e654bd61e61e45f9e320a1))
+* :lipstick: add tailwind reset, improve styling ([90aefad](https://github.com/henrikvilhelmberglund/Tutorials/commit/90aefad47e5fdeafec50a625f987575f1a9ae981))
+* :sparkles: add svelte course 050 ensemble actions ([3322f1d](https://github.com/henrikvilhelmberglund/Tutorials/commit/3322f1d9dbb5433198608c1e93422f9599b89fe8))
+* :bento: add image ([13cb131](https://github.com/henrikvilhelmberglund/Tutorials/commit/13cb131795fb7743ab6dfcb0c25638f5e64fa70c))
+* :sparkles: add svelte-course 049 use lazyImage ([60e8eb4](https://github.com/henrikvilhelmberglund/Tutorials/commit/60e8eb4a6b3652aa84931c8c6571590f6651d12a))
+* :sparkles: add 048 use popper with PopperJS ([573bb19](https://github.com/henrikvilhelmberglund/Tutorials/commit/573bb1984731815ae7fb94a1e389dac0c6a058a4))
+* :package: update svelte, sveltekit, vite, unocss ([d662232](https://github.com/henrikvilhelmberglund/Tutorials/commit/d662232c89c901e9a443ca4aa175fa67f5c56a74))
+* :sparkles: add 047 use viewport ([73071a5](https://github.com/henrikvilhelmberglund/Tutorials/commit/73071a5371b9825003ec1f45a9b74bb712ac3ef8))
+* :sparkles: update 046 use tooltip ([63f34d8](https://github.com/henrikvilhelmberglund/Tutorials/commit/63f34d863194a7cfafdc46a680ad7385957d5ffc))
+* :sparkles: add 046 use tooltip ([6cd350a](https://github.com/henrikvilhelmberglund/Tutorials/commit/6cd350ad22c9353c26a4d3f3ed6e9a909e1908d3))
+* :sparkles: add 045 use clickOutside ([f49f83a](https://github.com/henrikvilhelmberglund/Tutorials/commit/f49f83aa05db32d86f25d5f0e14f82e0418f1f35))
+* :sparkles: add 044 the order of Svelte actions ([223ee6f](https://github.com/henrikvilhelmberglund/Tutorials/commit/223ee6fdcf50ef069cbeeb2cb86de3f62fbc5d4f))
+* :sparkles: add 043 creating events with Svelte actions ([03e1b71](https://github.com/henrikvilhelmberglund/Tutorials/commit/03e1b71529aa081a446456c049cc0da9692f8b8a))
+* :sparkles: add 042 reusing event listeners with Svelte actions ([9c07e2c](https://github.com/henrikvilhelmberglund/Tutorials/commit/9c07e2cd4a9026f0d67911bd0ff19c1ad422dad6))
+* :sparkles: add 041 Integrating UI libraries with Svelte actions ([0000c7b](https://github.com/henrikvilhelmberglund/Tutorials/commit/0000c7b98275cb9089a1d1997af2d745f666906d))
+* :sparkles: add 040 what if the svelte action feature does not exist ([8d8fcde](https://github.com/henrikvilhelmberglund/Tutorials/commit/8d8fcdeff4b03dd1db6b7cbb2ef27cf41438f065))
+* :sparkles: add 039 dynamic parameters in Svelte actions ([b332b88](https://github.com/henrikvilhelmberglund/Tutorials/commit/b332b88ebb15a3ad197534502f1f39b071450b08))
+* :sparkles: add .svelte to component names if they don't already contain .svelte ([9e63e5e](https://github.com/henrikvilhelmberglund/Tutorials/commit/9e63e5eeff2504322815407616ef1592a190c0e7))
+
+
+### Bug Fixes
+
+* :bug: fix load functions/link loading ([30c565a](https://github.com/henrikvilhelmberglund/Tutorials/commit/30c565a8e2bc5558d5d619eaac75fb9d69840597))
+* :fire: remove layout ([3533fda](https://github.com/henrikvilhelmberglund/Tutorials/commit/3533fdadf6244e31a6726242d5b23cbe89835236))
+* :bug: don't load svelte-course stuff on main page load ([fd781b4](https://github.com/henrikvilhelmberglund/Tutorials/commit/fd781b4260e6cbd0afcbd99e1cded899cfa93463))
+* :bug: add CSS in app.html instead ([2193ad7](https://github.com/henrikvilhelmberglund/Tutorials/commit/2193ad72b3f68f00c4c211bbab48640a755988f2))
+* :lipstick: improve styling ([4303970](https://github.com/henrikvilhelmberglund/Tutorials/commit/4303970ca0bef1c2dc47570afbdfa0ce451629a4))
+* :fire: remove debug line ([07e067a](https://github.com/henrikvilhelmberglund/Tutorials/commit/07e067a31bee723f538cb922cd5b51254c29a24f))
+* :lipstick: change width of ShowMany ([3262aa0](https://github.com/henrikvilhelmberglund/Tutorials/commit/3262aa04abd31c86014bb4e0d9e829553ad3bcd0))
+* :lipstick: make nav act more like a nav ([cac2cb7](https://github.com/henrikvilhelmberglund/Tutorials/commit/cac2cb7c381ac45f84e963cacddc2290a1b53ad9))
+* :lipstick: improve styling ([5a0d968](https://github.com/henrikvilhelmberglund/Tutorials/commit/5a0d96825d2e2e826815d2a10a8c64be125223ef))
+* :package: update vite ([2fae837](https://github.com/henrikvilhelmberglund/Tutorials/commit/2fae837e6a6f9f3cc21456a8148dbea16224493e))
+* :wrench: put unocss config in vite.config.js ([86ea0ec](https://github.com/henrikvilhelmberglund/Tutorials/commit/86ea0ec77c1d1ac6e685172ff478cd5553910136))
+* :package: downgrade sveltekit because of incompatibility with mdsvex in higher versions ([df78a34](https://github.com/henrikvilhelmberglund/Tutorials/commit/df78a34ab2272d66b80a5570bc85b952817b46f2))
+* :fire: remove old text ([2aa0bb3](https://github.com/henrikvilhelmberglund/Tutorials/commit/2aa0bb35309589410f71d05122197ec7e783215c))
+* :bug: try to use unocss in .js ([c8c1314](https://github.com/henrikvilhelmberglund/Tutorials/commit/c8c131404ab85ee476638773fe97b1e6668abff4))
+* :lipstick: put modal in middle ([ca8f817](https://github.com/henrikvilhelmberglund/Tutorials/commit/ca8f8170a10b2a1ab460811843f35f013a1f9df9))
+* :lipstick: use unocss for backdrop blur ([9a032d7](https://github.com/henrikvilhelmberglund/Tutorials/commit/9a032d719ddf646bd5fb5e15dde2842e4e822993))
+* :bug: use svelte-preprocess instead of vite preprocess ([7b4bdff](https://github.com/henrikvilhelmberglund/Tutorials/commit/7b4bdff1c9516b0470b1523d2df2ad9ac5351c80))
+* :bug: add CSS for flatpickr which was required for some reason ([9bfd399](https://github.com/henrikvilhelmberglund/Tutorials/commit/9bfd39949479148823b93dd7b8906a9b7a57e731))
+* :bug: remove CDN stuff ([e3f2dd3](https://github.com/henrikvilhelmberglund/Tutorials/commit/e3f2dd39a7db8244da36f7cbe5748259cacfc3b7))
+* :ambulance: what the hell is an elementListener ([4d9e19d](https://github.com/henrikvilhelmberglund/Tutorials/commit/4d9e19d8d81cf782c886ab1d8d2f820eecb96c30))
+* :bug: fix build by adding flatpickr instead of using cdn ([2c54b19](https://github.com/henrikvilhelmberglund/Tutorials/commit/2c54b191872c55eb15cb15c74cedaf12b420dbff))
+
 ### [0.0.11](https://github.com/henrikvilhelmberglund/Tutorials/compare/v0.0.10...v0.0.11) (2023-04-02)
 
 
