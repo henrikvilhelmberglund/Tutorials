@@ -1,0 +1,27 @@
+---
+title: "$$slots"
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-04-22
+layout: notes
+---
+
+<script>
+  import ShowMany from "$lib/ShowMany.svelte";
+  import App from "./App.svelte";
+  import AppRaw from "./App.svelte?raw";
+  import A from "./A.svelte";
+  import ARaw from "./A.svelte?raw";
+
+</script>
+
+There is something called **$$slots**. It's an object containing keys. If they are **truthy** the slot **exists**.
+
+<ShowMany name={[
+{name: "App", comp:App, raw:AppRaw, text: ""},
+{name: "A", comp:App, raw:ARaw, text: ""},
+]}/>
+
+For slots that are not named the variable will be **$$slots.default**.
+
+It's also important to note that even if we pass in an **empty slot** the $$slots for that slot will be **truthy** (as seen above).
