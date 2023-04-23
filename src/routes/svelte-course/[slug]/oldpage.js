@@ -1,3 +1,5 @@
+// export const modules = import.meta.glob("./*.svx");
+export const prerender = true;
 // export const ssr = false;
 
 const modules = import.meta.glob([
@@ -42,15 +44,14 @@ for (let path in modules) {
 }
 
 export async function load({ params }) {
-	// const comps = import.meta.glob(`../../../lib/md/svelte-course/${params.slug}.svx`);
-	// const post = comps[`../../../lib/md/svelte-course/${name}.svx`];
 	const post = await import(`../../../lib/md/svelte-course/${params.slug}/+page.svx`);
+	// console.log(post.default);
 	return {
+		myPages,
 		body: {
 			postContent: post.default,
 			// meta: post.metadata
 		},
-		myPages,
 		slug: params.slug,
 	};
 }
