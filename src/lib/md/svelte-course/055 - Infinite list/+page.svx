@@ -1,0 +1,43 @@
+---
+title: "Infinite list"
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-04-23
+layout: notes
+---
+
+<script>
+  import ShowMany from "$lib/ShowMany.svelte";
+  import App from "./App.svelte";
+  import AppRaw from "./App.svelte?raw";
+  import List from "./List.svelte";
+  import ListRaw from "./List.svelte?raw";
+  import dataRaw from "./data?raw";
+  import useViewportActionRaw from "./useViewportAction?raw";
+
+</script>
+
+Here we're going to create an infinite list where we load more data as we scroll.
+
+We can experiment and play with a component to get something we like or we can think in terms of how we want to use it and how you want to allow users to use it and provide that behavior.
+
+He're we're going for the second approach.
+
+We can think of how our List component should look in order to provide the infinite scroll functionality.
+
+The list is infinite so if you want to read the code **click the checkbox in the top right**.
+
+<ShowMany name={[
+{name: "App", comp:App, raw:AppRaw, text: ""},
+{name: "List", comp:App, raw:ListRaw, text: ""},
+{name: "data.js", comp:App, raw:dataRaw, text: ""},
+{name: "useViewportAction.js", comp:App, raw:useViewportActionRaw, text: ""},
+]}/>
+
+We're reusing the viewport action from **use:viewport**.
+We're using a writable store and a **custom store** as the default export with our custom functionality.
+We're using an event dispatcher that dispatches a custom event **loadMore** whenever the action triggers the enterViewport event.
+We're using a slot to put the img tag **inside of the component in the markup**.
+We're using spread props in order to spread all of the $data store into our list component.
+
+That's it! I hoped you closed the infinite list so you can read this 😊
