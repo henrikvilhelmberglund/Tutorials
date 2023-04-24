@@ -1,0 +1,56 @@
+---
+title: "Tabs"
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-04-23
+layout: notes
+---
+
+<script>
+  import ShowMany from "$lib/ShowMany.svelte";
+  import App from "./App.svelte";
+  import AppRaw from "./App.svelte?raw";
+  import Tabs from "./Tabs.svelte";
+  import TabsRaw from "./Tabs.svelte?raw";
+  import Tab from "./Tab.svelte";
+  import TabRaw from "./Tab.svelte?raw";
+  import App2 from "./App2.svelte";
+  import App2Raw from "./App2.svelte?raw";
+  import Tabs2 from "./Tabs2.svelte";
+  import Tabs2Raw from "./Tabs2.svelte?raw";
+  import Tab2 from "./Tab2.svelte";
+  import Tab2Raw from "./Tab2.svelte?raw";
+  import DesigningTabsComponent from "./DesigningTabsComponent.svelte";
+  import DesigningTabsComponentRaw from "./DesigningTabsComponent.svelte?raw";
+
+</script>
+
+He're were going to make a Tabs component for displaying tabs. I already made a simple tab system myself for displaying the code but it could probably be improved.
+
+It can be good to think about how the user is going to use our component instead of just starting blindly.
+
+<ShowMany name={[
+{name: "DesigningTabsComponent", comp:DesigningTabsComponent, raw:DesigningTabsComponentRaw, text: ""},
+]}/>
+
+This looks fine! Let's start building it.
+
+<ShowMany name={[
+{name: "App", comp:App, raw:AppRaw, text: ""},
+{name: "Tabs", comp:App, raw:TabsRaw, text: ""},
+{name: "Tab", comp:App, raw:TabRaw, text: ""},
+]}/>
+
+At first the login tabs ended up at the end even though they had IDs of **2** and **3**.
+
+I solved it by using an object instead which works but from my understanding it is not guaranteed to work since objects are not ordered.
+
+Let's try fixing the array implementation instead:
+
+<ShowMany name={[
+  {name: "Tabs2", comp:App2, raw:Tabs2Raw, text: "Instead of pushing the value directly we sort them by their ID when assigning using the spread operator. As a bonus since we're assigning we don't need the ugly titles = titles either. Credits to <strong>Believe Lody</strong> for this solution!"},
+{name: "App2", comp:App2, raw:App2Raw, text: ""},
+{name: "Tab2", comp:App2, raw:Tab2Raw, text: ""},
+]}/>
+
+There we go! In this example we used slots, context, reactive context using a store, bind and reactive statements to end up with a fairly simple store.
