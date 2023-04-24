@@ -1,0 +1,72 @@
+---
+title: "$$props and $$restProps"
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-04-24
+layout: notes
+---
+
+<script>
+  import ShowMany from "$lib/ShowMany.svelte";
+  import App from "./App.svelte";
+  import AppRaw from "./App.svelte?raw";
+  import Button from "./Button.svelte";
+  import ButtonRaw from "./Button.svelte?raw";
+  import App2 from "./App2.svelte";
+  import App2Raw from "./App2.svelte?raw";
+  import Button2 from "./Button2.svelte";
+  import Button2Raw from "./Button2.svelte?raw";
+  import App3 from "./App3.svelte";
+  import App3Raw from "./App3.svelte?raw";
+  import Button3 from "./Button3.svelte";
+  import Button3Raw from "./Button3.svelte?raw";
+  import App4 from "./App4.svelte";
+  import App4Raw from "./App4.svelte?raw";
+  import Button4 from "./Button4.svelte";
+  import Button4Raw from "./Button4.svelte?raw";
+  import Joke from "./Joke.svelte";
+  import JokeRaw from "./Joke.svelte?raw";
+
+
+</script>
+
+This time we're finding out about $$props and $$restProps.
+
+We're making a button component as if we're making a component library.
+
+<ShowMany name={[
+{name: "App", comp:App, raw:AppRaw, text: ""},
+{name: "Button", comp:App, raw:ButtonRaw, text: ""},
+]}/>
+
+Now a user tells us that they want a new feature, to be able to customize the style of the button. We say okay and start implementing this:
+
+<ShowMany name={[
+{name: "App2", comp:App2, raw:App2Raw, text: ""},
+{name: "Button2", comp:App2, raw:Button2Raw, text: ""},
+]}/>
+
+Phew! Oh wait, now they want a new feature, to add an aria-label.
+
+<ShowMany name={[
+{name: "App3", comp:App3, raw:App3Raw, text: ""},
+{name: "Button3", comp:App3, raw:Button3Raw, text: ""},
+]}/>
+
+Okay this isn't great, every time we're asked for a new feature we have to edit our component to support it. Is there a better way?
+
+This is why we have **$$props** and **$$restProps**.
+
+"$$props" gives an object with **all of the props** passed to the component.
+
+"$$restProps" gives an object with the props that were **not declared with export**.
+
+<ShowMany name={[
+{name: "App4", comp:App4, raw:App4Raw, text: "We added a Joke component that can get jokes from an API, in the fetch we're using the results of our $$restProps."},
+{name: "Button4", comp:App4, raw:Button4Raw, text: ""},
+{name: "Joke", comp:App4, raw:JokeRaw, text: ""},
+]}/>
+
+The benefit of $$props and $$restProps is that we **don't have to define everything**, we can simply pass all of the props along and work with them that way.
+
+According to the documentation this ends up with less optimized code though and so it is not recommended and shouldn't be used unless it's necessary.
