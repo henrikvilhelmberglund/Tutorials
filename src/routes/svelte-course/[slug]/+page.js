@@ -23,7 +23,7 @@ for (let path in modules) {
 		continue;
 	} else {
 		fixedPath = path.replace("/+page.svx", "");
-		console.log(fixedPath);
+		// console.log(fixedPath);
 		// console.log(
 		// 	`$lib/md/svelte-course/${fixedPath.substring(fixedPath.lastIndexOf("/") + 1)}/+page.svx`
 		// );
