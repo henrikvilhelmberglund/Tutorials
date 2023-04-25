@@ -9,6 +9,7 @@ const modules = import.meta.glob([
 let myPages = [];
 let svelte;
 let title;
+let titles = [];
 for (let path in modules) {
 	// console.log(path);
 	let fixedPath = path.replace(".svx", "");
@@ -23,20 +24,23 @@ for (let path in modules) {
 		title: title,
 		link: fixedPath,
 		original: path,
-		newbody: post.default,
+		// newbody: post.default,
 		bsvelte: svelte,
 	});
+	titles.push(title);
+}
+
+async function loadPost(params) {
+	const post = import(`../../lib/md/${params.slug}.svx`);
+	return post;
 }
 
 export async function load({ params }) {
 	console.log(params.slug);
-	const post = await import(`../../lib/md/${params.slug}.svx`);
 	// console.log(post.default);
 	return {
-		body: {
-			postContent: post.default,
-			// meta: post.metadata
-		},
+		post: loadPost(params),
+		titles: titles,
 		myPages,
 		slug: params.slug,
 	};
