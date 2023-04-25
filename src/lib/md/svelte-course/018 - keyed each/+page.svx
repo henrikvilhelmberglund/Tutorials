@@ -70,8 +70,11 @@ Even if we reverse the array like in the example below it works:
 
 Keyed each blocks will become important when we use **transitions** since we need to keep **references** to the elements for them to **move correctly**.
 
-Here is a nice video where Li Hau Tan explains **`keyed {#each}`** visually:
+<!-- Here is a nice video where Li Hau Tan explains **`keyed {#each}`** visually: -->
 
-<Embed>
+<!-- TODO -->
+<!-- ! temporarily disabled due to SSR issues -->
+
+<!-- <Embed>
   <Youtube id="itcf8S8Az74"/>
-</Embed>
+</Embed> -->
