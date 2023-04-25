@@ -1,3 +1,4 @@
+// TODO clean up this mess
 // export const modules = import.meta.glob("./*.svx");
 export const prerender = true;
 // export const ssr = false;
@@ -13,12 +14,15 @@ const modules = import.meta.glob([
 let myPages = [];
 let svelte;
 let title;
+let titles = [];
+let posts = [];
 for (let path in modules) {
 	// console.log(path);
 	let fixedPath = path.replace(".svx", "");
 	let post;
 
-	post = await import(`$lib/md/${fixedPath.substring(fixedPath.lastIndexOf("/") + 1)}.svx`);
+	post = import(`$lib/md/${fixedPath.substring(fixedPath.lastIndexOf("/") + 1)}.svx`);
+	posts.push(post);
 	svelte = false;
 	title = fixedPath.substring(fixedPath.lastIndexOf("/") + 1);
 
@@ -27,15 +31,17 @@ for (let path in modules) {
 		title: title,
 		link: fixedPath,
 		original: path,
-		newbody: post.default,
+		// newbody: post.default,
 		bsvelte: svelte,
 	});
+	titles.push(title);
 }
 
 export async function load({ params }) {
 	return {
 		myPages,
-		titles: modules,
+		posts: posts,
+		titles: titles,
 		title: "Tutorials",
 		// meta: post.metadata
 	};

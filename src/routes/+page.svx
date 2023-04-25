@@ -43,13 +43,17 @@ layout: mainpage
 
   <div>
     
-    {#if mounted}
-    {#each data.myPages as item}
-    {#if !item.bsvelte}
-    <svelte:component this={item.newbody}></svelte:component>
-    {/if}
+    {#each data.posts as postPromise, i}
+    {#await postPromise}
+    <p class="text-3xl">
+      Loading {data.titles[i]}...
+    </p>
+    {:then post}
+    <svelte:component this={post.default}></svelte:component>
+    {:catch error}
+    {error}
+    {/await}
     {/each}
-    {/if}
   </div>
 </div>
 
