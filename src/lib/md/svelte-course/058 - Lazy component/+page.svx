@@ -1,0 +1,21 @@
+---
+title: "Lazy component"
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-04-25
+layout: notes
+---
+
+<script>
+  import ShowMany from "$lib/ShowMany.svelte";
+  import App from "./App.svelte";
+  import AppRaw from "./App.svelte?raw";
+
+
+</script>
+
+Here we're making a lazy component that will only load when it is in view.
+
+<ShowMany name={[
+{name: "App", comp:App, raw:AppRaw, text: ""},
+]}/>
