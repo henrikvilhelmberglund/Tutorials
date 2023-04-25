@@ -5,6 +5,9 @@ authorlink: github.com/henrikvilhelmberglund/
 date: 2022-10-05
 layout: notes
 ---
+
+<!-- TODO rename these "old tutorials" and write why I do/don't use them anymore -->
+
 # Code Runner in VSCode
 
 ##### (for running JavaScript code only projects in the VSCode console)
@@ -22,13 +25,13 @@ Tip 2: In case you have a web project using document and so on but still would l
 
 ```js
 //from https://flaviocopes.com/error-document-not-defined/
-if (typeof window !== 'undefined') {
-  //here `window` is available, so `window.document` (or simply `document`) is available too
+if (typeof window !== "undefined") {
+	//here `window` is available, so `window.document` (or simply `document`) is available too
 
-  function editParagraphs() {
-    let paragraph = document.querySelector("p");
-    paragraph.innerText = "ändrad paragraphtext";
-  }
-  editParagraphs();
+	function editParagraphs() {
+		let paragraph = document.querySelector("p");
+		paragraph.innerText = "ändrad paragraphtext";
+	}
+	editParagraphs();
 }
 ```
