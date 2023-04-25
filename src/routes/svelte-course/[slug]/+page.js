@@ -13,6 +13,7 @@ const modules = import.meta.glob([
 let myPages = [];
 let svelte;
 let title;
+let titles = [];
 
 // console.log(modules);
 for (let path in modules) {
@@ -40,17 +41,22 @@ for (let path in modules) {
 		// newbody: post.default,
 		bsvelte: svelte,
 	});
+	titles.push(title);
+}
+async function loadPost(params) {
+	return import(`../../../lib/md/svelte-course/${params.slug}/+page.svx`);
 }
 
 export async function load({ params }) {
 	// const comps = import.meta.glob(`../../../lib/md/svelte-course/${params.slug}.svx`);
 	// const post = comps[`../../../lib/md/svelte-course/${name}.svx`];
-	const post = await import(`../../../lib/md/svelte-course/${params.slug}/+page.svx`);
 	return {
-		body: {
-			postContent: post.default,
-			// meta: post.metadata
-		},
+		// body: {
+		// 	postContent: post.default,
+		// },
+		// meta: post.metadata
+		post: loadPost(params),
+		titles: titles,
 		myPages,
 		slug: params.slug,
 	};

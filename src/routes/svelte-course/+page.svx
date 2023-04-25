@@ -28,15 +28,15 @@ layout: mainpage
     Td,
     Strong,
   } from "$lib/components.js";
-  let mounted = false;
-  onMount(() => {
-    mounted = true;
-  });
+  // let mounted = false;
+  // onMount(() => {
+  //   mounted = true;
+  // });
 </script>
 
 <div class="flex">
 
-{#if data.myPages}
+{#if data.titles}
 
 <Nav {data} subroute={"/svelte-course"} />
 
@@ -44,13 +44,20 @@ layout: mainpage
 
 <div>
   
-  {#if mounted}
-  {#each data.myPages as item}
-{#if item.bsvelte}
-<svelte:component this={item.newbody}></svelte:component>
-{/if}
-{/each}
-{/if}
+  <!-- {#if mounted} -->
+  
+  {#each data.posts as postPromise, i}
+    {#await postPromise}
+    <p class="text-2xl">
+    
+      Loading {data.titles[i]}...
+    </p>
+    {:then post}
+    <svelte:component this={post.default}></svelte:component>
+    {:catch error}
+    {error}
+    {/await}
+  {/each}
 </div>
 
 </div>
