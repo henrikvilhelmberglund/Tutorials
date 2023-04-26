@@ -1,0 +1,49 @@
+---
+title: "<svelte:component>"
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-04-25
+layout: notes
+---
+
+<script>
+  import ShowMany from "$lib/ShowMany.svelte";
+  import App from "./App.svelte";
+  import AppRaw from "./App.svelte?raw";
+  import App2 from "./App2.svelte";
+  import App2Raw from "./App2.svelte?raw";
+  import App3 from "./App3.svelte";
+  import App3Raw from "./App3.svelte?raw";
+  import Foo from "./Foo.svelte";
+  import FooRaw from "./Foo.svelte?raw";
+  import Bar from "./Bar.svelte";
+  import BarRaw from "./Bar.svelte?raw";
+
+
+</script>
+
+Sometimes you may want to show a certain component depending on some condition. You can do so with an if block:
+
+<ShowMany name={[
+{name: "App", comp:App, raw:AppRaw, text: ""},
+{name: "Foo", comp:App, raw:FooRaw, text: ""},
+{name: "Bar", comp:App, raw:BarRaw, text: ""},
+]}/>
+
+This is a bit annoying though because we want to use the same props but have to have them in two (or more) places, not very DRY compliant. We could do something like create a variable with an object for the props and spread them, but it's still not ideal because we still have to repeat the bind: and so on.
+
+There is a better way: **svelte:component**. By using this special Svelte element we can pass in a **this** value with the component we want.
+
+<ShowMany name={[
+{name: "App2", comp:App2, raw:App2Raw, text: ""},
+{name: "Foo", comp:App, raw:FooRaw, text: ""},
+{name: "Bar", comp:App, raw:BarRaw, text: ""},
+]}/>
+
+We could even do something like this where we have a reactive statement that sets the component.
+
+<ShowMany name={[
+{name: "App3", comp:App3, raw:App3Raw, text: "Note that passing in null or undefined will effectively hide the component."},
+{name: "Foo", comp:App, raw:FooRaw, text: ""},
+{name: "Bar", comp:App, raw:BarRaw, text: ""},
+]}/>
