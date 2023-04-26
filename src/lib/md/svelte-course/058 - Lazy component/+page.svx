@@ -10,12 +10,32 @@ layout: notes
   import ShowMany from "$lib/ShowMany.svelte";
   import App from "./App.svelte";
   import AppRaw from "./App.svelte?raw";
+  import Component from "./Component.svelte";
+  import ComponentRaw from "./Component.svelte?raw";
+  import App2 from "./App2.svelte";
+  import App2Raw from "./App2.svelte?raw";
+  import Lazy from "./Lazy.svelte";
+  import LazyRaw from "./Lazy.svelte?raw";
 
 
 </script>
 
-Here we're making a lazy component that will only load when it is in view.
+Here we're making a lazy component that will only load when it is in view. We'll reuse our viewport action that we used a few times before.
+
+By not using import at the top and instead setting a variable to a **promise** we can load it dynamically when our div with the viewport action comes into view.
 
 <ShowMany name={[
 {name: "App", comp:App, raw:AppRaw, text: ""},
+{name: "Component", comp:App, raw:ComponentRaw, text: ""},
 ]}/>
+
+This works fine but is a bit annoying because we have to have a lot of code just to load the component when we want to, like having `isLoaded`, if statements around our dynamic component and so on.
+
+We can make this better by creating a **component for loading a dynamic component**.
+
+<ShowMany name={[
+{name: "App2", comp:App2, raw:App2Raw, text: ""},
+{name: "Lazy", comp:App2, raw:LazyRaw, text: ""},
+]}/>
+
+Our dynamically loaded Lazy component is finished and can use bindings and events like if it was a normal component imported statically. Nice!
