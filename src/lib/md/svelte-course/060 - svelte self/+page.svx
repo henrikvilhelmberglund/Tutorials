@@ -1,0 +1,33 @@
+---
+title: "<svelte:self>"
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-04-28
+layout: notes
+---
+
+<script>
+  import ShowMany from "$lib/ShowMany.svelte";
+  import App from "./App.svelte";
+  import AppRaw from "./App.svelte?raw";
+  import App2 from "./App2.svelte";
+  import App2Raw from "./App2.svelte?raw";
+import Nested from "./Nested.svelte";
+import NestedRaw from "./Nested.svelte?raw";
+
+</script>
+
+Here we want to display a visualization of arrays.
+
+<ShowMany name={[
+{name: "App", comp:App, raw:AppRaw, text: "This looks fine!"},
+{name: "Nested", comp:Nested, raw:NestedRaw, text: "Uh oh, we broke it."},
+]}/>
+
+It works fine with a flat array, but what if it is nested? We can use **{"<"}svelte:self>** for recursively displaying the component.
+
+<ShowMany name={[
+{name: "App2", comp:App2, raw:App2Raw, text: "Here we used the svelte:self element to recursively show the component again if the item was an array. We can also pass props to it. Here we pass in the data array."},
+]}/>
+
+To prevent infinite loops {"<"}svelte:self> can only be used within **if blocks**, **each blocks** or in **slots**.
