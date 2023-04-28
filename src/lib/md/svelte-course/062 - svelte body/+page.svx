@@ -1,0 +1,22 @@
+---
+title: "<svelte:body>"
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-04-28
+layout: notes
+---
+
+<script>
+  import ShowMany from "$lib/ShowMany.svelte";
+  import App from "./App.svelte";
+  import AppRaw from "./App.svelte?raw";
+  import App2 from "./App2.svelte";
+  import App2Raw from "./App2.svelte?raw";
+</script>
+
+This resembles the last post but instead of the window it's the body instead.
+
+<ShowMany name={[
+{name: "App", comp:App, raw:AppRaw, text: "Here it is using onMount and normal event listeners."},
+{name: "App2", comp:App2, raw:App2Raw, text: "We can remove a lot of the code if we use the svelte:body element!"},
+]}/>
