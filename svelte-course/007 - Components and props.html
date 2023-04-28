@@ -8,7 +8,7 @@
 		<meta name="viewport" content="width=device-width" />
 		<meta http-equiv="content-security-policy" content="">
 		<link href="../_app/immutable/assets/_layout.ae2be279.css" rel="stylesheet">
-		<link href="../_app/immutable/assets/_page.59fb0c3d.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/_page.36d2e480.css" rel="stylesheet">
 		<link href="../_app/immutable/assets/Nav.2e777a09.css" rel="stylesheet">
 		<link href="../_app/immutable/assets/mdsvex-layout-notes.d4a4a43a.css" rel="stylesheet">
 		<link href="../_app/immutable/assets/Strong.9d9f8bd8.css" rel="stylesheet">
@@ -40,21 +40,25 @@
 		<link href="../_app/immutable/assets/_page.58a7081f.css" rel="stylesheet">
 		<link href="../_app/immutable/assets/_page.610024fa.css" rel="stylesheet">
 		<link href="../_app/immutable/assets/_page.fd262bec.css" rel="stylesheet">
-		<link href="../_app/immutable/assets/_page.e4544b83.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/_page.87e94a28.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/_page.943532aa.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/_page.4074cc70.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/_page.58846cf0.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/_page.0f9f1628.css" rel="stylesheet">
 		<link href="../_app/immutable/assets/_Example.bd8a81fe.css" rel="stylesheet">
-		<link rel="modulepreload" href="../_app/immutable/entry/start.97f1fe99.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/index.37298988.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.6d406c95.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/index.646636c1.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/paths.a97e612f.js">
-		<link rel="modulepreload" href="../_app/immutable/entry/app.5d001e41.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.4617d297.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.5815ca79.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.f8f54da0.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.522bc5dc.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/paths.3baf5e07.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.95a61b80.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/preload-helper.41c905a7.js">
-		<link rel="modulepreload" href="../_app/immutable/entry/_layout.svelte.4c3d62ee.js">
-		<link rel="modulepreload" href="../_app/immutable/entry/svelte-course-_slug_-page.svelte.71e847d8.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/Nav.f8ebb351.js">
-		<link rel="modulepreload" href="../_app/immutable/entry/svelte-course-_slug_-page.js.dad30717.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/_layout.svelte.fc3a8456.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/svelte-course-_slug_-page.svelte.05d41711.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/Nav.a626fe98.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/svelte-course-_slug_-page.js.5fb8a3cf.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/dynamic-import-helper.be004503.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/_page.e5713a55.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/_page.6eed18c4.js">
 	</head>
 
 	<body>
@@ -127,10 +131,18 @@
 				<a class="uno-nhjwpp" href="/svelte-course/053 - Slot forwarding">053 - Slot forwarding</a><br>
 				<a class="uno-nhjwpp" href="/svelte-course/054 - $$slots">054 - $$slots</a><br>
 				<a class="uno-nhjwpp" href="/svelte-course/055 - Infinite list">055 - Infinite list</a><br>
-				<a class="uno-nhjwpp" href="/svelte-course/056 - Tabs">056 - Tabs</a></div>
+				<a class="uno-nhjwpp" href="/svelte-course/056 - Tabs">056 - Tabs</a><br>
+				<a class="uno-nhjwpp" href="/svelte-course/057 - $$props and $$restProps">057 - $$props and $$restProps</a><br>
+				<a class="uno-nhjwpp" href="/svelte-course/058 - Lazy component">058 - Lazy component</a><br>
+				<a class="uno-nhjwpp" href="/svelte-course/059 - svelte component">059 - svelte component</a><br>
+				<a class="uno-nhjwpp" href="/svelte-course/060 - svelte self">060 - svelte self</a><br>
+				<a class="uno-nhjwpp" href="/svelte-course/061 - svelte window">061 - svelte window</a><br>
+				<a class="uno-nhjwpp" href="/svelte-course/062 - svelte body">062 - svelte body</a></div>
 </nav>
 
-	<article class="uno-4w6dsq"><section class="uno-otf0eq"><div class="uno-xj1z8i"><h2 class="uno-sjqek6">Components and props
+	
+	
+		<article class="uno-4w6dsq"><section class="uno-otf0eq"><div class="uno-xj1z8i"><h2 class="uno-sjqek6">Components and props
 </h2></div>
     <div class="uno-mexwlg"><p class="uno-ddg7b5 text-1xl ">Posted on 2023-02-03 by
 </p>
@@ -261,7 +273,8 @@
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
   
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ObjectDisplay</span> <span class="token language-javascript"><span class="token punctuation">{</span><span class="token operator">...</span>obj<span class="token punctuation">}</span></span><span class="token punctuation">/></span></span><!-- HTML_TAG_END --></pre></div>
-</div></div></section></article></div>
+</div></div></section></article>
+	</div>
 
 
 
@@ -269,7 +282,7 @@
 			
 			<script>
 				{
-					__sveltekit_pkgt2s = {
+					__sveltekit_h08lq4 = {
 						env: {},
 						base: new URL("..", location).pathname.slice(0, -1),
 						element: document.currentScript.parentElement
@@ -278,10 +291,10 @@
 					const data = [null,null];
 
 					Promise.all([
-						import("../_app/immutable/entry/start.97f1fe99.js"),
-						import("../_app/immutable/entry/app.5d001e41.js")
+						import("../_app/immutable/entry/start.4617d297.js"),
+						import("../_app/immutable/entry/app.95a61b80.js")
 					]).then(([kit, app]) => {
-						kit.start(app, __sveltekit_pkgt2s.element, {
+						kit.start(app, __sveltekit_h08lq4.element, {
 							node_ids: [0, 4],
 							data,
 							form: null,

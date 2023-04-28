@@ -8,7 +8,7 @@
 		<meta name="viewport" content="width=device-width" />
 		<meta http-equiv="content-security-policy" content="">
 		<link href="../_app/immutable/assets/_layout.ae2be279.css" rel="stylesheet">
-		<link href="../_app/immutable/assets/_page.59fb0c3d.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/_page.36d2e480.css" rel="stylesheet">
 		<link href="../_app/immutable/assets/Nav.2e777a09.css" rel="stylesheet">
 		<link href="../_app/immutable/assets/mdsvex-layout-notes.d4a4a43a.css" rel="stylesheet">
 		<link href="../_app/immutable/assets/Strong.9d9f8bd8.css" rel="stylesheet">
@@ -40,21 +40,25 @@
 		<link href="../_app/immutable/assets/_page.58a7081f.css" rel="stylesheet">
 		<link href="../_app/immutable/assets/_page.610024fa.css" rel="stylesheet">
 		<link href="../_app/immutable/assets/_page.fd262bec.css" rel="stylesheet">
-		<link href="../_app/immutable/assets/_page.e4544b83.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/_page.87e94a28.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/_page.943532aa.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/_page.4074cc70.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/_page.58846cf0.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/_page.0f9f1628.css" rel="stylesheet">
 		<link href="../_app/immutable/assets/_Example.bd8a81fe.css" rel="stylesheet">
-		<link rel="modulepreload" href="../_app/immutable/entry/start.97f1fe99.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/index.37298988.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.6d406c95.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/index.646636c1.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/paths.a97e612f.js">
-		<link rel="modulepreload" href="../_app/immutable/entry/app.5d001e41.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.4617d297.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.5815ca79.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.f8f54da0.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.522bc5dc.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/paths.3baf5e07.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.95a61b80.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/preload-helper.41c905a7.js">
-		<link rel="modulepreload" href="../_app/immutable/entry/_layout.svelte.4c3d62ee.js">
-		<link rel="modulepreload" href="../_app/immutable/entry/svelte-course-_slug_-page.svelte.71e847d8.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/Nav.f8ebb351.js">
-		<link rel="modulepreload" href="../_app/immutable/entry/svelte-course-_slug_-page.js.dad30717.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/_layout.svelte.fc3a8456.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/svelte-course-_slug_-page.svelte.05d41711.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/Nav.a626fe98.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/svelte-course-_slug_-page.js.5fb8a3cf.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/dynamic-import-helper.be004503.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/_page.e5713a55.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/_page.6eed18c4.js">
 	</head>
 
 	<body>
@@ -127,25 +131,26 @@
 				<a class="uno-nhjwpp" href="/svelte-course/053 - Slot forwarding">053 - Slot forwarding</a><br>
 				<a class="uno-nhjwpp" href="/svelte-course/054 - $$slots">054 - $$slots</a><br>
 				<a class="uno-nhjwpp" href="/svelte-course/055 - Infinite list">055 - Infinite list</a><br>
-				<a class="uno-nhjwpp uno-mms0fk" href="/svelte-course/056 - Tabs">056 - Tabs</a></div>
+				<a class="uno-nhjwpp uno-mms0fk" href="/svelte-course/056 - Tabs">056 - Tabs</a><br>
+				<a class="uno-nhjwpp" href="/svelte-course/057 - $$props and $$restProps">057 - $$props and $$restProps</a><br>
+				<a class="uno-nhjwpp" href="/svelte-course/058 - Lazy component">058 - Lazy component</a><br>
+				<a class="uno-nhjwpp" href="/svelte-course/059 - svelte component">059 - svelte component</a><br>
+				<a class="uno-nhjwpp" href="/svelte-course/060 - svelte self">060 - svelte self</a><br>
+				<a class="uno-nhjwpp" href="/svelte-course/061 - svelte window">061 - svelte window</a><br>
+				<a class="uno-nhjwpp" href="/svelte-course/062 - svelte body">062 - svelte body</a></div>
 </nav>
 
-	<article class="uno-4w6dsq"><section class="uno-otf0eq"><div class="uno-xj1z8i"><h2 class="uno-sjqek6">Tabs
+	
+	
+		<article class="uno-4w6dsq"><section class="uno-otf0eq"><div class="uno-xj1z8i"><h2 class="uno-sjqek6">Tabs
 </h2></div>
     <div class="uno-mexwlg"><p class="uno-ddg7b5 text-1xl ">Posted on 2023-04-23 by
 </p>
       <a class="uno-bz4u3f text-1xl" href="http://github.com/henrikvilhelmberglund/">henrikvilhelmberglund
 </a></div></section>
-  <section class="uno-uha8j6"><p class="uno-ddg7b5 text-1xl ">Here we&#39;re going to create an infinite list where we load more data as we scroll.
+  <section class="uno-uha8j6"><p class="uno-ddg7b5 text-1xl ">He&#39;re were going to make a Tabs component for displaying tabs. I already made a simple tab system myself for displaying the code but it could probably be improved.
 </p>
-<p class="uno-ddg7b5 text-1xl ">We can experiment and play with a component to get something we like or we can think in terms of how we want to use it and how you want to allow users to use it and provide that behavior.
-</p>
-<p class="uno-ddg7b5 text-1xl ">He&#39;re we&#39;re going for the second approach.
-</p>
-<p class="uno-ddg7b5 text-1xl ">We can think of how our List component should look in order to provide the infinite scroll functionality.
-</p>
-<p class="uno-ddg7b5 text-1xl ">The list is infinite so if you want to read the code <strong class="uno-9ygim0">click the checkbox in the top right
-</strong>.
+<p class="uno-ddg7b5 text-1xl ">It can be good to think about how the user is going to use our component instead of just starting blindly.
 </p>
 
 
@@ -153,52 +158,175 @@
 
 
 
-<div class="uno-c5s868"><div class="uno-a5c347 svelty"><label class="uno-lgc48k" for="">Show list
-	<input type="checkbox" checked></label>
+<div class="uno-c5s868"><div class="uno-a5c347 svelty">
 
-<ul>
-	<li></li>
-</ul></div>
 
-	<div class="uno-u9dsbt"><label class="uno-1ieb8z uno-2y2hkt"><input type="radio" name="selected" class="uno-pdic65" id="" value="[object Object]" checked>App.svelte
-			</label><label class="uno-1ieb8z uno-blin5q"><input type="radio" name="selected" class="uno-pdic65" id="" value="[object Object]">List.svelte
-			</label><label class="uno-1ieb8z uno-blin5q"><input type="radio" name="selected" class="uno-pdic65" id="" value="[object Object]">data.js
-			</label><label class="uno-1ieb8z uno-blin5q"><input type="radio" name="selected" class="uno-pdic65" id="" value="[object Object]">useViewportAction.js
+</div>
+
+	<div class="uno-u9dsbt"><label class="uno-1ieb8z uno-2y2hkt"><input type="radio" name="selected" class="uno-pdic65" id="" value="[object Object]" checked>DesigningTabsComponent.svelte
 			</label>
 		<pre class="uno-yezwci language-svelte"><code style="font-family: 'Maple', Menlo, Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', 'Courier New', monospace;"><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
-	<span class="token keyword">import</span> List <span class="token keyword">from</span> <span class="token string">"./List.svelte"</span><span class="token punctuation">;</span>
-	<span class="token keyword">import</span> data <span class="token keyword">from</span> <span class="token string">"./data"</span><span class="token punctuation">;</span>
-
-	<span class="token keyword">let</span> showList <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+	<span class="token comment">// to hide errors</span>
+	<span class="token keyword">let</span> Tabs<span class="token punctuation">;</span>
+	<span class="token keyword">let</span> Tab<span class="token punctuation">;</span>
+	<span class="token keyword">let</span> isLoggedIn<span class="token punctuation">;</span>
+	<span class="token keyword">let</span> username<span class="token punctuation">;</span>
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fixed right-4 top-4 rounded-lg bg-blue-300 p-4 text-xl<span class="token punctuation">"</span></span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-	Show list
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>checkbox<span class="token punctuation">"</span></span> <span class="token attr-name"><span class="token namespace">bind:</span>checked=</span><span class="token language-javascript"><span class="token punctuation">{</span>showList<span class="token punctuation">}</span></span> <span class="token punctuation">/></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span>
+<span class="token comment">&lt;!-- 
 
-<span class="token language-javascript"><span class="token punctuation">{</span>#<span class="token keyword">if</span> showList<span class="token punctuation">}</span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>List</span> <span class="token language-javascript"><span class="token punctuation">{</span><span class="token operator">...</span>$data<span class="token punctuation">}</span></span> <span class="token attr-name">key</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>id<span class="token punctuation">"</span></span> <span class="token attr-name"><span class="token namespace">let:</span>item=</span><span class="token language-javascript"><span class="token punctuation">{</span><span class="token punctuation">{</span> download_url<span class="token punctuation">,</span> author <span class="token punctuation">}</span><span class="token punctuation">}</span></span> <span class="token attr-name"><span class="token namespace">on:</span>loadMore=</span><span class="token language-javascript"><span class="token punctuation">{</span>data<span class="token punctuation">.</span>fetchMore<span class="token punctuation">}</span></span><span class="token punctuation">></span></span>
-		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>item<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>w-full<span class="token punctuation">"</span></span> <span class="token attr-name">src=</span><span class="token language-javascript"><span class="token punctuation">{</span>download_url<span class="token punctuation">}</span></span> <span class="token attr-name">alt="stunning</span> <span class="token attr-name">photo</span> <span class="token attr-name">taken</span> <span class="token attr-name">by</span> <span class="token language-javascript"><span class="token punctuation">{</span>author<span class="token punctuation">}</span></span><span class="token attr-name">"</span> <span class="token punctuation">/></span></span>
-	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>List</span><span class="token punctuation">></span></span>
-<span class="token language-javascript"><span class="token punctuation">{</span><span class="token operator">/</span><span class="token keyword">if</span><span class="token punctuation">}</span></span>
+  &lt;Tabs>
+    &lt;Tab title="tab 1">Hey hey&lt;/Tab>
+    {#if isLoggedIn}
+		&lt;Tab title="secret tab 2">Logged in content 1&lt;/Tab>
+		&lt;Tab title="secret tab 3">Logged in content 2&lt;/Tab>
+    {/if}
+    &lt;Tab title={username}>info for {username}&lt;/Tab>
+  &lt;/Tabs>
+--></span>
+<span class="token comment">&lt;!-- alternative way, but we think just having an if statement to show or hide them feels better --></span>
 
+<span class="token comment">&lt;!-- &lt;Tab shouldShow={isLoggedIn}>Tab content&lt;/Tab> --></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">></span></span><span class="token style"><span class="token language-css">
 </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span>
 <!-- HTML_TAG_END --></code></pre></div>
 </div>
-<p class="uno-ddg7b5 text-1xl ">We&#39;re reusing the viewport action from <strong class="uno-9ygim0">use:viewport
-</strong>.
-We&#39;re using a writable store and a <strong class="uno-9ygim0">custom store
-</strong> as the default export with our custom functionality.
-We&#39;re using an event dispatcher that dispatches a custom event <strong class="uno-9ygim0">loadMore
-</strong> whenever the action triggers the enterViewport event.
-We&#39;re using a slot to put the img tag <strong class="uno-9ygim0">inside of the component in the markup
-</strong>.
-We&#39;re using spread props in order to spread all of the $data store into our list component.
+<p class="uno-ddg7b5 text-1xl ">This looks fine! Let&#39;s start building it.
 </p>
-<p class="uno-ddg7b5 text-1xl ">That&#39;s it! I hoped you closed the infinite list so you can read this 😊
-</p></section></article></div>
+
+
+
+
+
+
+<div class="uno-c5s868"><div class="uno-a5c347 svelty"><div><input type="checkbox">
+	<input type="text" value="Henrik"></div>
+
+<button>Change tab</button>
+
+<div></div>
+
+
+	
+	</div>
+
+	<div class="uno-u9dsbt"><label class="uno-1ieb8z uno-2y2hkt"><input type="radio" name="selected" class="uno-pdic65" id="" value="[object Object]" checked>App.svelte
+			</label><label class="uno-1ieb8z uno-blin5q"><input type="radio" name="selected" class="uno-pdic65" id="" value="[object Object]">Tabs.svelte
+			</label><label class="uno-1ieb8z uno-blin5q"><input type="radio" name="selected" class="uno-pdic65" id="" value="[object Object]">Tab.svelte
+			</label>
+		<pre class="uno-yezwci language-svelte"><code style="font-family: 'Maple', Menlo, Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', 'Courier New', monospace;"><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+	<span class="token keyword">import</span> Tabs <span class="token keyword">from</span> <span class="token string">"./Tabs.svelte"</span><span class="token punctuation">;</span>
+	<span class="token keyword">import</span> Tab <span class="token keyword">from</span> <span class="token string">"./Tab.svelte"</span><span class="token punctuation">;</span>
+	<span class="token keyword">let</span> isLoggedIn<span class="token punctuation">;</span>
+	<span class="token keyword">let</span> username <span class="token operator">=</span> <span class="token string">"Henrik"</span><span class="token punctuation">;</span>
+	<span class="token keyword">let</span> selectedTab <span class="token operator">=</span> <span class="token string">"2"</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>checkbox<span class="token punctuation">"</span></span> <span class="token attr-name"><span class="token namespace">bind:</span>checked=</span><span class="token language-javascript"><span class="token punctuation">{</span>isLoggedIn<span class="token punctuation">}</span></span> <span class="token punctuation">/></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name"><span class="token namespace">bind:</span>value=</span><span class="token language-javascript"><span class="token punctuation">{</span>username<span class="token punctuation">}</span></span> <span class="token punctuation">/></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name"><span class="token namespace">on:</span>click=</span><span class="token language-javascript"><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span>selectedTab <span class="token operator">=</span> <span class="token string">"4"</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token punctuation">></span></span>Change tab<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Tabs</span> <span class="token attr-name"><span class="token namespace">bind:</span>selectedTab</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Tab</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>tab 1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Hey hey<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Tab</span><span class="token punctuation">></span></span>
+	<span class="token language-javascript"><span class="token punctuation">{</span>#<span class="token keyword">if</span> isLoggedIn<span class="token punctuation">}</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Tab</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>2<span class="token punctuation">"</span></span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>secret tab 2<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Logged in content 1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Tab</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Tab</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>3<span class="token punctuation">"</span></span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>secret tab 3<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Logged in content 2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Tab</span><span class="token punctuation">></span></span>
+	<span class="token language-javascript"><span class="token punctuation">{</span><span class="token operator">/</span><span class="token keyword">if</span><span class="token punctuation">}</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>Tab</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>4<span class="token punctuation">"</span></span> <span class="token attr-name">title=</span><span class="token language-javascript"><span class="token punctuation">{</span>username<span class="token punctuation">}</span></span><span class="token punctuation">></span></span>info for <span class="token language-javascript"><span class="token punctuation">{</span>username<span class="token punctuation">}</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Tab</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>Tabs</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">></span></span><span class="token style"><span class="token language-css">
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span>
+<!-- HTML_TAG_END --></code></pre></div>
+</div>
+<p class="uno-ddg7b5 text-1xl ">At first the login tabs ended up at the end even though they had IDs of <strong class="uno-9ygim0">2
+</strong> and <strong class="uno-9ygim0">3
+</strong>.
+</p>
+<p class="uno-ddg7b5 text-1xl ">I solved it by using an object instead which works but from my understanding it is not guaranteed to work since objects are not ordered.
+</p>
+<p class="uno-ddg7b5 text-1xl ">Let&#39;s try fixing the array implementation instead:
+</p>
+
+
+
+
+<div class="uno-djcb2y text-1xl"><!-- HTML_TAG_START -->Instead of pushing the value directly we sort them by their ID when assigning using the spread operator. As a bonus since we're assigning we don't need the ugly titles = titles either. Credits to <strong>Believe Lody</strong> for this solution!<!-- HTML_TAG_END --></div>
+
+<div class="uno-c5s868"><div class="uno-a5c347 svelty"><div><input type="checkbox">
+	<input type="text" value="Henrik"></div>
+
+<button>Change tab</button>
+
+<div></div>
+
+
+	
+	</div>
+
+	<div class="uno-u9dsbt"><label class="uno-1ieb8z uno-2y2hkt"><input type="radio" name="selected" class="uno-pdic65" id="" value="[object Object]" checked>Tabs2.svelte
+			</label><label class="uno-1ieb8z uno-blin5q"><input type="radio" name="selected" class="uno-pdic65" id="" value="[object Object]">App2.svelte
+			</label><label class="uno-1ieb8z uno-blin5q"><input type="radio" name="selected" class="uno-pdic65" id="" value="[object Object]">Tab2.svelte
+			</label>
+		<pre class="uno-yezwci language-svelte"><code style="font-family: 'Maple', Menlo, Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', 'Courier New', monospace;"><!-- HTML_TAG_START --><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+	<span class="token keyword">import</span> <span class="token punctuation">{</span> setContext <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"svelte"</span><span class="token punctuation">;</span>
+	<span class="token keyword">import</span> <span class="token punctuation">{</span> writable <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"svelte/store"</span><span class="token punctuation">;</span>
+	<span class="token comment">// we want to be able to view one tab at a time</span>
+	<span class="token keyword">export</span> <span class="token keyword">let</span> selectedTab <span class="token operator">=</span> <span class="token string">"1"</span><span class="token punctuation">;</span>
+	<span class="token keyword">let</span> selectedTabStore <span class="token operator">=</span> <span class="token function">writable</span><span class="token punctuation">(</span>selectedTab<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token literal-property property">$</span><span class="token operator">:</span> $selectedTabStore <span class="token operator">=</span> selectedTab<span class="token punctuation">;</span>
+	<span class="token comment">// for making the bind: work</span>
+	<span class="token literal-property property">$</span><span class="token operator">:</span> <span class="token function">updateProps</span><span class="token punctuation">(</span>$selectedTabStore<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token keyword">function</span> <span class="token function">updateProps</span><span class="token punctuation">(</span><span class="token parameter">value</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		selectedTab <span class="token operator">=</span> value<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token function">setContext</span><span class="token punctuation">(</span><span class="token string">"selectedTab"</span><span class="token punctuation">,</span> selectedTabStore<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token keyword">let</span> titles <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+	<span class="token function">setContext</span><span class="token punctuation">(</span><span class="token string">"tabTitles"</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+		<span class="token function">registerTab</span><span class="token punctuation">(</span><span class="token parameter">id<span class="token punctuation">,</span> title</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token comment">// titles.push({ id, title });</span>
+			titles <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token operator">...</span>titles<span class="token punctuation">,</span> <span class="token punctuation">{</span> id<span class="token punctuation">,</span> title <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b</span><span class="token punctuation">)</span> <span class="token operator">=></span> a<span class="token punctuation">.</span>id <span class="token operator">-</span> b<span class="token punctuation">.</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span><span class="token punctuation">,</span>
+		<span class="token function">updateTitle</span><span class="token punctuation">(</span><span class="token parameter">id<span class="token punctuation">,</span> title</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token keyword">const</span> tabIndex <span class="token operator">=</span> titles<span class="token punctuation">.</span><span class="token function">findIndex</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">title</span><span class="token punctuation">)</span> <span class="token operator">=></span> title<span class="token punctuation">.</span>id <span class="token operator">===</span> id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			titles<span class="token punctuation">[</span>tabIndex<span class="token punctuation">]</span><span class="token punctuation">.</span>title <span class="token operator">=</span> title<span class="token punctuation">;</span>
+		<span class="token punctuation">}</span><span class="token punctuation">,</span>
+		<span class="token function">unregisterTab</span><span class="token punctuation">(</span><span class="token parameter">id</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token keyword">const</span> tabIndex <span class="token operator">=</span> titles<span class="token punctuation">.</span><span class="token function">findIndex</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">title</span><span class="token punctuation">)</span> <span class="token operator">=></span> title<span class="token punctuation">.</span>id <span class="token operator">===</span> id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+			<span class="token keyword">if</span> <span class="token punctuation">(</span>tabIndex <span class="token operator">></span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+				titles<span class="token punctuation">.</span><span class="token function">splice</span><span class="token punctuation">(</span>tabIndex<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+				titles <span class="token operator">=</span> titles<span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span><span class="token punctuation">,</span>
+	<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
+	<span class="token each"><span class="token punctuation">{</span><span class="token keyword">#each</span> <span class="token language-javascript">titles </span><span class="token keyword">as</span> <span class="token language-javascript"><span class="token punctuation">{</span> id<span class="token punctuation">,</span> title <span class="token punctuation">}</span><span class="token punctuation">}</span></span></span>
+		<span class="token comment">&lt;!-- not reactive yet because context is not reactive across components, we need a store as well --></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name"><span class="token namespace">class:</span>selected=</span><span class="token language-javascript"><span class="token punctuation">{</span>$selectedTabStore <span class="token operator">===</span> id<span class="token punctuation">}</span></span> <span class="token attr-name"><span class="token namespace">on:</span>click=</span><span class="token language-javascript"><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span>$selectedTabStore <span class="token operator">=</span> id<span class="token punctuation">)</span><span class="token punctuation">}</span></span>
+			<span class="token punctuation">></span></span><span class="token language-javascript"><span class="token punctuation">{</span>title<span class="token punctuation">}</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+	<span class="token each"><span class="token punctuation">{</span><span class="token keyword">/each</span><span class="token punctuation">}</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>slot</span> <span class="token punctuation">/></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">></span></span><span class="token style"><span class="token language-css">
+	<span class="token selector">button.selected</span> <span class="token punctuation">{</span>
+		<span class="token property">background</span><span class="token punctuation">:</span> black<span class="token punctuation">;</span>
+		<span class="token property">color</span><span class="token punctuation">:</span> white<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span>
+<!-- HTML_TAG_END --></code></pre></div>
+</div>
+<p class="uno-ddg7b5 text-1xl ">There we go! In this example we used slots, context, reactive context using a store, bind and reactive statements to end up with a fairly simple store.
+</p></section></article>
+	</div>
 
 
 
@@ -206,7 +334,7 @@ We&#39;re using spread props in order to spread all of the $data store into our 
 			
 			<script>
 				{
-					__sveltekit_pkgt2s = {
+					__sveltekit_h08lq4 = {
 						env: {},
 						base: new URL("..", location).pathname.slice(0, -1),
 						element: document.currentScript.parentElement
@@ -215,10 +343,10 @@ We&#39;re using spread props in order to spread all of the $data store into our 
 					const data = [null,null];
 
 					Promise.all([
-						import("../_app/immutable/entry/start.97f1fe99.js"),
-						import("../_app/immutable/entry/app.5d001e41.js")
+						import("../_app/immutable/entry/start.4617d297.js"),
+						import("../_app/immutable/entry/app.95a61b80.js")
 					]).then(([kit, app]) => {
-						kit.start(app, __sveltekit_pkgt2s.element, {
+						kit.start(app, __sveltekit_h08lq4.element, {
 							node_ids: [0, 4],
 							data,
 							form: null,
