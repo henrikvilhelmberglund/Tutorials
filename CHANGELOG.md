@@ -2,6 +2,37 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+### [0.0.13](https://github.com/henrikvilhelmberglund/Tutorials/compare/v0.0.12...v0.0.13) (2023-04-28)
+
+
+### Features
+
+* :sparkles: add svelte-course 062 svelte body ([f04e4ef](https://github.com/henrikvilhelmberglund/Tutorials/commit/f04e4ef6649c74d905fec7d8649547fd87ccc90a))
+* :sparkles: add svelte-course 061 svelte window ([706e575](https://github.com/henrikvilhelmberglund/Tutorials/commit/706e57521b2ffbd21ede7102fce4b093f43142b2))
+* :sparkles: add svelte-course 060 svelte self ([1aaf7b9](https://github.com/henrikvilhelmberglund/Tutorials/commit/1aaf7b9ac6df8bbf1311336e45b607b8ae043cbc))
+* :sparkles: add svelte-course 059 svelte component ([30d4926](https://github.com/henrikvilhelmberglund/Tutorials/commit/30d4926378800134d0a54e69bb9b0b0c5b1e6993))
+* :sparkles: add svelte-course 058 lazy component ([051db4e](https://github.com/henrikvilhelmberglund/Tutorials/commit/051db4e73ebdf151bdb599faa47c8644a388e302))
+* :sparkles: start svelte-course 058 but time to sleep! ([5d3aeb6](https://github.com/henrikvilhelmberglund/Tutorials/commit/5d3aeb6b426de7e66fa8997fcbca0f20b5b6f597))
+* :sparkles: use streaming promises ([5de4e1f](https://github.com/henrikvilhelmberglund/Tutorials/commit/5de4e1f59db8089f1d0c02cd0d0c54f76b64a4a8))
+* :memo: add todo to rename these/add recent info ([7650e6b](https://github.com/henrikvilhelmberglund/Tutorials/commit/7650e6bda9f66a2df07ddb752bf8ec1cc56b4cd8))
+* :sparkles: use fancy streaming promises here too ([f5a93f7](https://github.com/henrikvilhelmberglund/Tutorials/commit/f5a93f7266992237ad1ee6aad0c2bea1e74357a7))
+* :sparkles: use fancy streaming for promises when loading the posts ([b244dff](https://github.com/henrikvilhelmberglund/Tutorials/commit/b244dff3203b4bada697ab8f249641db412bebb2))
+* :package: try to update the package but it was already latest ([b80f07d](https://github.com/henrikvilhelmberglund/Tutorials/commit/b80f07db072a439234571f101c7de0f723fefdb7))
+* :sparkles: add svelte-course 057 ([d0f13ed](https://github.com/henrikvilhelmberglund/Tutorials/commit/d0f13ed7be60ee8af1fc35f52a63322004ece8fc))
+* :sparkles: add svelte course 056 tabs ([a74cdc7](https://github.com/henrikvilhelmberglund/Tutorials/commit/a74cdc75099b87f9e4b1980a4dcd96c010926640))
+* :sparkles: add prerender for svelte course slug ([0471756](https://github.com/henrikvilhelmberglund/Tutorials/commit/0471756b3e5755e3ff7ec21840dc115a6e9f2d59))
+* :memo: add TODO ([4405823](https://github.com/henrikvilhelmberglund/Tutorials/commit/4405823df2c7ea850874cbb3602d2f271e000d93))
+
+
+### Bug Fixes
+
+* :bug: temporarily disable Youtube component due to SSR ([d833ac3](https://github.com/henrikvilhelmberglund/Tutorials/commit/d833ac332f1b830d5d0b3a6f490527e5b341d605))
+* :zap: get titles directly from load function ([c82f40e](https://github.com/henrikvilhelmberglund/Tutorials/commit/c82f40e64f80b3cb65e6b33304b3d46990d34154))
+* :fire: comment out console log ([6024405](https://github.com/henrikvilhelmberglund/Tutorials/commit/6024405243bd60173c4845ae4e69576f12af5d7a))
+* :bug: apparently you can't have a base path when using the fallback ([a042a5a](https://github.com/henrikvilhelmberglund/Tutorials/commit/a042a5af1a983eac915ca1fbf962dfb86e25afef))
+* :memo: update TODO ([b575069](https://github.com/henrikvilhelmberglund/Tutorials/commit/b5750695622a33248f6109e9d95022e8bf2fd770))
+* :bug: set fallback to 404.html so refreshing works when you're in a post ([b23124d](https://github.com/henrikvilhelmberglund/Tutorials/commit/b23124dab6797a1ffd1d393543b0bde5b050c45c))
+
 ### [0.0.12](https://github.com/henrikvilhelmberglund/Tutorials/compare/v0.0.11...v0.0.12) (2023-04-23)
 
 
