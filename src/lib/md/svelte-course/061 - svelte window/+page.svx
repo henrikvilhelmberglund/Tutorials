@@ -1,0 +1,36 @@
+---
+title: "<svelte:window>"
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-04-28
+layout: notes
+---
+
+<script>
+  import ShowMany from "$lib/ShowMany.svelte";
+  import App from "./App.svelte";
+  import AppRaw from "./App.svelte?raw";
+  import App2 from "./App2.svelte";
+  import App2Raw from "./App2.svelte?raw";
+</script>
+
+Another Svelte special element is {"<"}svelte:window>.
+
+Here we want to see the width and have it change whenever we resize the window. We also want to focus the search bar whenever we press ctrl+f.
+
+<ShowMany name={[
+{name: "App", comp:App, raw:AppRaw, text: "Here it is normally without using svelte:window. Let's try to rewrite it using svelte:window>."},
+{name: "App2", comp:App2, raw:App2Raw, text: "By using svelte:window we can bind to the innerWidth variable and remove that function. We can also remove the onMount lifecycle functions and instead put the event handlers on the svelte:window element itself."},
+]}/>
+
+Svelte bindings (bind:) are usually two way bindings but here everything except scrollX and scrollY are readonly so effectively they are one way bindings.
+
+Here is a list of the properties we can bind to:
+
+- innerWidth
+- innerHeight
+- outerWidth
+- outerHeight
+- scrollX (not readonly)
+- scrollY (not readonly)
+- online — an alias for window.navigator.onLine
