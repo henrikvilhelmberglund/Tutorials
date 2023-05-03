@@ -7,7 +7,6 @@
 
 <div class="flex">
 	<Nav {data} subroute={"/svelte-course"} />
-
 	<svelte:component this={data.post.default} />
 </div>
 <!-- 

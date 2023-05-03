@@ -14,7 +14,5 @@
 
 <div class="flex">
 	<Nav {data} subroute={"/old-tutorials"} />
-	<div>
-		<svelte:component this={data.post.default} />
-	</div>
+	<svelte:component this={data.post.default} />
 </div>
