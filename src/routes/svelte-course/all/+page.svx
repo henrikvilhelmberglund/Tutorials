@@ -44,19 +44,10 @@ layout: mainpage
 
 <div>
   
-  <!-- {#if mounted} -->
+  {#each data.posts as post}
   
-  {#each data.posts as postPromise, i}
-    {#await postPromise}
-    <p class="text-2xl">
-    
-      Loading {data.titles[i]}...
-    </p>
-    {:then post}
     <svelte:component this={post.default}></svelte:component>
-    {:catch error}
-    {error}
-    {/await}
+  
   {/each}
 </div>
 

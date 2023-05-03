@@ -8,14 +8,7 @@
 <div class="flex">
 	<Nav {data} subroute={"/svelte-course"} />
 
-	<!-- TODO this doesn't really work... hmm -->
-	{#await data.post}
-		<p class="fixed left-[50%] top-[50%] text-3xl">Loading...</p>
-	{:then post}
-		<svelte:component this={post.default} />
-	{:catch error}
-		{error}
-	{/await}
+	<svelte:component this={data.post.default} />
 </div>
 <!-- 
 

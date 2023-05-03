@@ -14,14 +14,7 @@
 
 <div class="flex">
 	<Nav {data} subroute={"/old-tutorials"} />
-
 	<div>
-		{#await data.post}
-			<p class="text-3xl">Loading...</p>
-		{:then post}
-			<svelte:component this={post.default} />
-		{:catch error}
-			{error}
-		{/await}
+		<svelte:component this={data.post.default} />
 	</div>
 </div>

@@ -39,20 +39,12 @@ layout: mainpage
 <div class="flex">
   
   
-  <Nav {data}/>
+  <Nav {data} subroute={"/old-tutorials"}/>
 
   <div>
     
-    {#each data.posts as postPromise, i}
-    {#await postPromise}
-    <p class="text-3xl">
-      Loading {data.titles[i]}...
-    </p>
-    {:then post}
+    {#each data.posts as post}
     <svelte:component this={post.default}></svelte:component>
-    {:catch error}
-    {error}
-    {/await}
     {/each}
   </div>
 </div>

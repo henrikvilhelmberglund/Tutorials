@@ -17,9 +17,9 @@ for (let path in modules) {
 	let fixedPath = path.replace(".svx", "");
 	let post;
 
-	post = await import(
-		`../../../lib/md/old-tutorials/${fixedPath.substring(fixedPath.lastIndexOf("/") + 1)}.svx`
-	);
+	// post = await import(
+	// 	`../../../lib/md/old-tutorials/${fixedPath.substring(fixedPath.lastIndexOf("/") + 1)}.svx`
+	// );
 	svelte = false;
 	title = fixedPath.substring(fixedPath.lastIndexOf("/") + 1);
 
