@@ -6,3 +6,4 @@
 ☐ hide the box thingy in the upper right until we're viewing the post that needs it
 ☐ remove nav to the left in mobile view
 ☐ in general fix mobile view
+☐ use ShowMany component in earlier Svelte-course pages to get the correct styling
