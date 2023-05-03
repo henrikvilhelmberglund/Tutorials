@@ -1,5 +1,4 @@
 <script>
-	export let data;
 	import { base } from "$app/paths";
 	import "@unocss/reset/tailwind.css";
 </script>
