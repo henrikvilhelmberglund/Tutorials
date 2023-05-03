@@ -10,22 +10,22 @@ let posts = [];
 
 async function importPosts() {
 	const modules = import.meta.glob([
-		"../../../lib/md/svelte-course/*/*.svx",
+		"../../../lib/md/svelte-course/*/+page.svx",
 		"!../../../lib/md/svelte-course/_*.svx",
 		"!../../../lib/md/svelte-course/*/_*.svx",
 		"!../../../lib/md/svelte-course/_*/*.svx",
 	]);
 
-	console.log(modules);
+	// console.log(modules);
 	for (let path in modules) {
-		console.log(path);
+		// console.log(path);
 		let fixedPath = path.replace(".svx", "");
 		let post;
 		if (!path.includes("+page.svx")) {
 			continue;
 		} else {
 			fixedPath = path.replace("/+page.svx", "");
-			console.log(fixedPath);
+			// console.log(fixedPath);
 			// console.log(
 			// 	`$lib/md/svelte-course/${fixedPath.substring(fixedPath.lastIndexOf("/") + 1)}/+page.svx`
 			// );
@@ -50,14 +50,15 @@ async function importPosts() {
 			bsvelte: svelte,
 		});
 		titles.push(title);
-		console.log(posts);
+		// console.log(posts);
 	}
 	return myPages;
 }
 
-export async function load({ params }) {
+export async function load({ params, route }) {
+	console.log(route.id);
 	return {
-    // TODO this naming is a bit stupid
+		// TODO this naming is a bit stupid
 		myPages: importPosts(),
 		posts: posts,
 		// myPages:
