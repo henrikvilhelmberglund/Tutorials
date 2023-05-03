@@ -2,6 +2,33 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+### [0.0.14](https://github.com/henrikvilhelmberglund/Tutorials/compare/v0.0.13...v0.0.14) (2023-05-03)
+
+
+### Features
+
+* :sparkles: add TODO ([542b323](https://github.com/henrikvilhelmberglund/Tutorials/commit/542b3235c7037f76280e597138a03c5a3a4b1f0a))
+* :lipstick: update index route ([7be6100](https://github.com/henrikvilhelmberglund/Tutorials/commit/7be610008b5d9f053a7d049cae1ed388a6cc1192))
+* :sparkles: update TODO ([c40312a](https://github.com/henrikvilhelmberglund/Tutorials/commit/c40312ab453a81c280bb44c0279b634bd008e6e4))
+* :sparkles: add box page for svelte-course ([2737538](https://github.com/henrikvilhelmberglund/Tutorials/commit/27375380b3305fdfb7a72a37e70d4d9a6b699c0f))
+* :sparkles: add "all" to posts array, use ternary to set the correct link ([68cfacc](https://github.com/henrikvilhelmberglund/Tutorials/commit/68cfacc3bf2562e009efe37ad3df8685641f1242))
+* :sparkles: display links as boxes in the main page ([a065a80](https://github.com/henrikvilhelmberglund/Tutorials/commit/a065a80245335c156cbae62b3427d78396aca608))
+* :sparkles: add PostGrid component ([b2036d4](https://github.com/henrikvilhelmberglund/Tutorials/commit/b2036d4c840cd9d6fc263803cda9957c20b08115))
+* :sparkles: update load functions ([6e961b7](https://github.com/henrikvilhelmberglund/Tutorials/commit/6e961b7bb4c92b339be6e8b1c8b8cf0d3c0930ee))
+* :sparkles: move files to old-tutorials folder ([b37949b](https://github.com/henrikvilhelmberglund/Tutorials/commit/b37949b8a7885be0c87ad2e8b25d126f99e34034))
+
+
+### Bug Fixes
+
+* :lipstick: remove useless div ([95d2474](https://github.com/henrikvilhelmberglund/Tutorials/commit/95d24745482f1a76e3c2cc79400df4a42b305b0c))
+* :zap: use glob import instead of importing twice ([c6df562](https://github.com/henrikvilhelmberglund/Tutorials/commit/c6df5620f9a511fb216613bca000e7fc60ac4716))
+* :fire: remove unused data ([d4b3a2e](https://github.com/henrikvilhelmberglund/Tutorials/commit/d4b3a2ef3c857b59cfa258d947708ab6d168d5f9))
+* :sparkles: remove the numbers from the links ([1fefcf9](https://github.com/henrikvilhelmberglund/Tutorials/commit/1fefcf926c111e870fb0e2450a5766c04ca42e66))
+* :bug: readd base path ([b65287c](https://github.com/henrikvilhelmberglund/Tutorials/commit/b65287cc377eae3ea989c0706e4753a6d5c5179f))
+* :bug: speed up importing by only importing +page.svx ([2217cc4](https://github.com/henrikvilhelmberglund/Tutorials/commit/2217cc47642bae7ab2f725732efffd465cbcf489))
+* :bug: import from the correct folder ([3288cd5](https://github.com/henrikvilhelmberglund/Tutorials/commit/3288cd582df063e25114007f8c8a3a43940afb12))
+* :lipstick: make boxes bigger ([780aee9](https://github.com/henrikvilhelmberglund/Tutorials/commit/780aee981a1e2b2949e1262b909353198048ab5c))
+
 ### [0.0.13](https://github.com/henrikvilhelmberglund/Tutorials/compare/v0.0.12...v0.0.13) (2023-04-28)
 
 
