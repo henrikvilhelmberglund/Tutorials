@@ -10,10 +10,10 @@ let posts = [];
 
 async function importPosts() {
 	const modules = import.meta.glob([
-		"../../lib/md/svelte-course/*/*.svx",
-		"!../../lib/md/svelte-course/_*.svx",
-		"!../../lib/md/svelte-course/*/_*.svx",
-		"!../../lib/md/svelte-course/_*/*.svx",
+		"../../../lib/md/svelte-course/*/*.svx",
+		"!../../../lib/md/svelte-course/_*.svx",
+		"!../../../lib/md/svelte-course/*/_*.svx",
+		"!../../../lib/md/svelte-course/_*/*.svx",
 	]);
 
 	console.log(modules);
@@ -32,7 +32,7 @@ async function importPosts() {
 
 			// TODO I probably don't want to do this in the layout, I only want the titles for the nav
 			post = import(
-				`../../lib/md/svelte-course/${fixedPath.substring(
+				`../../../lib/md/svelte-course/${fixedPath.substring(
 					fixedPath.lastIndexOf("/") + 1
 				)}/+page.svx`
 			);
