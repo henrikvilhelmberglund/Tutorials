@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="../favicon.png" />
+		<link rel="stylesheet" href="../prism-vsc-dark-plus.css" />
+		<link rel="stylesheet" href="../flatpickr.min.css" />
+		<meta name="viewport" content="width=device-width" />
+		<meta http-equiv="content-security-policy" content="">
+		<link href="../_app/immutable/assets/_layout.ae2be279.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/mdsvex-layout-notes.d4a4a43a.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/Strong.9d9f8bd8.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/005 - Command Center in VSCode.01c9375a.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/Learning Svelte and SvelteKit part 1.4a0b184b.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/_page.cd93ba7b.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/Nav.2e777a09.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.23d454ba.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.0b5cc0d7.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.141ecacc.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.153ae70b.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/paths.2a29ddc0.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.0310b995.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/preload-helper.41c905a7.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/_layout.svelte.ed378a9b.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/layout.svelte.2ae0adf8.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/old-tutorials-layout.js.a46d2255.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/_layout.0f08ade7.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/old-tutorials-_slug_-page.svelte.5be595c6.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/Nav.0226f8fd.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/old-tutorials-_slug_-page.js.82c8095e.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/dynamic-import-helper.be004503.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/_page.8f11809a.js">
+	</head>
+
+	<body>
+		<div>
+
+
+<nav class="uno-xmknk1"><a class="uno-d5b78r" href="/">Home
+	</a>
+	<a class="uno-d5b78r" href="/old-tutorials">Old tutorials
+	</a>
+	<a class="uno-wpglej" href="/svelte-course">Svelte Course
+	</a></nav>
+
+<div class="uno-pwuzzj"><p class="uno-lsveny">Warning!</p>
+	<p class="uno-51bdnx">under construction :)</p></div>
+
+
+
+
+<div class="uno-soiijf"><nav class="uno-y100e3"><div class="uno-719mcd">
+				<br>
+				<a class="uno-nhjwpp" href="/old-tutorials/000 - Code Runner in VSCode"> Code Runner in VSCode</a>
+				<br>
+				<a class="uno-nhjwpp uno-mms0fk" href="/old-tutorials/001 - Live Preview in VSCode"> Live Preview in VSCode</a>
+				<br>
+				<a class="uno-nhjwpp" href="/old-tutorials/002 - Snippets in VSCode"> Snippets in VSCode</a>
+				<br>
+				<a class="uno-nhjwpp" href="/old-tutorials/003 - Multi command snippets in VSCode"> Multi command snippets in VSCode</a>
+				<br>
+				<a class="uno-nhjwpp" href="/old-tutorials/004 - Viewing (and debugging) a Live Server project using the Edge Devtools extension"> Viewing (and debugging) a Live Server project using the Edge Devtools extension</a>
+				<br>
+				<a class="uno-nhjwpp" href="/old-tutorials/005 - Command Center in VSCode"> Command Center in VSCode</a>
+				<br>
+				<a class="uno-nhjwpp" href="/old-tutorials/Learning Svelte and SvelteKit part 1">Learning Svelte and SvelteKit part 1</a></div>
+</nav>
+	<div><article class="uno-4w6dsq"><section class="uno-otf0eq"><div class="uno-xj1z8i"><h2 class="uno-sjqek6">Live Preview in VSCode
+</h2></div>
+    <div class="uno-mexwlg"><p class="uno-ddg7b5 text-1xl ">Posted on 2022-10-05 by
+</p>
+      <a class="uno-bz4u3f text-1xl" href="http://github.com/henrikvilhelmberglund/">henrikvilhelmberglund
+</a></div></section>
+  <section class="uno-uha8j6"><h1 class="uno-0ryjra">Live Preview in VSCode
+</h1>
+<h2 class="uno-sjqek6">(Warning: Tutorial 004 has a better workflow!)
+</h2>
+<h5 class="">(creates a local web server for showing HTML+CSS+JS in an embedded browser in VSCode instead of opening a separate browser window)</h5>
+<ol><li class="uno-yaaaza text-1xl">In VSCode, find Extensions in the left panel and search for Live Preview
+</li>
+<li class="uno-yaaaza text-1xl">Click Live Preview and Install
+</li>
+<li class="uno-yaaaza text-1xl">Create a new file and save it as .html
+</li>
+<li class="uno-yaaaza text-1xl">Copy paste the following and save
+</li></ol>
+<pre class="language-html"><!-- HTML_TAG_START --><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>It works!<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span>H1!<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>Hi, this is a paragraph.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code><!-- HTML_TAG_END --></pre>
+<ol start="5"><li class="uno-yaaaza text-1xl">With the .html file active, in the top right click Show Preview
+</li>
+<li class="uno-yaaaza text-1xl">An embedded browser is opened where the project HTML+CSS+JS is displayed
+</li>
+<li class="uno-yaaaza text-1xl">Success! (the page updates in realtime)
+</li></ol></section></article></div>
+</div>
+
+
+			
+			<script>
+				{
+					__sveltekit_ceulfa = {
+						env: {},
+						base: new URL("..", location).pathname.slice(0, -1),
+						element: document.currentScript.parentElement
+					};
+
+					const data = [null,null,null];
+
+					Promise.all([
+						import("../_app/immutable/entry/start.23d454ba.js"),
+						import("../_app/immutable/entry/app.0310b995.js")
+					]).then(([kit, app]) => {
+						kit.start(app, __sveltekit_ceulfa.element, {
+							node_ids: [0, 2, 7],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>

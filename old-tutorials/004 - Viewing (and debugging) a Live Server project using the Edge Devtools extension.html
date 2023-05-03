@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="../favicon.png" />
+		<link rel="stylesheet" href="../prism-vsc-dark-plus.css" />
+		<link rel="stylesheet" href="../flatpickr.min.css" />
+		<meta name="viewport" content="width=device-width" />
+		<meta http-equiv="content-security-policy" content="">
+		<link href="../_app/immutable/assets/_layout.ae2be279.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/mdsvex-layout-notes.d4a4a43a.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/Strong.9d9f8bd8.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/005 - Command Center in VSCode.01c9375a.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/Learning Svelte and SvelteKit part 1.4a0b184b.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/_page.cd93ba7b.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/Nav.2e777a09.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.23d454ba.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.0b5cc0d7.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.141ecacc.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.153ae70b.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/paths.2a29ddc0.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.0310b995.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/preload-helper.41c905a7.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/_layout.svelte.ed378a9b.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/layout.svelte.2ae0adf8.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/old-tutorials-layout.js.a46d2255.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/_layout.0f08ade7.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/old-tutorials-_slug_-page.svelte.5be595c6.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/Nav.0226f8fd.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/old-tutorials-_slug_-page.js.82c8095e.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/dynamic-import-helper.be004503.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/_page.8f11809a.js">
+	</head>
+
+	<body>
+		<div>
+
+
+<nav class="uno-xmknk1"><a class="uno-d5b78r" href="/">Home
+	</a>
+	<a class="uno-d5b78r" href="/old-tutorials">Old tutorials
+	</a>
+	<a class="uno-wpglej" href="/svelte-course">Svelte Course
+	</a></nav>
+
+<div class="uno-pwuzzj"><p class="uno-lsveny">Warning!</p>
+	<p class="uno-51bdnx">under construction :)</p></div>
+
+
+
+
+<div class="uno-soiijf"><nav class="uno-y100e3"><div class="uno-719mcd">
+				<br>
+				<a class="uno-nhjwpp" href="/old-tutorials/000 - Code Runner in VSCode"> Code Runner in VSCode</a>
+				<br>
+				<a class="uno-nhjwpp" href="/old-tutorials/001 - Live Preview in VSCode"> Live Preview in VSCode</a>
+				<br>
+				<a class="uno-nhjwpp" href="/old-tutorials/002 - Snippets in VSCode"> Snippets in VSCode</a>
+				<br>
+				<a class="uno-nhjwpp" href="/old-tutorials/003 - Multi command snippets in VSCode"> Multi command snippets in VSCode</a>
+				<br>
+				<a class="uno-nhjwpp uno-mms0fk" href="/old-tutorials/004 - Viewing (and debugging) a Live Server project using the Edge Devtools extension"> Viewing (and debugging) a Live Server project using the Edge Devtools extension</a>
+				<br>
+				<a class="uno-nhjwpp" href="/old-tutorials/005 - Command Center in VSCode"> Command Center in VSCode</a>
+				<br>
+				<a class="uno-nhjwpp" href="/old-tutorials/Learning Svelte and SvelteKit part 1">Learning Svelte and SvelteKit part 1</a></div>
+</nav>
+	<div><article class="uno-4w6dsq"><section class="uno-otf0eq"><div class="uno-xj1z8i"><h2 class="uno-sjqek6">Viewing (and debugging) a Live Server project using the Edge Devtools extension
+</h2></div>
+    <div class="uno-mexwlg"><p class="uno-ddg7b5 text-1xl ">Posted on 2022-10-05 by
+</p>
+      <a class="uno-bz4u3f text-1xl" href="http://github.com/henrikvilhelmberglund/">henrikvilhelmberglund
+</a></div></section>
+  <section class="uno-uha8j6"><h1 class="uno-0ryjra">Viewing (and debugging) a Live Server project using the Edge Devtools extension
+</h1>
+<h4 class="">(Note: Slightly janky)</h4>
+<h2 class="uno-sjqek6">Purpose: to view (or debug) a Live Server project in an embedded Edge browser in VSCode itself with console, elements and so on also visible
+</h2>
+<h3 class="uno-k2n0uo">Viewing
+</h3>
+<ol start="0"><li class="uno-yaaaza text-1xl">If you don&#39;t already have Live Server, in extensions in the left side panel search for Live Server and install it.
+</li>
+<li class="uno-yaaaza text-1xl">If you don&#39;t have Edge (Dev version), go to <a class="uno-bz4u3f text-1xl" href="https://www.microsoftedgeinsider.com/en-us/download">https://www.microsoftedgeinsider.com/en-us/download
+</a> to download it .
+</li>
+<li class="uno-yaaaza text-1xl">In extensions in the left side panel search for Edge Devtools and install it.
+</li>
+<li class="uno-yaaaza text-1xl">Now we need a launch.json for the project, click the Microsoft Edge Tools icon in the left side panel and in your code folder (workspace) click Generate launch.json.
+</li>
+<li class="uno-yaaaza text-1xl">Some entries will be added to the launch.json file but we need one more for starting Edge Devtools without debugging.
+</li>
+<li class="uno-yaaaza text-1xl">Open Run and Debug in the left side panel and click the Open launch.json icon.
+</li>
+<li class="uno-yaaaza text-1xl">In there paste the following at the top inside of configurations.
+</li></ol>
+<pre class="language-undefined"><!-- HTML_TAG_START --><code class="language-undefined">&#123;
+        &quot;name&quot;: &quot;Open App (Headless)&quot;,
+        &quot;request&quot;: &quot;launch&quot;,
+        &quot;type&quot;: &quot;vscode-edge-devtools.debug&quot;,
+        &quot;url&quot;: &quot;http://localhost:5500&quot;,
+        &quot;webRoot&quot;: &quot;$&#123;workspaceFolder&#125;&quot;
+      &#125;,</code><!-- HTML_TAG_END --></pre>
+<ol start="7"><li class="uno-yaaaza text-1xl">This command will launch the Edge Devtools as an embedded browser along with developer tools but without debugging functionality. This is useful for just viewing your web project as you&#39;re building it.
+</li>
+<li class="uno-yaaaza text-1xl">Go to Keyboard Shortcuts and a shortcut key for Debug: Start Debugging and make sure Open App (Headless) is selected in the dropdown. This isn&#39;t really headless anymore by the way so you can change the name if you want to.
+</li>
+<li class="uno-yaaaza text-1xl">To make the Live Server experience even better when using Edge Devtools, go to Settings and search for auto save, change Auto Save to afterDelay and the Auto Save Delay to 400ms.
+</li>
+<li class="uno-yaaaza text-1xl">Next search for live server delay and change Live Server Wait to 410ms. By doing this your unsaved files will auto save after 400ms after changes are made and Live Server will automatically reload the page after 410ms. This means you can see your changes as you are coding.
+</li>
+<li class="uno-yaaaza text-1xl">Success! (for viewing, just press the shortcut key)
+</li></ol>
+<h3 class="uno-k2n0uo">Debugging
+</h3>
+<ol start="0"><li class="uno-yaaaza text-1xl">Start with Viewing if you didn&#39;t do it yet to set up the basics.
+</li>
+<li class="uno-yaaaza text-1xl">Open an .html file in your project and then Go Live to start the Live Server if it wasn&#39;t started yet.
+</li>
+<li class="uno-yaaaza text-1xl">Click the Microsoft Edge Tools icon in the left side panel and then Launch Project. If it says Launch Instance you may need to open your project as a folder. 
+</li>
+<li class="uno-yaaaza text-1xl">This should start debugging for your project (you can see a small bar with different buttons).
+For more information on debugging itself see <a class="uno-bz4u3f text-1xl" href="https://code.visualstudio.com/docs/editor/debugging">https://code.visualstudio.com/docs/editor/debugging
+</a>
+</li>
+<li class="uno-yaaaza text-1xl">To open the console at the bottom of the DevTools window (if it&#39;s not there), press escape.
+</li>
+<li class="uno-yaaaza text-1xl">When you are done debugging click the red button and Edge Devtools will close. This is the janky part.
+</li>
+<li class="uno-yaaaza text-1xl">To get back Edge Devtools for viewing the project without debugging press your shortcut key for Debug: Start Debugging.
+</li>
+<li class="uno-yaaaza text-1xl">To add a shortcut key for debugging in Keyboard Shortcuts add a key for Microsoft Edge Tools: Launch project.
+</li>
+<li class="uno-yaaaza text-1xl">Success!
+</li></ol>
+<h3 class="uno-k2n0uo">Logpoints
+</h3>
+<ul class="uno-kgkl12"><li class="uno-yaaaza text-1xl"><p class="uno-ddg7b5 text-1xl ">When debugging is active you can add logpoints by right clicking left of the line numbers to the left and clicking Add Logpoint. 
+</p>
+</li>
+<li class="uno-yaaaza text-1xl"><p class="uno-ddg7b5 text-1xl ">It is important to note that these will need to be on a line below the variable definition if you want to log its value (or you will just get back undefined). 
+</p>
+</li>
+<li class="uno-yaaaza text-1xl"><p class="uno-ddg7b5 text-1xl ">To get the value of a variable or any expression just surround it with curly braces, so if we had a variable myVariable it would be myVariable inside curly braces.
+</p>
+</li>
+<li class="uno-yaaaza text-1xl"><p class="uno-ddg7b5 text-1xl ">One of the powerful features of logpoints is that it doesn&#39;t trigger a file save so you can keep your website state (without it refreshing your Live Server page) but it is still possible to add and edit all the logpoints. 
+</p>
+</li>
+<li class="uno-yaaaza text-1xl"><p class="uno-ddg7b5 text-1xl ">So, instead of throwing console.log() everywhere and adding/changing our inputs in the site every time we want to see something in the console we can just have debugging running, add a logpoint anywhere in our code or even change our existing logpoints to log what we want without disrupting website/app state for easier debugging. Try it out! 
+</p>
+</li>
+</ul></section></article></div>
+</div>
+
+
+			
+			<script>
+				{
+					__sveltekit_ceulfa = {
+						env: {},
+						base: new URL("..", location).pathname.slice(0, -1),
+						element: document.currentScript.parentElement
+					};
+
+					const data = [null,null,null];
+
+					Promise.all([
+						import("../_app/immutable/entry/start.23d454ba.js"),
+						import("../_app/immutable/entry/app.0310b995.js")
+					]).then(([kit, app]) => {
+						kit.start(app, __sveltekit_ceulfa.element, {
+							node_ids: [0, 2, 7],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>
