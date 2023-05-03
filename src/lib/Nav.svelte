@@ -8,11 +8,12 @@
 	{#if data.titles}
 		<div class="flex flex-col [&>*]:m-4">
 			{#each data.titles as link}
+				{@const displayLink = link.includes("-") ? link.split("-")[1] : link}
 				<br />
 				<a
 					class:!bg-orange-400={link === data.slug}
 					class="hover:(outline-4 outline-solid) my-1 rounded-lg bg-slate-200 p-2 outline-black"
-					href="{base}{subroute}/{link}">{link}</a>
+					href="{base}{subroute}/{link}">{displayLink}</a>
 			{/each}
 		</div>
 	{/if}
