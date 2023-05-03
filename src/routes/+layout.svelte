@@ -11,6 +11,11 @@
 		Home
 	</a>
 	<a
+		class="mx-4 rounded-lg bg-green-400  p-4 text-black no-underline hover:bg-green-300"
+		href="{base}/old-tutorials">
+		Old tutorials
+	</a>
+	<a
 		class="rounded-lg bg-green-400 p-4 text-black no-underline hover:bg-green-300"
 		href="{base}/svelte-course">
 		Svelte Course

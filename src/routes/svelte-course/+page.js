@@ -11,7 +11,6 @@ let posts = [];
 async function importPosts() {
 	const modules = import.meta.glob([
 		"../../lib/md/svelte-course/*/*.svx",
-		// "$lib/md/svelte-course/*.svx",
 		"!../../lib/md/svelte-course/_*.svx",
 		"!../../lib/md/svelte-course/*/_*.svx",
 		"!../../lib/md/svelte-course/_*/*.svx",
@@ -58,9 +57,9 @@ async function importPosts() {
 
 export async function load({ params }) {
 	return {
-		posts: posts,
-		// TODO this naming is a bit stupid
+    // TODO this naming is a bit stupid
 		myPages: importPosts(),
+		posts: posts,
 		// myPages:
 		titles: titles,
 		title: "Tutorials",

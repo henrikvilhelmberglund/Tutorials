@@ -13,7 +13,7 @@
 <!-- {JSON.stringify(data.body)} -->
 
 <div class="flex">
-	<Nav {data} />
+	<Nav {data} subroute={"/old-tutorials"} />
 
 	<div>
 		{#await data.post}

@@ -4,12 +4,12 @@ export const prerender = true;
 // export const ssr = false;
 
 const modules = import.meta.glob([
-	"$lib/md/*.svx",
-	"!$lib/md/_*.svx",
-	// "$lib/md/svelte-course/*/*.svx",
-	// "$lib/md/svelte-course/*.svx",
-	// "!$lib/md/svelte-course/_*.svx",
-	// "!$lib/md/svelte-course/*/_*.svx",
+	// "$lib/md/*.svx",
+	// "!$lib/md/_*.svx",
+	"../../../lib/md/old-tutorials/*.svx",
+	"!../../../lib/md/old-tutorials/_*.svx",
+	"!../../../lib/md/old-tutorials/*/_*.svx",
+	"!../../../lib/md/old-tutorials/_*/*.svx",
 ]);
 let myPages = [];
 let svelte;
@@ -21,7 +21,7 @@ for (let path in modules) {
 	let fixedPath = path.replace(".svx", "");
 	let post;
 
-	post = import(`$lib/md/${fixedPath.substring(fixedPath.lastIndexOf("/") + 1)}.svx`);
+	post = import(`../../../lib/md/old-tutorials/${fixedPath.substring(fixedPath.lastIndexOf("/") + 1)}.svx`);
 	posts.push(post);
 	svelte = false;
 	title = fixedPath.substring(fixedPath.lastIndexOf("/") + 1);

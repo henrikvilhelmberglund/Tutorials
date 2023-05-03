@@ -1,6 +1,8 @@
 const modules = import.meta.glob([
-	"$lib/md/*.svx",
-	"!$lib/md/_*.svx",
+	"../../../lib/md/old-tutorials/*.svx",
+	"!../../../lib/md/old-tutorials/_*.svx",
+	"!../../../lib/md/old-tutorials/*/_*.svx",
+	"!../../../lib/md/old-tutorials/_*/*.svx",
 	// "$lib/md/svelte-course/*/*.svx",
 	// "$lib/md/svelte-course/*.svx",
 	// "!$lib/md/svelte-course/_*.svx",
@@ -15,7 +17,9 @@ for (let path in modules) {
 	let fixedPath = path.replace(".svx", "");
 	let post;
 
-	post = await import(`../../lib/md/${fixedPath.substring(fixedPath.lastIndexOf("/") + 1)}.svx`);
+	post = await import(
+		`../../../lib/md/old-tutorials/${fixedPath.substring(fixedPath.lastIndexOf("/") + 1)}.svx`
+	);
 	svelte = false;
 	title = fixedPath.substring(fixedPath.lastIndexOf("/") + 1);
 
@@ -31,7 +35,7 @@ for (let path in modules) {
 }
 
 async function loadPost(params) {
-	const post = import(`../../lib/md/${params.slug}.svx`);
+	const post = import(`../../../lib/md/old-tutorials/${params.slug}.svx`);
 	return post;
 }
 
