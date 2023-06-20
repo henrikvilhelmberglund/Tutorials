@@ -1,0 +1,22 @@
+---
+title: "<svelte:head>"
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-06-19
+layout: notes
+---
+
+<script>
+  import ShowMany from "$lib/ShowMany.svelte";
+  import App from "./App.svelte";
+  import AppRaw from "./App.svelte?raw";
+  import App2 from "./App2.svelte";
+  import App2Raw from "./App2.svelte?raw";
+</script>
+
+{"<"}svelte:head{">"} is used when we want to add something in the **HTML head tag** in our Svelte component. This is useful for SEO.
+
+<ShowMany name={[
+{name: "App", comp:App, raw:AppRaw, text: "We can dynamically change the title or metadata of the page."},
+{name: "App2", comp:App2, raw:App2Raw, text: "We can also load our fancy fonts."},
+]}/>
