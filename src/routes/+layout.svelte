@@ -28,8 +28,8 @@
 
 <slot />
 
-<style uno:preflights uno:safelist global>
+<style uno:preflights uno:safelist>
 	:global(body) {
-		@apply m-0 bg-slate-300;
+		@apply bg-slate-300;
 	}
 </style>
