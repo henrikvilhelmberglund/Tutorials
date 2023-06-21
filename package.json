@@ -21,6 +21,7 @@
 		"@unocss/preset-icons": "^0.48.4",
 		"@unocss/preset-uno": "^0.48.4",
 		"commit-and-tag-version": "^10.1.0",
+		"dompurify": "^3.0.3",
 		"gh-pages": "^4.0.0",
 		"mdsvex": "^0.10.6",
 		"prettier": "^2.8.3",
