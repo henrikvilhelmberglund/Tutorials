@@ -1,0 +1,57 @@
+---
+title: "{@html}"
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-06-20
+layout: notes
+---
+
+<script>
+  import ShowMany from "$lib/ShowMany.svelte";
+  import App from "./App.svelte";
+  import AppRaw from "./App.svelte?raw";
+  import App2 from "./App2.svelte";
+  import App2Raw from "./App2.svelte?raw";
+  import App3 from "./App3.svelte";
+  import App3Raw from "./App3.svelte?raw";
+  import App4 from "./App4.svelte";
+  import App4Raw from "./App4.svelte?raw";
+  import App5 from "./App5.svelte";
+  import App5Raw from "./App5.svelte?raw";
+  Error.stackTraceLimit = 0;
+</script>
+
+Let's say we wanted to display some text as HTML in our page. We could do that with an action.
+
+<ShowMany name={[
+{name: "App", comp:App, raw:AppRaw, text: ""},
+]}/>
+
+---
+
+We've seen this pattern before, we create a function that takes in a node and optionally some data, then we can apply that function on an element by adding `use:innerHTML={html}` in this case.
+
+That's pretty useful but there's an even easier way to do this: the **{"{"}@html{"}"}** block.
+
+<ShowMany name={[
+{name: "App2", comp:App2, raw:App2Raw, text: ""},
+]}/>
+
+Nice, we can remove the whole action and still get the desired result.
+
+The disadvantage of this though is that we can run any code which may not be what we want. As we see here we can easily **introduce security vulnerabilities**.
+
+To avoid that it is a good idea to use something like **DOMPurify** to clean up the HTML a bit, removing XSS problems.
+
+<ShowMany name={[
+{name: "App3", comp:App3, raw:App3Raw, text: ""},
+]}/>
+
+---
+
+Let's say we want to want to take in some HTML and add an event listener to a button in there. How would we do that? Like this!
+
+<ShowMany name={[
+{name: "App4", comp:App4, raw:App4Raw, text: "We have a problem though. When we update the text area code, the event listener stops working. We can fix that with a reactive statement (App5)"},
+{name: "App5", comp:App5, raw:App5Raw, text: "Here we fixed it by adding a reactive statement that reruns the event listener code whenever html changes."},
+]}/>
