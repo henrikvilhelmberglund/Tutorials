@@ -1,0 +1,42 @@
+---
+title: "{@debug}"
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-06-21
+layout: notes
+---
+
+<script>
+  import ShowMany from "$lib/ShowMany.svelte";
+  import App from "./App.svelte";
+  import AppRaw from "./App.svelte?raw";
+  import App2 from "./App2.svelte";
+  import App2Raw from "./App2.svelte?raw";
+  import App3 from "./App3.svelte";
+  import App3Raw from "./App3.svelte?raw";
+  Error.stackTraceLimit = 0;
+</script>
+
+Let's say we wanted to debug a value. In Svelte it's easy to just display the value in the site with {"{"}value{"}"}.
+
+<ShowMany name={[
+{name: "App", comp:App, raw:AppRaw, text: ""},
+]}/>
+
+---
+
+There is another way we can do this though, using **{"{"}@debug{"}"}**.
+
+If we have the inspector open it will **trigger the debugger** without the need to add a breakpoint in the .svelte file, if the inspector is not open it will console.log the value.
+
+<ShowMany name={[
+{name: "App2", comp:App2, raw:App2Raw, text: ""},
+]}/>
+
+---
+
+We can also use {"{"}@debug{"}"} in each blocks and if blocks..
+
+<ShowMany name={[
+{name: "App3", comp:App3, raw:App3Raw, text: ""},
+]}/>
