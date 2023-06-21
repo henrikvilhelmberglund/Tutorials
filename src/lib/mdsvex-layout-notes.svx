@@ -16,6 +16,8 @@
     Th,
     Td,
     Strong,
+    Code,
+    HR
   } from "$lib/components.js";
 
   export {
@@ -34,6 +36,8 @@
     Th as th,
     Td as td,
     Strong as strong,
+    Code as code,
+    HR as hr
   };
 </script>
 

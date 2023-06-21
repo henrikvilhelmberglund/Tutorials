@@ -28,3 +28,7 @@ import Td from "$lib/components/Td.svelte";
 export { Td };
 import Strong from "$lib/components/Strong.svelte";
 export { Strong };
+import Code from "$lib/components/Code.svelte";
+export { Code };
+import HR from "$lib/components/HR.svelte";
+export { HR };
