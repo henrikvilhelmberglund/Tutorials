@@ -101,5 +101,3 @@ Of course, this being Svelte, we can do something nicer still. By adding the CSS
 {name: "App6", comp:App6, raw:App6Raw, text: "Notice the prop in the pink Button components. If you inspect the pink buttons you can see that they have been wrapped in new divs that don't break the layout."},
 {name: "Button6", comp:App6, raw:Button6Raw, text: ""},
 ]}/>
-
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
