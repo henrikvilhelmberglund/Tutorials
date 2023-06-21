@@ -1,6 +1,6 @@
-import preprocess from "svelte-preprocess";
 import UnoCSS from "@unocss/svelte-scoped/preprocess";
-// import { vitePreprocess } from "@sveltejs/kit/vite";
+// import preprocess from "svelte-preprocess";
+import { vitePreprocess } from "@sveltejs/kit/vite";
 import { mdsvex } from "mdsvex";
 import mdsvexConfig from "./mdsvex.config.js";
 import adapter from "@sveltejs/adapter-static";
@@ -38,7 +38,7 @@ const config = {
 	},
 
 	preprocess: [
-		preprocess(),
+		vitePreprocess(),
 		UnoCSS({
 			include: [/\.svelte$/, /\.svx$/, /\.js$/],
 			// mode: "svelte-scoped",
