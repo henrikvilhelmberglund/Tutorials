@@ -1,0 +1,105 @@
+---
+title: "Passing CSS custom properties to components"
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-06-20
+layout: notes
+---
+
+<script>
+  import ShowMany from "$lib/ShowMany.svelte";
+  import App from "./App.svelte";
+  import AppRaw from "./App.svelte?raw";
+  import Button from "./Button.svelte";
+  import ButtonRaw from "./Button.svelte?raw";
+  import App2 from "./App2.svelte";
+  import App2Raw from "./App2.svelte?raw";
+  import Button2 from "./Button2.svelte";
+  import Button2Raw from "./Button2.svelte?raw";
+  import Button3 from "./Button3.svelte";
+  import Button3Raw from "./Button3.svelte?raw";
+  import App3 from "./App3.svelte";
+  import App3Raw from "./App3.svelte?raw";
+  import Button4 from "./Button4.svelte";
+  import Button4Raw from "./Button4.svelte?raw";
+  import App4 from "./App4.svelte";
+  import App4Raw from "./App4.svelte?raw";
+  import Button5 from "./Button5.svelte";
+  import Button5Raw from "./Button5.svelte?raw";
+  import App5 from "./App5.svelte";
+  import App5Raw from "./App5.svelte?raw";
+  import Button6 from "./Button6.svelte";
+  import Button6Raw from "./Button6.svelte?raw";
+  import App6 from "./App6.svelte";
+  import App6Raw from "./App6.svelte?raw";
+</script>
+
+There are several methods to add classes to components, such as **class=""**, **class:**, props. Here we use props:
+
+<ShowMany name={[
+{name: "App", comp:App, raw:AppRaw, text: ""},
+{name: "Button", comp:App, raw:ButtonRaw, text: ""},
+]}/>
+
+However maybe we don't want to use props for the CSS, instead using props only for data. What could we do then to provide our CSS?
+
+We could use **CSS custom properties**. These are custom properties that we can **define ourselves** like this:
+
+`--button-color: red`
+
+and then use like this:
+
+`var(--button-color)`
+
+These custom properties are then **inherited and usable by the children** of the element where you defined them.
+
+We can also have a fallback if the value is undefined by doing this:
+
+`var(--button-color, blue)`
+
+<ShowMany name={[
+{name: "App2", comp:App2, raw:App2Raw, text: ""},
+{name: "Button2", comp:App2, raw:Button2Raw, text: ""},
+]}/>
+
+---
+
+Let's try without any props at all.
+
+<ShowMany name={[
+{name: "App3", comp:App3, raw:App3Raw, text: ""},
+{name: "Button3", comp:App3, raw:Button3Raw, text: ""},
+]}/>
+
+---
+
+We may not want to wrap the buttons with div tags though because they're now block instead of inline. This could cause problems with our layout if we use something like grid.
+
+<ShowMany name={[
+{name: "App4", comp:App4, raw:App4Raw, text: "Here our pink buttons end up together which is not really what we want."},
+{name: "Button4", comp:App4, raw:Button4Raw, text: ""},
+]}/>
+
+---
+
+To avoid this issue we can use the CSS display property **content**.
+
+`display: content;`
+
+This will make sure that it is not treated as a part of the layout.
+
+<ShowMany name={[
+{name: "App5", comp:App5, raw:App5Raw, text: "By adding display: contents; to our wrapping elements we can still use the grid perfectly fine."},
+{name: "Button5", comp:App5, raw:Button5Raw, text: ""},
+]}/>
+
+---
+
+Of course, this being Svelte, we can do something nicer still. By adding the CSS custom properties as props in the component, they will be **automatically wrapped in a display: contents div**.
+
+<ShowMany name={[
+{name: "App6", comp:App6, raw:App6Raw, text: "Notice the prop in the pink Button components. If you inspect the pink buttons you can see that they have been wrapped in new divs that don't break the layout."},
+{name: "Button6", comp:App6, raw:Button6Raw, text: ""},
+]}/>
+
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
