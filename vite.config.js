@@ -1,28 +1,14 @@
 import { sveltekit } from "@sveltejs/kit/vite";
 import examples from "mdsvexamples/vite";
-import UnoCSS from "unocss/vite";
-import presetIcons from "@unocss/preset-icons";
-import presetUno from "@unocss/preset-uno";
-import transformerDirectives from "@unocss/transformer-directives";
+// import UnoCSS from "unocss/vite";
+
 
 /** @type {import('vite').UserConfig} */
 const config = {
 	plugins: [
-		UnoCSS({
-			include: [/\.svelte$/, /\.svx$/, /\.js$/],
-			mode: "svelte-scoped",
-			presets: [
-				presetUno(),
-				presetIcons({
-					prefix: "i-",
-					extraProperties: {
-						display: "inline-block",
-						"vertical-align": "middle",
-					},
-				}),
-			],
-			transformers: [transformerDirectives()],
-		}),
+    // UnoCSS({
+    
+		// }),
 		sveltekit(),
 		examples,
 	],
