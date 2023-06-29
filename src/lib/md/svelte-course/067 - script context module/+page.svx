@@ -1,0 +1,88 @@
+---
+title: '<script context="module"/>'
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-06-22
+layout: notes
+---
+
+<script>
+  import ShowMany from "$lib/ShowMany.svelte";
+  import App from "./App.svelte";
+  import AppRaw from "./App.svelte?raw";
+  import Map from "./Map.svelte";
+  import MapRaw from "./Map.svelte?raw";
+  import mapDataRaw from "./mapData?raw";
+  import mapStoreRaw from "./mapStore?raw";
+  import App2 from "./App2.svelte";
+  import App2Raw from "./App2.svelte?raw";
+  import Map2 from "./Map2.svelte";
+  import Map2Raw from "./Map2.svelte?raw";
+  import App3 from "./App3.svelte";
+  import App3Raw from "./App3.svelte?raw";
+  import App4 from "./App4.svelte";
+  import App4Raw from "./App4.svelte?raw";
+  import CountComponent from "./CountComponent.svelte";
+  import CountComponentRaw from "./CountComponent.svelte?raw";
+  import App5 from "./App5.svelte";
+  import App5Raw from "./App5.svelte?raw";
+  import CountComponent2 from "./CountComponent2.svelte";
+  import CountComponent2Raw from "./CountComponent2.svelte?raw";
+  Error.stackTraceLimit = 0;
+</script>
+
+<ShowMany name={[
+{name: "App", comp:App, raw:AppRaw, text: ""},
+{name: "Map", comp:App, raw:MapRaw, text: ""},
+{name: "mapData.js", comp:App, raw:mapDataRaw, text: ""},
+{name: "mapStore.js", comp:App, raw:mapStoreRaw, text: ""},
+]}/>
+
+---
+
+In this example we have an App with a few Map components. The Map components import a store from mapStore.js. The reason we don't create the store inside of the Map component is that that would end up with a store for each Map component (meaning a state within each component) instead of a separate shared store used by every Map component.
+
+We only have one store instance, this is called a **singleton**. We are also using it in the main App.svelte as well where the store value is bound to the input field.
+
+We have another file called mapData.js containing another singleton, **currentMap**. It contains a function to update the currentMap to another map. Since we're exportíng the value with `export let currentMap;` it will update where we are importing it (inside our Map component).
+
+It is not super nice though to have to have a separate .js file with the store for our Map components since they are so tightly coupled. Importing the store from a separate file makes it seem like it's a separate thing (something that's supposed to be used everywhere within the app for example).
+
+Is there a way to improve this? Let's see!
+
+<ShowMany name={[
+{name: "App2", comp:App2, raw:App2Raw, text: "We can import our store from the Map2 component as a named export."},
+{name: "Map2", comp:App2, raw:Map2Raw, text: "We removed the function since we can update the variable from within each instance."},
+]}/>
+
+---
+
+Here is the version using **{"<"}script context="module"/>**. It allows us to have a **module level script tag** inside our Svelte component. All of our instances will have the same data in that script tag so we can put the functions and store we had in the .js files in there instead and it will still work. We can even **export the store from Map2** and import it in App2 with this line: `import Map, { mapValue } from "./Map2.svelte";`.
+
+The one thing we can't do is have a **default export** since in Svelte the **component itself is the default export**.
+
+Another thing to keep in mind is that the module level variables **are not state** and we can not change them from within our markup like we normally can in our instance level script tag.
+
+<ShowMany name={[
+{name: "App3", comp:App3, raw:App3Raw, text: ""},
+]}/>
+
+---
+
+To fix this we can again **use a store** which will give us a reactive variable (assuming we interact with it as a store).
+
+<ShowMany name={[
+{name: "App4", comp:App4, raw:App4Raw, text: "Each component shows the same value because now it is a module level state."},
+{name: "CountComponent", comp:App4, raw:CountComponentRaw, text: ""},
+]}/>
+
+---
+
+We can even do something fun like this:
+
+<ShowMany name={[
+{name: "App5", comp:App5, raw:App5Raw, text: ""},
+{name: "CountComponent2", comp:App5, raw:CountComponent2Raw, text: ""},
+]}/>
+
+Probably a bit overkill but at least it's possible!

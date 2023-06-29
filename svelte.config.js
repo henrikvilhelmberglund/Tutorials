@@ -1,8 +1,13 @@
-import preprocess from "svelte-preprocess";
-// import { vitePreprocess } from "@sveltejs/kit/vite";
+import UnoCSS from "@unocss/svelte-scoped/preprocess";
+// import preprocess from "svelte-preprocess";
+import { vitePreprocess } from "@sveltejs/kit/vite";
 import { mdsvex } from "mdsvex";
 import mdsvexConfig from "./mdsvex.config.js";
 import adapter from "@sveltejs/adapter-static";
+// import UnoCSS from '@unocss/svelte-scoped/vite'
+import presetIcons from "@unocss/preset-icons";
+import presetUno from "@unocss/preset-uno";
+import transformerDirectives from "@unocss/transformer-directives";
 const dev = process.argv.includes("dev");
 //put the lines below inside of kit: { } in svelte.config.js
 
@@ -25,14 +30,30 @@ const config = {
 		},
 	},
 	vitePlugin: {
-		experimental: {
-			inspector: {
-				holdMode: true,
-			},
+		inspector: {
+			holdMode: true,
 		},
 	},
 
-	preprocess: [preprocess(), mdsvex(mdsvexConfig)],
+	preprocess: [
+		vitePreprocess(),
+		UnoCSS({
+			include: [/\.svelte$/, /\.svx$/, /\.js$/],
+			// mode: "svelte-scoped",
+			presets: [
+				presetUno(),
+				presetIcons({
+					prefix: "i-",
+					extraProperties: {
+						display: "inline-block",
+						"vertical-align": "middle",
+					},
+				}),
+			],
+			transformers: [transformerDirectives()],
+		}),
+		mdsvex(mdsvexConfig),
+	],
 };
 
 export default config;

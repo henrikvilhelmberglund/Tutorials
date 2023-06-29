@@ -1,0 +1,28 @@
+---
+title: "Coordinating transitions"
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-06-29
+layout: notes
+---
+
+<script>
+  import ShowMany from "$lib/ShowMany.svelte";
+  import App from "./App.svelte";
+  import AppRaw from "./App.svelte?raw";
+  import App2 from "./App2.svelte";
+  import App2Raw from "./App2.svelte?raw";
+ 
+  Error.stackTraceLimit = 0;
+</script>
+
+There is a way to **coordinate transitions** if we want to play one transition after another has completed. This is done by using **delay**.
+
+<ShowMany name={[
+{name: "App", comp:App, raw:AppRaw, text: "Before delay is added."},
+{name: "App2", comp:App2, raw:App2Raw, text: "After delay is added."},
+]}/>
+
+Note that in Svelte 4 transitions are **local by default** meaning that if you want children transitions to play when a parent is added you need to add the **|global** modifier. (For most things local transitions make more sense though)
+
+Also note that in this App2 example there's is an annoying delay when adding new items. We will fix this in the next post!

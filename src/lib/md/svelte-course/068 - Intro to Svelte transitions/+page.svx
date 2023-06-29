@@ -1,0 +1,31 @@
+---
+title: "Intro to Svelte transitions"
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-06-25
+layout: notes
+---
+
+<script>
+  import ShowMany from "$lib/ShowMany.svelte";
+  import App from "./App.svelte";
+  import AppRaw from "./App.svelte?raw";
+  import App2 from "./App2.svelte";
+  import App2Raw from "./App2.svelte?raw";
+ 
+  Error.stackTraceLimit = 0;
+</script>
+
+Some quick info:
+
+- There's fade, blur, fly, slide, scale. All of these are imported from svelte/transition.
+- To use them add for example `transition:fly`, then arguments if needed `transition:fly={{x: 100}}`
+- You can also use `in:fade` or `out:fade` if you only want a transition when an element is created or destroyed. Or if you want different transitions for in and out.
+- There are easings in svelte/easings if you want a smoother animation. For example `sineOut`
+
+Let's look at Li Hau Tan's example:
+
+<ShowMany name={[
+{name: "App", comp:App, raw:AppRaw, text: "Here we have a TODO app without transitions. Let's try adding some transitions and see if it feels better to use."},
+{name: "App2", comp:App2, raw:App2Raw, text: "It does!"},
+]}/>
