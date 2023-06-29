@@ -6,32 +6,34 @@
 		<link rel="stylesheet" href="/Tutorials/prism-vsc-dark-plus.css" />
 		<link rel="stylesheet" href="/Tutorials/flatpickr.min.css" />
 		<meta name="viewport" content="width=device-width" />
-		<meta http-equiv="content-security-policy" content="">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/entry/start.28434a87.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/index.0b5cc0d7.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/singletons.237e52b6.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/index.153ae70b.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/paths.0e947561.js">
-		<link rel="modulepreload" href="/Tutorials/_app/immutable/entry/app.0db5d5fe.js">
+		
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/entry/start.011660fe.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/scheduler.a7cd560e.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/singletons.d7453a28.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/index.5e192797.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/paths.bd29c1ba.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/entry/app.c5ce8cac.js">
 		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/preload-helper.41c905a7.js">
+		<link rel="modulepreload" href="/Tutorials/_app/immutable/chunks/index.396264e7.js">
 	</head>
 
 	<body>
 		<div>
 			<script>
 				{
-					__sveltekit_swbv87 = {
-						env: {},
+					__sveltekit_2f5ln9 = {
 						assets: "/Tutorials",
 						base: "/Tutorials",
-						element: document.currentScript.parentElement
+						env: {}
 					};
 
+					const element = document.currentScript.parentElement;
+
 					Promise.all([
-						import("/Tutorials/_app/immutable/entry/start.28434a87.js"),
-						import("/Tutorials/_app/immutable/entry/app.0db5d5fe.js")
+						import("/Tutorials/_app/immutable/entry/start.011660fe.js"),
+						import("/Tutorials/_app/immutable/entry/app.c5ce8cac.js")
 					]).then(([kit, app]) => {
-						kit.start(app, __sveltekit_swbv87.element);
+						kit.start(app, element);
 					});
 				}
 			</script>
