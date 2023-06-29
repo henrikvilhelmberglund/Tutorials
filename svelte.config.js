@@ -30,10 +30,8 @@ const config = {
 		},
 	},
 	vitePlugin: {
-		experimental: {
-			inspector: {
-				holdMode: true,
-			},
+		inspector: {
+			holdMode: true,
 		},
 	},
 
