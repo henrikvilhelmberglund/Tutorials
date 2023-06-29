@@ -1,0 +1,58 @@
+---
+title: "Transition Events"
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-06-29
+layout: notes
+---
+
+<script>
+  import ShowMany from "$lib/ShowMany.svelte";
+  import App from "./App.svelte";
+  import AppRaw from "./App.svelte?raw";
+  import App2 from "./App2.svelte";
+  import App2Raw from "./App2.svelte?raw";
+ 
+  Error.stackTraceLimit = 0;
+</script>
+
+In the last post we had a problem where when adding an item there's a long delay. We'll fix that in this post by using a **condition**:
+
+if the list is showing, don't add a delay.
+
+if the list is not showing, add a delay.
+
+By doing that we can get instant feedback when adding items when the list is already showing and still get a nice transition animation when clicking to show a list.
+
+There are four **transition events** we can use to accomplish this:
+
+- on:introstart
+- on:introend
+- on:outrostart
+- on:outroend
+
+So we can just add this code
+
+```js
+on:introend={() => {
+  list.shown = true;
+}}
+on:outroend={() => {
+  list.shown = false;
+}}
+```
+
+and then use the condition in the transition:
+
+```svelte
+in:fly|global={{ x: 60, delay: list.shown ? 0 : 400 + index * 300 }}
+```
+
+<ShowMany name={[
+{name: "App", comp:App, raw:AppRaw, text: "Before fixing the issue there's a delay when adding new items."},
+{name: "App2", comp:App2, raw:App2Raw, text: "When using the condition there's no delay when adding new items. Nice!"},
+]}/>
+
+Note that in Svelte 4 transitions are **local by default** meaning that if you want children transitions to play when a parent is added you need to add the **|global** modifier. (For most things local transitions make more sense though)
+
+Also note that in this App2 example there's is an annoying delay when adding new items. We will fix this in the next post!
