@@ -28,7 +28,7 @@
 
 <slot />
 
-<style uno:preflights uno:safelist>
+<style>
 	:global(body) {
 		@apply bg-slate-300;
 	}
