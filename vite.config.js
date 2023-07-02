@@ -1,14 +1,13 @@
 import { sveltekit } from "@sveltejs/kit/vite";
 import examples from "mdsvexamples/vite";
-// import UnoCSS from "unocss/vite";
-
+import UnoCSS from "@unocss/svelte-scoped/vite";
 
 /** @type {import('vite').UserConfig} */
 const config = {
 	plugins: [
-    // UnoCSS({
-    
-		// }),
+		UnoCSS({
+			injectReset: "@unocss/reset/tailwind.css",
+		}),
 		sveltekit(),
 		examples,
 	],

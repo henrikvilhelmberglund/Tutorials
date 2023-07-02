@@ -1,6 +1,5 @@
 <script>
 	import { base } from "$app/paths";
-	import "@unocss/reset/tailwind.css";
 </script>
 
 <nav class="flex pb-4">
@@ -28,7 +27,7 @@
 
 <slot />
 
-<style uno:preflights uno:safelist>
+<style>
 	:global(body) {
 		@apply bg-slate-300;
 	}
