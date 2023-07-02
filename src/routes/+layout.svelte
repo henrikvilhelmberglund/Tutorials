@@ -1,6 +1,5 @@
 <script>
 	import { base } from "$app/paths";
-	import "@unocss/reset/tailwind.css";
 </script>
 
 <nav class="flex pb-4">
