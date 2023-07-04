@@ -23,6 +23,7 @@
 		"@unocss/reset": "^0.53.4",
 		"@unocss/svelte-scoped": "latest",
 		"commit-and-tag-version": "^10.1.0",
+		"d3-interpolate": "^3.0.1",
 		"dompurify": "^3.0.3",
 		"flatpickr": "^4.6.13",
 		"gh-pages": "^4.0.0",
