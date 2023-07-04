@@ -10,49 +10,32 @@ layout: notes
   import ShowMany from "$lib/ShowMany.svelte";
   import App from "./App.svelte";
   import AppRaw from "./App.svelte?raw";
-  import App2 from "./App2.svelte";
-  import App2Raw from "./App2.svelte?raw";
+  import Ease from "./Ease.svelte";
+  import EaseRaw from "./Ease.svelte?raw";
+  import Controls from "./Controls.svelte";
+  import ControlsRaw from "./Controls.svelte?raw";
+  import Grid from "./Grid.svelte";
+  import GridRaw from "./Grid.svelte?raw";
+  import easesRaw from "./eases?raw";
  
   Error.stackTraceLimit = 0;
 </script>
 
-In the last post we had a problem where when adding an item there's a long delay. We'll fix that in this post by using a **condition**:
+To add some flavor to our transitions we can use **easings**. They are functions that change how the transitions accelerate or decelerate.
 
-if the list is showing, don't add a delay.
-
-if the list is not showing, add a delay.
-
-By doing that we can get instant feedback when adding items when the list is already showing and still get a nice transition animation when clicking to show a list.
-
-There are four **transition events** we can use to accomplish this:
-
-- on:introstart
-- on:introend
-- on:outrostart
-- on:outroend
-
-So we can just add this code
-
-```js
-on:introend={() => {
-  list.shown = true;
-}}
-on:outroend={() => {
-  list.shown = false;
-}}
-```
-
-and then use the condition in the transition:
-
-```svelte
-in:fly|global={{ x: 60, delay: list.shown ? 0 : 400 + index * 300 }}
-```
+We can steal the Ease Visualiser from https://svelte.dev/examples/easing to see them in action.
 
 <ShowMany name={[
-{name: "App", comp:App, raw:AppRaw, text: "Before fixing the issue there's a delay when adding new items."},
-{name: "App2", comp:App2, raw:App2Raw, text: "When using the condition there's no delay when adding new items. Nice!"},
+{name: "Ease", comp:Ease, raw:EaseRaw, text: "The x axis is the timeline (from start to end) and the y axis is the value."},
+{name: "Controls", comp:Ease, raw:ControlsRaw, text: ""},
+{name: "Grid", comp:Ease, raw:GridRaw, text: ""},
+{name: "eases.js", comp:Ease, raw:easesRaw, text: ""},
 ]}/>
 
-Note that in Svelte 4 transitions are **local by default** meaning that if you want children transitions to play when a parent is added you need to add the **|global** modifier. (For most things local transitions make more sense though)
+---
 
-Also note that in this App2 example there's is an annoying delay when adding new items. We will fix this in the next post!
+We can try adding an easing function to our app.
+
+<ShowMany name={[
+{name: "App", comp:App, raw:AppRaw, text: "And just like that we have a few bouncy items for our lists! "},
+]}/>

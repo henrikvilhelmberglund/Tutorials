@@ -1,6 +1,6 @@
 <script>
 	import { fade, blur, fly, slide, scale } from "svelte/transition";
-	import { bounceInOut, sineOut } from "svelte/easing";
+	import { bounceOut, sineOut } from "svelte/easing";
 	import { browser } from "$app/environment";
 	const data = [
 		{ title: "Hall", items: ["Sweep the floor", "Mop the floor", "Throw the rubbish"] },
@@ -47,7 +47,15 @@
 				<button class="close" on:click={() => (list.show = false)}>X</button>
 				<ul class="items">
 					{#each list.items as item, index (item)}
-						<li in:fly|global={{ x: 60, delay: 400 + index * 300 }} out:slide class="item">
+						<li
+							in:fly|global={{
+								x: 120,
+								delay: list.shown ? 0 : 400 + index * 300,
+								easing: bounceOut,
+								duration: 1500,
+							}}
+							out:slide
+							class="item">
 							<button
 								on:click={() => {
 									list.items = list.items.filter((i) => i !== item);
