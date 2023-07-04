@@ -1,0 +1,33 @@
+---
+title: "Accessible transitions"
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-07-04
+layout: notes
+---
+
+<script>
+  import ShowMany from "$lib/ShowMany.svelte";
+  import App from "./App.svelte";
+  import AppRaw from "./App.svelte?raw";
+ 
+  Error.stackTraceLimit = 0;
+</script>
+
+So transitions are nice but they are not for everyone. If someone prefers to not see animations we shouldn't get in the way of that. We can use the media query **prefers-reduced-motion** to disable our transitions if the user has selected in their OS that they want reduced motion.
+
+In our case it looks like this:
+
+```css
+@media (prefers-reduced-motion: reduce) {
+	* {
+		animation-duration: 0s !important;
+	}
+}
+```
+
+By enabling "Emulate CSS media feature prefers-reduced-motion" in devtools we can test this easier.
+
+<ShowMany name={[
+{name: "App", comp:App, raw:AppRaw, text: "I used only in: for the main div transition so the elements are not duplicated when a list is deleted (caused flashing)"},
+]}/>
