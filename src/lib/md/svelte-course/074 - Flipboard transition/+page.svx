@@ -1,0 +1,27 @@
+---
+title: "Flipboard transition"
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-07-06
+layout: notes
+---
+
+<script>
+  import ShowMany from "$lib/ShowMany.svelte";
+  import App from "./App.svelte";
+  import AppRaw from "./App.svelte?raw";
+  import App2 from "./App2.svelte";
+  import App2Raw from "./App2.svelte?raw";
+  import {hover as App2Hover} from "./App2Hover.svelte";
+ 
+  Error.stackTraceLimit = 0;
+</script>
+
+Here we're going to create another custom transition: a flipboard transition. Flipboard here means an animation that switches between characters until we end up on a certain word.
+
+As in the last post we create a function, this time flipboard(), which returns an object with duration, delay and easing. This time however we are not returning `css` but instead using the **tick(t)** function to use javascript in our function. This is not as performant as doing it in CSS but makes writing fancy non CSS transitions possible.
+
+<ShowMany name={[
+{name: "App", comp:App, raw:AppRaw, text: "Starting point."},
+{name: "App2", comp:App2, raw:App2Raw, text: "End result.", hover: App2Hover},
+]}/>
