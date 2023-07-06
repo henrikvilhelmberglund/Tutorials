@@ -5,6 +5,12 @@ authorlink: github.com/henrikvilhelmberglund/
 date: 2023-07-06
 layout: notes
 ---
+<script context="module">
+	const App2Hover = {
+		20: "By throttling the tick function we can make the transition run slower even though it is called every tick by Svelte.",
+		27: "Here is the main logic. We start by making the string as long as the real word and filling it with dashes. After some time we replace the dashes with random characters, then finally with the real character.",
+	};
+</script>
 
 <script>
   import ShowMany from "$lib/ShowMany.svelte";
@@ -12,7 +18,7 @@ layout: notes
   import AppRaw from "./App.svelte?raw";
   import App2 from "./App2.svelte";
   import App2Raw from "./App2.svelte?raw";
-  import {hover as App2Hover} from "./App2Hover.svelte";
+  // import {hover as App2Hover} from "./App2Hover.svelte";
  
   Error.stackTraceLimit = 0;
 </script>
