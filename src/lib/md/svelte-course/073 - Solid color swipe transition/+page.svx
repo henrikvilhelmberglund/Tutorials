@@ -1,0 +1,30 @@
+---
+title: "Solid color swipe transition"
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-07-06
+layout: notes
+---
+
+<script>
+  import ShowMany from "$lib/ShowMany.svelte";
+  import App from "./App.svelte";
+  import AppRaw from "./App.svelte?raw";
+  import App2 from "./App2.svelte";
+  import App2Raw from "./App2.svelte?raw";
+ 
+  Error.stackTraceLimit = 0;
+</script>
+
+Here we are going to use custom transitions to create a solid color swipe transition.
+
+Custom transitions are **functions**. In the function we can return delay, duration, easing and css. We'll focus on css.
+
+<ShowMany name={[
+{name: "App", comp:App, raw:AppRaw, text: "Here is our starting code."},
+{name: "App2", comp:App2, raw:App2Raw, text: "We added a swipeColor() function that returns CSS."},
+]}/>
+
+---
+
+We added a function that returns CSS. It is split into two parts, the first part from t 0-0.5 where the solid block covers the text and the text is hidden, after that the second part from t 0.5-1 where the solid block is leaving and revealing the text.
