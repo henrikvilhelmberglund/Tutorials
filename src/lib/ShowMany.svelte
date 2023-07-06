@@ -1,10 +1,33 @@
 <script>
+	import { fade } from "svelte/transition";
 	import Prism from "prismjs";
 	import "prism-svelte";
 
 	export let name;
+
+	function handleMousemove(event) {
+		const codeElement = event.target.closest("code");
+		if (!codeElement) return; // If the mouse isn't over the code, return
+
+		const { clientY } = event;
+		const { top } = codeElement.getBoundingClientRect();
+		const lineHeight = 24;
+
+		const lineIndex = Math.floor((clientY - top) / lineHeight);
+		console.log("Hovered line:", lineIndex + 1);
+		hoveredLine = lineIndex + 1;
+
+		hoveredLineInfo = selected.hover?.[hoveredLine];
+
+		if (hoveredLineInfo) {
+			console.log(hoveredLineInfo);
+		}
+	}
+
 	let i = 0;
 	let selected = name[0];
+	let hoveredLine;
+	let hoveredLineInfo;
 
 	name.forEach((singleName) => {
 		if (!singleName.name.includes(".js") && !singleName.name.includes(".svelte")) {
@@ -67,12 +90,31 @@
 			</label>
 		{/each}
 		{#if show}
-			<pre
-				class="{language === 'svelte'
-					? 'language-svelte'
-					: 'language-javascript'} rounded-t-0 !m-0 rounded-xl p-0 !pt-2"><code
-					style="font-family: 'Maple', Menlo, Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', 'Courier New',
-        monospace;">{@html highlighted}</code></pre>
+			<div on:mousemove={(e) => handleMousemove(e)} role="presentation">
+				<pre
+					class="{language === 'svelte'
+						? 'language-svelte'
+						: 'language-javascript'} rounded-t-0 !m-0 rounded-xl !pt-2"><code
+						style="font-family: 'Maple', Menlo, Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', 'Courier New',
+            monospace;">{@html highlighted}</code></pre>
+				{#if selected.hover}
+					{#each Object.keys(selected.hover) as hoverInfo}
+						<div
+							class="absolute left-[0.5%] rounded-full bg-orange-500 p-2 text-white"
+							style="top: {hoverInfo * 24 + 12}px;" />
+					{/each}
+				{/if}
+				{#if hoveredLineInfo}
+					<div
+						transition:fade
+						class="z-[100] absolute left-[60%] rounded border-4 border-orange-500 bg-black p-4 text-white"
+						style="top: {hoveredLine * 24}px;">
+						<p class="text-lg">
+							{hoveredLineInfo}
+						</p>
+					</div>
+				{/if}
+			</div>
 		{/if}
 	</div>
 </div>
