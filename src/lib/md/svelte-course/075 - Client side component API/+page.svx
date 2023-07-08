@@ -1,0 +1,54 @@
+---
+title: "Client side component API"
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-07-08
+layout: notes
+---
+
+<script context="module">
+	const HTMLHover = {
+		8: "target is where we are mounting the component.",
+		9: "props is where we can pass props to the component.",
+		13: "context is where we can pass context.",
+		14: `anchor is where we can pass in an element that marks where our component should come before. For example with target document.body we could have anchor #footer and it would be appended to body but just before footer. Similar to insertBefore().`,
+		15: "intro is by default false but if we change it to true transitions will play when they are first loaded.",
+		20: "Using component.$set() we can set for example the props.",
+		27: "We can also use component methods directly.",
+		34: "We can listen for events as well.",
+		31: "We can destroy the component.",
+	};
+</script>
+
+<script>
+  import ShowMany from "$lib/ShowMany.svelte";
+  import App from "./App.svelte";
+  import AppRaw from "./App.svelte?raw";
+  import Component from "./Component.svelte";
+  import ComponentRaw from "./Component.svelte?raw";
+	import PretendThisIsHTML from "./PretendThisIsHTML.svelte";
+	import PretendThisIsHTMLRaw from "./PretendThisIsHTML.svelte?raw";
+  // import {hover as App2Hover} from "./App2Hover.svelte";
+ 
+  Error.stackTraceLimit = 0;
+</script>
+
+Until now we have been using Svelte components in other Svelte components where we import them and then write the tag for the component `<Component></Component>`.
+
+What if we want to use them somewhere else? This is where the **client side component API** comes in.
+
+<ShowMany name={[
+{name: "App", comp:App, raw:AppRaw, text: "This is the normal way we use components in Svelte."},
+{name: "Component", comp:App, raw: ComponentRaw, text: ""},
+]}/>
+
+---
+
+Using the client side component API we can use the exported class directly.
+
+<div id="my-vanilla-HTML-and-JS-page">Here is my vanilla HTML and JS page</div>
+
+<ShowMany name={[
+{name: "PretendThisIsHTML", comp:PretendThisIsHTML, raw:PretendThisIsHTMLRaw, text: "I'm not sure how to effectively display this but pretend this is vanilla HTML and .js.", hover:HTMLHover},
+{name: "Component", comp:App, raw: ComponentRaw, text: "You will have to refresh the page to see PretendThisIsHTML again. 🙏"},
+]}/>
