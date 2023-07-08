@@ -14,13 +14,13 @@
 		const lineHeight = 24;
 
 		const lineIndex = Math.floor((clientY - top) / lineHeight);
-		console.log("Hovered line:", lineIndex + 1);
+		// console.log("Hovered line:", lineIndex + 1);
 		hoveredLine = lineIndex + 1;
 
 		hoveredLineInfo = selected.hover?.[hoveredLine];
 
 		if (hoveredLineInfo) {
-			console.log(hoveredLineInfo);
+			// console.log(hoveredLineInfo);
 		}
 	}
 
@@ -107,7 +107,7 @@
 				{#if hoveredLineInfo}
 					<div
 						transition:fade
-						class="z-[100] absolute left-[60%] rounded border-4 border-orange-500 bg-black p-4 text-white"
+						class="absolute right-[110%] z-[100] min-w-[300px] rounded-lg border-4 border-orange-500 bg-orange-300 p-4 text-black shadow-2xl shadow-orange-300"
 						style="top: {hoveredLine * 24}px;">
 						<p class="text-lg">
 							{hoveredLineInfo}
@@ -131,7 +131,7 @@
 		outline: none;
 	}
 
-	:global(.svelty input, button, select, textarea) {
+	:global(input, button, select, textarea) {
 		font-family: inherit;
 		font-size: inherit;
 		-webkit-padding: 0.4em 0;
