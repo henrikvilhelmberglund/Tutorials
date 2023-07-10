@@ -1,0 +1,27 @@
+---
+title: "Svelte compiler API"
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-07-10
+layout: notes
+---
+
+<script context="module">
+	const HTMLHover = {
+
+	};
+</script>
+
+<script>
+  import ShowMany from "$lib/ShowMany.svelte";
+ 
+  Error.stackTraceLimit = 0;
+</script>
+
+Svelte uses a compiler. Our .svelte files that we write will be compiled to HTML, vanilla JSS and CSS. We do this by importing the compiler `import { compile } from "svelte/compiler";` and then using it like this `compile(OurComponent)`.
+
+As before this doesn't really work client side so here is another link:
+
+<a class="bg-blue-500 rounded text-white" href="/svelte-course/Compiler-API">Compiler API</a>
+
+Again maybe not a great example but I'm not sure how to explain this. You don't really need to use the compiler API manually anyway, Svelte takes care of that for us!
