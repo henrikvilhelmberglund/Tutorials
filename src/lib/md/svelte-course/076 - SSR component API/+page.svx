@@ -1,0 +1,36 @@
+---
+title: "SSR component API"
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-07-10
+layout: notes
+---
+
+<script context="module">
+	const HTMLHover = {
+
+	};
+</script>
+
+<script>
+  import ShowMany from "$lib/ShowMany.svelte";
+  import App from "./App.svelte";
+  import AppRaw from "./App.svelte?raw";
+  import Component from "./Component.svelte";
+  import ComponentRaw from "./Component.svelte?raw";
+	import PretendThisIsHTML from "./PretendThisIsHTML.svelte";
+	import PretendThisIsHTMLRaw from "./PretendThisIsHTML.svelte?raw";
+  // import {hover as App2Hover} from "./App2Hover.svelte";
+ 
+  Error.stackTraceLimit = 0;
+</script>
+
+In the last post we learned about the client side component API but today we're talking about SSR component API.
+
+We can do `Component.render()` and get our HTML code, CSS and head.
+
+I can't really showcase this in this page because I'm using **SSR** (server side rendering) for the initial HTML and then **CSR** (client side rendering) for the client side interactivity.
+
+I made a new page with CSR disabled that will show how the output of render() looks: (may need to refresh after navigating to the page)
+
+<a class="bg-blue-500 rounded text-white" href="/svelte-course/SSR-component-API">SSR component API</a>
