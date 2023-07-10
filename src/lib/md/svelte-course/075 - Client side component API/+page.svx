@@ -50,5 +50,5 @@ Using the client side component API we can use the exported class directly.
 
 <ShowMany name={[
 {name: "PretendThisIsHTML", comp:PretendThisIsHTML, raw:PretendThisIsHTMLRaw, text: "I'm not sure how to effectively display this but pretend this is vanilla HTML and .js.", hover:HTMLHover},
-{name: "Component", comp:App, raw: ComponentRaw, text: "You will have to refresh the page to see PretendThisIsHTML again. 🙏"},
+{name: "Component", comp:PretendThisIsHTML, raw: ComponentRaw, text: ""},
 ]}/>
