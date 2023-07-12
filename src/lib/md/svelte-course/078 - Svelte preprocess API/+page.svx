@@ -1,0 +1,26 @@
+---
+title: "Svelte preprocess API"
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-07-11
+layout: notes
+---
+
+<script context="module">
+	const HTMLHover = {
+
+	};
+</script>
+
+<script>
+  import ShowMany from "$lib/ShowMany.svelte";
+  // import {hover as App2Hover} from "./App2Hover.svelte";
+ 
+  Error.stackTraceLimit = 0;
+</script>
+
+Sometimes we may want to write something other than JS, HTML and CSS and have this transformed into Svelte code. This blog is based on this concept, it uses [mdsvex](https://mdsvex.pngwn.io/) to turn markdown into Svelte code.
+
+The good thing about that is that I can use Markdown and Svelte code interchangably, for example <span class="text-emerald-600 font-a">I can write an inline span element if I want some extra styling.</span>
+
+<a class="bg-blue-500 rounded text-white" href="/svelte-course/Preprocess-API">Preprocess API</a>
