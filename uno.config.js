@@ -10,5 +10,10 @@ export default defineConfig({
 				"vertical-align": "middle",
 			},
 		}),
+		presetWebFonts({
+			fonts: {
+				a: "Lilita One",
+			},
+		}),
 	],
 });
