@@ -1,0 +1,31 @@
+---
+title: "Svelte hydration"
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-07-12
+layout: notes
+---
+
+<script context="module">
+	const HTMLHover = {
+
+	};
+</script>
+
+<script>
+  import ShowMany from "$lib/ShowMany.svelte";
+  // import {hover as App2Hover} from "./App2Hover.svelte";
+ 
+  Error.stackTraceLimit = 0;
+
+  import Youtube from "svelte-youtube-embed";
+</script>
+
+Hydration refers to the process where the client side interactivity gets injected into the server rendered HTML. Using SvelteKit this happens automatically which is nice, but it's also possible to do it yourself by using `hydratable: "true"` inside of compile().
+
+I think this is a bit hard to demonstrate on this site though so I'll just link the video itself which I found interesting:
+
+<div class="w-[400px] md:w-[1000px]">
+  
+  <Youtube id="wYCMnphN5c8"></Youtube>
+</div>
