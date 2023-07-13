@@ -42,12 +42,12 @@ layout: mainpage
 
 {/if}
 
-<div>
+<div class="bg-[hsl(14,100%,60%)]">
   
   {#each data.posts as post}
-  
+  <article in:fade class="flex-0 m-12 flex min-w-[50%] flex-1 flex-col items-center justify-start">
     <svelte:component this={post.default}></svelte:component>
-  
+  </article>
   {/each}
 </div>
 
