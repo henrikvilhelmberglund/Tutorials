@@ -21,7 +21,7 @@
 <script>
 	import { base } from "$app/paths";
 	import { page } from "$app/stores";
-	console.log($page.url.toString());
+	// console.log($page.url.toString());
 </script>
 
 <nav class="flex bg-slate-200">
