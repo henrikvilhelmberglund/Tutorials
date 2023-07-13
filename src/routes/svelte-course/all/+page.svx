@@ -28,6 +28,7 @@ layout: mainpage
     Td,
     Strong,
   } from "$lib/components.js";
+	import { fade } from "svelte/transition";
   // let mounted = false;
   // onMount(() => {
   //   mounted = true;
