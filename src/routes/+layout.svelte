@@ -1,34 +1,44 @@
-<script>
-	import { base } from "$app/paths";
+<script context="module">
+	export const routes = [
+		{
+			link: "/",
+			name: "Home",
+			description: "",
+		},
+		{
+			link: "/svelte-course",
+			name: "Svelte course",
+			description: "My understanding and examples of Li Hau Tan's Svelte course on freeCodeCamp.",
+		},
+		{
+			link: "/old-tutorials",
+			name: "Old tutorials",
+			description: "Old kind of outdated tutorials.",
+		},
+	];
 </script>
 
-<nav class="flex pb-4">
-	<a
-		class="mx-4 rounded-lg bg-green-400  p-4 text-black no-underline hover:bg-green-300"
-		href="{base}/">
-		Home
-	</a>
-	<a
-		class="mx-4 rounded-lg bg-green-400  p-4 text-black no-underline hover:bg-green-300"
-		href="{base}/old-tutorials">
-		Old tutorials
-	</a>
-	<a
-		class="rounded-lg bg-green-400 p-4 text-black no-underline hover:bg-green-300"
-		href="{base}/svelte-course">
-		Svelte Course
-	</a>
-</nav>
+<script>
+	import { base } from "$app/paths";
+	import { page } from "$app/stores";
+	console.log($page.url.toString());
+</script>
 
-<div class="w-full bg-red-900">
-	<p class="text-6xl text-red-300">Warning!</p>
-	<p class="text-3xl text-red-100">under construction :)</p>
-</div>
+<nav class="flex bg-slate-200">
+	{#each routes as route}
+		<a
+			class:!bg-orange-400={$page.url.toString().includes(route.link) && route.link !== "/"}
+			class="hover:(outline-1 outline-solid) mx-4 my-2 rounded-lg bg-slate-100 p-4 font-semibold text-black no-underline outline-black"
+			href="{base}{route.link}">
+			{route.name}
+		</a>
+	{/each}
+</nav>
 
 <slot />
 
 <style>
 	:global(body) {
-		@apply bg-slate-300;
+		@apply bg-slate-100;
 	}
 </style>
