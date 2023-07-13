@@ -49,7 +49,7 @@ async function importPosts(route) {
 }
 
 export async function load({ params, route }) {
-	console.log(route.id);
+	// console.log(route.id);
 	// console.log(typeof route.id);
 	return {
 		// TODO this naming is a bit stupid
