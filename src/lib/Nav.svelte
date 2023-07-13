@@ -12,7 +12,7 @@
 				<br />
 				<a
 					class:!bg-orange-400={link === data.slug}
-					class="hover:(outline-4 outline-solid) my-1 rounded-lg bg-slate-200 p-2 outline-black"
+					class="hover:(outline-1 outline-solid) my-1 rounded-lg bg-slate-200 p-2 outline-black"
 					href="{base}{subroute}/{link}">{displayLink}</a>
 			{/each}
 		</div>
