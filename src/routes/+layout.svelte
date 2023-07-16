@@ -21,9 +21,11 @@
 <script>
 	import { base } from "$app/paths";
 	import { page } from "$app/stores";
+	import { SemanticColors } from "svelte-semantic-colors";
 	// console.log($page.url.toString());
 </script>
 
+<!-- <SemanticColors /> -->
 <nav class="flex bg-slate-200">
 	{#each routes as route}
 		<a
