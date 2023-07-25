@@ -1,4 +1,5 @@
-export const prerender = true;
+// change prerender to true
+export const prerender = false;
 // export const ssr = false;
 
 const modules = import.meta.glob([
