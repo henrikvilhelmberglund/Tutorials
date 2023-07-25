@@ -11,6 +11,16 @@
 			description: "My understanding and examples of Li Hau Tan's Svelte course on freeCodeCamp.",
 		},
 		{
+			link: "/VSCode",
+			name: "VSCode",
+			description: "Workflow enhancements for VSCode",
+		},
+		{
+			link: "/CSS",
+			name: "CSS",
+			description: "CSS examples",
+		},
+		{
 			link: "/old-tutorials",
 			name: "Old tutorials",
 			description: "Old kind of outdated tutorials.",
