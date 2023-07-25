@@ -15,7 +15,7 @@
 			{#if route.link !== "/"}
 				<article class="flex h-96 w-full">
 					<a
-						class="mx-4 flex w-full flex-col items-center justify-center rounded-lg bg-white p-4 text-4xl text-black no-underline hover:(outline-1 outline-solid outline-black)"
+						class="hover:(outline-1 outline-solid outline-black) mx-4 flex w-full flex-col items-center justify-center rounded-lg bg-white p-4 text-4xl text-black no-underline"
 						href="{base}{route.link}">
 						{route.name}
 						<p class="text-lg">{route.description}</p>
