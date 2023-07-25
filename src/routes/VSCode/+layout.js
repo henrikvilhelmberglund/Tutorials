@@ -30,10 +30,17 @@ async function importPosts(route) {
 				posts.push(mod);
 			});
 		}
-		title = fixedPath.split(`${shortRoute}`)[1].split("/")[1];
+		// TODO add this in other places
+		/* chatGPT
+    We create a regular expression (regex) with the pattern (?<=^|\/)${shortRoute}(?=\/|$). This pattern uses positive lookbehind (?<=^|\/) and positive lookahead (?=\/|$) assertions to ensure that we match shortRoute only when it's preceded by the start of the string ^ or a forward slash /, and followed by either a forward slash / or the end of the string $. This way, we can avoid matching occurrences of shortRoute in the middle of other words.
+    */
+		const regex = new RegExp(`(?<=^|\/)${shortRoute}(?=\/|$)`, "g");
+		const splits = fixedPath.split(regex);
+		title = splits[1].split("/")[1];
+		// console.log(fixedPath.split(`${shortRoute}`));
 		// title = title.includes("+page") ? title.split("+page")[0] : title;
 		// console.log(fixedPath);
-		// console.log(title);
+		console.log(title);
 		svelte = true;
 
 		// let fixedPath = path;
