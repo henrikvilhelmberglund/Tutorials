@@ -31,7 +31,7 @@
 <script>
 	import { base } from "$app/paths";
 	import { page } from "$app/stores";
-	import { SemanticColors } from "svelte-semantic-colors";
+	// import { SemanticColors } from "svelte-semantic-colors";
 	// console.log($page.url.toString());
 </script>
 
