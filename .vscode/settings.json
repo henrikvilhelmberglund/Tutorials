@@ -1,3 +1,3 @@
 {
-	"conventionalCommits.scopes": ["md: CSS"]
+	"conventionalCommits.scopes": ["md: CSS", "md: VSCode"]
 }
