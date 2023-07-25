@@ -1,0 +1,23 @@
+---
+title: Mask text using image
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-07-25
+layout: notes
+---
+
+<script>
+	import ShowMany from "$lib/ShowMany.svelte";
+	import BackgroundTest from "./BackgroundTest.svelte";
+	import BackgroundTestRaw from "./BackgroundTest.svelte?raw";
+  import Cat from "./Cat.svelte";
+  import CatRaw from "./Cat.svelte?raw";
+
+</script>
+
+It is possible to mask a background image using text. May be useful sometime!
+
+<ShowMany name={[
+  {name: "Cat", comp:Cat , raw:CatRaw, text: "Nice cat!"},
+{name: "BackgroundTest", comp:BackgroundTest , raw:BackgroundTestRaw, text: "Highlight me to view my true form!"},
+]}/>
