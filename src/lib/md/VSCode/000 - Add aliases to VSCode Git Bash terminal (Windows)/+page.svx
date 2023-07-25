@@ -1,0 +1,20 @@
+---
+title: "Add aliases to VSCode Git Bash terminal (Windows)"
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-07-25
+layout: notes
+---
+
+<script>
+	import ShowMany from "$lib/ShowMany.svelte";
+
+
+</script>
+
+Coming soon!!
+
+<!-- <ShowMany name={[
+{name: "Cat", comp:Cat , raw:CatRaw, text: "Nice cat!"},
+{name: "BackgroundTest", comp:BackgroundTest , raw:BackgroundTestRaw, text: "Highlight me to view my true form!"},
+]}/> -->
