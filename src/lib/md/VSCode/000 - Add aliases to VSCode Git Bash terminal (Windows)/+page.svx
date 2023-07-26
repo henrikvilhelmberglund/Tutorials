@@ -7,14 +7,54 @@ layout: notes
 ---
 
 <script>
-	import ShowMany from "$lib/ShowMany.svelte";
+  // FIX this breaks syntax highlighting for some reason
+	// import ShowMany from "$lib/ShowMany.svelte";
+
+	import Num from "$lib/Num.svelte";
+
 
 
 </script>
 
-Coming soon!!
+It is possible to add aliases for the VSCode terminal. In my case I'm using Git Bash. Here's how to do that:
+
+- <Num num="1"/> In settings.json (Preferences: Open User Settings (JSON)) add the following:
+
+```json
+
+"terminal.integrated.profiles.windows": {
+      "Git Bash": {
+      "source": "Git Bash",
+      "args": ["--login", "-i"]
+    }
+  }
+
+```
+
+- <Num num="2"/> Find aliases.sh and open it using VSCode. In my case it is in "C:\Program Files\Git\etc\profile.d\"
+
+
+- <Num num="3"/> Add your aliases. Here are some of mine:
+
+
+
+
+```bash
+
+alias d="nr dev"
+alias b="nr build"
+alias p="nr preview"
+alias pu="nr publish"
+alias r="nr release"
+
+```
+
+These use [ni](https://github.com/antfu/ni).
+
+- <Num num="4"/> Save the file. You will get a notification that you need to save it as an administrator so click that button to save the file.
+
+
+- <Num num="5"/> Close the terminal and spawn a new instance. You should be able to use your new aliases. Success!
 
 <!-- <ShowMany name={[
-{name: "Cat", comp:Cat , raw:CatRaw, text: "Nice cat!"},
-{name: "BackgroundTest", comp:BackgroundTest , raw:BackgroundTestRaw, text: "Highlight me to view my true form!"},
 ]}/> -->
