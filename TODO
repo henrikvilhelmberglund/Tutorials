@@ -8,3 +8,5 @@
 ☐ in general fix mobile view
 ☐ use ShowMany component in earlier Svelte-course pages to get the correct styling
 ☐ make hr look good
+☐ fix error thingy (dog API?)??
+☐ add loading spinner thingy for when you click on a page so you know something is happening
