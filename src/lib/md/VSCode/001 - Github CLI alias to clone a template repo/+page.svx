@@ -1,0 +1,64 @@
+---
+title: "Github CLI alias to clone a template repo"
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-09-07
+layout: notes
+---
+
+<script>
+  // FIX this breaks syntax highlighting for some reason
+	// import ShowMany from "$lib/ShowMany.svelte";
+
+	import Num from "$lib/Num.svelte";
+
+
+
+</script>
+
+(I should probably rename this category from VSCode to Workflow or something)
+
+I was feeling extra lazy today so I wanted to create something that helps me create new repos. (yes, I am aware that I have ~90 repos right now...)
+
+Github has a [CLI tool](https://cli.github.com/) so I wanted to use that to speed up my workflow a bit. Here's what you can do:
+
+- <Num num="1"/> Download the Github CLI tool.
+
+
+- <Num num="2"/> Set up a template repository. Basically create a nice repo that will act as a base, in settings turn it into a template.
+
+
+- <Num num="3"/> Run a command to add an alias to gh (the Github CLI tool):
+
+`gh alias set --shell n 'gh repo create "$1" --template henrikvilhelmberglund/sveltekit-unocss-template --public --clone && cd "$1" && code -r .'`
+
+...??? 🐱
+
+Ok, let me explain.
+
+`gh alias set` is the command to create a new alias for the Github CLI tool. I want to do stuff in the shell so I pass `--shell`.
+
+`n` is the name of my new command.
+
+After that I paste everything I want to do surrounded by single quotes ''.
+
+`gh repo create "$1"` means that I'm creating a repo where the name is whatever I type in after I run the command using `gh n repo-name-here` for example. In this case `$1` is `repo-name-here`
+
+`--template henrikvilhelmberglund/sveltekit-unocss-template` is how you specify the template to use. The syntax is `--template owner/repo`.
+
+`--public` means it's a public repo. You can also use `--private`.
+
+`--clone` means that it will clone the repo to the local machine. **Note**, make sure you are in the correct folder before running the alias. (in my case `C:/Github`)
+
+`&& cd "$1"` means that after the previous command is done, change the directory to $1 (aka the folder we just created).
+
+`&& code -r .` means that after we have changed the directory, open the folder in VSCode reusing the same window.
+
+All that command means we create a public repo using a template, clone it, enter the folder, then open VSCode in that folder so the folder is our new workspace. **Perfect!**
+
+After doing so I don't have to do some silly stuff in Github.com, I can just run `gh n my-new-repo` from my VSCode terminal and it'll create and clone the project for me. Being lazy sure is nice!
+
+- <Num num="4"/> Success! I hope it helped!
+
+<!-- <ShowMany name={[
+]}/> -->
