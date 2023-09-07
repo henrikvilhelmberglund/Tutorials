@@ -28,7 +28,6 @@ layout: mainpage
     Td,
     Strong,
   } from "$lib/components.js";
-	import { fade } from "svelte/transition";
   // let mounted = false;
   // onMount(() => {
   //   mounted = true;
@@ -46,7 +45,7 @@ layout: mainpage
 <div class="bg-[hsl(14,100%,60%)]">
   
   {#each data.posts as post}
-  <article in:fade class="flex-0 m-12 flex min-w-[50%] flex-1 flex-col items-center justify-start">
+  <article class="flex-0 m-12 flex min-w-[50%] flex-1 flex-col items-center justify-start">
     <svelte:component this={post.default}></svelte:component>
   </article>
   {/each}
