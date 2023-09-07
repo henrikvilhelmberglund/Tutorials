@@ -37,7 +37,7 @@
 					class="rounded-r-0 rounded-bl-0  absolute -top-4 left-0 rounded-xl rounded-br-xl bg-orange-500 p-1 text-black">
 					{name}
 				</p>
-				<pre class="language-svelte !m-0 rounded-xl p-0 !pt-10"><code
+				<pre class="language-svelte !m-0 rounded-xl w-[75vw] md:w-[50vw] p-0 !pt-10"><code
 						style="font-family: 'Maple', Menlo, Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', 'Courier New',
           monospace;">{@html highlighted}</code>
         </pre>

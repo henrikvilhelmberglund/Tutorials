@@ -6,7 +6,8 @@
 ☐ hide the box thingy in the upper right until we're viewing the post that needs it
 ☐ remove nav to the left in mobile view
 ☐ in general fix mobile view
-☐ use ShowMany component in earlier Svelte-course pages to get the correct styling
+☐ use ShowMany component in earlier Svelte-course pages to get the correct styling (and mobile friendly styling)
 ☐ make hr look good
 ☐ fix error thingy (dog API?)??
 ☐ add loading spinner thingy for when you click on a page so you know something is happening
+☐ mobile check

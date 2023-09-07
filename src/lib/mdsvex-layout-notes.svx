@@ -64,7 +64,7 @@
       {/if}
     </div>
   </section>
-  <section class="bg-slate-100 rounded-xl flex flex-col justify-center items-center w-4/6 p-4 [&>*]:p-2 pb-40">
+  <section class="bg-slate-100 rounded-xl flex flex-col justify-center items-center w-[80vw] md:w-4/6 p-4 [&>*]:p-2 pb-40">
     <slot />
   </section>
 

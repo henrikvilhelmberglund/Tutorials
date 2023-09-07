@@ -31,28 +31,28 @@
 <script>
 	import { base } from "$app/paths";
 	import { page } from "$app/stores";
-  import { onNavigate } from '$app/navigation';
+	import { onNavigate } from "$app/navigation";
 	// import { SemanticColors } from "svelte-semantic-colors";
 	// console.log($page.url.toString());
 
-  onNavigate((navigation) => {
-    if (!document.startViewTransition) return;
+	onNavigate((navigation) => {
+		if (!document.startViewTransition) return;
 
-    return new Promise((resolve) => {
-        document.startViewTransition(async () => {
-            resolve();
-            await navigation.complete;
-        });
-    });
-});
+		return new Promise((resolve) => {
+			document.startViewTransition(async () => {
+				resolve();
+				await navigation.complete;
+			});
+		});
+	});
 </script>
 
 <!-- <SemanticColors /> -->
-<nav class="flex bg-slate-200">
+<nav class="flex gap-1 bg-slate-200 md:w-screen">
 	{#each routes as route}
 		<a
 			class:!bg-orange-400={$page.url.toString().includes(route.link) && route.link !== "/"}
-			class="hover:(outline-1 outline-solid) mx-4 my-2 rounded-lg bg-slate-100 p-4 font-semibold text-black no-underline outline-black"
+			class="hover:(outline-1 outline-solid) my-2 min-w-[48px] rounded-lg bg-slate-100 py-2 text-center font-semibold text-black no-underline outline-black md:mx-4 md:p-4"
 			href="{base}{route.link}">
 			{route.name}
 		</a>

@@ -3,13 +3,13 @@
 	import { routes } from "./+layout.svelte";
 </script>
 
-<div class="flex flex-col items-center text-center">
+<div class="flex flex-col items-center text-center w-[100vw]">
 	<div>
 		<h1 class="text-5xl">Tutorials</h1>
 		<h2 class="text-2xl">Welcome to my tutorials page!</h2>
 	</div>
 
-	<div class="flex w-full items-center justify-evenly pt-12">
+	<div class="flex w-full flex-wrap items-center justify-evenly pt-12 md:flex-nowrap">
 		{#each routes as route, i}
 			<!-- TODO add images for these instead of text -->
 			{#if route.link !== "/"}
