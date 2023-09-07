@@ -44,13 +44,17 @@ async function importPosts(route) {
 		svelte = true;
 
 		// let fixedPath = path;
-		myPages.push({
-			title: title,
-			link: fixedPath,
-			original: path,
-			bsvelte: svelte,
-		});
-		titles.push(title);
+		if (titles.includes(title)) {
+			return myPages;
+		} else {
+			myPages.push({
+				title: title,
+				link: fixedPath,
+				original: path,
+				bsvelte: svelte,
+			});
+			titles.push(title);
+		}
 	}
 	return myPages;
 }
