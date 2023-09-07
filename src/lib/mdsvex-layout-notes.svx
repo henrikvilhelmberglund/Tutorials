@@ -55,7 +55,7 @@
         <svelte:component this={H2}>{title}</svelte:component>
       {/if}
     </div>
-    <div class="flex justify-center items-center gap-1">
+    <div class="flex justify-end pt-4 items-center gap-1">
       {#if date}
         <svelte:component this={P}>Posted on {date.split("T")[0]} by</svelte:component>
       {/if}

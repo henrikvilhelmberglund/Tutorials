@@ -48,7 +48,7 @@
 </script>
 
 <!-- <SemanticColors /> -->
-<nav class="flex gap-1 bg-slate-200 md:w-screen">
+<nav class="flex gap-1 bg-slate-200 md:w-[99.1vw]">
 	{#each routes as route}
 		<a
 			class:!bg-orange-400={$page.url.toString().includes(route.link) && route.link !== "/"}
