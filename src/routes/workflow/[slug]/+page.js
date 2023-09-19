@@ -2,9 +2,9 @@ export const prerender = true;
 // export const ssr = false;
 
 const modules = import.meta.glob([
-	"../../../lib/md/VSCode/*/*.svx",
-	"../../../lib/md/VSCode/_*.svx",
-	"../../../lib/md/VSCode/*/_*.svx",
+	"../../../lib/md/workflow/*/*.svx",
+	"../../../lib/md/workflow/_*.svx",
+	"../../../lib/md/workflow/*/_*.svx",
 ]);
 let myPages = [];
 let svelte;
@@ -33,7 +33,7 @@ for (let path in modules) {
 	titles.push(title);
 }
 async function loadPost(params) {
-	return import(`../../../lib/md/VSCode/${params.slug}/+page.svx`);
+	return import(`../../../lib/md/workflow/${params.slug}/+page.svx`);
 }
 
 export async function load({ params }) {

@@ -38,7 +38,7 @@ layout: mainpage
 
 {#if data.titles}
 
-<Nav {data} subroute={"/VSCode"} />
+<Nav {data} subroute={"/workflow"} />
 
 {/if}
 

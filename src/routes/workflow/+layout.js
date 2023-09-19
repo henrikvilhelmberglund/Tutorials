@@ -11,10 +11,10 @@ let posts = [];
 async function importPosts(route) {
 	const shortRoute = route.id.split("/")[1];
 	const modules = import.meta.glob([
-		`../../lib/md/VSCode/*/+page.svx`,
-		`!../../lib/md/VSCode/_*.svx`,
-		`!../../lib/md/VSCode/*/_*.svx`,
-		`!../../lib/md/VSCode/_*/*.svx`,
+		`../../lib/md/workflow/*/+page.svx`,
+		`!../../lib/md/workflow/_*.svx`,
+		`!../../lib/md/workflow/*/_*.svx`,
+		`!../../lib/md/workflow/_*/*.svx`,
 	]);
 
 	// console.log(modules);

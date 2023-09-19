@@ -6,8 +6,8 @@
 </script>
 
 <div class="flex">
-	<Nav {data} subroute={"/VSCode"} />
-	<PostGrid route="/VSCode" posts={data.titles} />
+	<Nav {data} subroute={"/workflow"} />
+	<PostGrid route="/workflow" posts={data.titles} />
 </div>
 
 <style>

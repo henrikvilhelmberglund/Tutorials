@@ -11,7 +11,7 @@
 </script>
 
 <div class="flex bg-[hsl(14,100%,60%)]">
-	<Nav {data} subroute={"/VSCode"} />
+	<Nav {data} subroute={"/workflow"} />
 	<article class="flex-0 m-12 flex min-w-[50%] flex-1 flex-col items-center justify-start">
 		<svelte:component this={data.post.default} />
 		<PreviousNext {previous} {next} />
