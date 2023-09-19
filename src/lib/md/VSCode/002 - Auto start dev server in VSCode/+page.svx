@@ -32,7 +32,7 @@ Why not start the server automatically whenever you open a project in VSCode? He
 		{
 			"label": "Start Dev Server",
 			"type": "shell",
-			"command": "d",
+			"command": "ni && d",
 			"runOptions": { "runOn": "folderOpen" },
 			"group": {
 				"kind": "none",
@@ -47,7 +47,7 @@ Why not start the server automatically whenever you open a project in VSCode? He
 }
 ```
 
-- <Num num="3"/> Replace the command with the actual command you would like to use, for example npm run dev.
+- <Num num="3"/> Replace the command with the actual command you would like to use, for example "npm install && npm run dev" to automatically install and after running run the dev server.
 
 
 - <Num num="4"/> After the changes every time you open a new folder in VSCode you will start a dev server automatically.
