@@ -1,0 +1,49 @@
+---
+title: "Start project build in Cloudflare Pages using deploy hook"
+author: henrikvilhelmberglund
+authorlink: github.com/henrikvilhelmberglund/
+date: 2023-09-19
+layout: notes
+---
+
+<script>
+  // FIX this breaks syntax highlighting for some reason
+	// import ShowMany from "$lib/ShowMany.svelte";
+
+	import Num from "$lib/Num.svelte";
+
+
+
+</script>
+
+This site is hosted on Cloudflare Pages. I disabled the automatic building when I commit because I often make tiny commits which would cause a huge queue of build processes. To build the page I went to Cloudflare Pages, clicked on my site and reran the deployment from the canceled build which worked fine.
+
+It is slightly annoying though to rebuild that way because I need to go to Cloudflare Pages, find my page among a lot of other stuff, find the deployments and rebuild the deployment. Instead of doing that I found that you can use a **deploy hook** which you then can simply send a **POST request** to whenever you want to build your site.
+
+Here's how to do that! (assuming you have a site set up at Cloudflare Pages already)
+
+- <Num num="1"/> In "Workers & Pages" click the title of your project.
+
+
+- <Num num="2"/> Click "Settings".
+
+
+- <Num num="3"/> Click "Builds and deployments".
+
+
+- <Num num="4"/> At the bottom there should be "Deploy hooks" and a button to "Add deploy hook". Click the button.
+
+
+- <Num num="5"/> Type a name for the deploy hook (in my case "build Tutorials") and select the branch to build, then click "Add".
+
+
+- <Num num="6"/> After doing so you should get a link that you can copy. It's not authenticated so don't put it online or people will be able to trigger rebuilds for your site which may be annoying.
+
+
+- <Num num="7"/> In some kind of rest client (I like the HTTPie desktop client) send a POST request to the link and it will trigger the build of your project. Now you have a simple way to trigger a build of your project without going to Cloudflare Pages.
+
+
+- <Num num="8"/> Success! I hope it helped!
+
+<!-- <ShowMany name={[
+]}/> -->
