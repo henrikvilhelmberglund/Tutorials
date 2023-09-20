@@ -46,9 +46,17 @@ layout: mainpage
 <div class="bg-[hsl(14,100%,60%)]">
   
   {#each data.posts as post}
-  <article in:fade class="flex-0 m-12 flex min-w-[50%] flex-1 flex-col items-center justify-start">
-    <svelte:component this={post.default}></svelte:component>
-  </article>
+    {#await post}
+      <div class="w-[100vw]">
+        <p class="text-center text-5xl">Loading post...</p>
+      </div>
+    {:then result}
+    <article in:fade class="flex-0 m-12 flex min-w-[50%] flex-1 flex-col items-center justify-start">
+      <svelte:component this={result.default}></svelte:component>
+    </article>
+      {:catch error}
+      {error}
+    {/await}
   {/each}
 </div>
 

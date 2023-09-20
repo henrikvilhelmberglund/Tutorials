@@ -46,7 +46,15 @@ layout: mainpage
   
   {#each data.posts as post}
   <article class="flex-0 m-12 flex min-w-[50%] flex-1 flex-col items-center justify-start">
-    <svelte:component this={post.default}></svelte:component>
+    {#await post}
+    <div class="w-full">
+      <p class="text-center text-5xl">Loading...</p>
+    </div>
+    {:then result}
+    <svelte:component this={result.default}></svelte:component>
+    {:catch error}
+    {error}
+    {/await}
   </article>
   {/each}
 </div>

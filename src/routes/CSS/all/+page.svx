@@ -11,23 +11,6 @@ layout: mainpage
   export let data;
   let items = [];
 
-  import {
-    H1,
-    H2,
-    H3,
-    H4,
-    H5,
-    H6,
-    Blockquote,
-    Li,
-    Ul,
-    P,
-    A,
-    Table,
-    Th,
-    Td,
-    Strong,
-  } from "$lib/components.js";
 	import { fade } from "svelte/transition";
   // let mounted = false;
   // onMount(() => {
@@ -43,13 +26,21 @@ layout: mainpage
 
 {/if}
 
-<div class="bg-[hsl(14,100%,60%)]">
+<div class="bg-[hsl(14,100%,60%)] min-h-screen">
   
   {#each data.posts as post}
+  {#await post}
+    <div class="w-[100vw]">
+      <p class="text-center text-5xl">Loading post...</p>
+    </div>
+  {:then result}
   <article in:fade class="flex-0 m-12 flex min-w-[50%] flex-1 flex-col items-center justify-start">
-    <svelte:component this={post.default}></svelte:component>
+    <svelte:component this={result.default}></svelte:component>
   </article>
-  {/each}
+    {:catch error}
+    {error}
+  {/await}
+{/each}
 </div>
 
 </div>

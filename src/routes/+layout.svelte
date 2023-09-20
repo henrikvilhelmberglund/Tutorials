@@ -33,7 +33,6 @@
 	import { page } from "$app/stores";
 	import { onNavigate } from "$app/navigation";
 	// import { SemanticColors } from "svelte-semantic-colors";
-	// console.log($page.url.toString());
 
 	onNavigate((navigation) => {
 		if (!document.startViewTransition) return;
